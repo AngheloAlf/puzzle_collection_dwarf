@@ -459,8 +459,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -471,21 +471,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
     union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
     union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
     union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
     union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
     union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
     union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
@@ -635,7 +635,7 @@ static int gnOffsetShakeY; // size: 0x4, address: 0xF4C40
 // Range: 0x91BDC -> 0x91F28
 int storyLoadPath2(struct_story_c_16662 * * ppPath /* r26 */, char * szName /* r4 */, void * ppHeap /* r27 */, @enum$96story_c eMode /* r28 */) {
     // Local variables
-    struct_bitmap_c_65 file; // r1+0x30
+    struct_bitmap_c_31 file; // r1+0x30
     void * pHeap; // r1+0x8
     char acNameImage[16]; // r1+0x20
     int iImage; // r29
@@ -663,29 +663,7 @@ int storySetPathWrap2(struct_story_c_16662 * pPath /* r1+0x0 */, int iSet0 /* r1
 int storySetPathImage2(struct_story_c_16662 * pPath /* r1+0x0 */, int nAlpha /* r1+0x4 */) {}
 
 // Range: 0x91FF0 -> 0x92124
-int storyGetPathImage2(struct_story_c_16662 * pPath /* r1+0x0 */, int nOffsetFrame /* r1+0x4 */, int iPack /* r1+0x8 */, struct {
-    // total size: 0xA0
-    int iFrame; // offset 0x0, size 0x4
-    int iObject; // offset 0x4, size 0x4
-    signed short nSizeScan; // offset 0x8, size 0x2
-    int nType; // offset 0xC, size 0x4
-    int nTick; // offset 0x10, size 0x4
-    int nTranslucent; // offset 0x14, size 0x4
-    int nBitmapCount; // offset 0x18, size 0x4
-    int * anPositionX; // offset 0x1C, size 0x4
-    int * anPositionY; // offset 0x20, size 0x4
-    int * anFrameDelay; // offset 0x24, size 0x4
-    struct_image_c_6458 * aScan; // offset 0x28, size 0x4
-    struct_bitmap_c_14 * * apBitmap; // offset 0x2C, size 0x4
-    void * apPixel[2]; // offset 0x30, size 0x8
-    union_pon_gc_tex_c_17914 aObject[2]; // offset 0x38, size 0x50
-    int nScaleX; // offset 0x88, size 0x4
-    int nScaleY; // offset 0x8C, size 0x4
-    unsigned short nScrollX; // offset 0x90, size 0x2
-    unsigned short nScrollY; // offset 0x92, size 0x2
-    unsigned int nColor0; // offset 0x94, size 0x4
-    unsigned int nColor1; // offset 0x98, size 0x4
-} * * ppImage /* r1+0xC */, int * piFrame /* r1+0x10 */) {
+int storyGetPathImage2(struct_story_c_16662 * pPath /* r1+0x0 */, int nOffsetFrame /* r1+0x4 */, int iPack /* r1+0x8 */, struct_image_c_89 * * ppImage /* r1+0xC */, int * piFrame /* r1+0x10 */) {
     // Local variables
     int bSkip; // r1+0x0
     struct_image_c_89 * pImage; // r4
@@ -708,27 +686,7 @@ int storyTickPath2(struct_story_c_16662 * pPath /* r29 */) {
 }
 
 // Range: 0x92468 -> 0x92758
-int storyDrawPath2(struct_story_c_16662 * pPath /* r24 */, int nDeltaX /* r25 */, int nDeltaY /* r26 */, float rDeltaScale /* f29 */, int * pnX /* r27 */, int * pnY /* r28 */, float * prScale /* r29 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r30 */) {
+int storyDrawPath2(struct_story_c_16662 * pPath /* r24 */, int nDeltaX /* r25 */, int nDeltaY /* r26 */, float rDeltaScale /* f29 */, int * pnX /* r27 */, int * pnY /* r28 */, float * prScale /* r29 */, union_pon_gc_c_173 * * ppGfx /* r30 */) {
     // Local variables
     int iPack; // r20
     struct_image_c_89 * pImage; // r1+0x34
@@ -765,7 +723,7 @@ static int storyTickPath3(struct_story_c_17969 * pPath /* r1+0x0 */, int * pnOff
 // Range: 0x92968 -> 0x92AC0
 static int storyLoadPath(struct_story_c_17987 * * ppPath /* r30 */, char * szName /* r4 */, void * ppHeap /* r31 */) {
     // Local variables
-    struct_bitmap_c_65 file; // r1+0x20
+    struct_bitmap_c_31 file; // r1+0x20
     unsigned int nHeader; // r1+0x18
     unsigned int nCount; // r1+0x14
 
@@ -801,27 +759,7 @@ static void storyMakeBeam(struct_story_c_18049 * * ppBeam /* r23 */, int nCount 
 }
 
 // Range: 0x93074 -> 0x933C8
-static void storyDrawBeam(struct_story_c_18049 * pBeam /* r31 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r14 */) {
+static void storyDrawBeam(struct_story_c_18049 * pBeam /* r31 */, union_pon_gc_c_173 * * ppGfx /* r14 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r17
     float rScale; // f1
@@ -878,10 +816,7 @@ static void storyMakeRays(void * ppHeap /* r1+0x8 */) {
 }
 
 // Range: 0x938C8 -> 0x93C70
-static void storyDrawRays(union_pon_gc_c_173 * * ppGfx /* r27 */, int bBack /* r1+0xC */, union {
-    long m[4][4]; // offset 0x0, size 0x40
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * pMtx0 /* r28 */, union_pon_gc_MemoryCard_c_1396 * pMtx1 /* r29 */) {
+static void storyDrawRays(union_pon_gc_c_173 * * ppGfx /* r27 */, int bBack /* r1+0xC */, union_pon_gc_MemoryCard_c_1396 * pMtx0 /* r28 */, union_pon_gc_MemoryCard_c_1396 * pMtx1 /* r29 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r30
     int iRay; // r22

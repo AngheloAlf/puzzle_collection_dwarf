@@ -320,11 +320,7 @@ void StretchAlphaTexTile(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int texW /
 }
 
 // Range: 0x83AC -> 0x84FC
-void RectAlphaTexTile(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union {
-    struct_drmario_tex_func_c_25209 v; // offset 0x0, size 0x10
-    struct_drmario_tex_func_c_25217 n; // offset 0x0, size 0x10
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * colorTex /* r1+0x18 */, int colorTexW /* r1+0x1C */, void * alphaTex /* r1+0x20 */, int alphaTexW /* r1+0x24 */, int lx /* r28 */, int ly /* r29 */, int lw /* r30 */, int lh /* r31 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
+void RectAlphaTexTile(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union_tex_func_c_1051 * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * colorTex /* r1+0x18 */, int colorTexW /* r1+0x1C */, void * alphaTex /* r1+0x20 */, int alphaTexW /* r1+0x24 */, int lx /* r28 */, int ly /* r29 */, int lw /* r30 */, int lh /* r31 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
     // Local variables
     struct SStretchTexTile st[1]; // r1+0x38
 }
@@ -380,11 +376,7 @@ void StretchTexTile8(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int texW /* r1
 }
 
 // Range: 0x8BC8 -> 0x8DA0
-void RectTexTile8(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union {
-    struct_drmario_tex_func_c_25209 v; // offset 0x0, size 0x10
-    struct_drmario_tex_func_c_25217 n; // offset 0x0, size 0x10
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * lut /* r1+0x18 */, void * tex /* r1+0x1C */, int lx /* r1+0x20 */, int ly /* r1+0x24 */, int lw /* r29 */, int lh /* r30 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
+void RectTexTile8(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union_tex_func_c_1051 * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * lut /* r1+0x18 */, void * tex /* r1+0x1C */, int lx /* r1+0x20 */, int ly /* r1+0x24 */, int lw /* r29 */, int lh /* r30 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
     // Local variables
     struct SStretchTexTile st[1]; // r1+0x38
     union_drmario_gc_c_202 * _g; // r1+0x8
@@ -433,11 +425,7 @@ void StretchTexTile4i(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int texW /* r
 }
 
 // Range: 0x9294 -> 0x9394
-void RectTexTile4i(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union {
-    struct_drmario_tex_func_c_25209 v; // offset 0x0, size 0x10
-    struct_drmario_tex_func_c_25217 n; // offset 0x0, size 0x10
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * tex /* r1+0x18 */, int lx /* r1+0x1C */, int ly /* r1+0x20 */, int lw /* r1+0x24 */, int lh /* r30 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
+void RectTexTile4i(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, union_tex_func_c_1051 * * vpp /* r1+0xC */, int texW /* r1+0x10 */, int texH /* r1+0x14 */, void * tex /* r1+0x18 */, int lx /* r1+0x1C */, int ly /* r1+0x20 */, int lw /* r1+0x24 */, int lh /* r30 */, float x /* r1+0x28 */, float y /* r1+0x2C */, float w /* r1+0x30 */, float h /* r1+0x34 */) {
     // Local variables
     struct SStretchTexTile st[1]; // r1+0x38
 }
@@ -449,44 +437,28 @@ void tiMappingAddr(struct_tex_func_c_1287 * tiArray /* r3 */, int count /* r4 */
 }
 
 // Range: 0x9404 -> 0x94B8
-void tiCopyTexBlock(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * ti /* r1+0xC */, int cached /* r1+0x10 */, int x /* r6 */, int y /* r10 */) {
+void tiCopyTexBlock(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * ti /* r1+0xC */, int cached /* r1+0x10 */, int x /* r6 */, int y /* r10 */) {
     // Local variables
     void * lut; // r7
     void * tex; // r5
 }
 
 // Range: 0x94B8 -> 0x9588
-void tiStretchTexBlock(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * ti /* r1+0xC */, int cached /* r1+0x10 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
+void tiStretchTexBlock(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * ti /* r1+0xC */, int cached /* r1+0x10 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
     // Local variables
     void * lut; // r6
     void * tex; // r7
 }
 
 // Range: 0x9588 -> 0x96A0
-void tiStretchTexTile(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * ti /* r1+0x14 */, int lx /* r30 */, int ly /* r31 */, int lw /* r10 */, int lh /* r12 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
+void tiStretchTexTile(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * ti /* r1+0x14 */, int lx /* r30 */, int ly /* r31 */, int lw /* r10 */, int lh /* r12 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
     // Local variables
     void * lut; // r6
     void * tex; // r11
 }
 
 // Range: 0x96A0 -> 0x97B0
-void tiStretchTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * ti /* r1+0x14 */, int count /* r1+0x1C */, int index /* r1+0x20 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
+void tiStretchTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * ti /* r1+0x14 */, int count /* r1+0x1C */, int index /* r1+0x20 */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
     // Local variables
     int height; // r5
     int offset; // r1+0x10
@@ -495,11 +467,7 @@ void tiStretchTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
 }
 
 // Range: 0x97B0 -> 0x98A0
-void tiStretchAlphaTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * tiC /* r1+0x1C */, struct_tex_func_c_1287 * tiA /* r1+0x20 */, int count /* r1+0x28 */, int index /* r1+0x2C */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
+void tiStretchAlphaTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * tiC /* r1+0x1C */, struct_tex_func_c_1287 * tiA /* r1+0x20 */, int count /* r1+0x28 */, int index /* r1+0x2C */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
     // Local variables
     int width; // r12
     int height; // r6

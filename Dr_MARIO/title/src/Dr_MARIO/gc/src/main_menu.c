@@ -89,18 +89,10 @@ static void menuItem_setColorDir(struct SMenuItem * st /* r1+0x0 */, int dir /* 
 static @enum$110dm_title_main_c menuItem_outOfScreen(struct SMenuItem * st /* r1+0x8 */, int width /* r1+0xC */, int height /* r1+0x10 */) {}
 
 // Range: 0x2E838 -> 0x2EB70
-static int menuItem_drawTex(struct SMenuItem * st /* r7 */, union_drmario_gc_c_202 * * gpp /* r4 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * tex /* r5 */, int cached /* r6 */) {}
+static int menuItem_drawTex(struct SMenuItem * st /* r7 */, union_drmario_gc_c_202 * * gpp /* r4 */, struct_tex_func_c_1287 * tex /* r5 */, int cached /* r6 */) {}
 
 // Range: 0x2EB70 -> 0x2EF5C
-static int menuItem_drawAlphaTex(struct SMenuItem * st /* r11 */, union_drmario_gc_c_202 * * gpp /* r4 */, struct {
-    // total size: 0x8
-    void * addr; // offset 0x0, size 0x4
-    unsigned short * size; // offset 0x4, size 0x4
-} * texC /* r9 */, struct_tex_func_c_1287 * texA /* r6 */, int cached /* r1+0x28 */) {
+static int menuItem_drawAlphaTex(struct SMenuItem * st /* r11 */, union_drmario_gc_c_202 * * gpp /* r4 */, struct_tex_func_c_1287 * texC /* r9 */, struct_tex_func_c_1287 * texA /* r6 */, int cached /* r1+0x28 */) {
     // Local variables
     int width; // r10
     int height; // r5
@@ -171,27 +163,7 @@ static void menuTitle_setTitle(struct_main_menu_c_1356 * st /* r1+0x0 */, @enum$
 }
 
 // Range: 0x2F02C -> 0x2F310
-static void menuTitle_draw(struct_main_menu_c_1356 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r17 */) {
+static void menuTitle_draw(struct_main_menu_c_1356 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r17 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_tex_func_c_1287 * texC; // r19
@@ -225,27 +197,7 @@ static void menuCursor_update(struct_main_menu_c_2249 * st /* r30 */, struct SMe
 
 static int _pnts$1106[9][8]; // size: 0x120, address: 0x2CF0
 // Range: 0x2F6BC -> 0x302F4
-static void menuCursor_draw1(struct_main_menu_c_2249 * * stAry /* r1+0x6C */, int count /* r1+0x70 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x74 */) {
+static void menuCursor_draw1(struct_main_menu_c_2249 * * stAry /* r1+0x6C */, int count /* r1+0x70 */, union_drmario_gc_c_202 * * gpp /* r1+0x74 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r31
     struct_main_menu_c_2249 * st; // r27
@@ -293,27 +245,7 @@ static void menuCursor_draw1(struct_main_menu_c_2249 * * stAry /* r1+0x6C */, in
 
 static int _type$1345[4][4]; // size: 0x40, address: 0x2E18
 // Range: 0x302F4 -> 0x306A0
-static void menuCursor_draw2(struct_main_menu_c_2249 * * stAry /* r14 */, int count /* r18 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x2C */) {
+static void menuCursor_draw2(struct_main_menu_c_2249 * * stAry /* r14 */, int count /* r18 */, union_drmario_gc_c_202 * * gpp /* r1+0x2C */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_main_menu_c_2249 * st; // r1+0x8
@@ -332,27 +264,7 @@ static void menuCursor_draw2(struct_main_menu_c_2249 * * stAry /* r14 */, int co
 
 static unsigned short cap_pos$1442[22][13]; // size: 0x23C, address: 0x2E58
 // Range: 0x306A0 -> 0x30BFC
-static void menuBottle_draw(struct_main_menu_c_5973 * st /* r30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */) {
+static void menuBottle_draw(struct_main_menu_c_5973 * st /* r30 */, union_drmario_gc_c_202 * * gpp /* r29 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r20
     struct_tex_func_c_1287 * tex; // r1+0x8
@@ -441,27 +353,7 @@ static @enum$110dm_title_main_c menuYN_input(struct_main_menu_c_10481 * st /* r3
 
 static char * _yn$1767[2]; // size: 0x8, address: 0x21D64
 // Range: 0x31118 -> 0x31350
-static void menuYN_draw(struct_main_menu_c_10481 * st /* r29 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuYN_draw(struct_main_menu_c_10481 * st /* r29 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x14
     struct SMenuItem * item; // r31
@@ -488,27 +380,7 @@ static void menuMes_init(struct_main_menu_c_11514 * st /* r24 */, void * global 
 static int _tex$1865[4][2]; // size: 0x20, address: 0x30EC
 static int _row$1866[4]; // size: 0x10, address: 0x310C
 // Range: 0x314E4 -> 0x31810
-static void menuSpeedAsk_draw(struct_main_menu_c_11529 * * stAry /* r1+0x2C */, int count /* r1+0x30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x34 */) {
+static void menuSpeedAsk_draw(struct_main_menu_c_11529 * * stAry /* r1+0x2C */, int count /* r1+0x30 */, union_drmario_gc_c_202 * * gpp /* r1+0x34 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_main_menu_c_11529 * st; // r1+0x8
@@ -557,27 +429,7 @@ static void menuSpeedItem_update(struct_main_menu_c_12102 * st /* r26 */, struct
 }
 
 // Range: 0x31E40 -> 0x32724
-static void menuSpeedItem_draw1(struct_main_menu_c_12102 * * stAry /* r16 */, int count /* r17 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r15 */) {
+static void menuSpeedItem_draw1(struct_main_menu_c_12102 * * stAry /* r16 */, int count /* r17 */, union_drmario_gc_c_202 * * gpp /* r15 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x50
     struct_main_menu_c_12102 * st; // r31
@@ -631,27 +483,7 @@ static void menuMusicItem_update(struct_main_menu_c_12955 * st /* r27 */, struct
 }
 
 // Range: 0x32DF4 -> 0x330E8
-static void menuMusicItem_draw1(struct_main_menu_c_12955 * * stAry /* r18 */, int count /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r17 */) {
+static void menuMusicItem_draw1(struct_main_menu_c_12955 * * stAry /* r18 */, int count /* r28 */, union_drmario_gc_c_202 * * gpp /* r17 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_main_menu_c_12955 * st; // r5
@@ -667,27 +499,7 @@ static void menuMusicItem_draw1(struct_main_menu_c_12955 * * stAry /* r18 */, in
 }
 
 // Range: 0x330E8 -> 0x33250
-static void menuMusicItem_draw2(struct_main_menu_c_12955 * * stAry /* r28 */, int count /* r29 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuMusicItem_draw2(struct_main_menu_c_12955 * * stAry /* r28 */, int count /* r29 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x1C
     void * list; // r31
@@ -705,27 +517,7 @@ static void menuNumber_update(struct_main_menu_c_14031 * st /* r30 */, struct SM
 static int _tbl$2516[10]; // size: 0x28, address: 0x3168
 static int _step$2517[2]; // size: 0x8, address: 0x3190
 // Range: 0x333D0 -> 0x338D0
-static void menuNumber_draw(struct_main_menu_c_14031 * * stAry /* r1+0x2C */, int count /* r1+0x30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x34 */) {
+static void menuNumber_draw(struct_main_menu_c_14031 * * stAry /* r1+0x2C */, int count /* r1+0x30 */, union_drmario_gc_c_202 * * gpp /* r1+0x34 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_main_menu_c_14031 * st; // r29
@@ -749,27 +541,7 @@ static void menuNumber_draw(struct_main_menu_c_14031 * * stAry /* r1+0x2C */, in
 }
 
 // Range: 0x338D0 -> 0x33FB0
-static void menuComLvPanel_draw(struct_main_menu_c_14606 * * stAry /* r1+0x40 */, int count /* r1+0x44 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x48 */) {
+static void menuComLvPanel_draw(struct_main_menu_c_14606 * * stAry /* r1+0x40 */, int count /* r1+0x44 */, union_drmario_gc_c_202 * * gpp /* r1+0x48 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x3C
     struct_main_menu_c_14606 * st; // r25
@@ -817,27 +589,7 @@ static void menuCont_init(struct_main_menu_c_15821 * st /* r31 */, void * global
 static int _line$2914[1]; // size: 0x4, address: 0x31E4
 static int _desc$2915[2]; // size: 0x8, address: 0x31E8
 // Range: 0x34318 -> 0x34F68
-static void menuCont_draw(struct_main_menu_c_15821 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuCont_draw(struct_main_menu_c_15821 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x74
     struct SMenuItem * item; // r20
@@ -874,27 +626,7 @@ static @enum$110dm_title_main_c menuMainPanel_input(struct_main_menu_c_17099 * s
 
 static int _panel$3220[5]; // size: 0x14, address: 0x31F0
 // Range: 0x35138 -> 0x35650
-static void menuMainPanel_draw(struct_main_menu_c_17099 * st /* r30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r31 */) {
+static void menuMainPanel_draw(struct_main_menu_c_17099 * st /* r30 */, union_drmario_gc_c_202 * * gpp /* r31 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x3C
     struct_tex_func_c_1287 * texC; // r20
@@ -955,27 +687,7 @@ static void menuNameSelPanel_update(struct_main_menu_c_17729 * st /* r28 */, str
 static int _texEndOrGuest$3608[2]; // size: 0x8, address: 0x3204
 struct_dm_game_main_c_8121 evs_mem_data[9]; // size: 0x750, address: 0x549C0
 // Range: 0x36108 -> 0x36B5C
-static void menuNameSelPanel_draw(struct_main_menu_c_17729 * st /* r22 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x50 */) {
+static void menuNameSelPanel_draw(struct_main_menu_c_17729 * st /* r22 */, union_drmario_gc_c_202 * * gpp /* r1+0x50 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x4C
     struct SMenuItem * item; // r31
@@ -1018,27 +730,7 @@ static @enum$110dm_title_main_c menuNameOpPanel_input(struct_main_menu_c_19237 *
 
 static int _panel$3859[2][2]; // size: 0x10, address: 0x3214
 // Range: 0x36D10 -> 0x37568
-static void menuNameOpPanel_draw(struct_main_menu_c_19237 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuNameOpPanel_draw(struct_main_menu_c_19237 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x50
     struct SMenuItem * item; // r17
@@ -1082,27 +774,7 @@ static @enum$110dm_title_main_c menuSndSelPanel_input(struct_main_menu_c_20387 *
 
 static int _panel$4108[4]; // size: 0x10, address: 0x32A4
 // Range: 0x37828 -> 0x38250
-static void menuSndSelPanel_draw(struct_main_menu_c_20387 * st /* r30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */) {
+static void menuSndSelPanel_draw(struct_main_menu_c_20387 * st /* r30 */, union_drmario_gc_c_202 * * gpp /* r29 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x70
     struct SMenuItem * item; // r31
@@ -1170,64 +842,10 @@ static void menuPlay2Panel_init(struct_main_menu_c_21192 * st /* r23 */, void * 
 }
 
 // Range: 0x386D4 -> 0x38724
-static void menuPlay2Panel_copyConfig(struct_main_menu_c_21192 * st /* r1+0x0 */, struct {
-    // total size: 0x1920
-    void * global; // offset 0x0, size 0x4
-    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
-    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
-    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
-    int size; // offset 0x10, size 0x4
-    int playerCount; // offset 0x14, size 0x4
-    int cpuCount; // offset 0x18, size 0x4
-    int playerNo; // offset 0x1C, size 0x4
-    int charNo; // offset 0x20, size 0x4
-    int depth; // offset 0x24, size 0x4
-    int flow; // offset 0x28, size 0x4
-    void * animeAddr; // offset 0x2C, size 0x4
-    struct_main_menu_c_21372 flags; // offset 0x30, size 0x4
-    struct SMenuItem miBase[1]; // offset 0x34, size 0x90
-    struct SMenuItem miPlayer[1]; // offset 0xC4, size 0x90
-    struct SMenuItem miPlayerNo[1]; // offset 0x154, size 0x90
-    struct_main_menu_c_14031 lvNum[1]; // offset 0x1E4, size 0xAC
-    struct SMenuLvGauge lvGauge[1]; // offset 0x290, size 0x300
-    struct_main_menu_c_11529 speedAsk[1]; // offset 0x590, size 0x9C
-    struct_main_menu_c_12102 speedItem[1]; // offset 0x62C, size 0x664
-    struct SAnimeState animeState[1]; // offset 0xC90, size 0x40
-    struct SMenuItem miOk[1]; // offset 0xCD0, size 0x90
-    struct_main_menu_c_2249 cursor[2]; // offset 0xD60, size 0x4C0
-    struct_main_menu_c_11529 glvAsk[1]; // offset 0x1220, size 0x9C
-    struct_main_menu_c_12102 glvItem[1]; // offset 0x12BC, size 0x664
-} * from /* r1+0x4 */) {}
+static void menuPlay2Panel_copyConfig(struct_main_menu_c_21192 * st /* r1+0x0 */, struct_main_menu_c_21192 * from /* r1+0x4 */) {}
 
 // Range: 0x38724 -> 0x38804
-static void menuPlay2Panel_copyCursor(struct_main_menu_c_21192 * st /* r1+0x0 */, struct {
-    // total size: 0x1920
-    void * global; // offset 0x0, size 0x4
-    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
-    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
-    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
-    int size; // offset 0x10, size 0x4
-    int playerCount; // offset 0x14, size 0x4
-    int cpuCount; // offset 0x18, size 0x4
-    int playerNo; // offset 0x1C, size 0x4
-    int charNo; // offset 0x20, size 0x4
-    int depth; // offset 0x24, size 0x4
-    int flow; // offset 0x28, size 0x4
-    void * animeAddr; // offset 0x2C, size 0x4
-    struct_main_menu_c_21372 flags; // offset 0x30, size 0x4
-    struct SMenuItem miBase[1]; // offset 0x34, size 0x90
-    struct SMenuItem miPlayer[1]; // offset 0xC4, size 0x90
-    struct SMenuItem miPlayerNo[1]; // offset 0x154, size 0x90
-    struct_main_menu_c_14031 lvNum[1]; // offset 0x1E4, size 0xAC
-    struct SMenuLvGauge lvGauge[1]; // offset 0x290, size 0x300
-    struct_main_menu_c_11529 speedAsk[1]; // offset 0x590, size 0x9C
-    struct_main_menu_c_12102 speedItem[1]; // offset 0x62C, size 0x664
-    struct SAnimeState animeState[1]; // offset 0xC90, size 0x40
-    struct SMenuItem miOk[1]; // offset 0xCD0, size 0x90
-    struct_main_menu_c_2249 cursor[2]; // offset 0xD60, size 0x4C0
-    struct_main_menu_c_11529 glvAsk[1]; // offset 0x1220, size 0x9C
-    struct_main_menu_c_12102 glvItem[1]; // offset 0x12BC, size 0x664
-} * from /* r1+0x4 */) {
+static void menuPlay2Panel_copyCursor(struct_main_menu_c_21192 * st /* r1+0x0 */, struct_main_menu_c_21192 * from /* r1+0x4 */) {
     // Local variables
     int i; // r1+0x0
 }
@@ -1256,27 +874,7 @@ static int _type$4602[4][4]; // size: 0x40, address: 0x33C4
 static int _texPanelP4$4617[2]; // size: 0x8, address: 0x3404
 static int _texPanelP2$4618[2]; // size: 0x8, address: 0x340C
 // Range: 0x39094 -> 0x3A0F8
-static void menuPlay2Panel_draw(struct_main_menu_c_21192 * * stAry /* r14 */, int count /* r24 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0xCC */) {
+static void menuPlay2Panel_draw(struct_main_menu_c_21192 * * stAry /* r14 */, int count /* r24 */, union_drmario_gc_c_202 * * gpp /* r1+0xCC */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0xC8
     struct_main_menu_c_21192 * st; // r31
@@ -1332,27 +930,7 @@ static void menuPlay2PanelSub_update(struct_main_menu_c_23318 * st /* r30 */, st
 }
 
 // Range: 0x3A940 -> 0x3B358
-static void menuPlay2PanelSub_draw(struct_main_menu_c_23318 * st /* r30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r31 */) {
+static void menuPlay2PanelSub_draw(struct_main_menu_c_23318 * st /* r30 */, union_drmario_gc_c_202 * * gpp /* r31 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x80
     struct SMenuItem * item; // r29
@@ -1571,27 +1149,7 @@ static void menuMain_update(struct_main_menu_c_24930 * st /* r31 */) {
 
 static int _pat$6137[6]; // size: 0x18, address: 0x3698
 // Range: 0x3DBB8 -> 0x3E894
-static void menuMain_drawKaSaMaRu(struct_main_menu_c_24930 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r15 */) {
+static void menuMain_drawKaSaMaRu(struct_main_menu_c_24930 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r15 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0xB4
     union_main_story_c_778 * mp; // r30
@@ -1626,27 +1184,7 @@ static void menuMain_drawKaSaMaRu(struct_main_menu_c_24930 * st /* r31 */, union
 }
 
 // Range: 0x3E894 -> 0x3ED5C
-static void menuMain_draw(struct_main_menu_c_24930 * st /* r29 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuMain_draw(struct_main_menu_c_24930 * st /* r29 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x34
     struct_tex_func_c_1287 * texC; // r31
@@ -1729,27 +1267,7 @@ static int _cover$6929[2][2]; // size: 0x10, address: 0x37C4
 static int _filter$6930[2][2][9]; // size: 0x90, address: 0x37D4
 static int _wchar$6931[2]; // size: 0x8, address: 0x3864
 // Range: 0x401F8 -> 0x41658
-static void menuStory_draw(struct_main_menu_c_29769 * st /* r30 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0xC8 */) {
+static void menuStory_draw(struct_main_menu_c_29769 * st /* r30 */, union_drmario_gc_c_202 * * gpp /* r1+0xC8 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0xC4
     struct_tex_func_c_1287 * texC; // r21
@@ -1841,27 +1359,7 @@ static void menuLvSel_update(struct_main_menu_c_33175 * st /* r31 */) {
 }
 
 // Range: 0x4240C -> 0x43274
-static void menuLvSel_draw(struct_main_menu_c_33175 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuLvSel_draw(struct_main_menu_c_33175 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0xE4
     struct_tex_func_c_1287 * texC; // r27
@@ -1965,27 +1463,7 @@ static void menuChSel_update(struct_main_menu_c_34547 * st /* r27 */) {
 static int _tex$8297[2]; // size: 0x8, address: 0x3920
 static int _pos$8298[2][2]; // size: 0x10, address: 0x3928
 // Range: 0x44494 -> 0x44F60
-static void menuChSel_draw(struct_main_menu_c_34547 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r19 */) {
+static void menuChSel_draw(struct_main_menu_c_34547 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r19 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x9C
     struct SMenuItem * item; // r27
@@ -2091,27 +1569,7 @@ static void menuPlay2_update(struct_main_menu_c_36447 * st /* r30 */) {
 }
 
 // Range: 0x46084 -> 0x463D8
-static void menuPlay2_draw(struct_main_menu_c_36447 * st /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */) {
+static void menuPlay2_draw(struct_main_menu_c_36447 * st /* r28 */, union_drmario_gc_c_202 * * gpp /* r29 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x24
     struct_tex_func_c_1287 * texC; // r31
@@ -2175,27 +1633,7 @@ static void menuNmEnt_update(struct_main_menu_c_38997 * st /* r31 */) {
 }
 
 // Range: 0x470CC -> 0x47AC8
-static void menuNmEnt_draw(struct_main_menu_c_38997 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuNmEnt_draw(struct_main_menu_c_38997 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x50
     struct_tex_func_c_1287 * texC; // r26
@@ -2223,27 +1661,7 @@ static void menuNmEnt_draw(struct_main_menu_c_38997 * st /* r31 */, union {
 
 union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x47AC8 -> 0x47D88
-static void menuRankBase_draw(struct_main_menu_c_41104 * * stAry /* r17 */, int count /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r16 */) {
+static void menuRankBase_draw(struct_main_menu_c_41104 * * stAry /* r17 */, int count /* r28 */, union_drmario_gc_c_202 * * gpp /* r16 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x28
     struct_main_menu_c_41104 * st; // r5
@@ -2261,27 +1679,7 @@ static void menuRankBase_draw(struct_main_menu_c_41104 * * stAry /* r17 */, int 
 
 union_drmario_gc_c_202 alpha_texture_init_dl[]; // size: 0x0, address: 0x41A0
 // Range: 0x47D88 -> 0x48358
-static void menuRankNum_draw(struct_main_menu_c_41807 * * stAry /* r1+0x40 */, int count /* r1+0x44 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x48 */) {
+static void menuRankNum_draw(struct_main_menu_c_41807 * * stAry /* r1+0x40 */, int count /* r1+0x44 */, union_drmario_gc_c_202 * * gpp /* r1+0x48 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x3C
     struct_main_menu_c_41807 * st; // r27
@@ -2328,27 +1726,7 @@ static int _posX_2$9714[6]; // size: 0x18, address: 0x39D4
 static int _posX_4$9715[6]; // size: 0x18, address: 0x39EC
 static int * _posX_tbl$9716[7]; // size: 0x1C, address: 0x22ECC
 // Range: 0x4891C -> 0x48CC4
-static void menuRankFig_draw(struct_main_menu_c_42524 * * stAry /* r1+0x30 */, int count /* r1+0x34 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x38 */) {
+static void menuRankFig_draw(struct_main_menu_c_42524 * * stAry /* r1+0x30 */, int count /* r1+0x34 */, union_drmario_gc_c_202 * * gpp /* r1+0x38 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x2C
     struct_main_menu_c_42524 * st; // r24
@@ -2377,27 +1755,7 @@ static void menuRankName_init(struct_main_menu_c_43099 * st /* r1+0x8 */, void *
 }
 
 // Range: 0x48DC8 -> 0x490B4
-static void menuRankName_draw(struct_main_menu_c_43099 * * stAry /* r16 */, int count /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r15 */) {
+static void menuRankName_draw(struct_main_menu_c_43099 * * stAry /* r16 */, int count /* r31 */, union_drmario_gc_c_202 * * gpp /* r15 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x2C
     struct_main_menu_c_43099 * st; // r1+0x8
@@ -2412,27 +1770,7 @@ static int _rows$9879[4]; // size: 0x10, address: 0x3A14
 static int _tex$9880[3]; // size: 0xC, address: 0x3A24
 static int _choice$9881[7]; // size: 0x1C, address: 0x3A30
 // Range: 0x490B4 -> 0x49788
-static void menuRankLabel_draw(struct_main_menu_c_43644 * * stAry /* r1+0x54 */, int count /* r1+0x58 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x5C */) {
+static void menuRankLabel_draw(struct_main_menu_c_43644 * * stAry /* r1+0x54 */, int count /* r1+0x58 */, union_drmario_gc_c_202 * * gpp /* r1+0x5C */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x50
     struct_main_menu_c_43644 * st; // r3
@@ -2453,27 +1791,7 @@ static void menuRankLabel_draw(struct_main_menu_c_43644 * * stAry /* r1+0x54 */,
 }
 
 // Range: 0x49788 -> 0x4984C
-static void menuRankHeader_draw(struct_main_menu_c_44191 * * stAry /* r29 */, int count /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r30 */) {
+static void menuRankHeader_draw(struct_main_menu_c_44191 * * stAry /* r29 */, int count /* r31 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x14
     struct_main_menu_c_44191 * st; // r1+0x8
@@ -2488,27 +1806,7 @@ static void menuRankHeader_draw(struct_main_menu_c_44191 * * stAry /* r29 */, in
 static void menuRankPanel_update(struct_main_menu_c_44706 * st /* r29 */, struct SMenuItem * parent /* r30 */) {}
 
 // Range: 0x499B4 -> 0x49E34
-static void menuRankPanel_draw(struct_main_menu_c_44706 * * stAry /* r27 */, int count /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */) {
+static void menuRankPanel_draw(struct_main_menu_c_44706 * * stAry /* r27 */, int count /* r28 */, union_drmario_gc_c_202 * * gpp /* r29 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x74
     struct_main_menu_c_44706 * st; // r31
@@ -2660,27 +1958,7 @@ static void menuRank_update(struct_main_menu_c_45591 * st /* r31 */) {
 
 static int _dir$10660[2]; // size: 0x8, address: 0x3B64
 // Range: 0x4B28C -> 0x4BAEC
-static void menuRank_draw(struct_main_menu_c_45591 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r16 */) {
+static void menuRank_draw(struct_main_menu_c_45591 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r16 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x8C
     struct SMenuItem * item; // r25

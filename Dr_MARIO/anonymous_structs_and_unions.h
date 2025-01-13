@@ -452,21 +452,6 @@ typedef struct /* struct_tex_func_c_1287 */ {
     void * addr; // offset 0x0, size 0x4
     unsigned short * size; // offset 0x4, size 0x4
 } struct_tex_func_c_1287;
-typedef struct /* struct_drmario_tex_func_c_25209 */ {
-    // total size: 0x10
-    signed short ob[3]; // offset 0x0, size 0x6
-    unsigned short flag; // offset 0x6, size 0x2
-    signed short tc[2]; // offset 0x8, size 0x4
-    unsigned char cn[4]; // offset 0xC, size 0x4
-} struct_drmario_tex_func_c_25209;
-typedef struct /* struct_drmario_tex_func_c_25217 */ {
-    // total size: 0x10
-    signed short ob[3]; // offset 0x0, size 0x6
-    unsigned short flag; // offset 0x6, size 0x2
-    signed short tc[2]; // offset 0x8, size 0x4
-    signed char n[3]; // offset 0xC, size 0x3
-    unsigned char a; // offset 0xF, size 0x1
-} struct_drmario_tex_func_c_25217;
 typedef struct /* struct_unzip_c_179 */ {
     // total size: 0x8
     unsigned long next_addr; // offset 0x0, size 0x4
@@ -524,7 +509,7 @@ typedef struct /* struct_lws_c_8 */ {
     // total size: 0x40
     long m[4][4]; // offset 0x0, size 0x40
 } struct_lws_c_8;
-typedef struct /* struct_lws_c_365 */ {
+typedef struct /* struct_lws_c_728 */ {
     // total size: 0x18
     union {
         struct {
@@ -701,8 +686,8 @@ typedef struct /* struct_lws_c_365 */ {
     signed short px; // offset 0x10, size 0x2
     signed short py; // offset 0x12, size 0x2
     signed short pz; // offset 0x14, size 0x2
-} struct_lws_c_365;
-typedef struct /* struct_lws_c_379 */ {
+} struct_lws_c_728;
+typedef struct /* struct_lws_c_742 */ {
     // total size: 0x1C
     int key_no; // offset 0x0, size 0x4
     int next; // offset 0x4, size 0x4
@@ -715,7 +700,7 @@ typedef struct /* struct_lws_c_379 */ {
     signed short sx; // offset 0x14, size 0x2
     signed short sy; // offset 0x16, size 0x2
     signed short sz; // offset 0x18, size 0x2
-} struct_lws_c_379;
+} struct_lws_c_742;
 typedef struct /* struct_dm_game_main_c_176 */ {
     // total size: 0x3C4
     unsigned long game_score; // offset 0x0, size 0x4
@@ -856,14 +841,14 @@ typedef struct /* struct_dm_game_main_c_176 */ {
         unsigned char cn; // offset 0x5, size 0x1
     } cap; // offset 0x3BC, size 0x6
 } struct_dm_game_main_c_176;
-typedef struct /* struct_dm_game_main_c_502 */ {
+typedef struct /* struct_dm_game_main_c_487 */ {
     // total size: 0xA
     signed char pos_m_x; // offset 0x0, size 0x1
     signed char pos_m_y; // offset 0x1, size 0x1
     signed char capsel_m_g; // offset 0x2, size 0x1
     signed char capsel_m_p; // offset 0x3, size 0x1
     signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} struct_dm_game_main_c_502;
+} struct_dm_game_main_c_487;
 typedef struct /* struct_dm_game_main_c_690 */ {
     // total size: 0xC
     signed char pos_x[2]; // offset 0x0, size 0x2
@@ -872,67 +857,6 @@ typedef struct /* struct_dm_game_main_c_690 */ {
     signed char capsel_p[2]; // offset 0x6, size 0x2
     signed char capsel_flg[4]; // offset 0x8, size 0x4
 } struct_dm_game_main_c_690;
-typedef struct /* struct_dm_game_main_c_828 */ {
-    // total size: 0x108
-    struct {
-        // total size: 0x40
-        unsigned char ok; // offset 0x0, size 0x1
-        unsigned char tory; // offset 0x1, size 0x1
-        unsigned char x; // offset 0x2, size 0x1
-        unsigned char y; // offset 0x3, size 0x1
-        unsigned char rev; // offset 0x4, size 0x1
-        unsigned char ccnt; // offset 0x5, size 0x1
-        long pri; // offset 0x8, size 0x4
-        long dead; // offset 0xC, size 0x4
-        unsigned char hei[2][10]; // offset 0x10, size 0x14
-        unsigned char wid[2][10]; // offset 0x24, size 0x14
-        unsigned char elin[2]; // offset 0x38, size 0x2
-        unsigned char only[2]; // offset 0x3A, size 0x2
-        unsigned char wonly[2]; // offset 0x3C, size 0x2
-        unsigned char sub; // offset 0x3E, size 0x1
-        unsigned char rensa; // offset 0x3F, size 0x1
-    } aiFlagDecide; // offset 0x0, size 0x40
-    struct {
-        // total size: 0x2
-        unsigned char x; // offset 0x0, size 0x1
-        unsigned char y; // offset 0x1, size 0x1
-    } aiRootDecide[50]; // offset 0x40, size 0x64
-    unsigned char aiKeyCount; // offset 0xA4, size 0x1
-    unsigned char aiSpeedCnt; // offset 0xA5, size 0x1
-    unsigned char aiKRFlag; // offset 0xA6, size 0x1
-    unsigned char aiRollCnt; // offset 0xA7, size 0x1
-    unsigned char aiRollFinal; // offset 0xA8, size 0x1
-    unsigned char aiRollHabit; // offset 0xA9, size 0x1
-    unsigned char aiSpUpFlag; // offset 0xAA, size 0x1
-    unsigned char aiSpUpStart; // offset 0xAB, size 0x1
-    unsigned char aivl; // offset 0xAC, size 0x1
-    unsigned char aiok; // offset 0xAD, size 0x1
-    unsigned char aiRandFlag; // offset 0xAE, size 0x1
-    unsigned char aiEX; // offset 0xAF, size 0x1
-    unsigned char aiEY; // offset 0xB0, size 0x1
-    unsigned char aiOldRollCnt; // offset 0xB1, size 0x1
-    unsigned char aiEffectNo[16]; // offset 0xB2, size 0x10
-    signed short aiEffectParam[16]; // offset 0xC2, size 0x20
-    signed short aiEffectCount[16]; // offset 0xE2, size 0x20
-    unsigned char aiState; // offset 0x102, size 0x1
-    unsigned char aiSelSpeed; // offset 0x103, size 0x1
-    unsigned char aiRootP; // offset 0x104, size 0x1
-    unsigned short aiPriOfs; // offset 0x106, size 0x2
-} struct_dm_game_main_c_828;
-typedef struct /* struct_dm_game_main_c_837 */ {
-    // total size: 0x2
-    unsigned char st; // offset 0x0, size 0x1
-    unsigned char co; // offset 0x1, size 0x1
-} struct_dm_game_main_c_837;
-typedef struct /* struct_dm_game_main_c_846 */ {
-    // total size: 0x6
-    unsigned char mx; // offset 0x0, size 0x1
-    unsigned char my; // offset 0x1, size 0x1
-    unsigned char ca; // offset 0x2, size 0x1
-    unsigned char cb; // offset 0x3, size 0x1
-    unsigned char sp; // offset 0x4, size 0x1
-    unsigned char cn; // offset 0x5, size 0x1
-} struct_dm_game_main_c_846;
 typedef struct /* struct_dm_game_main_c_1653 */ {
     // total size: 0x3
     signed char virus_type; // offset 0x0, size 0x1
@@ -1763,144 +1687,6 @@ typedef struct /* struct_dm_game_main_c_12898 */ {
     signed short limit; // offset 0x0, size 0x2
     signed short blink; // offset 0x2, size 0x2
 } struct_dm_game_main_c_12898;
-typedef struct /* struct_dm_game_main_c_16552 */ {
-    // total size: 0x8
-    unsigned int w0; // offset 0x0, size 0x4
-    unsigned int w1; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16552;
-typedef struct /* struct_dm_game_main_c_16559 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int par : 8; // offset 0x0, size 0x4
-    unsigned int len : 16; // offset 0x0, size 0x4
-    unsigned int addr; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16559;
-typedef struct /* struct_dm_game_main_c_16569 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad : 24; // offset 0x0, size 0x4
-    struct {
-        // total size: 0x4
-        unsigned char flag; // offset 0x0, size 0x1
-        unsigned char v[3]; // offset 0x1, size 0x3
-    } tri; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16569;
-typedef struct /* struct_dm_game_main_c_16579 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad : 24; // offset 0x0, size 0x4
-    struct {
-        // total size: 0x4
-        unsigned char flag; // offset 0x0, size 0x1
-        unsigned char v[3]; // offset 0x1, size 0x3
-    } line; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16579;
-typedef struct /* struct_dm_game_main_c_16586 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad1 : 24; // offset 0x0, size 0x4
-    int pad2 : 24; // offset 0x4, size 0x4
-    unsigned int param : 8; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16586;
-typedef struct /* struct_dm_game_main_c_16595 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad0 : 8; // offset 0x0, size 0x4
-    int mw_index : 8; // offset 0x0, size 0x4
-    int number : 8; // offset 0x0, size 0x4
-    int pad1 : 8; // offset 0x4, size 0x4
-    int base : 24; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16595;
-typedef struct /* struct_dm_game_main_c_16603 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad0 : 8; // offset 0x0, size 0x4
-    int sft : 8; // offset 0x0, size 0x4
-    int len : 8; // offset 0x0, size 0x4
-    unsigned int data : 32; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16603;
-typedef struct /* struct_dm_game_main_c_16620 */ {
-    // total size: 0x8
-    unsigned char cmd; // offset 0x0, size 0x1
-    unsigned char lodscale; // offset 0x1, size 0x1
-    unsigned char tile; // offset 0x2, size 0x1
-    unsigned char on; // offset 0x3, size 0x1
-    unsigned short s; // offset 0x4, size 0x2
-    unsigned short t; // offset 0x6, size 0x2
-} struct_dm_game_main_c_16620;
-typedef struct /* struct_dm_game_main_c_16627 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad1 : 24; // offset 0x0, size 0x4
-    signed short pad2; // offset 0x4, size 0x2
-    signed short scale; // offset 0x6, size 0x2
-} struct_dm_game_main_c_16627;
-typedef struct /* struct_dm_game_main_c_16636 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int fmt : 3; // offset 0x0, size 0x4
-    unsigned int siz : 2; // offset 0x0, size 0x4
-    unsigned int pad : 7; // offset 0x0, size 0x4
-    unsigned int wd : 12; // offset 0x0, size 0x4
-    unsigned int dram; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16636;
-typedef struct /* struct_dm_game_main_c_16642 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int muxs0 : 24; // offset 0x0, size 0x4
-    unsigned int muxs1 : 32; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16642;
-typedef struct /* struct_dm_game_main_c_16650 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned char pad; // offset 0x1, size 0x1
-    unsigned char prim_min_level; // offset 0x2, size 0x1
-    unsigned char prim_level; // offset 0x3, size 0x1
-    unsigned long color; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16650;
-typedef struct /* struct_dm_game_main_c_16663 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int x0 : 10; // offset 0x0, size 0x4
-    int x0frac : 2; // offset 0x0, size 0x4
-    int y0 : 10; // offset 0x0, size 0x4
-    int y0frac : 2; // offset 0x0, size 0x4
-    unsigned int pad : 8; // offset 0x4, size 0x4
-    int x1 : 10; // offset 0x4, size 0x4
-    int x1frac : 2; // offset 0x4, size 0x4
-    int y1 : 10; // offset 0x4, size 0x4
-    int y1frac : 2; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16663;
-typedef struct /* struct_dm_game_main_c_16683 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int fmt : 3; // offset 0x0, size 0x4
-    unsigned int siz : 2; // offset 0x0, size 0x4
-    unsigned int pad0 : 1; // offset 0x0, size 0x4
-    unsigned int line : 9; // offset 0x0, size 0x4
-    unsigned int tmem : 9; // offset 0x0, size 0x4
-    unsigned int pad1 : 5; // offset 0x4, size 0x4
-    unsigned int tile : 3; // offset 0x4, size 0x4
-    unsigned int palette : 4; // offset 0x4, size 0x4
-    unsigned int ct : 1; // offset 0x4, size 0x4
-    unsigned int mt : 1; // offset 0x4, size 0x4
-    unsigned int maskt : 4; // offset 0x4, size 0x4
-    unsigned int shiftt : 4; // offset 0x4, size 0x4
-    unsigned int cs : 1; // offset 0x4, size 0x4
-    unsigned int ms : 1; // offset 0x4, size 0x4
-    unsigned int masks : 4; // offset 0x4, size 0x4
-    unsigned int shifts : 4; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16683;
-typedef struct /* struct_dm_game_main_c_16693 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int sl : 12; // offset 0x0, size 0x4
-    unsigned int tl : 12; // offset 0x0, size 0x4
-    int pad : 5; // offset 0x4, size 0x4
-    unsigned int tile : 3; // offset 0x4, size 0x4
-    unsigned int sh : 12; // offset 0x4, size 0x4
-    unsigned int th : 12; // offset 0x4, size 0x4
-} struct_dm_game_main_c_16693;
 typedef struct /* struct_dm_game_main_c_17429 */ {
     // total size: 0x48
     int * xtbl; // offset 0x0, size 0x4
@@ -2592,11 +2378,6 @@ typedef struct /* struct_main_menu_c_21192 */ {
         } cursor[1]; // offset 0x404, size 0x260
     } glvItem[1]; // offset 0x12BC, size 0x664
 } struct_main_menu_c_21192;
-typedef struct /* struct_main_menu_c_21372 */ {
-    // total size: 0x4
-    unsigned int cpu : 1; // offset 0x0, size 0x4
-    unsigned int loaded : 1; // offset 0x0, size 0x4
-} struct_main_menu_c_21372;
 typedef struct /* struct_main_menu_c_23318 */ {
     // total size: 0x105C
     void * global; // offset 0x0, size 0x4

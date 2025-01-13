@@ -39,7 +39,7 @@ signed char aiDebugP1; // size: 0x1, address: 0x23580
 struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
 static unsigned char capsGCnv$122[22]; // size: 0x16, address: 0x23584
 static unsigned char capsCCnv$123[6]; // size: 0x6, address: 0x2359C
-struct_dm_game_main_c_502 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
+struct_dm_game_main_c_487 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
 // Range: 0x4D71C -> 0x4D950
 void aifMakeBlkWork(struct_dm_game_main_c_176 * uupw /* r1+0x8 */) {
     // Local variables
@@ -234,24 +234,7 @@ int aifRensaCheckCore(struct_dm_game_main_c_176 * uupw /* r3 */, unsigned char m
 }
 
 // Range: 0x4F698 -> 0x4F764
-int aifRensaCheck(struct_dm_game_main_c_176 * uupw /* r3 */, struct {
-    // total size: 0x40
-    unsigned char ok; // offset 0x0, size 0x1
-    unsigned char tory; // offset 0x1, size 0x1
-    unsigned char x; // offset 0x2, size 0x1
-    unsigned char y; // offset 0x3, size 0x1
-    unsigned char rev; // offset 0x4, size 0x1
-    unsigned char ccnt; // offset 0x5, size 0x1
-    long pri; // offset 0x8, size 0x4
-    long dead; // offset 0xC, size 0x4
-    unsigned char hei[2][10]; // offset 0x10, size 0x14
-    unsigned char wid[2][10]; // offset 0x24, size 0x14
-    unsigned char elin[2]; // offset 0x38, size 0x2
-    unsigned char only[2]; // offset 0x3A, size 0x2
-    unsigned char wonly[2]; // offset 0x3C, size 0x2
-    unsigned char sub; // offset 0x3E, size 0x1
-    unsigned char rensa; // offset 0x3F, size 0x1
-} * af /* r4 */) {
+int aifRensaCheck(struct_dm_game_main_c_176 * uupw /* r3 */, struct_aiset_c_921 * af /* r4 */) {
     // Local variables
     struct_dm_game_main_c_176 * upw; // r3
     unsigned char x; // r5

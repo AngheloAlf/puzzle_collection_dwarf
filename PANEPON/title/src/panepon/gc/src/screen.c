@@ -77,13 +77,7 @@ static float garSlopePage[12]; // size: 0x30, address: 0xF4684
 static float garOffsetPage[12]; // size: 0x30, address: 0xF46B4
 static float garClipPage[48]; // size: 0xC0, address: 0xB6AC8
 // Range: 0x8373C -> 0x8459C
-static int screenGetTextData(struct_screen_c_2860 * pText /* r20 */, int iText /* r1+0xC */, struct {
-    // total size: 0x10
-    int nX; // offset 0x0, size 0x4
-    int nY; // offset 0x4, size 0x4
-    int nSizeX; // offset 0x8, size 0x4
-    int nSizeY; // offset 0xC, size 0x4
-} * pTile /* r21 */, struct_image_c_89 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
+static int screenGetTextData(struct_screen_c_2860 * pText /* r20 */, int iText /* r1+0xC */, struct_bitmap_c_320 * pTile /* r21 */, struct_image_c_89 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
     // Local variables
     struct_image_c_89 * pImage; // r1+0x8
     int nSpace; // r29
@@ -153,27 +147,7 @@ static int screenCenterText(struct_screen_c_2860 * pText /* r23 */) {
 }
 
 // Range: 0x848A8 -> 0x84EBC
-static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned int nRGBA /* r26 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r29 */) {
+static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned int nRGBA /* r26 */, union_pon_gc_c_173 * * ppGfx /* r29 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r31
     struct_bitmap_c_14 * pBitmap; // r1+0x8
@@ -214,27 +188,7 @@ static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned i
 }
 
 // Range: 0x84EBC -> 0x86014
-static void screenDrawText(struct_screen_c_2860 * pText /* r31 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x38 */, int iClip /* r1+0x3C */) {
+static void screenDrawText(struct_screen_c_2860 * pText /* r31 */, union_pon_gc_c_173 * * ppGfx /* r1+0x38 */, int iClip /* r1+0x3C */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x34
     int bLoad; // r1+0x40
@@ -569,27 +523,7 @@ static void screenDrawPageText(union_pon_gc_c_173 * * ppGfx /* r29 */) {
 }
 
 // Range: 0x886B8 -> 0x88A64
-static void screenDrawDialog(struct_screen_c_17942 * pDialog /* r1+0x0 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x4 */) {
+static void screenDrawDialog(struct_screen_c_17942 * pDialog /* r1+0x0 */, union_pon_gc_c_173 * * ppGfx /* r1+0x4 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r5
     int nColorR; // r9
@@ -722,33 +656,7 @@ static int screenWrapCursor(struct_screen_c_16999 * pArea /* r1+0x8 */, int iCur
 
 @enum$96screen_c;
 // Range: 0x899F0 -> 0x89E5C
-static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct {
-    // total size: 0x60
-    int nX; // offset 0x0, size 0x4
-    int nY; // offset 0x4, size 0x4
-    int iImage; // offset 0x8, size 0x4
-    struct_image_c_89 * pImage; // offset 0xC, size 0x4
-    int nTextData; // offset 0x10, size 0x4
-    int nListCount; // offset 0x14, size 0x4
-    int nOffsetCursor; // offset 0x18, size 0x4
-    int nTag; // offset 0x1C, size 0x4
-    int nTagText; // offset 0x20, size 0x4
-    int nSizeX; // offset 0x24, size 0x4
-    int nSizeY; // offset 0x28, size 0x4
-    unsigned int nType; // offset 0x2C, size 0x4
-    int nRows; // offset 0x30, size 0x4
-    int nColumns; // offset 0x34, size 0x4
-    unsigned char * acSlot; // offset 0x38, size 0x4
-    int iCursorX; // offset 0x3C, size 0x4
-    int iCursorY; // offset 0x40, size 0x4
-    int nCursorX; // offset 0x44, size 0x4
-    int nCursorY; // offset 0x48, size 0x4
-    int nCursorX0; // offset 0x4C, size 0x4
-    int nCursorY0; // offset 0x50, size 0x4
-    int nCursorX1; // offset 0x54, size 0x4
-    int nCursorY1; // offset 0x58, size 0x4
-    unsigned short * anCursorList; // offset 0x5C, size 0x4
-} * pArea /* r4 */, @enum$96screen_c eFind /* r31 */, int iPlayer /* r28 */) {
+static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct_screen_c_16999 * pArea /* r4 */, @enum$96screen_c eFind /* r31 */, int iPlayer /* r28 */) {
     // Local variables
     int nMaskPlayer; // r6
     int iArea; // r7
@@ -1059,8 +967,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -1071,21 +979,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
     union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
     union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
     union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
     union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
     union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
     union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
@@ -1673,7 +1581,7 @@ int screenFind(int * piScreen /* r1+0x0 */, char * szName /* r1+0x4 */) {
 // Range: 0x8DED4 -> 0x8EBE0
 int screenLoad(char * szNameFile /* r3 */, void * ppHeap /* r28 */) {
     // Local variables
-    struct_bitmap_c_65 file; // r1+0x28
+    struct_bitmap_c_31 file; // r1+0x28
     struct_screen_c_446 * pScreen; // r31
     int nScreenCount; // r1+0x24
     int nFlag; // r30

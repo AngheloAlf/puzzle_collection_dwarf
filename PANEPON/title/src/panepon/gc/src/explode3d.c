@@ -166,7 +166,7 @@ void Update3DExplode1(struct explode_t * explode /* r1+0x0 */, int distance /* r
     signed char * ptr; // r1+0x0
     int position; // r1+0x0
     int first; // r1+0x0
-    struct_pon_gc_tex_c_9927 * s; // r8
+    struct_animation_c_1169 * s; // r8
 
     // References
     // -> signed char Explosion1[20][12];
@@ -182,7 +182,7 @@ void Update3DExplode2(struct explode_t * explode /* r1+0x0 */, int distance /* r
     int position; // r1+0x0
     int first; // r1+0x0
     int max; // r9
-    struct_pon_gc_tex_c_9927 * s; // r5
+    struct_animation_c_1169 * s; // r5
 
     // References
     // -> signed char Explosion4[24][32];

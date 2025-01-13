@@ -37,7 +37,7 @@ void * gpHeapPeel; // size: 0x4, address: 0xF455C
 void peelSetup() {
     // Local variables
     int iTile; // r3
-    struct_bitmap_c_65 file; // r1+0x24
+    struct_bitmap_c_31 file; // r1+0x24
     char * pHeap; // r1+0x8
     int iScreen; // r1+0x8
     unsigned long * pScreen; // r3

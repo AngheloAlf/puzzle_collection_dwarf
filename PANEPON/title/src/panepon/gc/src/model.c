@@ -9,7 +9,7 @@ int modelLoad(struct_model_c_289 * * ppModel /* r1+0x154 */, char * szName /* r1
     // Local variables
     union_pon_gc_tex_c_1219 * pVtx; // r31
     union_pon_gc_c_173 * pGfx; // r31
-    struct_bitmap_c_65 file; // r1+0x144
+    struct_bitmap_c_31 file; // r1+0x144
     struct_model_c_674 * pMesh; // r1+0x8
     struct_image_c_89 * pImage; // r4
     int nTag; // r1+0x140
@@ -109,27 +109,7 @@ int modelLoad(struct_model_c_289 * * ppModel /* r1+0x154 */, char * szName /* r1
 }
 
 // Range: 0x7CBB4 -> 0x7CCE4
-int modelDrawMesh(struct_model_c_289 * pModel /* r1+0x0 */, int iMesh /* r1+0x4 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x8 */) {
+int modelDrawMesh(struct_model_c_289 * pModel /* r1+0x0 */, int iMesh /* r1+0x4 */, union_pon_gc_c_173 * * ppGfx /* r1+0x8 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r8
     struct_model_c_674 * pMesh; // r9

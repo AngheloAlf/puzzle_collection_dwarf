@@ -38,7 +38,7 @@ static int _posP2Mario[2]; // size: 0x8, address: 0x3CB8
 static int _posP4Mario[2][2]; // size: 0x10, address: 0x3CC0
 @enum$165dm_manual_main_c;
 struct_dm_manual_main_c_1294 * watchManual; // size: 0x4, address: 0x583A8
-struct_dm_game_main_c_502 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
+struct_dm_game_main_c_487 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
 // Range: 0x573F4 -> 0x5754C
 void dm_manual_attack_capsel_down() {
     // Local variables
@@ -138,14 +138,7 @@ unsigned char evs_seqnumb; // size: 0x1, address: 0x18F90
 struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
 @enum$100dm_game_main_c;
 // Range: 0x575AC -> 0x57AFC
-@enum$100dm_game_main_c dm_manual_main_cnt(struct_dm_game_main_c_176 * state /* r29 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r30 */, unsigned char player_no /* r1+0x10 */) {
+@enum$100dm_game_main_c dm_manual_main_cnt(struct_dm_game_main_c_176 * state /* r29 */, struct_dm_game_main_c_487 * map /* r30 */, unsigned char player_no /* r1+0x10 */) {
     // Local variables
     struct_dm_manual_main_c_1294 * st; // r31
     int i; // r28
@@ -162,14 +155,7 @@ unsigned short joygam[4]; // size: 0x8, address: 0x1CE40
 unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 unsigned char FallSpeed[]; // size: 0x0, address: 0x48A0
 // Range: 0x57AFC -> 0x57C40
-static void dm_manual_make_key(struct_dm_game_main_c_176 * state /* r27 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r28 */) {
+static void dm_manual_make_key(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_487 * map /* r28 */) {
     // Local variables
     struct_dm_manual_main_c_1294 * st; // r30
     struct_dm_game_main_c_690 * cap; // r29
@@ -195,7 +181,7 @@ static @enum$110dm_title_main_c dm_manual_1_main() {
     // Local variables
     struct_dm_manual_main_c_1294 * st; // r1+0x8
     struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_502 * map; // r28
+    struct_dm_game_main_c_487 * map; // r28
     struct_dm_game_main_c_690 * cap; // r27
     @enum$100dm_game_main_c ret; // r26
     int i; // r1+0x8
@@ -233,7 +219,7 @@ static @enum$110dm_title_main_c dm_manual_2_main() {
     int i; // r25
     @enum$110dm_title_main_c res; // r30
     struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_502 * map; // r28
+    struct_dm_game_main_c_487 * map; // r28
 
     // References
     // -> static unsigned char position_2_1[10][4];
@@ -264,7 +250,7 @@ static @enum$110dm_title_main_c dm_manual_3_main() {
     int i; // r25
     @enum$110dm_title_main_c res; // r31
     struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_502 * map; // r28
+    struct_dm_game_main_c_487 * map; // r28
 
     // References
     // -> static int _posP4Mario[2][2];
@@ -299,7 +285,7 @@ static @enum$110dm_title_main_c dm_manual_4_main() {
     // Local variables
     struct_dm_manual_main_c_1294 * st; // r1+0x8
     struct_dm_game_main_c_176 * state; // r30
-    struct_dm_game_main_c_502 * map; // r29
+    struct_dm_game_main_c_487 * map; // r29
     int i; // r1+0x8
     int j; // r1+0x8
     @enum$110dm_title_main_c res; // r28
@@ -382,11 +368,7 @@ static void disp_cont() {
 @enum$98dm_title_main_c;
 @enum$98dm_title_main_c main_old; // size: 0x4, address: 0x18F88
 // Range: 0x5A1FC -> 0x5A698
-static void dm_manual_draw_fg(union_main_story_c_778 * * mpp /* r30 */, union {
-    struct_drmario_tex_func_c_25209 v; // offset 0x0, size 0x10
-    struct_drmario_tex_func_c_25217 n; // offset 0x0, size 0x10
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * vpp /* r29 */) {
+static void dm_manual_draw_fg(union_main_story_c_778 * * mpp /* r30 */, union_tex_func_c_1051 * * vpp /* r29 */) {
     // Local variables
     struct_dm_manual_main_c_1294 * st; // r31
     struct_tex_func_c_1287 * texC; // r4

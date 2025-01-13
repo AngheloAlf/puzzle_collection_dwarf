@@ -180,22 +180,7 @@ struct SRankSortInfo {
 @enum$362record_c;
 @enum$110dm_title_main_c;
 // Range: 0x2B520 -> 0x2B674
-static @enum$110dm_title_main_c _get1PLess(struct_dm_game_main_c_8121 * mc1 /* r1+0x0 */, struct {
-    // total size: 0xD0
-    unsigned char mem_use_flg; // offset 0x0, size 0x1
-    unsigned char mem_name[4]; // offset 0x1, size 0x4
-    int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct_record_c_266 story_data[3]; // offset 0x28, size 0x24
-    struct_record_c_281 level_data[3]; // offset 0x4C, size 0x18
-    struct_record_c_296 taiQ_data[3]; // offset 0x64, size 0x18
-    struct_record_c_312 timeAt_data[3]; // offset 0x7C, size 0x24
-    unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-    unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-    unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-    unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-    unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct_dm_game_main_c_10328 config; // offset 0xB4, size 0x1A
-} * mc2 /* r1+0x4 */, @enum$362record_c mode /* r1+0x8 */, int level /* r1+0xC */) {
+static @enum$110dm_title_main_c _get1PLess(struct_dm_game_main_c_8121 * mc1 /* r1+0x0 */, struct_dm_game_main_c_8121 * mc2 /* r1+0x4 */, @enum$362record_c mode /* r1+0x8 */, int level /* r1+0xC */) {
     // Local variables
     int hi; // r7
     int lo; // r8
@@ -434,27 +419,7 @@ void RecWritingMsg_calc(struct_record_c_1350 * st /* r31 */) {}
 
 union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x2DEA0 -> 0x2E004
-void RecWritingMsg_draw(struct_record_c_1350 * st /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */) {
+void RecWritingMsg_draw(struct_record_c_1350 * st /* r28 */, union_drmario_gc_c_202 * * gpp /* r29 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x18
     int w; // r1+0x10

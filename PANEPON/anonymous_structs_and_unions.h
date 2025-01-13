@@ -533,137 +533,7 @@ typedef union /* union_pon_gc_tex_c_1219 */ {
     } n; // offset 0x0, size 0x10
     long long force_structure_alignment; // offset 0x0, size 0x8
 } union_pon_gc_tex_c_1219;
-typedef struct /* struct_pon_gc_tex_c_7093 */ {
-    // total size: 0x28
-    unsigned short imageX; // offset 0x0, size 0x2
-    unsigned short imageW; // offset 0x2, size 0x2
-    signed short frameX; // offset 0x4, size 0x2
-    unsigned short frameW; // offset 0x6, size 0x2
-    unsigned short imageY; // offset 0x8, size 0x2
-    unsigned short imageH; // offset 0xA, size 0x2
-    signed short frameY; // offset 0xC, size 0x2
-    unsigned short frameH; // offset 0xE, size 0x2
-    unsigned long long * imagePtr; // offset 0x10, size 0x4
-    unsigned short imageLoad; // offset 0x14, size 0x2
-    unsigned char imageFmt; // offset 0x16, size 0x1
-    unsigned char imageSiz; // offset 0x17, size 0x1
-    unsigned short imagePal; // offset 0x18, size 0x2
-    unsigned short imageFlip; // offset 0x1A, size 0x2
-    unsigned short tmemW; // offset 0x1C, size 0x2
-    unsigned short tmemH; // offset 0x1E, size 0x2
-    unsigned short tmemLoadSH; // offset 0x20, size 0x2
-    unsigned short tmemLoadTH; // offset 0x22, size 0x2
-    unsigned short tmemSizeW; // offset 0x24, size 0x2
-    unsigned short tmemSize; // offset 0x26, size 0x2
-} struct_pon_gc_tex_c_7093;
-typedef struct /* struct_pon_gc_tex_c_7114 */ {
-    // total size: 0x28
-    unsigned short imageX; // offset 0x0, size 0x2
-    unsigned short imageW; // offset 0x2, size 0x2
-    signed short frameX; // offset 0x4, size 0x2
-    unsigned short frameW; // offset 0x6, size 0x2
-    unsigned short imageY; // offset 0x8, size 0x2
-    unsigned short imageH; // offset 0xA, size 0x2
-    signed short frameY; // offset 0xC, size 0x2
-    unsigned short frameH; // offset 0xE, size 0x2
-    unsigned long long * imagePtr; // offset 0x10, size 0x4
-    unsigned short imageLoad; // offset 0x14, size 0x2
-    unsigned char imageFmt; // offset 0x16, size 0x1
-    unsigned char imageSiz; // offset 0x17, size 0x1
-    unsigned short imagePal; // offset 0x18, size 0x2
-    unsigned short imageFlip; // offset 0x1A, size 0x2
-    unsigned short scaleW; // offset 0x1C, size 0x2
-    unsigned short scaleH; // offset 0x1E, size 0x2
-    long imageYorig; // offset 0x20, size 0x4
-    unsigned char padding[4]; // offset 0x24, size 0x4
-} struct_pon_gc_tex_c_7114;
-typedef union /* union_pon_gc_tex_c_7332 */ {
-    struct {
-        // total size: 0x18
-        unsigned long type; // offset 0x0, size 0x4
-        unsigned long long * image; // offset 0x4, size 0x4
-        unsigned short tmem; // offset 0x8, size 0x2
-        unsigned short tsize; // offset 0xA, size 0x2
-        unsigned short tline; // offset 0xC, size 0x2
-        unsigned short sid; // offset 0xE, size 0x2
-        unsigned long flag; // offset 0x10, size 0x4
-        unsigned long mask; // offset 0x14, size 0x4
-    } block; // offset 0x0, size 0x18
-    struct {
-        // total size: 0x18
-        unsigned long type; // offset 0x0, size 0x4
-        unsigned long long * image; // offset 0x4, size 0x4
-        unsigned short tmem; // offset 0x8, size 0x2
-        unsigned short twidth; // offset 0xA, size 0x2
-        unsigned short theight; // offset 0xC, size 0x2
-        unsigned short sid; // offset 0xE, size 0x2
-        unsigned long flag; // offset 0x10, size 0x4
-        unsigned long mask; // offset 0x14, size 0x4
-    } tile; // offset 0x0, size 0x18
-    struct {
-        // total size: 0x18
-        unsigned long type; // offset 0x0, size 0x4
-        unsigned long long * image; // offset 0x4, size 0x4
-        unsigned short phead; // offset 0x8, size 0x2
-        unsigned short pnum; // offset 0xA, size 0x2
-        unsigned short zero; // offset 0xC, size 0x2
-        unsigned short sid; // offset 0xE, size 0x2
-        unsigned long flag; // offset 0x10, size 0x4
-        unsigned long mask; // offset 0x14, size 0x4
-    } tlut; // offset 0x0, size 0x18
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_tex_c_7332;
-typedef struct /* struct_pon_gc_tex_c_7513 */ {
-    // total size: 0x18
-    unsigned long type; // offset 0x0, size 0x4
-    unsigned long long * image; // offset 0x4, size 0x4
-    unsigned short tmem; // offset 0x8, size 0x2
-    unsigned short tsize; // offset 0xA, size 0x2
-    unsigned short tline; // offset 0xC, size 0x2
-    unsigned short sid; // offset 0xE, size 0x2
-    unsigned long flag; // offset 0x10, size 0x4
-    unsigned long mask; // offset 0x14, size 0x4
-} struct_pon_gc_tex_c_7513;
-typedef struct /* struct_pon_gc_tex_c_7524 */ {
-    // total size: 0x18
-    unsigned long type; // offset 0x0, size 0x4
-    unsigned long long * image; // offset 0x4, size 0x4
-    unsigned short tmem; // offset 0x8, size 0x2
-    unsigned short twidth; // offset 0xA, size 0x2
-    unsigned short theight; // offset 0xC, size 0x2
-    unsigned short sid; // offset 0xE, size 0x2
-    unsigned long flag; // offset 0x10, size 0x4
-    unsigned long mask; // offset 0x14, size 0x4
-} struct_pon_gc_tex_c_7524;
-typedef struct /* struct_pon_gc_tex_c_7535 */ {
-    // total size: 0x18
-    unsigned long type; // offset 0x0, size 0x4
-    unsigned long long * image; // offset 0x4, size 0x4
-    unsigned short phead; // offset 0x8, size 0x2
-    unsigned short pnum; // offset 0xA, size 0x2
-    unsigned short zero; // offset 0xC, size 0x2
-    unsigned short sid; // offset 0xE, size 0x2
-    unsigned long flag; // offset 0x10, size 0x4
-    unsigned long mask; // offset 0x14, size 0x4
-} struct_pon_gc_tex_c_7535;
-typedef struct /* struct_pon_gc_tex_c_9927 */ {
-    // total size: 0x18
-    signed short objX; // offset 0x0, size 0x2
-    unsigned short scaleW; // offset 0x2, size 0x2
-    unsigned short imageW; // offset 0x4, size 0x2
-    unsigned short paddingX; // offset 0x6, size 0x2
-    signed short objY; // offset 0x8, size 0x2
-    unsigned short scaleH; // offset 0xA, size 0x2
-    unsigned short imageH; // offset 0xC, size 0x2
-    unsigned short paddingY; // offset 0xE, size 0x2
-    unsigned short imageStride; // offset 0x10, size 0x2
-    unsigned short imageAdrs; // offset 0x12, size 0x2
-    unsigned char imageFmt; // offset 0x14, size 0x1
-    unsigned char imageSiz; // offset 0x15, size 0x1
-    unsigned char imagePal; // offset 0x16, size 0x1
-    unsigned char imageFlags; // offset 0x17, size 0x1
-} struct_pon_gc_tex_c_9927;
-typedef union /* union_pon_gc_tex_c_17914 */ {
+typedef union /* union_pon_gc_tex_c_7116 */ {
     struct {
         // total size: 0x28
         unsigned short imageX; // offset 0x0, size 0x2
@@ -709,7 +579,43 @@ typedef union /* union_pon_gc_tex_c_17914 */ {
         unsigned char padding[4]; // offset 0x24, size 0x4
     } s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_tex_c_17914;
+} union_pon_gc_tex_c_7116;
+typedef union /* union_pon_gc_tex_c_7332 */ {
+    struct {
+        // total size: 0x18
+        unsigned long type; // offset 0x0, size 0x4
+        unsigned long long * image; // offset 0x4, size 0x4
+        unsigned short tmem; // offset 0x8, size 0x2
+        unsigned short tsize; // offset 0xA, size 0x2
+        unsigned short tline; // offset 0xC, size 0x2
+        unsigned short sid; // offset 0xE, size 0x2
+        unsigned long flag; // offset 0x10, size 0x4
+        unsigned long mask; // offset 0x14, size 0x4
+    } block; // offset 0x0, size 0x18
+    struct {
+        // total size: 0x18
+        unsigned long type; // offset 0x0, size 0x4
+        unsigned long long * image; // offset 0x4, size 0x4
+        unsigned short tmem; // offset 0x8, size 0x2
+        unsigned short twidth; // offset 0xA, size 0x2
+        unsigned short theight; // offset 0xC, size 0x2
+        unsigned short sid; // offset 0xE, size 0x2
+        unsigned long flag; // offset 0x10, size 0x4
+        unsigned long mask; // offset 0x14, size 0x4
+    } tile; // offset 0x0, size 0x18
+    struct {
+        // total size: 0x18
+        unsigned long type; // offset 0x0, size 0x4
+        unsigned long long * image; // offset 0x4, size 0x4
+        unsigned short phead; // offset 0x8, size 0x2
+        unsigned short pnum; // offset 0xA, size 0x2
+        unsigned short zero; // offset 0xC, size 0x2
+        unsigned short sid; // offset 0xE, size 0x2
+        unsigned long flag; // offset 0x10, size 0x4
+        unsigned long mask; // offset 0x14, size 0x4
+    } tlut; // offset 0x0, size 0x18
+    long long force_structure_alignment; // offset 0x0, size 0x8
+} union_pon_gc_tex_c_7332;
 typedef struct /* struct_pon_gc_MemoryCard_c_23 */ {
     // total size: 0x2C
     int status; // offset 0x0, size 0x4
@@ -1016,6 +922,44 @@ typedef struct /* struct_pon_gc_draw_c_2466 */ {
     struct flic_t flic[340]; // offset 0x2E848, size 0x2A80
     struct text_t drawText[70]; // offset 0x312C8, size 0x8C0
 } struct_pon_gc_draw_c_2466;
+typedef struct /* struct_animation_c_1169 */ {
+    // total size: 0x18
+    signed short objX; // offset 0x0, size 0x2
+    unsigned short scaleW; // offset 0x2, size 0x2
+    unsigned short imageW; // offset 0x4, size 0x2
+    unsigned short paddingX; // offset 0x6, size 0x2
+    signed short objY; // offset 0x8, size 0x2
+    unsigned short scaleH; // offset 0xA, size 0x2
+    unsigned short imageH; // offset 0xC, size 0x2
+    unsigned short paddingY; // offset 0xE, size 0x2
+    unsigned short imageStride; // offset 0x10, size 0x2
+    unsigned short imageAdrs; // offset 0x12, size 0x2
+    unsigned char imageFmt; // offset 0x14, size 0x1
+    unsigned char imageSiz; // offset 0x15, size 0x1
+    unsigned char imagePal; // offset 0x16, size 0x1
+    unsigned char imageFlags; // offset 0x17, size 0x1
+} struct_animation_c_1169;
+typedef struct /* struct_animation_c_25858 */ {
+    // total size: 0x28
+    unsigned short imageX; // offset 0x0, size 0x2
+    unsigned short imageW; // offset 0x2, size 0x2
+    signed short frameX; // offset 0x4, size 0x2
+    unsigned short frameW; // offset 0x6, size 0x2
+    unsigned short imageY; // offset 0x8, size 0x2
+    unsigned short imageH; // offset 0xA, size 0x2
+    signed short frameY; // offset 0xC, size 0x2
+    unsigned short frameH; // offset 0xE, size 0x2
+    unsigned long long * imagePtr; // offset 0x10, size 0x4
+    unsigned short imageLoad; // offset 0x14, size 0x2
+    unsigned char imageFmt; // offset 0x16, size 0x1
+    unsigned char imageSiz; // offset 0x17, size 0x1
+    unsigned short imagePal; // offset 0x18, size 0x2
+    unsigned short imageFlip; // offset 0x1A, size 0x2
+    unsigned short scaleW; // offset 0x1C, size 0x2
+    unsigned short scaleH; // offset 0x1E, size 0x2
+    long imageYorig; // offset 0x20, size 0x4
+    unsigned char padding[4]; // offset 0x24, size 0x4
+} struct_animation_c_25858;
 typedef struct /* struct_bitmap_c_14 */ {
     // total size: 0x1C
     int nType; // offset 0x0, size 0x4
@@ -1026,151 +970,13 @@ typedef struct /* struct_bitmap_c_14 */ {
     int nSizeOriginalX; // offset 0x14, size 0x4
     unsigned short * aColorPalette; // offset 0x18, size 0x4
 } struct_bitmap_c_14;
-typedef struct /* struct_bitmap_c_65 */ {
+typedef struct /* struct_bitmap_c_31 */ {
     // total size: 0x10
     int iFile; // offset 0x0, size 0x4
     int nSize; // offset 0x4, size 0x4
     int nBase; // offset 0x8, size 0x4
     int nOffset; // offset 0xC, size 0x4
-} struct_bitmap_c_65;
-typedef struct /* struct_bitmap_c_151 */ {
-    // total size: 0x8
-    unsigned int w0; // offset 0x0, size 0x4
-    unsigned int w1; // offset 0x4, size 0x4
-} struct_bitmap_c_151;
-typedef struct /* struct_bitmap_c_158 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int par : 8; // offset 0x0, size 0x4
-    unsigned int len : 16; // offset 0x0, size 0x4
-    unsigned int addr; // offset 0x4, size 0x4
-} struct_bitmap_c_158;
-typedef struct /* struct_bitmap_c_168 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad : 24; // offset 0x0, size 0x4
-    struct {
-        // total size: 0x4
-        unsigned char flag; // offset 0x0, size 0x1
-        unsigned char v[3]; // offset 0x1, size 0x3
-    } tri; // offset 0x4, size 0x4
-} struct_bitmap_c_168;
-typedef struct /* struct_bitmap_c_178 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad : 24; // offset 0x0, size 0x4
-    struct {
-        // total size: 0x4
-        unsigned char flag; // offset 0x0, size 0x1
-        unsigned char v[3]; // offset 0x1, size 0x3
-    } line; // offset 0x4, size 0x4
-} struct_bitmap_c_178;
-typedef struct /* struct_bitmap_c_185 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad1 : 24; // offset 0x0, size 0x4
-    int pad2 : 24; // offset 0x4, size 0x4
-    unsigned int param : 8; // offset 0x4, size 0x4
-} struct_bitmap_c_185;
-typedef struct /* struct_bitmap_c_194 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad0 : 8; // offset 0x0, size 0x4
-    int mw_index : 8; // offset 0x0, size 0x4
-    int number : 8; // offset 0x0, size 0x4
-    int pad1 : 8; // offset 0x4, size 0x4
-    int base : 24; // offset 0x4, size 0x4
-} struct_bitmap_c_194;
-typedef struct /* struct_bitmap_c_202 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad0 : 8; // offset 0x0, size 0x4
-    int sft : 8; // offset 0x0, size 0x4
-    int len : 8; // offset 0x0, size 0x4
-    unsigned int data : 32; // offset 0x4, size 0x4
-} struct_bitmap_c_202;
-typedef struct /* struct_bitmap_c_219 */ {
-    // total size: 0x8
-    unsigned char cmd; // offset 0x0, size 0x1
-    unsigned char lodscale; // offset 0x1, size 0x1
-    unsigned char tile; // offset 0x2, size 0x1
-    unsigned char on; // offset 0x3, size 0x1
-    unsigned short s; // offset 0x4, size 0x2
-    unsigned short t; // offset 0x6, size 0x2
-} struct_bitmap_c_219;
-typedef struct /* struct_bitmap_c_226 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int pad1 : 24; // offset 0x0, size 0x4
-    signed short pad2; // offset 0x4, size 0x2
-    signed short scale; // offset 0x6, size 0x2
-} struct_bitmap_c_226;
-typedef struct /* struct_bitmap_c_235 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int fmt : 3; // offset 0x0, size 0x4
-    unsigned int siz : 2; // offset 0x0, size 0x4
-    unsigned int pad : 7; // offset 0x0, size 0x4
-    unsigned int wd : 12; // offset 0x0, size 0x4
-    unsigned int dram; // offset 0x4, size 0x4
-} struct_bitmap_c_235;
-typedef struct /* struct_bitmap_c_241 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int muxs0 : 24; // offset 0x0, size 0x4
-    unsigned int muxs1 : 32; // offset 0x4, size 0x4
-} struct_bitmap_c_241;
-typedef struct /* struct_bitmap_c_249 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned char pad; // offset 0x1, size 0x1
-    unsigned char prim_min_level; // offset 0x2, size 0x1
-    unsigned char prim_level; // offset 0x3, size 0x1
-    unsigned long color; // offset 0x4, size 0x4
-} struct_bitmap_c_249;
-typedef struct /* struct_bitmap_c_262 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    int x0 : 10; // offset 0x0, size 0x4
-    int x0frac : 2; // offset 0x0, size 0x4
-    int y0 : 10; // offset 0x0, size 0x4
-    int y0frac : 2; // offset 0x0, size 0x4
-    unsigned int pad : 8; // offset 0x4, size 0x4
-    int x1 : 10; // offset 0x4, size 0x4
-    int x1frac : 2; // offset 0x4, size 0x4
-    int y1 : 10; // offset 0x4, size 0x4
-    int y1frac : 2; // offset 0x4, size 0x4
-} struct_bitmap_c_262;
-typedef struct /* struct_bitmap_c_282 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int fmt : 3; // offset 0x0, size 0x4
-    unsigned int siz : 2; // offset 0x0, size 0x4
-    unsigned int pad0 : 1; // offset 0x0, size 0x4
-    unsigned int line : 9; // offset 0x0, size 0x4
-    unsigned int tmem : 9; // offset 0x0, size 0x4
-    unsigned int pad1 : 5; // offset 0x4, size 0x4
-    unsigned int tile : 3; // offset 0x4, size 0x4
-    unsigned int palette : 4; // offset 0x4, size 0x4
-    unsigned int ct : 1; // offset 0x4, size 0x4
-    unsigned int mt : 1; // offset 0x4, size 0x4
-    unsigned int maskt : 4; // offset 0x4, size 0x4
-    unsigned int shiftt : 4; // offset 0x4, size 0x4
-    unsigned int cs : 1; // offset 0x4, size 0x4
-    unsigned int ms : 1; // offset 0x4, size 0x4
-    unsigned int masks : 4; // offset 0x4, size 0x4
-    unsigned int shifts : 4; // offset 0x4, size 0x4
-} struct_bitmap_c_282;
-typedef struct /* struct_bitmap_c_292 */ {
-    // total size: 0x8
-    int cmd : 8; // offset 0x0, size 0x4
-    unsigned int sl : 12; // offset 0x0, size 0x4
-    unsigned int tl : 12; // offset 0x0, size 0x4
-    int pad : 5; // offset 0x4, size 0x4
-    unsigned int tile : 3; // offset 0x4, size 0x4
-    unsigned int sh : 12; // offset 0x4, size 0x4
-    unsigned int th : 12; // offset 0x4, size 0x4
-} struct_bitmap_c_292;
+} struct_bitmap_c_31;
 typedef struct /* struct_bitmap_c_320 */ {
     // total size: 0x10
     int nX; // offset 0x0, size 0x4
@@ -1454,13 +1260,6 @@ typedef struct /* struct_image_c_89 */ {
     unsigned int nColor0; // offset 0x94, size 0x4
     unsigned int nColor1; // offset 0x98, size 0x4
 } struct_image_c_89;
-typedef struct /* struct_image_c_6458 */ {
-    // total size: 0xC
-    int nData; // offset 0x0, size 0x4
-    int nRGBA; // offset 0x4, size 0x4
-    signed short nDeltaX; // offset 0x8, size 0x2
-    signed short nDeltaY; // offset 0xA, size 0x2
-} struct_image_c_6458;
 typedef struct /* struct_init_c_9 */ {
     // total size: 0x10
     signed short vscale[4]; // offset 0x0, size 0x8

@@ -147,11 +147,7 @@ void StretchTexBlock8ia(union_pon_gc_c_173 * * gpp /* r1+0x8 */, int texW /* r1+
 static void pon_gSPObjError() {}
 
 // Range: 0x8D74 -> 0x9720
-static int pon_texture(union_pon_gc_c_173 * * glp /* r21 */, union {
-    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * bg /* r26 */, unsigned long CycleType /* r5 */) {
+static int pon_texture(union_pon_gc_c_173 * * glp /* r21 */, union_pon_gc_tex_c_7116 * bg /* r26 */, unsigned long CycleType /* r5 */) {
     // Local variables
     int err; // r25
     int x; // r24
@@ -166,12 +162,7 @@ static int pon_texture(union_pon_gc_c_173 * * glp /* r21 */, union {
 
 static union_pon_gc_tex_c_7332 * txBlock; // size: 0x4, address: 0x188
 // Range: 0x9720 -> 0x9890
-void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union {
-    struct_pon_gc_tex_c_7513 block; // offset 0x0, size 0x18
-    struct_pon_gc_tex_c_7524 tile; // offset 0x0, size 0x18
-    struct_pon_gc_tex_c_7535 tlut; // offset 0x0, size 0x18
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * tx /* r1+0x4 */) {
+void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union_pon_gc_tex_c_7332 * tx /* r1+0x4 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r5
     union_pon_gc_c_173 * _g; // r6
@@ -192,10 +183,7 @@ void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union {
 }
 
 // Range: 0x9890 -> 0xA300
-void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_9927 s; // offset 0x0, size 0x18
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * sp /* r4 */) {
+void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, union_pon_gc_c_222 * sp /* r4 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r31
     unsigned long iW; // r9
@@ -243,11 +231,7 @@ void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, union {
 }
 
 // Range: 0xA300 -> 0xA36C
-void pon_guS2DEmuBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * bg /* r31 */) {
+void pon_guS2DEmuBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union_pon_gc_tex_c_7116 * bg /* r31 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r1+0x10
 }
@@ -256,11 +240,7 @@ void pon_guS2DEmuBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
 void pon_guS2DEmuSetScissor() {}
 
 // Range: 0xA370 -> 0xA420
-void pon_gSPBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * bg /* r31 */) {
+void pon_gSPBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union_pon_gc_tex_c_7116 * bg /* r31 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r1+0x10
     union_pon_gc_c_173 * _g; // r1+0x8
@@ -268,11 +248,7 @@ void pon_gSPBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
 }
 
 // Range: 0xA420 -> 0xA4E4
-void pon_gSPBgRectCopy(union_pon_gc_c_173 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * bg /* r31 */) {
+void pon_gSPBgRectCopy(union_pon_gc_c_173 * * glp /* r30 */, union_pon_gc_tex_c_7116 * bg /* r31 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r1+0x10
     union_pon_gc_c_173 * _g; // r1+0x8
@@ -280,7 +256,7 @@ void pon_gSPBgRectCopy(union_pon_gc_c_173 * * glp /* r30 */, union {
 }
 
 // Range: 0xA4E4 -> 0xA5D4
-void pon_guS2DInitBg(union_pon_gc_tex_c_17914 * bg /* r1+0x0 */) {
+void pon_guS2DInitBg(union_pon_gc_tex_c_7116 * bg /* r1+0x0 */) {
     // Local variables
     unsigned short tmemUse; // r6
     unsigned short shift; // r4

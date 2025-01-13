@@ -7,21 +7,13 @@
 static struct_lws_c_8 AnimProc[64]; // size: 0x1000, address: 0x190C0
 union_main_story_c_778 * pObjectMtx; // size: 0x4, address: 0x8E08
 // Range: 0xCF70 -> 0xD610
-int lws_anim(union_drmario_gc_c_202 * * glp /* r1+0xDC */, long (* pm)[4] /* r1+0xE0 */, struct {
-    // total size: 0x18
-    int first_frame; // offset 0x0, size 0x4
-    int last_frame; // offset 0x4, size 0x4
-    int frame_rate; // offset 0x8, size 0x4
-    int obj_count; // offset 0xC, size 0x4
-    struct_lws_c_365 * obj; // offset 0x10, size 0x4
-    struct_lws_c_379 * key; // offset 0x14, size 0x4
-} * pSceneData /* r21 */, int frame /* r30 */, unsigned long baseAddr /* r14 */) {
+int lws_anim(union_drmario_gc_c_202 * * glp /* r1+0xDC */, long (* pm)[4] /* r1+0xE0 */, struct_main_story_c_211 * pSceneData /* r21 */, int frame /* r30 */, unsigned long baseAddr /* r14 */) {
     // Local variables
     union_drmario_gc_c_202 * pgfx; // r27
-    struct_lws_c_365 * pObj; // r29
-    struct_lws_c_379 * pKey; // r5
-    struct_lws_c_379 * pKey1; // r9
-    struct_lws_c_379 * pKey2; // r3
+    struct_lws_c_728 * pObj; // r29
+    struct_lws_c_742 * pKey; // r5
+    struct_lws_c_742 * pKey1; // r9
+    struct_lws_c_742 * pKey2; // r3
     int i; // r16
     int key; // r6
     int ret; // r1+0xE8

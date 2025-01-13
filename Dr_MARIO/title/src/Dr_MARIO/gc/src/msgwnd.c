@@ -57,27 +57,7 @@ void msgWnd_update(struct_main_story_c_451 * st /* r26 */) {
 }
 
 // Range: 0x290C4 -> 0x29AE0
-void msgWnd_draw(struct_main_story_c_451 * st /* r31 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r17 */) {
+void msgWnd_draw(struct_main_story_c_451 * st /* r31 */, union_drmario_gc_c_202 * * gpp /* r17 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x10
     int now; // r28

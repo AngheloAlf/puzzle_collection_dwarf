@@ -164,32 +164,7 @@ float yt; // size: 0x4, address: 0xED8
 float yb; // size: 0x4, address: 0xEDC
 unsigned char tex_cursor_4p_0[1728]; // size: 0x6C0, address: 0x530
 // Range: 0xCE88 -> 0xD17C
-void pon_SelectStage4p(union_pon_gc_c_173 * * ppGfx /* r26 */, struct {
-    // total size: 0x31B88
-    union_pon_gc_c_173 glist[14336]; // offset 0x0, size 0x1C000
-    union_pon_gc_MemoryCard_c_1396 projection[4]; // offset 0x1C000, size 0x100
-    union_pon_gc_MemoryCard_c_1396 viewing[4]; // offset 0x1C100, size 0x100
-    union_pon_gc_MemoryCard_c_1396 trans[4]; // offset 0x1C200, size 0x100
-    union_pon_gc_MemoryCard_c_1396 rotate[4]; // offset 0x1C300, size 0x100
-    float degree[4]; // offset 0x1C400, size 0x10
-    char frontTexture[4][10]; // offset 0x1C410, size 0x28
-    char backTexture[4][10]; // offset 0x1C438, size 0x28
-    int overflow; // offset 0x1C460, size 0x4
-    struct block_t block[4][12][18]; // offset 0x1C464, size 0x9480
-    struct attack_t attack[4][40]; // offset 0x258E8, size 0x3200
-    struct icon_t icon[4][10]; // offset 0x28AE8, size 0x1040
-    struct explode_t explosion[4][50]; // offset 0x29B28, size 0x2580
-    struct cursor_t cursorBlock[4]; // offset 0x2C0A8, size 0x440
-    union_pon_gc_c_222 block_rect[4][12][6]; // offset 0x2C4E8, size 0x1B00
-    union_pon_gc_c_222 new_block_rect[4][6]; // offset 0x2DFE8, size 0x240
-    union_pon_gc_c_222 left2D[4]; // offset 0x2E228, size 0x60
-    union_pon_gc_c_222 right2D[4]; // offset 0x2E288, size 0x60
-    char visible[4][12][18]; // offset 0x2E2E8, size 0x360
-    union_pon_gc_MemoryCard_c_1396 left3D[4]; // offset 0x2E648, size 0x100
-    union_pon_gc_MemoryCard_c_1396 right3D[4]; // offset 0x2E748, size 0x100
-    struct flic_t flic[340]; // offset 0x2E848, size 0x2A80
-    struct text_t drawText[70]; // offset 0x312C8, size 0x8C0
-} * dynamicp /* r1+0xC */, int x /* r24 */, int y /* r25 */, int num /* r1+0x1C */) {
+void pon_SelectStage4p(union_pon_gc_c_173 * * ppGfx /* r26 */, struct_pon_gc_draw_c_2466 * dynamicp /* r1+0xC */, int x /* r24 */, int y /* r25 */, int num /* r1+0x1C */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r27
     union_pon_gc_c_173 * _g; // r4

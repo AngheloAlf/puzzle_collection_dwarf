@@ -112,7 +112,8 @@ def parse_anonymous_structs_and_unions(contents: list[str]) -> dict[str, tuple[s
                 if body not in structs_by_contents:
                     structs_by_contents[body] = (f"{kind}_{current_unit.replace('.', '_')}_{struct_index}", kind)
                 current_struct_contents.clear()
-        elif line.endswith("struct {\n") or line.endswith("union {\n"):
+
+        if braces_count == 0 and (line.endswith("struct {\n") or line.endswith("union {\n")):
             if line.endswith("struct {\n"):
                 kind = "struct"
             else:
@@ -149,14 +150,21 @@ def set_anonymous_structs_and_unions(contents: list[str], structs_by_contents: d
                 braces_count += line.count("{")
             else:
                 body = "".join(current_struct_contents)
+                current_struct_contents.clear()
                 current_struct_name = structs_by_contents.get(body)
                 assert current_struct_name is not None, f"\n{body=}\n{line=}"
 
-                new_line = trailing_line + current_struct_name[0] + "}".join(line.split("}")[1:])
-                new_contents.append(new_line)
-
-                trailing_line = None
-                current_struct_contents.clear()
+                line = trailing_line + current_struct_name[0] + "}".join(line.split("}")[1:])
+                if line.endswith("struct {\n") or line.endswith("union {\n"):
+                    if line.endswith("struct {\n"):
+                        kind = "struct"
+                    else:
+                        kind = "union"
+                    trailing_line = line.split(f"{kind} {{")[0]
+                    braces_count += 1
+                else:
+                    new_contents.append(line)
+                    trailing_line = None
 
         elif line.endswith("struct {\n") or line.endswith("union {\n"):
             if line.endswith("struct {\n"):

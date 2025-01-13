@@ -6,13 +6,7 @@
 */
 static struct_bitmap_c_14 * gpBitmapLast; // size: 0x4, address: 0x1810
 // Range: 0x3AB70 -> 0x3ACFC
-static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct {
-    // total size: 0x10
-    int iFile; // offset 0x0, size 0x4
-    int nSize; // offset 0x4, size 0x4
-    int nBase; // offset 0x8, size 0x4
-    int nOffset; // offset 0xC, size 0x4
-} * pFile /* r27 */) {
+static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct_bitmap_c_31 * pFile /* r27 */) {
     // Local variables
     int nSize; // r31
     int iTarget; // r30
@@ -31,7 +25,7 @@ static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct {
 // Range: 0x3ACFC -> 0x3B31C
 int bitmapLoad(struct_bitmap_c_14 * * ppBitmap /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */, int bDMA /* r27 */) {
     // Local variables
-    struct_bitmap_c_65 file; // r1+0x38
+    struct_bitmap_c_31 file; // r1+0x38
     int nSizeOriginalX; // r26
     unsigned int * anColor; // r26
     int nColorCount; // r1+0x34
@@ -76,27 +70,7 @@ int bitmapFlip(struct_bitmap_c_14 * pBitmap /* r26 */) {
 int bitmapLoadData(struct_bitmap_c_14 * pBitmap /* r3 */, void * pPixel /* r4 */) {}
 
 // Range: 0x3B5EC -> 0x3BD6C
-int bitmapLoadTile(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x10 */, struct_bitmap_c_320 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
+int bitmapLoadTile(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */, struct_bitmap_c_320 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r4
     int nSizeX; // r8

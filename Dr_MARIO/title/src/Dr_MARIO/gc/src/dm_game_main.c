@@ -58,14 +58,7 @@ void dm_attack_se(struct_dm_game_main_c_176 * state /* r28 */, int player_no /* 
 }
 
 // Range: 0xDBC0 -> 0xDC60
-void dm_warning_h_line(struct_dm_game_main_c_176 * state /* r27 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r28 */) {
+void dm_warning_h_line(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_487 * map /* r28 */) {
     // Local variables
     int i; // r31
     int j; // r30
@@ -73,7 +66,7 @@ void dm_warning_h_line(struct_dm_game_main_c_176 * state /* r27 */, struct {
 }
 
 // Range: 0xDC60 -> 0xDF5C
-static int set_down_flg(struct_dm_game_main_c_502 * map /* r27 */) {
+static int set_down_flg(struct_dm_game_main_c_487 * map /* r27 */) {
     // Local variables
     int i; // r1+0x8
     int j; // r28
@@ -84,14 +77,7 @@ static int set_down_flg(struct_dm_game_main_c_502 * map /* r27 */) {
 }
 
 // Range: 0xDF5C -> 0xE1D4
-void go_down(struct_dm_game_main_c_176 * state /* r30 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r31 */, int cout /* r1+0x10 */) {
+void go_down(struct_dm_game_main_c_176 * state /* r30 */, struct_dm_game_main_c_487 * map /* r31 */, int cout /* r1+0x10 */) {
     // Local variables
     int i; // r25
     int j; // r24
@@ -100,7 +86,7 @@ void go_down(struct_dm_game_main_c_176 * state /* r30 */, struct {
 }
 
 // Range: 0xE1D4 -> 0xE2A8
-void erase_anime(struct_dm_game_main_c_502 * map /* r29 */) {
+void erase_anime(struct_dm_game_main_c_487 * map /* r29 */) {
     // Local variables
     int i; // r30
 }
@@ -119,74 +105,7 @@ static void throw_rotate_capsel(struct_dm_game_main_c_690 * cap /* r1+0x0 */) {
 }
 
 // Range: 0xE37C -> 0xE5A4
-void translate_capsel(struct_dm_game_main_c_502 * map /* r26 */, struct {
-    // total size: 0x3C4
-    unsigned long game_score; // offset 0x0, size 0x4
-    unsigned short game_retry; // offset 0x4, size 0x2
-    signed short map_x; // offset 0x6, size 0x2
-    signed short map_y; // offset 0x8, size 0x2
-    signed char map_item_size; // offset 0xA, size 0x1
-    @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
-    @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
-    @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
-    @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
-    @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
-    @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
-    unsigned char virus_order_number; // offset 0x24, size 0x1
-    unsigned char virus_number; // offset 0x25, size 0x1
-    unsigned char virus_level; // offset 0x26, size 0x1
-    unsigned char virus_anime; // offset 0x27, size 0x1
-    signed char virus_anime_vec; // offset 0x28, size 0x1
-    unsigned char virus_anime_count; // offset 0x29, size 0x1
-    unsigned char virus_anime_max; // offset 0x2A, size 0x1
-    unsigned char virus_anime_spead; // offset 0x2B, size 0x1
-    unsigned char cap_def_speed; // offset 0x2C, size 0x1
-    unsigned char cap_speed; // offset 0x2D, size 0x1
-    unsigned char cap_count; // offset 0x2E, size 0x1
-    unsigned char cap_speed_count; // offset 0x2F, size 0x1
-    unsigned char cap_speed_vec; // offset 0x30, size 0x1
-    unsigned char cap_speed_max; // offset 0x31, size 0x1
-    unsigned char cap_magazine_cnt; // offset 0x32, size 0x1
-    unsigned char cap_magazine_save; // offset 0x33, size 0x1
-    signed char cap_move_se_flg; // offset 0x34, size 0x1
-    unsigned char erase_anime; // offset 0x35, size 0x1
-    unsigned char erase_anime_count; // offset 0x36, size 0x1
-    unsigned char erase_virus_count; // offset 0x37, size 0x1
-    unsigned char erase_virus_count_old; // offset 0x38, size 0x1
-    unsigned char chain_count; // offset 0x39, size 0x1
-    unsigned char chain_line; // offset 0x3A, size 0x1
-    unsigned char chain_line_max; // offset 0x3B, size 0x1
-    unsigned char chain_color[4]; // offset 0x3C, size 0x4
-    unsigned char black_up_count; // offset 0x40, size 0x1
-    int warning_se_flag; // offset 0x44, size 0x4
-    unsigned char flg_retire; // offset 0x48, size 0x1
-    unsigned char flg_game_over; // offset 0x49, size 0x1
-    unsigned char flg_training; // offset 0x4A, size 0x1
-    unsigned char player_no; // offset 0x4B, size 0x1
-    unsigned char player_type; // offset 0x4C, size 0x1
-    unsigned char think_type; // offset 0x4D, size 0x1
-    unsigned char think_level; // offset 0x4E, size 0x1
-    unsigned char team_no; // offset 0x4F, size 0x1
-    unsigned short cap_attack_work[16][2]; // offset 0x50, size 0x40
-    int charNo; // offset 0x90, size 0x4
-    struct SAnimeState anime; // offset 0x94, size 0x40
-    int flash_virus_pos[9][3]; // offset 0xD4, size 0x6C
-    int flash_virus_bak[9]; // offset 0x140, size 0x24
-    int flash_virus_count; // offset 0x164, size 0x4
-    int bottom_up_scroll; // offset 0x168, size 0x4
-    int game_level; // offset 0x16C, size 0x4
-    int total_erase_count; // offset 0x170, size 0x4
-    int total_chain_count; // offset 0x174, size 0x4
-    struct_dm_game_main_c_690 now_cap; // offset 0x178, size 0xC
-    struct_dm_game_main_c_690 next_cap; // offset 0x184, size 0xC
-    struct_dm_game_main_c_828 ai; // offset 0x190, size 0x108
-    unsigned char pn; // offset 0x298, size 0x1
-    unsigned char gs; // offset 0x299, size 0x1
-    unsigned char lv; // offset 0x29A, size 0x1
-    unsigned char vs; // offset 0x29B, size 0x1
-    struct_dm_game_main_c_837 blk[18][8]; // offset 0x29C, size 0x120
-    struct_dm_game_main_c_846 cap; // offset 0x3BC, size 0x6
-} * state /* r27 */, int move_vec /* r28 */, int joy_no /* r29 */) {
+void translate_capsel(struct_dm_game_main_c_487 * map /* r26 */, struct_dm_game_main_c_176 * state /* r27 */, int move_vec /* r28 */, int joy_no /* r29 */) {
     // Local variables
     int vec; // r31
     struct_dm_game_main_c_690 * cap; // r30
@@ -195,14 +114,7 @@ void translate_capsel(struct_dm_game_main_c_502 * map /* r26 */, struct {
 static unsigned int rotate_table$474[4]; // size: 0x10, address: 0x4928
 static unsigned int rotate_mtx$475[6]; // size: 0x18, address: 0x4938
 // Range: 0xE5A4 -> 0xE7C8
-void rotate_capsel(struct_dm_game_main_c_502 * map /* r27 */, struct {
-    // total size: 0xC
-    signed char pos_x[2]; // offset 0x0, size 0x2
-    signed char pos_y[2]; // offset 0x2, size 0x2
-    signed char capsel_g[2]; // offset 0x4, size 0x2
-    signed char capsel_p[2]; // offset 0x6, size 0x2
-    signed char capsel_flg[4]; // offset 0x8, size 0x4
-} * cap /* r28 */, int move_vec /* r29 */) {
+void rotate_capsel(struct_dm_game_main_c_487 * map /* r27 */, struct_dm_game_main_c_690 * cap /* r28 */, int move_vec /* r29 */) {
     // Local variables
     int vec; // r30
     unsigned int save; // r3
@@ -249,14 +161,7 @@ int dm_check_game_over(struct_dm_game_main_c_176 * state /* r1+0x0 */) {}
 
 @enum$110dm_title_main_c;
 // Range: 0xEB60 -> 0xEBE4
-static int update_flash_virus_count(struct_dm_game_main_c_176 * state /* r3 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r1+0x4 */, @enum$110dm_title_main_c flag /* r1+0x8 */) {
+static int update_flash_virus_count(struct_dm_game_main_c_176 * state /* r3 */, struct_dm_game_main_c_487 * map /* r1+0x4 */, @enum$110dm_title_main_c flag /* r1+0x8 */) {
     // Local variables
     int count; // r8
     int i; // r9
@@ -264,14 +169,7 @@ static int update_flash_virus_count(struct_dm_game_main_c_176 * state /* r3 */, 
 }
 
 // Range: 0xEBE4 -> 0xED2C
-static void dm_set_virus(struct_dm_game_main_c_176 * state /* r28 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r29 */, struct_dm_game_main_c_1653 * v_map /* r30 */, unsigned char * order /* r27 */) {
+static void dm_set_virus(struct_dm_game_main_c_176 * state /* r28 */, struct_dm_game_main_c_487 * map /* r29 */, struct_dm_game_main_c_1653 * v_map /* r30 */, unsigned char * order /* r27 */) {
     // Local variables
     unsigned int p; // r27
     int virus_max; // r1+0x8
@@ -282,14 +180,7 @@ static void dm_set_virus(struct_dm_game_main_c_176 * state /* r28 */, struct {
 }
 
 // Range: 0xED2C -> 0xEEC4
-void dm_virus_anime(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r4 */) {
+void dm_virus_anime(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct_dm_game_main_c_487 * map /* r4 */) {
     // Local variables
     int i; // r7
 
@@ -298,30 +189,16 @@ void dm_virus_anime(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct {
 }
 
 // Range: 0xEEC4 -> 0xEF58
-void dm_capsel_erase_anime(struct_dm_game_main_c_176 * state /* r30 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r31 */) {}
+void dm_capsel_erase_anime(struct_dm_game_main_c_176 * state /* r30 */, struct_dm_game_main_c_487 * map /* r31 */) {}
 
 // Range: 0xEF58 -> 0xEFFC
-static void dm_make_erase_h_line(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r1+0x4 */, int start /* r5 */, int chain /* r1+0xC */, int pos_x /* r1+0x10 */) {
+static void dm_make_erase_h_line(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct_dm_game_main_c_487 * map /* r1+0x4 */, int start /* r5 */, int chain /* r1+0xC */, int pos_x /* r1+0x10 */) {
     // Local variables
     int i; // r1+0x0
 }
 
 // Range: 0xEFFC -> 0xF158
-int dm_h_erase_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
+int dm_h_erase_chack(struct_dm_game_main_c_487 * map /* r1+0x0 */) {
     // Local variables
     int i; // r6
     int j; // r7
@@ -331,14 +208,7 @@ int dm_h_erase_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
 }
 
 // Range: 0xF158 -> 0xF360
-void dm_h_erase_chack_set(struct_dm_game_main_c_176 * state /* r23 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r24 */) {
+void dm_h_erase_chack_set(struct_dm_game_main_c_176 * state /* r23 */, struct_dm_game_main_c_487 * map /* r24 */) {
     // Local variables
     int i; // r30
     int j; // r29
@@ -349,21 +219,14 @@ void dm_h_erase_chack_set(struct_dm_game_main_c_176 * state /* r23 */, struct {
 }
 
 // Range: 0xF360 -> 0xF404
-static void dm_make_erase_w_line(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r1+0x4 */, unsigned int start /* r5 */, unsigned int chain /* r1+0xC */, unsigned int pos_y /* r1+0x10 */) {
+static void dm_make_erase_w_line(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct_dm_game_main_c_487 * map /* r1+0x4 */, unsigned int start /* r5 */, unsigned int chain /* r1+0xC */, unsigned int pos_y /* r1+0x10 */) {
     // Local variables
     int i; // r5
     int p; // r1+0x0
 }
 
 // Range: 0xF404 -> 0xF568
-int dm_w_erase_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
+int dm_w_erase_chack(struct_dm_game_main_c_487 * map /* r1+0x0 */) {
     // Local variables
     int i; // r7
     int j; // r8
@@ -373,14 +236,7 @@ int dm_w_erase_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
 }
 
 // Range: 0xF568 -> 0xF770
-void dm_w_erase_chack_set(struct_dm_game_main_c_176 * state /* r22 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r23 */) {
+void dm_w_erase_chack_set(struct_dm_game_main_c_176 * state /* r22 */, struct_dm_game_main_c_487 * map /* r23 */) {
     // Local variables
     unsigned int p; // r1+0x8
     unsigned int end; // r29
@@ -392,41 +248,27 @@ void dm_w_erase_chack_set(struct_dm_game_main_c_176 * state /* r22 */, struct {
 }
 
 // Range: 0xF770 -> 0xF8F0
-void dm_h_ball_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
+void dm_h_ball_chack(struct_dm_game_main_c_487 * map /* r1+0x0 */) {
     // Local variables
     unsigned int i; // r5
     unsigned int j; // r6
 }
 
 // Range: 0xF8F0 -> 0xF9EC
-void dm_w_ball_chack(struct_dm_game_main_c_502 * map /* r1+0x0 */) {
+void dm_w_ball_chack(struct_dm_game_main_c_487 * map /* r1+0x0 */) {
     // Local variables
     unsigned int i; // r9
     unsigned int j; // r10
 }
 
 // Range: 0xF9EC -> 0xFA9C
-int dm_black_up(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r1+0x4 */) {
+int dm_black_up(struct_dm_game_main_c_176 * state /* r1+0x0 */, struct_dm_game_main_c_487 * map /* r1+0x4 */) {
     // Local variables
     unsigned char i; // r6
 }
 
 // Range: 0xFA9C -> 0xFCC0
-int dm_broken_set(struct_dm_game_main_c_176 * state /* r31 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r27 */) {
+int dm_broken_set(struct_dm_game_main_c_176 * state /* r31 */, struct_dm_game_main_c_487 * map /* r27 */) {
     // Local variables
     unsigned int i; // r29
     unsigned int j; // r28
@@ -436,19 +278,12 @@ int dm_broken_set(struct_dm_game_main_c_176 * state /* r31 */, struct {
 }
 
 // Range: 0xFCC0 -> 0xFE60
-static void dm_calc_erase_score_pos(struct_dm_game_main_c_176 * state /* r1+0x8 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r1+0xC */, int * pos /* r1+0x10 */) {
+static void dm_calc_erase_score_pos(struct_dm_game_main_c_176 * state /* r1+0x8 */, struct_dm_game_main_c_487 * map /* r1+0xC */, int * pos /* r1+0x10 */) {
     // Local variables
     int count; // r6
     int x; // r12
     int y; // r31
-    struct_dm_game_main_c_502 * mp; // r1+0x8
+    struct_dm_game_main_c_487 * mp; // r1+0x8
 }
 
 unsigned char FlyingCnt[]; // size: 0x0, address: 0x488C
@@ -597,7 +432,7 @@ static void scoreNums_set(struct_dm_game_main_c_5046 * st /* r30 */, unsigned lo
 
 struct_dm_game_main_c_5475 * gameBackup[2]; // size: 0x8, address: 0x1A1B0
 struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
-struct_dm_game_main_c_502 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
+struct_dm_game_main_c_487 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
 unsigned long evs_game_time; // size: 0x4, address: 0x190AC
 // Range: 0x10900 -> 0x10AA4
 static void backup_game_state(int bufNo /* r1+0x0 */) {
@@ -661,14 +496,7 @@ static int black_color$1384[2]; // size: 0x8, address: 0xDC8
 unsigned char FallSpeed[]; // size: 0x0, address: 0x48A0
 unsigned char BonusWait[][3]; // size: 0x0, address: 0x4890
 // Range: 0x10DC8 -> 0x11090
-void dm_capsel_down(struct_dm_game_main_c_176 * state /* r28 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r29 */) {
+void dm_capsel_down(struct_dm_game_main_c_176 * state /* r28 */, struct_dm_game_main_c_487 * map /* r29 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r31
     struct_dm_game_main_c_690 * cap; // r30
@@ -767,14 +595,7 @@ static int retryMenu_input(int playerNo /* r1+0x8 */) {
 }
 
 // Range: 0x11C54 -> 0x11F88
-static void set_bottom_up_virus(struct_dm_game_main_c_176 * state /* r27 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r28 */) {
+static void set_bottom_up_virus(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_487 * map /* r28 */) {
     // Local variables
     int i; // r29
     int j; // r30
@@ -791,7 +612,7 @@ static void set_bottom_up_virus(struct_dm_game_main_c_176 * state /* r27 */, str
 }
 
 // Range: 0x11F88 -> 0x12144
-static @enum$110dm_title_main_c bottom_up_bottle_items(struct_dm_game_main_c_502 * map /* r3 */) {
+static @enum$110dm_title_main_c bottom_up_bottle_items(struct_dm_game_main_c_487 * map /* r3 */) {
     // Local variables
     int i; // r1+0x8
     int j; // r1+0x8
@@ -892,14 +713,7 @@ signed char aiDebugP1; // size: 0x1, address: 0x23580
 unsigned short joynew[5]; // size: 0xA, address: 0x1CD88
 @enum$100dm_game_main_c;
 // Range: 0x12940 -> 0x13968
-static @enum$100dm_game_main_c dm_game_main_cnt_1P(struct_dm_game_main_c_176 * state /* r31 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r24 */, int player_no /* r26 */) {
+static @enum$100dm_game_main_c dm_game_main_cnt_1P(struct_dm_game_main_c_176 * state /* r31 */, struct_dm_game_main_c_487 * map /* r24 */, int player_no /* r26 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r25
     int i; // r20
@@ -929,14 +743,7 @@ static @enum$100dm_game_main_c dm_game_main_cnt_1P(struct_dm_game_main_c_176 * s
 }
 
 // Range: 0x13968 -> 0x14DE4
-static @enum$100dm_game_main_c dm_game_main_cnt(struct_dm_game_main_c_176 * state /* r30 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r22 */, int player_no /* r31 */) {
+static @enum$100dm_game_main_c dm_game_main_cnt(struct_dm_game_main_c_176 * state /* r30 */, struct_dm_game_main_c_487 * map /* r22 */, int player_no /* r31 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r24
     int i; // r1+0x8
@@ -1035,7 +842,7 @@ void dm_calc_big_virus_pos(struct_dm_game_main_c_176 * state /* r31 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r29
     struct_dm_game_main_c_176 * state; // r28
-    struct_dm_game_main_c_502 * map; // r24
+    struct_dm_game_main_c_487 * map; // r24
     @enum$100dm_game_main_c ret; // r1+0x8
     int i; // r24
     unsigned long score; // r24
@@ -1115,7 +922,7 @@ static @enum$110dm_title_main_c dm_set_time_attack_result_2p(struct_dm_game_main
     // Local variables
     struct_dm_game_main_c_4937 * st; // r25
     struct_dm_game_main_c_176 * state[2]; // r1+0x3C
-    struct_dm_game_main_c_502 * map[2]; // r1+0x34
+    struct_dm_game_main_c_487 * map[2]; // r1+0x34
     @enum$110dm_title_main_c finish; // r20
     @enum$110dm_title_main_c menu; // r27
     int i; // r28
@@ -1140,7 +947,7 @@ static @enum$100dm_game_main_c dm_game_main_4p() {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r27
     struct_dm_game_main_c_176 * state[4]; // r1+0x58
-    struct_dm_game_main_c_502 * map[4]; // r1+0x48
+    struct_dm_game_main_c_487 * map[4]; // r1+0x48
     @enum$100dm_game_main_c ret[4]; // r1+0x38
     int i; // r26
     @enum$110dm_title_main_c finish; // r31
@@ -1239,27 +1046,7 @@ struct_tex_func_c_1287 * dm_game_get_capsel_pal(int sizeIndex /* r1+0x0 */, int 
 
 union_drmario_gc_c_202 alpha_texture_init_dl[]; // size: 0x0, address: 0x41A0
 // Range: 0x17F08 -> 0x1822C
-static void scoreNums_draw(struct_dm_game_main_c_5046 * st /* r24 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r1+0x18 */) {
+static void scoreNums_draw(struct_dm_game_main_c_5046 * st /* r24 */, union_drmario_gc_c_202 * * gpp /* r1+0x18 */) {
     // Local variables
     union_drmario_gc_c_202 * gp; // r1+0x10
     struct_dm_game_main_c_5057 * num; // r3
@@ -1282,27 +1069,7 @@ static void scoreNums_draw(struct_dm_game_main_c_5046 * st /* r24 */, union {
 }
 
 // Range: 0x1822C -> 0x18654
-void starForce_draw(struct_dm_game_main_c_17429 * star /* r28 */, union {
-    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * gpp /* r29 */, int count /* r30 */) {
+void starForce_draw(struct_dm_game_main_c_17429 * star /* r28 */, union_drmario_gc_c_202 * * gpp /* r29 */, int count /* r30 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r31
     union_drmario_gc_c_202 * gp; // r1+0x14
@@ -1352,7 +1119,7 @@ static void draw_4p_attack_guide_panel(union_drmario_gc_c_202 * * gpp /* r20 */,
 }
 
 // Range: 0x18944 -> 0x18A58
-static void dm_map_draw(struct_dm_game_main_c_502 * map /* r3 */, unsigned char col_no /* r1+0xC */, signed short x_p /* r1+0xE */, signed short y_p /* r1+0x10 */, signed char size /* r1+0x12 */) {
+static void dm_map_draw(struct_dm_game_main_c_487 * map /* r3 */, unsigned char col_no /* r1+0xC */, signed short x_p /* r1+0xE */, signed short y_p /* r1+0x10 */, signed char size /* r1+0x12 */) {
     // Local variables
     int i; // r1+0x8
     union_drmario_gc_c_202 * _g; // r1+0x8
@@ -1519,74 +1286,7 @@ static void draw_flash_virus_light(union_drmario_gc_c_202 * * gpp /* r31 */, @en
 }
 
 // Range: 0x19C88 -> 0x19D6C
-static void draw_flash_virus_lights(union_drmario_gc_c_202 * * gpp /* r30 */, struct {
-    // total size: 0x3C4
-    unsigned long game_score; // offset 0x0, size 0x4
-    unsigned short game_retry; // offset 0x4, size 0x2
-    signed short map_x; // offset 0x6, size 0x2
-    signed short map_y; // offset 0x8, size 0x2
-    signed char map_item_size; // offset 0xA, size 0x1
-    @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
-    @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
-    @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
-    @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
-    @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
-    @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
-    unsigned char virus_order_number; // offset 0x24, size 0x1
-    unsigned char virus_number; // offset 0x25, size 0x1
-    unsigned char virus_level; // offset 0x26, size 0x1
-    unsigned char virus_anime; // offset 0x27, size 0x1
-    signed char virus_anime_vec; // offset 0x28, size 0x1
-    unsigned char virus_anime_count; // offset 0x29, size 0x1
-    unsigned char virus_anime_max; // offset 0x2A, size 0x1
-    unsigned char virus_anime_spead; // offset 0x2B, size 0x1
-    unsigned char cap_def_speed; // offset 0x2C, size 0x1
-    unsigned char cap_speed; // offset 0x2D, size 0x1
-    unsigned char cap_count; // offset 0x2E, size 0x1
-    unsigned char cap_speed_count; // offset 0x2F, size 0x1
-    unsigned char cap_speed_vec; // offset 0x30, size 0x1
-    unsigned char cap_speed_max; // offset 0x31, size 0x1
-    unsigned char cap_magazine_cnt; // offset 0x32, size 0x1
-    unsigned char cap_magazine_save; // offset 0x33, size 0x1
-    signed char cap_move_se_flg; // offset 0x34, size 0x1
-    unsigned char erase_anime; // offset 0x35, size 0x1
-    unsigned char erase_anime_count; // offset 0x36, size 0x1
-    unsigned char erase_virus_count; // offset 0x37, size 0x1
-    unsigned char erase_virus_count_old; // offset 0x38, size 0x1
-    unsigned char chain_count; // offset 0x39, size 0x1
-    unsigned char chain_line; // offset 0x3A, size 0x1
-    unsigned char chain_line_max; // offset 0x3B, size 0x1
-    unsigned char chain_color[4]; // offset 0x3C, size 0x4
-    unsigned char black_up_count; // offset 0x40, size 0x1
-    int warning_se_flag; // offset 0x44, size 0x4
-    unsigned char flg_retire; // offset 0x48, size 0x1
-    unsigned char flg_game_over; // offset 0x49, size 0x1
-    unsigned char flg_training; // offset 0x4A, size 0x1
-    unsigned char player_no; // offset 0x4B, size 0x1
-    unsigned char player_type; // offset 0x4C, size 0x1
-    unsigned char think_type; // offset 0x4D, size 0x1
-    unsigned char think_level; // offset 0x4E, size 0x1
-    unsigned char team_no; // offset 0x4F, size 0x1
-    unsigned short cap_attack_work[16][2]; // offset 0x50, size 0x40
-    int charNo; // offset 0x90, size 0x4
-    struct SAnimeState anime; // offset 0x94, size 0x40
-    int flash_virus_pos[9][3]; // offset 0xD4, size 0x6C
-    int flash_virus_bak[9]; // offset 0x140, size 0x24
-    int flash_virus_count; // offset 0x164, size 0x4
-    int bottom_up_scroll; // offset 0x168, size 0x4
-    int game_level; // offset 0x16C, size 0x4
-    int total_erase_count; // offset 0x170, size 0x4
-    int total_chain_count; // offset 0x174, size 0x4
-    struct_dm_game_main_c_690 now_cap; // offset 0x178, size 0xC
-    struct_dm_game_main_c_690 next_cap; // offset 0x184, size 0xC
-    struct_dm_game_main_c_828 ai; // offset 0x190, size 0x108
-    unsigned char pn; // offset 0x298, size 0x1
-    unsigned char gs; // offset 0x299, size 0x1
-    unsigned char lv; // offset 0x29A, size 0x1
-    unsigned char vs; // offset 0x29B, size 0x1
-    struct_dm_game_main_c_837 blk[18][8]; // offset 0x29C, size 0x120
-    struct_dm_game_main_c_846 cap; // offset 0x3BC, size 0x6
-} * state /* r31 */) {
+static void draw_flash_virus_lights(union_drmario_gc_c_202 * * gpp /* r30 */, struct_dm_game_main_c_176 * state /* r31 */) {
     // Local variables
     @enum$110dm_title_main_c cached; // r4
     int i; // r28
@@ -1699,10 +1399,7 @@ void dm_draw_big_virus(union_drmario_gc_c_202 * * gpp /* r26 */) {
 
 static int _pat$4838[6]; // size: 0x18, address: 0xFC8
 // Range: 0x1AAD4 -> 0x1AEB8
-void dm_draw_KaSaMaRu(union_drmario_gc_c_202 * * gpp /* r24 */, union {
-    long m[4][4]; // offset 0x0, size 0x40
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * mpp /* r25 */, union_tex_func_c_1051 * * vpp /* r26 */, int speaking /* r19 */, int x /* r27 */, int y /* r28 */, int dir /* r29 */, int alpha /* r30 */) {
+void dm_draw_KaSaMaRu(union_drmario_gc_c_202 * * gpp /* r24 */, union_main_story_c_778 * * mpp /* r25 */, union_tex_func_c_1051 * * vpp /* r26 */, int speaking /* r19 */, int x /* r27 */, int y /* r28 */, int dir /* r29 */, int alpha /* r30 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r20
     union_drmario_gc_c_202 * gp; // r1+0x7C
@@ -1730,14 +1427,7 @@ void dm_draw_KaSaMaRu(union_drmario_gc_c_202 * * gpp /* r24 */, union {
 }
 
 // Range: 0x1AEB8 -> 0x1B340
-static void dm_game_graphic_common(struct_dm_game_main_c_176 * state /* r31 */, int player_no /* r23 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r25 */) {
+static void dm_game_graphic_common(struct_dm_game_main_c_176 * state /* r31 */, int player_no /* r23 */, struct_dm_game_main_c_487 * map /* r25 */) {
     // Local variables
     struct_tex_func_c_1287 * tex; // r3
     int i; // r22
@@ -1770,14 +1460,7 @@ static void dm_game_graphic_common(struct_dm_game_main_c_176 * state /* r31 */, 
 }
 
 // Range: 0x1B340 -> 0x1B4F8
-void dm_game_graphic_p(struct_dm_game_main_c_176 * state /* r28 */, int player_no /* r4 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r5 */) {
+void dm_game_graphic_p(struct_dm_game_main_c_176 * state /* r28 */, int player_no /* r4 */, struct_dm_game_main_c_487 * map /* r5 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r30
     int i; // r29
@@ -1796,14 +1479,7 @@ void dm_game_graphic_p(struct_dm_game_main_c_176 * state /* r28 */, int player_n
 }
 
 // Range: 0x1B4F8 -> 0x1B6D8
-static void dm_game_graphic_1p(struct_dm_game_main_c_176 * state /* r29 */, int player_no /* r4 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r5 */) {
+static void dm_game_graphic_1p(struct_dm_game_main_c_176 * state /* r29 */, int player_no /* r4 */, struct_dm_game_main_c_487 * map /* r5 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r30
     int i; // r6
@@ -1872,14 +1548,7 @@ void dm_make_key() {
 }
 
 // Range: 0x1C290 -> 0x1C6C4
-void key_control_main(struct_dm_game_main_c_176 * state /* r27 */, struct {
-    // total size: 0xA
-    signed char pos_m_x; // offset 0x0, size 0x1
-    signed char pos_m_y; // offset 0x1, size 0x1
-    signed char capsel_m_g; // offset 0x2, size 0x1
-    signed char capsel_m_p; // offset 0x3, size 0x1
-    signed char capsel_m_flg[6]; // offset 0x4, size 0x6
-} * map /* r28 */, int player_no /* r29 */, int joy_no /* r30 */) {
+void key_control_main(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_487 * map /* r28 */, int player_no /* r29 */, int joy_no /* r30 */) {
     // Local variables
     struct_dm_game_main_c_4937 * st; // r31
     struct_dm_game_main_c_690 * cap; // r25

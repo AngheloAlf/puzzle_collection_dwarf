@@ -21,27 +21,7 @@ static void titleTickRing(struct_title_c_1989 * aRing /* r3 */) {
 }
 
 // Range: 0xA4C98 -> 0xA5124
-static void titleDrawRing(struct_title_c_1989 * aRing /* r1+0x8 */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0xC */) {
+static void titleDrawRing(struct_title_c_1989 * aRing /* r1+0x8 */, union_pon_gc_c_173 * * ppGfx /* r1+0xC */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r9
     int nX; // r12
@@ -86,27 +66,7 @@ static void titleMakeDust(struct_title_c_6091 * aDust /* r27 */, int nCount /* r
 }
 
 // Range: 0xA532C -> 0xA5760
-static void titleDrawDust(struct_title_c_6091 * aDust /* r1+0x8 */, int nCount /* r1+0xC */, union {
-    struct_bitmap_c_151 words; // offset 0x0, size 0x8
-    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_178 line; // offset 0x0, size 0x8
-    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x10 */) {
+static void titleDrawDust(struct_title_c_6091 * aDust /* r1+0x8 */, int nCount /* r1+0xC */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */) {
     // Local variables
     int nX; // r10
     int nY; // r1+0x8
@@ -442,8 +402,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -454,21 +414,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
     union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
     union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
     union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
     union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
     union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
     union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4

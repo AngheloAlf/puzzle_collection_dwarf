@@ -268,8 +268,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -280,21 +280,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
     union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
     union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
     union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
     union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
     union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
     union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
     union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
@@ -340,7 +340,7 @@ void AttackFly(struct tetWell * well /* r1+0x8 */, struct attack_t * attack /* r
     int multi; // r1+0x8
     float m; // f4
     float pos; // f5
-    struct_pon_gc_tex_c_9927 * s; // r6
+    struct_animation_c_1169 * s; // r6
 
     // References
     // -> int st_Attack3DTopPosition[4][6];
@@ -354,7 +354,7 @@ void AttackFly(struct tetWell * well /* r1+0x8 */, struct attack_t * attack /* r
 // Range: 0x32FD4 -> 0x33088
 void pon_AttackFly4p(struct attack_t * attack /* r31 */, int num /* r1+0x10 */) {
     // Local variables
-    struct_pon_gc_tex_c_9927 * s; // r8
+    struct_animation_c_1169 * s; // r8
 
     // References
     // -> int st_Attack2DTopPosition[4][6];
@@ -368,7 +368,7 @@ void AttackTop(struct tetWell * well /* r26 */, struct cursor_t * cursor /* r29 
     int count; // r5
     int pos; // r31
     int multi; // r30
-    struct_pon_gc_tex_c_9927 * s; // r29
+    struct_animation_c_1169 * s; // r29
     struct attack_t * attk; // r29
 
     // References
@@ -387,7 +387,7 @@ void pon_AttackTop4p(struct tetWell * well /* r26 */, struct cursor_t * cursor /
     int count; // r6
     int pos; // r31
     int multi; // r30
-    struct_pon_gc_tex_c_9927 * s; // r29
+    struct_animation_c_1169 * s; // r29
     struct attack_t * attk; // r29
     struct tetWell * victimwell; // r1+0x8
 
