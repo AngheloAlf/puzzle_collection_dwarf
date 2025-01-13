@@ -1,4 +1,4 @@
-typedef enum {
+typedef enum /* @enum$100editor_c */ {
     EM_NONE = 0,
     EM_MAKE = 1,
     EM_MAKE_MOVE = 2,
@@ -11,7 +11,7 @@ typedef enum {
     EM_BACK = 9,
     EM_PLAY = 10,
 } @enum$100editor_c;
-typedef enum {
+typedef enum /* @enum$105menu_c */ {
     MT_NONE = 0,
     MT_MANY = 1,
     MT_PLAY = 2,
@@ -80,23 +80,23 @@ typedef enum {
     MT_SCORE_ATTACK = 65,
     MT_STAGE_CLEAR = 66,
 } @enum$105menu_c;
-typedef enum {
+typedef enum /* @enum$104menu_c */ {
     ML_NONE = 0,
     ML_JAPANESE = 1,
     ML_ENGLISH = 2,
 } @enum$104menu_c;
-typedef enum {
+typedef enum /* @enum$107menu_c */ {
     MST_NONE = 0,
     MST_STEREO = 1,
     MST_MONO = 2,
 } @enum$107menu_c;
-typedef enum {
+typedef enum /* @enum$108menu_c */ {
     MSM_BGM = 0,
     MSM_SFX = 1,
     MSM_OFF = 2,
     MSM_ALL = 3,
 } @enum$108menu_c;
-typedef enum {
+typedef enum /* @enum$328menu_c */ {
     MPT_NONE = -1,
     MPS_EASY1 = 0,
     MPS_HARD1 = 1,
@@ -105,7 +105,7 @@ typedef enum {
     MPS_HARD2 = 4,
     MPS_SPECIAL = 5,
 } @enum$328menu_c;
-typedef enum {
+typedef enum /* @enum$354menu_c */ {
     MVS_NONE = -1,
     MVS_EASY = 0,
     MVS_NORMAL = 1,
@@ -113,7 +113,7 @@ typedef enum {
     MVS_SHARD = 3,
     MVS_VHARD = 4,
 } @enum$354menu_c;
-typedef enum {
+typedef enum /* @enum$106menu_c */ {
     MGT_NONE = -1,
     MGT_1P_ENDLESS = 0,
     MGT_1P_VSCPU = 1,
@@ -128,7 +128,7 @@ typedef enum {
     MGT_4P_SCORE = 10,
     MGT_4P_CLEAR = 11,
 } @enum$106menu_c;
-typedef enum {
+typedef enum /* @enum$2697menu_c */ {
     MRT_NONE = -1,
     MRT_ENDLESS2D = 0,
     MRT_ENDLESS3D = 1,
@@ -137,20 +137,20 @@ typedef enum {
     MRT_CLEAR2D = 4,
     MRT_CLEAR3D = 5,
 } @enum$2697menu_c;
-typedef enum {
+typedef enum /* @enum$2991menu_c */ {
     MSD_NORMAL = 0,
     MSD_OFF = 1,
     MSD_TRANSPARENT = 2,
     MSD_BLINKING = 3,
 } @enum$2991menu_c;
-typedef enum {
+typedef enum /* @enum$95menu_c */ {
     MFP_NONE = 0,
     MFP_LEFT = 1,
     MFP_LEFT_MIDDLE = 2,
     MFP_RIGHT_MIDDLE = 3,
     MFP_RIGHT = 4,
 } @enum$95menu_c;
-typedef enum {
+typedef enum /* @enum$635mimic_c */ {
     MM_NONE = 0,
     MM_GIRLTEXT = 1,
     MM_LEVEL = 2,
@@ -163,7 +163,7 @@ typedef enum {
     MM_PLAYTEXT2 = 9,
     MM_PLAYTEXT3 = 10,
 } @enum$635mimic_c;
-typedef enum {
+typedef enum /* @enum$94peel_c */ {
     PT_NONE = -1,
     PT_PICK = 0,
     PT_SPIN = 1,
@@ -181,7 +181,7 @@ typedef enum {
     PT_SCATTER = 13,
     PT_FADE = 14,
 } @enum$94peel_c;
-typedef enum {
+typedef enum /* @enum$95screen_c */ {
     SFM_NONE = 0,
     SFM_FADEIN = 1,
     SFM_FADEOUT = 2,
@@ -191,7 +191,7 @@ typedef enum {
     SFM_PAGEPEELIN = 6,
     SFM_PAGEPEELOUT = 7,
 } @enum$95screen_c;
-typedef enum {
+typedef enum /* @enum$94screen_c */ {
     SBT_NONE = -1,
     SBT_FLOWER = 0,
     SBT_ICE = 1,
@@ -211,19 +211,19 @@ typedef enum {
     SBT_WHALE = 15,
     SBT_WITCH = 16,
 } @enum$94screen_c;
-typedef enum {
+typedef enum /* @enum$96screen_c */ {
     SAF_NONE = 0,
     SAF_LEFT = 1,
     SAF_RIGHT = 2,
     SAF_UP = 3,
     SAF_DOWN = 4,
 } @enum$96screen_c;
-typedef enum {
+typedef enum /* @enum$106story_c */ {
     SX_NONE = 0,
     SX_BEAT = 1,
     SX_MEET = 2,
 } @enum$106story_c;
-typedef enum {
+typedef enum /* @enum$105story_c */ {
     SM_NONE = 0,
     SM_PICK = 1,
     SM_OPEN = 2,
@@ -234,30 +234,30 @@ typedef enum {
     SM_CAST = 7,
     SM_CHAR = 8,
 } @enum$105story_c;
-typedef enum {
+typedef enum /* @enum$107story_c */ {
     SDT_BITS = 0,
     SDT_BALL = 1,
     SDT_GLOW = 2,
 } @enum$107story_c;
-typedef enum {
+typedef enum /* @enum$96story_c */ {
     SPM_HOLD = 0,
     SPM_WRAP = 1,
     SPM_LOOP = 2,
     SPM_PACK = 3,
 } @enum$96story_c;
-typedef enum {
+typedef enum /* @enum$1241story_c */ {
     SSH_WAIT = 0,
     SSH_HOLD = 1,
     SSH_DONE = 2,
 } @enum$1241story_c;
-typedef enum {
+typedef enum /* @enum$1240story_c */ {
     SSTM_NONE = 0,
     SSTM_SHOW = 1,
     SSTM_TYPE = 2,
     SSTM_WAIT = 3,
     SSTM_HIDE = 4,
 } @enum$1240story_c;
-typedef enum {
+typedef enum /* @enum$1588story_c */ {
     SGM_NONE = 0,
     SGM_WAIT = 1,
     SGM_GLAD = 2,
@@ -269,7 +269,7 @@ typedef enum {
     SGM_FLY2 = 8,
     SGM_PLAY = 9,
 } @enum$1588story_c;
-typedef enum {
+typedef enum /* @enum$1773story_c */ {
     SIM_NONE = 0,
     SIM_LAST = 1,
     SIM_SPAN = 2,
@@ -279,14 +279,14 @@ typedef enum {
     SIM_FLY1 = 6,
     SIM_FLY2 = 7,
 } @enum$1773story_c;
-typedef enum {
+typedef enum /* @enum$2278story_c */ {
     SCT_NONE = 0,
     SCT_RAINBOW = 1,
     SCT_MASCOTS = 2,
     SCT_PROFILE = 3,
     SCT_FARIES = 4,
 } @enum$2278story_c;
-typedef enum {
+typedef enum /* @enum$2732story_c */ {
     SEM_NONE = 0,
     SEM_WAIT = 1,
     SEM_GROW = 2,
@@ -295,14 +295,14 @@ typedef enum {
     SEM_FADE = 5,
     SEM_HOLD = 6,
 } @enum$2732story_c;
-typedef enum {
+typedef enum /* @enum$107title_c */ {
     TM_NONE = 0,
     TM_CARD = 1,
     TM_LOGO = 2,
     TM_MAIN = 3,
     TM_CHAR = 4,
 } @enum$107title_c;
-typedef enum {
+typedef enum /* @enum$105title_c */ {
     TD_NONE = 0,
     TD_PROFILE = 1,
     TD_RULES_1 = 2,

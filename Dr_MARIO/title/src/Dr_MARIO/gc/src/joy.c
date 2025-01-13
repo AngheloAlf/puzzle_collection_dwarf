@@ -33,13 +33,7 @@ int joyInit() {
     // -> unsigned short joynew[5];
 }
 
-struct {
-    // total size: 0x6
-    unsigned short button; // offset 0x0, size 0x2
-    signed char stick_x; // offset 0x2, size 0x1
-    signed char stick_y; // offset 0x3, size 0x1
-    unsigned char errno; // offset 0x4, size 0x1
-} joypad[4]; // size: 0x18, address: 0x1CE50
+struct_joy_c_49 joypad[4]; // size: 0x18, address: 0x1CE50
 struct st_ContData {
     // total size: 0x8
     unsigned short button; // offset 0x0, size 0x2
@@ -85,12 +79,7 @@ unsigned char link_joy[4]; // size: 0x4, address: 0x1CE6C
 // Range: 0x22260 -> 0x22314
 int joyResponseCheck() {
     // Local variables
-    struct {
-        // total size: 0x4
-        unsigned short type; // offset 0x0, size 0x2
-        unsigned char status; // offset 0x2, size 0x1
-        unsigned char errno; // offset 0x3, size 0x1
-    } joyStatus[4]; // r1+0xC
+    struct_joy_c_50 joyStatus[4]; // r1+0xC
     int max_cont; // r30
     signed char i; // r8
     signed char j; // r1+0x8

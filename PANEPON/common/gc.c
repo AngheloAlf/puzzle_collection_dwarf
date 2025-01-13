@@ -555,20 +555,7 @@ struct OSCalendarTime {
     int usec; // offset 0x24, size 0x4
 };
 // Range: 0xB227C -> 0xB25E0
-static void gc_memoryCardSelect_checkSub(int slot /* r24 */, struct {
-    // total size: 0x2C
-    int status; // offset 0x0, size 0x4
-    int sec; // offset 0x4, size 0x4
-    int min; // offset 0x8, size 0x4
-    int hour; // offset 0xC, size 0x4
-    int mday; // offset 0x10, size 0x4
-    int mon; // offset 0x14, size 0x4
-    int year; // offset 0x18, size 0x4
-    int wday; // offset 0x1C, size 0x4
-    long byteNotUsed; // offset 0x20, size 0x4
-    long fileNotUsed; // offset 0x24, size 0x4
-    int reserveFile; // offset 0x28, size 0x4
-} * slotStatus /* r29 */) {
+static void gc_memoryCardSelect_checkSub(int slot /* r24 */, struct_pon_gc_MemoryCard_c_13 * slotStatus /* r29 */) {
     // Local variables
     struct CARDStat cardStat; // r1+0x9C
     long long tempTm; // r0
@@ -584,20 +571,7 @@ static void gc_memoryCardSelect_checkSub(int slot /* r24 */, struct {
 }
 
 // Range: 0xB25E0 -> 0xB2620
-void gc_memoryCardSelect_check(struct {
-    // total size: 0x2C
-    int status; // offset 0x0, size 0x4
-    int sec; // offset 0x4, size 0x4
-    int min; // offset 0x8, size 0x4
-    int hour; // offset 0xC, size 0x4
-    int mday; // offset 0x10, size 0x4
-    int mon; // offset 0x14, size 0x4
-    int year; // offset 0x18, size 0x4
-    int wday; // offset 0x1C, size 0x4
-    long byteNotUsed; // offset 0x20, size 0x4
-    long fileNotUsed; // offset 0x24, size 0x4
-    int reserveFile; // offset 0x28, size 0x4
-} * slotA /* r3 */, struct {
+void gc_memoryCardSelect_check(struct_pon_gc_MemoryCard_c_13 * slotA /* r3 */, struct {
     // total size: 0x2C
     int status; // offset 0x0, size 0x4
     int sec; // offset 0x4, size 0x4

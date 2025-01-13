@@ -23,92 +23,11 @@ static unsigned long BitField_GetBit(struct BitField * st /* r1+0x0 */, int coun
 }
 
 // Range: 0x2AEE8 -> 0x2AF60
-void dm_init_config_save(struct {
-    // total size: 0x1A
-    unsigned char st_lv; // offset 0x0, size 0x1
-    unsigned char st_sh; // offset 0x1, size 0x1
-    unsigned char st_st; // offset 0x2, size 0x1
-    unsigned char st_no; // offset 0x3, size 0x1
-    unsigned char p1_lv; // offset 0x4, size 0x1
-    unsigned char p1_sp; // offset 0x5, size 0x1
-    unsigned char p1_m; // offset 0x6, size 0x1
-    unsigned char p1_ta_lv; // offset 0x7, size 0x1
-    unsigned char p1_tq_lv; // offset 0x8, size 0x1
-    unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-    unsigned char vc_lv[2]; // offset 0xB, size 0x2
-    unsigned char vc_sp[2]; // offset 0xD, size 0x2
-    unsigned char vc_no[2]; // offset 0xF, size 0x2
-    unsigned char vc_st; // offset 0x11, size 0x1
-    unsigned char vc_m; // offset 0x12, size 0x1
-    unsigned char vm_fl_lv; // offset 0x13, size 0x1
-    unsigned char vm_ta_lv; // offset 0x14, size 0x1
-    unsigned char vm_lv; // offset 0x15, size 0x1
-    unsigned char vm_sp; // offset 0x16, size 0x1
-    unsigned char vm_no; // offset 0x17, size 0x1
-    unsigned char vm_st; // offset 0x18, size 0x1
-    unsigned char vm_m; // offset 0x19, size 0x1
-} * config /* r1+0x0 */) {}
+void dm_init_config_save(struct_dm_game_main_c_31 * config /* r1+0x0 */) {}
 
 int evs_default_name[]; // size: 0x0, address: 0x1909C
 // Range: 0x2AF60 -> 0x2B0A0
-void dm_init_save_mem(struct {
-    // total size: 0xD0
-    unsigned char mem_use_flg; // offset 0x0, size 0x1
-    unsigned char mem_name[4]; // offset 0x1, size 0x4
-    int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } story_data[3]; // offset 0x28, size 0x24
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } level_data[3]; // offset 0x4C, size 0x18
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } taiQ_data[3]; // offset 0x64, size 0x18
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } timeAt_data[3]; // offset 0x7C, size 0x24
-    unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-    unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-    unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-    unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-    unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct {
-        // total size: 0x1A
-        unsigned char st_lv; // offset 0x0, size 0x1
-        unsigned char st_sh; // offset 0x1, size 0x1
-        unsigned char st_st; // offset 0x2, size 0x1
-        unsigned char st_no; // offset 0x3, size 0x1
-        unsigned char p1_lv; // offset 0x4, size 0x1
-        unsigned char p1_sp; // offset 0x5, size 0x1
-        unsigned char p1_m; // offset 0x6, size 0x1
-        unsigned char p1_ta_lv; // offset 0x7, size 0x1
-        unsigned char p1_tq_lv; // offset 0x8, size 0x1
-        unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-        unsigned char vc_lv[2]; // offset 0xB, size 0x2
-        unsigned char vc_sp[2]; // offset 0xD, size 0x2
-        unsigned char vc_no[2]; // offset 0xF, size 0x2
-        unsigned char vc_st; // offset 0x11, size 0x1
-        unsigned char vc_m; // offset 0x12, size 0x1
-        unsigned char vm_fl_lv; // offset 0x13, size 0x1
-        unsigned char vm_ta_lv; // offset 0x14, size 0x1
-        unsigned char vm_lv; // offset 0x15, size 0x1
-        unsigned char vm_sp; // offset 0x16, size 0x1
-        unsigned char vm_no; // offset 0x17, size 0x1
-        unsigned char vm_st; // offset 0x18, size 0x1
-        unsigned char vm_m; // offset 0x19, size 0x1
-    } config; // offset 0xB4, size 0x1A
-} * mem /* r29 */) {
+void dm_init_save_mem(struct_dm_game_main_c_30 * mem /* r29 */) {
     // Local variables
     int i; // r1+0x8
     int j; // r1+0x8
@@ -141,131 +60,12 @@ void dm_init_system_mem() {
     // -> static char _defName$233[8];
 }
 
-struct {
-    // total size: 0xD0
-    unsigned char mem_use_flg; // offset 0x0, size 0x1
-    unsigned char mem_name[4]; // offset 0x1, size 0x4
-    int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } story_data[3]; // offset 0x28, size 0x24
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } level_data[3]; // offset 0x4C, size 0x18
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } taiQ_data[3]; // offset 0x64, size 0x18
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } timeAt_data[3]; // offset 0x7C, size 0x24
-    unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-    unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-    unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-    unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-    unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct {
-        // total size: 0x1A
-        unsigned char st_lv; // offset 0x0, size 0x1
-        unsigned char st_sh; // offset 0x1, size 0x1
-        unsigned char st_st; // offset 0x2, size 0x1
-        unsigned char st_no; // offset 0x3, size 0x1
-        unsigned char p1_lv; // offset 0x4, size 0x1
-        unsigned char p1_sp; // offset 0x5, size 0x1
-        unsigned char p1_m; // offset 0x6, size 0x1
-        unsigned char p1_ta_lv; // offset 0x7, size 0x1
-        unsigned char p1_tq_lv; // offset 0x8, size 0x1
-        unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-        unsigned char vc_lv[2]; // offset 0xB, size 0x2
-        unsigned char vc_sp[2]; // offset 0xD, size 0x2
-        unsigned char vc_no[2]; // offset 0xF, size 0x2
-        unsigned char vc_st; // offset 0x11, size 0x1
-        unsigned char vc_m; // offset 0x12, size 0x1
-        unsigned char vm_fl_lv; // offset 0x13, size 0x1
-        unsigned char vm_ta_lv; // offset 0x14, size 0x1
-        unsigned char vm_lv; // offset 0x15, size 0x1
-        unsigned char vm_sp; // offset 0x16, size 0x1
-        unsigned char vm_no; // offset 0x17, size 0x1
-        unsigned char vm_st; // offset 0x18, size 0x1
-        unsigned char vm_m; // offset 0x19, size 0x1
-    } config; // offset 0xB4, size 0x1A
-} evs_mem_data[9]; // size: 0x750, address: 0x549C0
+struct_dm_game_main_c_30 evs_mem_data[9]; // size: 0x750, address: 0x549C0
 // Range: 0x2B190 -> 0x2B280
 void dm_story_sort_set(int player_no /* r1+0x0 */, int char_no /* r1+0x4 */, int g_level /* r1+0x8 */, int score /* r6 */, int time /* r11 */, int c_stage /* r1+0x14 */, int ignoreFlag /* r1+0x18 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r10
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } * ms; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r10
+    struct_record_c_55 * ms; // r1+0x0
     int hi; // r1+0x0
     int lo; // r9
 
@@ -276,11 +76,7 @@ void dm_story_sort_set(int player_no /* r1+0x0 */, int char_no /* r1+0x4 */, int
 // Range: 0x2B280 -> 0x2B2C8
 void dm_level_sort_set(int player_no /* r1+0x0 */, int g_speed /* r1+0x4 */, int score /* r5 */, int c_level /* r6 */) {
     // Local variables
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } * ml; // r1+0x0
+    struct_record_c_56 * ml; // r1+0x0
     int hi; // r1+0x0
     int lo; // r4
 
@@ -291,11 +87,7 @@ void dm_level_sort_set(int player_no /* r1+0x0 */, int g_speed /* r1+0x4 */, int
 // Range: 0x2B2C8 -> 0x2B340
 void dm_taiQ_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int score /* r5 */, int time /* r6 */) {
     // Local variables
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } * tq; // r4
+    struct_record_c_57 * tq; // r4
     int hi; // r3
     int lo; // r6
 
@@ -306,12 +98,7 @@ void dm_taiQ_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int scor
 // Range: 0x2B340 -> 0x2B3CC
 void dm_timeAt_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int score /* r5 */, int time /* r9 */, int erase /* r7 */) {
     // Local variables
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } * ta; // r4
+    struct_record_c_58 * ta; // r4
     int hi; // r6
     int lo; // r8
 
@@ -322,64 +109,7 @@ void dm_timeAt_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int sc
 // Range: 0x2B3CC -> 0x2B410
 void dm_vscom_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -388,64 +118,7 @@ void dm_vscom_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B410 -> 0x2B454
 void dm_vc_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -454,64 +127,7 @@ void dm_vc_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B454 -> 0x2B498
 void dm_vsman_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -520,64 +136,7 @@ void dm_vsman_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B498 -> 0x2B4DC
 void dm_vm_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -586,64 +145,7 @@ void dm_vm_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B4DC -> 0x2B520
 void dm_vm_ta_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x0
+    struct_dm_game_main_c_30 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -678,231 +180,39 @@ struct SRankSortInfo {
 @enum$362record_c;
 @enum$110dm_title_main_c;
 // Range: 0x2B520 -> 0x2B674
-static @enum$110dm_title_main_c _get1PLess(struct {
+static @enum$110dm_title_main_c _get1PLess(struct_dm_game_main_c_30 * mc1 /* r1+0x0 */, struct {
     // total size: 0xD0
     unsigned char mem_use_flg; // offset 0x0, size 0x1
     unsigned char mem_name[4]; // offset 0x1, size 0x4
     int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } story_data[3]; // offset 0x28, size 0x24
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } level_data[3]; // offset 0x4C, size 0x18
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } taiQ_data[3]; // offset 0x64, size 0x18
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } timeAt_data[3]; // offset 0x7C, size 0x24
+    struct_record_c_55 story_data[3]; // offset 0x28, size 0x24
+    struct_record_c_56 level_data[3]; // offset 0x4C, size 0x18
+    struct_record_c_57 taiQ_data[3]; // offset 0x64, size 0x18
+    struct_record_c_58 timeAt_data[3]; // offset 0x7C, size 0x24
     unsigned short vscom_data[2]; // offset 0xA0, size 0x4
     unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
     unsigned short vsman_data[2]; // offset 0xA8, size 0x4
     unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
     unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct {
-        // total size: 0x1A
-        unsigned char st_lv; // offset 0x0, size 0x1
-        unsigned char st_sh; // offset 0x1, size 0x1
-        unsigned char st_st; // offset 0x2, size 0x1
-        unsigned char st_no; // offset 0x3, size 0x1
-        unsigned char p1_lv; // offset 0x4, size 0x1
-        unsigned char p1_sp; // offset 0x5, size 0x1
-        unsigned char p1_m; // offset 0x6, size 0x1
-        unsigned char p1_ta_lv; // offset 0x7, size 0x1
-        unsigned char p1_tq_lv; // offset 0x8, size 0x1
-        unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-        unsigned char vc_lv[2]; // offset 0xB, size 0x2
-        unsigned char vc_sp[2]; // offset 0xD, size 0x2
-        unsigned char vc_no[2]; // offset 0xF, size 0x2
-        unsigned char vc_st; // offset 0x11, size 0x1
-        unsigned char vc_m; // offset 0x12, size 0x1
-        unsigned char vm_fl_lv; // offset 0x13, size 0x1
-        unsigned char vm_ta_lv; // offset 0x14, size 0x1
-        unsigned char vm_lv; // offset 0x15, size 0x1
-        unsigned char vm_sp; // offset 0x16, size 0x1
-        unsigned char vm_no; // offset 0x17, size 0x1
-        unsigned char vm_st; // offset 0x18, size 0x1
-        unsigned char vm_m; // offset 0x19, size 0x1
-    } config; // offset 0xB4, size 0x1A
-} * mc1 /* r1+0x0 */, struct {
-    // total size: 0xD0
-    unsigned char mem_use_flg; // offset 0x0, size 0x1
-    unsigned char mem_name[4]; // offset 0x1, size 0x4
-    int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } story_data[3]; // offset 0x28, size 0x24
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } level_data[3]; // offset 0x4C, size 0x18
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } taiQ_data[3]; // offset 0x64, size 0x18
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } timeAt_data[3]; // offset 0x7C, size 0x24
-    unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-    unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-    unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-    unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-    unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct {
-        // total size: 0x1A
-        unsigned char st_lv; // offset 0x0, size 0x1
-        unsigned char st_sh; // offset 0x1, size 0x1
-        unsigned char st_st; // offset 0x2, size 0x1
-        unsigned char st_no; // offset 0x3, size 0x1
-        unsigned char p1_lv; // offset 0x4, size 0x1
-        unsigned char p1_sp; // offset 0x5, size 0x1
-        unsigned char p1_m; // offset 0x6, size 0x1
-        unsigned char p1_ta_lv; // offset 0x7, size 0x1
-        unsigned char p1_tq_lv; // offset 0x8, size 0x1
-        unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-        unsigned char vc_lv[2]; // offset 0xB, size 0x2
-        unsigned char vc_sp[2]; // offset 0xD, size 0x2
-        unsigned char vc_no[2]; // offset 0xF, size 0x2
-        unsigned char vc_st; // offset 0x11, size 0x1
-        unsigned char vc_m; // offset 0x12, size 0x1
-        unsigned char vm_fl_lv; // offset 0x13, size 0x1
-        unsigned char vm_ta_lv; // offset 0x14, size 0x1
-        unsigned char vm_lv; // offset 0x15, size 0x1
-        unsigned char vm_sp; // offset 0x16, size 0x1
-        unsigned char vm_no; // offset 0x17, size 0x1
-        unsigned char vm_st; // offset 0x18, size 0x1
-        unsigned char vm_m; // offset 0x19, size 0x1
-    } config; // offset 0xB4, size 0x1A
+    struct_dm_game_main_c_31 config; // offset 0xB4, size 0x1A
 } * mc2 /* r1+0x4 */, @enum$362record_c mode /* r1+0x8 */, int level /* r1+0xC */) {
     // Local variables
     int hi; // r7
     int lo; // r8
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } * story1; // r1+0x0
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } * story2; // r1+0x0
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } * level1; // r1+0x0
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned char c_level; // offset 0x4, size 0x1
-    } * level2; // r1+0x0
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } * taiQ1; // r1+0x0
-    struct {
-        // total size: 0x8
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-    } * taiQ2; // r1+0x0
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } * timeAt1; // r1+0x0
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char erase; // offset 0x8, size 0x1
-    } * timeAt2; // r1+0x0
+    struct_record_c_55 * story1; // r1+0x0
+    struct_record_c_55 * story2; // r1+0x0
+    struct_record_c_56 * level1; // r1+0x0
+    struct_record_c_56 * level2; // r1+0x0
+    struct_record_c_57 * taiQ1; // r1+0x0
+    struct_record_c_57 * taiQ2; // r1+0x0
+    struct_record_c_58 * timeAt1; // r1+0x0
+    struct_record_c_58 * timeAt2; // r1+0x0
 }
 
 // Range: 0x2B674 -> 0x2B89C
 static void _sort1PMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$362record_c mode /* r23 */, int level /* r24 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r1+0x8
+    struct_dm_game_main_c_30 * mc; // r1+0x8
     unsigned char * sort; // r1+0x8
     int i; // r26
     int j; // r25
@@ -943,64 +253,7 @@ void dm_data_mode_timeAt_sort(struct SRankSortInfo * st /* r30 */) {
 // Range: 0x2B9DC -> 0x2BDE4
 static void _sortVsMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$494record_c mode /* r1+0xC */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * mc; // r5
+    struct_dm_game_main_c_30 * mc; // r5
     int i; // r31
     int j; // r31
     int aveVal; // r5
@@ -1030,72 +283,10 @@ void dm_data_vm_ta_sort(struct SRankSortInfo * st /* r3 */) {}
 // Range: 0x2BE98 -> 0x2C36C
 static void RecStory_Compress(struct BitField * bf /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * player; // r31
+    struct_dm_game_main_c_30 * player; // r31
     int i; // r1+0x8
     int j; // r1+0x8
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } * story; // r6
+    struct_record_c_55 * story; // r6
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -1104,72 +295,10 @@ static void RecStory_Compress(struct BitField * bf /* r1+0x8 */, int num /* r1+0
 // Range: 0x2C36C -> 0x2C7C4
 static void RecStory_Extract(struct BitField * bf /* r1+0x0 */, int num /* r1+0x4 */) {
     // Local variables
-    struct {
-        // total size: 0xD0
-        unsigned char mem_use_flg; // offset 0x0, size 0x1
-        unsigned char mem_name[4]; // offset 0x1, size 0x4
-        int clear_stage[4][2]; // offset 0x8, size 0x20
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char c_stage; // offset 0x8, size 0x1
-        } story_data[3]; // offset 0x28, size 0x24
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned char c_level; // offset 0x4, size 0x1
-        } level_data[3]; // offset 0x4C, size 0x18
-        struct {
-            // total size: 0x8
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-        } taiQ_data[3]; // offset 0x64, size 0x18
-        struct {
-            // total size: 0xC
-            unsigned long score; // offset 0x0, size 0x4
-            unsigned long time; // offset 0x4, size 0x4
-            unsigned char erase; // offset 0x8, size 0x1
-        } timeAt_data[3]; // offset 0x7C, size 0x24
-        unsigned short vscom_data[2]; // offset 0xA0, size 0x4
-        unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
-        unsigned short vsman_data[2]; // offset 0xA8, size 0x4
-        unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
-        unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-        struct {
-            // total size: 0x1A
-            unsigned char st_lv; // offset 0x0, size 0x1
-            unsigned char st_sh; // offset 0x1, size 0x1
-            unsigned char st_st; // offset 0x2, size 0x1
-            unsigned char st_no; // offset 0x3, size 0x1
-            unsigned char p1_lv; // offset 0x4, size 0x1
-            unsigned char p1_sp; // offset 0x5, size 0x1
-            unsigned char p1_m; // offset 0x6, size 0x1
-            unsigned char p1_ta_lv; // offset 0x7, size 0x1
-            unsigned char p1_tq_lv; // offset 0x8, size 0x1
-            unsigned char vc_fl_lv[2]; // offset 0x9, size 0x2
-            unsigned char vc_lv[2]; // offset 0xB, size 0x2
-            unsigned char vc_sp[2]; // offset 0xD, size 0x2
-            unsigned char vc_no[2]; // offset 0xF, size 0x2
-            unsigned char vc_st; // offset 0x11, size 0x1
-            unsigned char vc_m; // offset 0x12, size 0x1
-            unsigned char vm_fl_lv; // offset 0x13, size 0x1
-            unsigned char vm_ta_lv; // offset 0x14, size 0x1
-            unsigned char vm_lv; // offset 0x15, size 0x1
-            unsigned char vm_sp; // offset 0x16, size 0x1
-            unsigned char vm_no; // offset 0x17, size 0x1
-            unsigned char vm_st; // offset 0x18, size 0x1
-            unsigned char vm_m; // offset 0x19, size 0x1
-        } config; // offset 0xB4, size 0x1A
-    } * player; // r11
+    struct_dm_game_main_c_30 * player; // r11
     int i; // r1+0x0
     int j; // r1+0x0
-    struct {
-        // total size: 0xC
-        unsigned long score; // offset 0x0, size 0x4
-        unsigned long time; // offset 0x4, size 0x4
-        unsigned char c_stage; // offset 0x8, size 0x1
-    } * story; // r6
+    struct_record_c_55 * story; // r6
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -1223,16 +352,7 @@ enum EepRomErr EepRom_Init() {}
 // Range: 0x2D7F4 -> 0x2D878
 enum EepRomErr EepRom_InitFirst(void (* proc)(void *) /* r29 */, int (* proc2)(void *) /* r30 */, void * args /* r31 */) {}
 
-struct {
-    // total size: 0x16
-    unsigned char p4_team[4]; // offset 0x0, size 0x4
-    unsigned char p4_lv[4]; // offset 0x4, size 0x4
-    unsigned char p4_fl_lv[4]; // offset 0x8, size 0x4
-    unsigned char p4_no[4]; // offset 0xC, size 0x4
-    unsigned char p4_sp[4]; // offset 0x10, size 0x4
-    unsigned char p4_st; // offset 0x14, size 0x1
-    unsigned char p4_m; // offset 0x15, size 0x1
-} evs_cfg_4p; // size: 0x16, address: 0x55110
+struct_record_c_59 evs_cfg_4p; // size: 0x16, address: 0x55110
 // Range: 0x2D878 -> 0x2D948
 void EepRom_InitVars() {
     // Local variables
@@ -1304,874 +424,42 @@ void EepRom_DumpErrMes() {}
 void EepRom_DumpDataSize() {}
 
 // Range: 0x2DDAC -> 0x2DE0C
-void RecWritingMsg_init(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r31 */, void * heap /* r4 */) {}
+void RecWritingMsg_init(struct_record_c_60 * st /* r31 */, void * heap /* r4 */) {}
 
 // Range: 0x2DE0C -> 0x2DE58
-void RecWritingMsg_setStr(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r30 */, const unsigned char * str /* r31 */) {}
+void RecWritingMsg_setStr(struct_record_c_60 * st /* r30 */, const unsigned char * str /* r31 */) {}
 
 // Range: 0x2DE58 -> 0x2DEA0
-void RecWritingMsg_calc(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r31 */) {}
+void RecWritingMsg_calc(struct_record_c_60 * st /* r31 */) {}
 
-union {
-    struct {
-        // total size: 0x8
-        unsigned int w0; // offset 0x0, size 0x4
-        unsigned int w1; // offset 0x4, size 0x4
-    } words; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int par : 8; // offset 0x0, size 0x4
-        unsigned int len : 16; // offset 0x0, size 0x4
-        unsigned int addr; // offset 0x4, size 0x4
-    } dma; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad : 24; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x4
-            unsigned char flag; // offset 0x0, size 0x1
-            unsigned char v[3]; // offset 0x1, size 0x3
-        } tri; // offset 0x4, size 0x4
-    } tri; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad : 24; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x4
-            unsigned char flag; // offset 0x0, size 0x1
-            unsigned char v[3]; // offset 0x1, size 0x3
-        } line; // offset 0x4, size 0x4
-    } line; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad1 : 24; // offset 0x0, size 0x4
-        int pad2 : 24; // offset 0x4, size 0x4
-        unsigned int param : 8; // offset 0x4, size 0x4
-    } popmtx; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int mw_index : 8; // offset 0x0, size 0x4
-        int number : 8; // offset 0x0, size 0x4
-        int pad1 : 8; // offset 0x4, size 0x4
-        int base : 24; // offset 0x4, size 0x4
-    } segment; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int sft : 8; // offset 0x0, size 0x4
-        int len : 8; // offset 0x0, size 0x4
-        unsigned int data : 32; // offset 0x4, size 0x4
-    } setothermodeH; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int sft : 8; // offset 0x0, size 0x4
-        int len : 8; // offset 0x0, size 0x4
-        unsigned int data : 32; // offset 0x4, size 0x4
-    } setothermodeL; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        unsigned char cmd; // offset 0x0, size 0x1
-        unsigned char lodscale; // offset 0x1, size 0x1
-        unsigned char tile; // offset 0x2, size 0x1
-        unsigned char on; // offset 0x3, size 0x1
-        unsigned short s; // offset 0x4, size 0x2
-        unsigned short t; // offset 0x6, size 0x2
-    } texture; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad1 : 24; // offset 0x0, size 0x4
-        signed short pad2; // offset 0x4, size 0x2
-        signed short scale; // offset 0x6, size 0x2
-    } perspnorm; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int fmt : 3; // offset 0x0, size 0x4
-        unsigned int siz : 2; // offset 0x0, size 0x4
-        unsigned int pad : 7; // offset 0x0, size 0x4
-        unsigned int wd : 12; // offset 0x0, size 0x4
-        unsigned int dram; // offset 0x4, size 0x4
-    } setimg; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int muxs0 : 24; // offset 0x0, size 0x4
-        unsigned int muxs1 : 32; // offset 0x4, size 0x4
-    } setcombine; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned char pad; // offset 0x1, size 0x1
-        unsigned char prim_min_level; // offset 0x2, size 0x1
-        unsigned char prim_level; // offset 0x3, size 0x1
-        unsigned long color; // offset 0x4, size 0x4
-    } setcolor; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int x0 : 10; // offset 0x0, size 0x4
-        int x0frac : 2; // offset 0x0, size 0x4
-        int y0 : 10; // offset 0x0, size 0x4
-        int y0frac : 2; // offset 0x0, size 0x4
-        unsigned int pad : 8; // offset 0x4, size 0x4
-        int x1 : 10; // offset 0x4, size 0x4
-        int x1frac : 2; // offset 0x4, size 0x4
-        int y1 : 10; // offset 0x4, size 0x4
-        int y1frac : 2; // offset 0x4, size 0x4
-    } fillrect; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int fmt : 3; // offset 0x0, size 0x4
-        unsigned int siz : 2; // offset 0x0, size 0x4
-        unsigned int pad0 : 1; // offset 0x0, size 0x4
-        unsigned int line : 9; // offset 0x0, size 0x4
-        unsigned int tmem : 9; // offset 0x0, size 0x4
-        unsigned int pad1 : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int palette : 4; // offset 0x4, size 0x4
-        unsigned int ct : 1; // offset 0x4, size 0x4
-        unsigned int mt : 1; // offset 0x4, size 0x4
-        unsigned int maskt : 4; // offset 0x4, size 0x4
-        unsigned int shiftt : 4; // offset 0x4, size 0x4
-        unsigned int cs : 1; // offset 0x4, size 0x4
-        unsigned int ms : 1; // offset 0x4, size 0x4
-        unsigned int masks : 4; // offset 0x4, size 0x4
-        unsigned int shifts : 4; // offset 0x4, size 0x4
-    } settile; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } loadtile; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } settilesize; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } loadtlut; // offset 0x0, size 0x8
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} normal_texture_init_dl[]; // size: 0x0, address: 0x4208
+union_drmario_gc_c_0 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x2DEA0 -> 0x2E004
-void RecWritingMsg_draw(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r28 */, union {
-    struct {
-        // total size: 0x8
-        unsigned int w0; // offset 0x0, size 0x4
-        unsigned int w1; // offset 0x4, size 0x4
-    } words; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int par : 8; // offset 0x0, size 0x4
-        unsigned int len : 16; // offset 0x0, size 0x4
-        unsigned int addr; // offset 0x4, size 0x4
-    } dma; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad : 24; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x4
-            unsigned char flag; // offset 0x0, size 0x1
-            unsigned char v[3]; // offset 0x1, size 0x3
-        } tri; // offset 0x4, size 0x4
-    } tri; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad : 24; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x4
-            unsigned char flag; // offset 0x0, size 0x1
-            unsigned char v[3]; // offset 0x1, size 0x3
-        } line; // offset 0x4, size 0x4
-    } line; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad1 : 24; // offset 0x0, size 0x4
-        int pad2 : 24; // offset 0x4, size 0x4
-        unsigned int param : 8; // offset 0x4, size 0x4
-    } popmtx; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int mw_index : 8; // offset 0x0, size 0x4
-        int number : 8; // offset 0x0, size 0x4
-        int pad1 : 8; // offset 0x4, size 0x4
-        int base : 24; // offset 0x4, size 0x4
-    } segment; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int sft : 8; // offset 0x0, size 0x4
-        int len : 8; // offset 0x0, size 0x4
-        unsigned int data : 32; // offset 0x4, size 0x4
-    } setothermodeH; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad0 : 8; // offset 0x0, size 0x4
-        int sft : 8; // offset 0x0, size 0x4
-        int len : 8; // offset 0x0, size 0x4
-        unsigned int data : 32; // offset 0x4, size 0x4
-    } setothermodeL; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        unsigned char cmd; // offset 0x0, size 0x1
-        unsigned char lodscale; // offset 0x1, size 0x1
-        unsigned char tile; // offset 0x2, size 0x1
-        unsigned char on; // offset 0x3, size 0x1
-        unsigned short s; // offset 0x4, size 0x2
-        unsigned short t; // offset 0x6, size 0x2
-    } texture; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int pad1 : 24; // offset 0x0, size 0x4
-        signed short pad2; // offset 0x4, size 0x2
-        signed short scale; // offset 0x6, size 0x2
-    } perspnorm; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int fmt : 3; // offset 0x0, size 0x4
-        unsigned int siz : 2; // offset 0x0, size 0x4
-        unsigned int pad : 7; // offset 0x0, size 0x4
-        unsigned int wd : 12; // offset 0x0, size 0x4
-        unsigned int dram; // offset 0x4, size 0x4
-    } setimg; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int muxs0 : 24; // offset 0x0, size 0x4
-        unsigned int muxs1 : 32; // offset 0x4, size 0x4
-    } setcombine; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned char pad; // offset 0x1, size 0x1
-        unsigned char prim_min_level; // offset 0x2, size 0x1
-        unsigned char prim_level; // offset 0x3, size 0x1
-        unsigned long color; // offset 0x4, size 0x4
-    } setcolor; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        int x0 : 10; // offset 0x0, size 0x4
-        int x0frac : 2; // offset 0x0, size 0x4
-        int y0 : 10; // offset 0x0, size 0x4
-        int y0frac : 2; // offset 0x0, size 0x4
-        unsigned int pad : 8; // offset 0x4, size 0x4
-        int x1 : 10; // offset 0x4, size 0x4
-        int x1frac : 2; // offset 0x4, size 0x4
-        int y1 : 10; // offset 0x4, size 0x4
-        int y1frac : 2; // offset 0x4, size 0x4
-    } fillrect; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int fmt : 3; // offset 0x0, size 0x4
-        unsigned int siz : 2; // offset 0x0, size 0x4
-        unsigned int pad0 : 1; // offset 0x0, size 0x4
-        unsigned int line : 9; // offset 0x0, size 0x4
-        unsigned int tmem : 9; // offset 0x0, size 0x4
-        unsigned int pad1 : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int palette : 4; // offset 0x4, size 0x4
-        unsigned int ct : 1; // offset 0x4, size 0x4
-        unsigned int mt : 1; // offset 0x4, size 0x4
-        unsigned int maskt : 4; // offset 0x4, size 0x4
-        unsigned int shiftt : 4; // offset 0x4, size 0x4
-        unsigned int cs : 1; // offset 0x4, size 0x4
-        unsigned int ms : 1; // offset 0x4, size 0x4
-        unsigned int masks : 4; // offset 0x4, size 0x4
-        unsigned int shifts : 4; // offset 0x4, size 0x4
-    } settile; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } loadtile; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } settilesize; // offset 0x0, size 0x8
-    struct {
-        // total size: 0x8
-        int cmd : 8; // offset 0x0, size 0x4
-        unsigned int sl : 12; // offset 0x0, size 0x4
-        unsigned int tl : 12; // offset 0x0, size 0x4
-        int pad : 5; // offset 0x4, size 0x4
-        unsigned int tile : 3; // offset 0x4, size 0x4
-        unsigned int sh : 12; // offset 0x4, size 0x4
-        unsigned int th : 12; // offset 0x4, size 0x4
-    } loadtlut; // offset 0x0, size 0x8
+void RecWritingMsg_draw(struct_record_c_60 * st /* r28 */, union {
+    struct_dm_game_main_c_33 words; // offset 0x0, size 0x8
+    struct_dm_game_main_c_34 dma; // offset 0x0, size 0x8
+    struct_dm_game_main_c_35 tri; // offset 0x0, size 0x8
+    struct_dm_game_main_c_36 line; // offset 0x0, size 0x8
+    struct_dm_game_main_c_37 popmtx; // offset 0x0, size 0x8
+    struct_dm_game_main_c_38 segment; // offset 0x0, size 0x8
+    struct_dm_game_main_c_39 setothermodeH; // offset 0x0, size 0x8
+    struct_dm_game_main_c_39 setothermodeL; // offset 0x0, size 0x8
+    struct_dm_game_main_c_40 texture; // offset 0x0, size 0x8
+    struct_dm_game_main_c_41 perspnorm; // offset 0x0, size 0x8
+    struct_dm_game_main_c_42 setimg; // offset 0x0, size 0x8
+    struct_dm_game_main_c_43 setcombine; // offset 0x0, size 0x8
+    struct_dm_game_main_c_44 setcolor; // offset 0x0, size 0x8
+    struct_dm_game_main_c_45 fillrect; // offset 0x0, size 0x8
+    struct_dm_game_main_c_46 settile; // offset 0x0, size 0x8
+    struct_dm_game_main_c_47 loadtile; // offset 0x0, size 0x8
+    struct_dm_game_main_c_47 settilesize; // offset 0x0, size 0x8
+    struct_dm_game_main_c_47 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * gpp /* r29 */) {
     // Local variables
-    union {
-        struct {
-            // total size: 0x8
-            unsigned int w0; // offset 0x0, size 0x4
-            unsigned int w1; // offset 0x4, size 0x4
-        } words; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int par : 8; // offset 0x0, size 0x4
-            unsigned int len : 16; // offset 0x0, size 0x4
-            unsigned int addr; // offset 0x4, size 0x4
-        } dma; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad : 24; // offset 0x0, size 0x4
-            struct {
-                // total size: 0x4
-                unsigned char flag; // offset 0x0, size 0x1
-                unsigned char v[3]; // offset 0x1, size 0x3
-            } tri; // offset 0x4, size 0x4
-        } tri; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad : 24; // offset 0x0, size 0x4
-            struct {
-                // total size: 0x4
-                unsigned char flag; // offset 0x0, size 0x1
-                unsigned char v[3]; // offset 0x1, size 0x3
-            } line; // offset 0x4, size 0x4
-        } line; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad1 : 24; // offset 0x0, size 0x4
-            int pad2 : 24; // offset 0x4, size 0x4
-            unsigned int param : 8; // offset 0x4, size 0x4
-        } popmtx; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int mw_index : 8; // offset 0x0, size 0x4
-            int number : 8; // offset 0x0, size 0x4
-            int pad1 : 8; // offset 0x4, size 0x4
-            int base : 24; // offset 0x4, size 0x4
-        } segment; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int sft : 8; // offset 0x0, size 0x4
-            int len : 8; // offset 0x0, size 0x4
-            unsigned int data : 32; // offset 0x4, size 0x4
-        } setothermodeH; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int sft : 8; // offset 0x0, size 0x4
-            int len : 8; // offset 0x0, size 0x4
-            unsigned int data : 32; // offset 0x4, size 0x4
-        } setothermodeL; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            unsigned char cmd; // offset 0x0, size 0x1
-            unsigned char lodscale; // offset 0x1, size 0x1
-            unsigned char tile; // offset 0x2, size 0x1
-            unsigned char on; // offset 0x3, size 0x1
-            unsigned short s; // offset 0x4, size 0x2
-            unsigned short t; // offset 0x6, size 0x2
-        } texture; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad1 : 24; // offset 0x0, size 0x4
-            signed short pad2; // offset 0x4, size 0x2
-            signed short scale; // offset 0x6, size 0x2
-        } perspnorm; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int fmt : 3; // offset 0x0, size 0x4
-            unsigned int siz : 2; // offset 0x0, size 0x4
-            unsigned int pad : 7; // offset 0x0, size 0x4
-            unsigned int wd : 12; // offset 0x0, size 0x4
-            unsigned int dram; // offset 0x4, size 0x4
-        } setimg; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int muxs0 : 24; // offset 0x0, size 0x4
-            unsigned int muxs1 : 32; // offset 0x4, size 0x4
-        } setcombine; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned char pad; // offset 0x1, size 0x1
-            unsigned char prim_min_level; // offset 0x2, size 0x1
-            unsigned char prim_level; // offset 0x3, size 0x1
-            unsigned long color; // offset 0x4, size 0x4
-        } setcolor; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int x0 : 10; // offset 0x0, size 0x4
-            int x0frac : 2; // offset 0x0, size 0x4
-            int y0 : 10; // offset 0x0, size 0x4
-            int y0frac : 2; // offset 0x0, size 0x4
-            unsigned int pad : 8; // offset 0x4, size 0x4
-            int x1 : 10; // offset 0x4, size 0x4
-            int x1frac : 2; // offset 0x4, size 0x4
-            int y1 : 10; // offset 0x4, size 0x4
-            int y1frac : 2; // offset 0x4, size 0x4
-        } fillrect; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int fmt : 3; // offset 0x0, size 0x4
-            unsigned int siz : 2; // offset 0x0, size 0x4
-            unsigned int pad0 : 1; // offset 0x0, size 0x4
-            unsigned int line : 9; // offset 0x0, size 0x4
-            unsigned int tmem : 9; // offset 0x0, size 0x4
-            unsigned int pad1 : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int palette : 4; // offset 0x4, size 0x4
-            unsigned int ct : 1; // offset 0x4, size 0x4
-            unsigned int mt : 1; // offset 0x4, size 0x4
-            unsigned int maskt : 4; // offset 0x4, size 0x4
-            unsigned int shiftt : 4; // offset 0x4, size 0x4
-            unsigned int cs : 1; // offset 0x4, size 0x4
-            unsigned int ms : 1; // offset 0x4, size 0x4
-            unsigned int masks : 4; // offset 0x4, size 0x4
-            unsigned int shifts : 4; // offset 0x4, size 0x4
-        } settile; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } loadtile; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } settilesize; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } loadtlut; // offset 0x0, size 0x8
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } * gp; // r1+0x18
+    union_drmario_gc_c_0 * gp; // r1+0x18
     int w; // r1+0x10
     int h; // r1+0x10
-    union {
-        struct {
-            // total size: 0x8
-            unsigned int w0; // offset 0x0, size 0x4
-            unsigned int w1; // offset 0x4, size 0x4
-        } words; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int par : 8; // offset 0x0, size 0x4
-            unsigned int len : 16; // offset 0x0, size 0x4
-            unsigned int addr; // offset 0x4, size 0x4
-        } dma; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad : 24; // offset 0x0, size 0x4
-            struct {
-                // total size: 0x4
-                unsigned char flag; // offset 0x0, size 0x1
-                unsigned char v[3]; // offset 0x1, size 0x3
-            } tri; // offset 0x4, size 0x4
-        } tri; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad : 24; // offset 0x0, size 0x4
-            struct {
-                // total size: 0x4
-                unsigned char flag; // offset 0x0, size 0x1
-                unsigned char v[3]; // offset 0x1, size 0x3
-            } line; // offset 0x4, size 0x4
-        } line; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad1 : 24; // offset 0x0, size 0x4
-            int pad2 : 24; // offset 0x4, size 0x4
-            unsigned int param : 8; // offset 0x4, size 0x4
-        } popmtx; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int mw_index : 8; // offset 0x0, size 0x4
-            int number : 8; // offset 0x0, size 0x4
-            int pad1 : 8; // offset 0x4, size 0x4
-            int base : 24; // offset 0x4, size 0x4
-        } segment; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int sft : 8; // offset 0x0, size 0x4
-            int len : 8; // offset 0x0, size 0x4
-            unsigned int data : 32; // offset 0x4, size 0x4
-        } setothermodeH; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad0 : 8; // offset 0x0, size 0x4
-            int sft : 8; // offset 0x0, size 0x4
-            int len : 8; // offset 0x0, size 0x4
-            unsigned int data : 32; // offset 0x4, size 0x4
-        } setothermodeL; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            unsigned char cmd; // offset 0x0, size 0x1
-            unsigned char lodscale; // offset 0x1, size 0x1
-            unsigned char tile; // offset 0x2, size 0x1
-            unsigned char on; // offset 0x3, size 0x1
-            unsigned short s; // offset 0x4, size 0x2
-            unsigned short t; // offset 0x6, size 0x2
-        } texture; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int pad1 : 24; // offset 0x0, size 0x4
-            signed short pad2; // offset 0x4, size 0x2
-            signed short scale; // offset 0x6, size 0x2
-        } perspnorm; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int fmt : 3; // offset 0x0, size 0x4
-            unsigned int siz : 2; // offset 0x0, size 0x4
-            unsigned int pad : 7; // offset 0x0, size 0x4
-            unsigned int wd : 12; // offset 0x0, size 0x4
-            unsigned int dram; // offset 0x4, size 0x4
-        } setimg; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int muxs0 : 24; // offset 0x0, size 0x4
-            unsigned int muxs1 : 32; // offset 0x4, size 0x4
-        } setcombine; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned char pad; // offset 0x1, size 0x1
-            unsigned char prim_min_level; // offset 0x2, size 0x1
-            unsigned char prim_level; // offset 0x3, size 0x1
-            unsigned long color; // offset 0x4, size 0x4
-        } setcolor; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            int x0 : 10; // offset 0x0, size 0x4
-            int x0frac : 2; // offset 0x0, size 0x4
-            int y0 : 10; // offset 0x0, size 0x4
-            int y0frac : 2; // offset 0x0, size 0x4
-            unsigned int pad : 8; // offset 0x4, size 0x4
-            int x1 : 10; // offset 0x4, size 0x4
-            int x1frac : 2; // offset 0x4, size 0x4
-            int y1 : 10; // offset 0x4, size 0x4
-            int y1frac : 2; // offset 0x4, size 0x4
-        } fillrect; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int fmt : 3; // offset 0x0, size 0x4
-            unsigned int siz : 2; // offset 0x0, size 0x4
-            unsigned int pad0 : 1; // offset 0x0, size 0x4
-            unsigned int line : 9; // offset 0x0, size 0x4
-            unsigned int tmem : 9; // offset 0x0, size 0x4
-            unsigned int pad1 : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int palette : 4; // offset 0x4, size 0x4
-            unsigned int ct : 1; // offset 0x4, size 0x4
-            unsigned int mt : 1; // offset 0x4, size 0x4
-            unsigned int maskt : 4; // offset 0x4, size 0x4
-            unsigned int shiftt : 4; // offset 0x4, size 0x4
-            unsigned int cs : 1; // offset 0x4, size 0x4
-            unsigned int ms : 1; // offset 0x4, size 0x4
-            unsigned int masks : 4; // offset 0x4, size 0x4
-            unsigned int shifts : 4; // offset 0x4, size 0x4
-        } settile; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } loadtile; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } settilesize; // offset 0x0, size 0x8
-        struct {
-            // total size: 0x8
-            int cmd : 8; // offset 0x0, size 0x4
-            unsigned int sl : 12; // offset 0x0, size 0x4
-            unsigned int tl : 12; // offset 0x0, size 0x4
-            int pad : 5; // offset 0x4, size 0x4
-            unsigned int tile : 3; // offset 0x4, size 0x4
-            unsigned int sh : 12; // offset 0x4, size 0x4
-            unsigned int th : 12; // offset 0x4, size 0x4
-        } loadtlut; // offset 0x0, size 0x8
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } * _g; // r1+0x10
+    union_drmario_gc_c_0 * _g; // r1+0x10
 
     // References
     // -> unsigned char mess_panel_tex[15456];
@@ -2181,196 +469,16 @@ void RecWritingMsg_draw(struct {
 }
 
 // Range: 0x2E004 -> 0x2E010
-void RecWritingMsg_start(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r1+0x0 */) {}
+void RecWritingMsg_start(struct_record_c_60 * st /* r1+0x0 */) {}
 
 // Range: 0x2E010 -> 0x2E01C
-void RecWritingMsg_end(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r1+0x0 */) {}
+void RecWritingMsg_end(struct_record_c_60 * st /* r1+0x0 */) {}
 
 // Range: 0x2E01C -> 0x2E038
-int RecWritingMsg_isEnd(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r1+0x0 */) {}
+int RecWritingMsg_isEnd(struct_record_c_60 * st /* r1+0x0 */) {}
 
 // Range: 0x2E038 -> 0x2E044
-void RecWritingMsg_setPos(struct {
-    // total size: 0x88
-    struct {
-        // total size: 0x80
-        void * heap; // offset 0x0, size 0x4
-        struct {
-            // total size: 0x10
-            int top; // offset 0x0, size 0x4
-            int end; // offset 0x4, size 0x4
-            int width; // offset 0x8, size 0x4
-            int color; // offset 0xC, size 0x4
-        } * layout; // offset 0x4, size 0x4
-        int layoutSize; // offset 0x8, size 0x4
-        unsigned char * msgBuf; // offset 0xC, size 0x4
-        int msgBufSize; // offset 0x10, size 0x4
-        int msgBufTop; // offset 0x14, size 0x4
-        int msgBufNow; // offset 0x18, size 0x4
-        int contFlags; // offset 0x1C, size 0x4
-        int fontType; // offset 0x20, size 0x4
-        int centering; // offset 0x24, size 0x4
-        int posX; // offset 0x28, size 0x4
-        int posY; // offset 0x2C, size 0x4
-        int fntW; // offset 0x30, size 0x4
-        int fntH; // offset 0x34, size 0x4
-        int colSize; // offset 0x38, size 0x4
-        int colStep; // offset 0x3C, size 0x4
-        int colNow; // offset 0x40, size 0x4
-        int rowSize; // offset 0x44, size 0x4
-        int rowStep; // offset 0x48, size 0x4
-        int rowNow; // offset 0x4C, size 0x4
-        float msgCount; // offset 0x50, size 0x4
-        float msgSpeed; // offset 0x54, size 0x4
-        float scrCount; // offset 0x58, size 0x4
-        float scrSpeed; // offset 0x5C, size 0x4
-        int msgIsEnd; // offset 0x60, size 0x4
-        int isSpeak; // offset 0x64, size 0x4
-        int topColor; // offset 0x68, size 0x4
-        int keyWait; // offset 0x6C, size 0x4
-        int countWait; // offset 0x70, size 0x4
-        int alpha; // offset 0x74, size 0x4
-        int scisFlag; // offset 0x78, size 0x4
-        unsigned int grapCount; // offset 0x7C, size 0x4
-    } msgWnd; // offset 0x0, size 0x80
-    int timeout; // offset 0x80, size 0x4
-    int count; // offset 0x84, size 0x4
-} * st /* r1+0x0 */, int x /* r1+0x4 */, int y /* r1+0x8 */) {}
+void RecWritingMsg_setPos(struct_record_c_60 * st /* r1+0x0 */, int x /* r1+0x4 */, int y /* r1+0x8 */) {}
 
 // Range: 0x2E044 -> 0x2E048
 void setSleepTimer() {}

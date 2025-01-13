@@ -8,24 +8,7 @@
 static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF4480
 static int gbFadeAlpha; // size: 0x4, address: 0xF4484
 static int gnAlphaPeel; // size: 0x4, address: 0xF4488
-static union {
-    struct {
-        // total size: 0x10
-        signed short ob[3]; // offset 0x0, size 0x6
-        unsigned short flag; // offset 0x6, size 0x2
-        signed short tc[2]; // offset 0x8, size 0x4
-        unsigned char cn[4]; // offset 0xC, size 0x4
-    } v; // offset 0x0, size 0x10
-    struct {
-        // total size: 0x10
-        signed short ob[3]; // offset 0x0, size 0x6
-        unsigned short flag; // offset 0x6, size 0x2
-        signed short tc[2]; // offset 0x8, size 0x4
-        signed char n[3]; // offset 0xC, size 0x3
-        unsigned char a; // offset 0xF, size 0x1
-    } n; // offset 0x0, size 0x10
-    long long force_structure_alignment; // offset 0x0, size 0x8
-} * gapVtxPeel[2]; // size: 0x8, address: 0xF448C
+static union_pon_gc_tex_c_4 * gapVtxPeel[2]; // size: 0x8, address: 0xF448C
 static void * gaTile[48]; // size: 0xC0, address: 0xF4494
 static int gnWaveData; // size: 0x4, address: 0xF4554
 static char * gacWaveData; // size: 0x4, address: 0xF4558
@@ -54,13 +37,7 @@ void * gpHeapPeel; // size: 0x4, address: 0xF455C
 void peelSetup() {
     // Local variables
     int iTile; // r3
-    struct {
-        // total size: 0x10
-        int iFile; // offset 0x0, size 0x4
-        int nSize; // offset 0x4, size 0x4
-        int nBase; // offset 0x8, size 0x4
-        int nOffset; // offset 0xC, size 0x4
-    } file; // r1+0x24
+    struct_bitmap_c_17 file; // r1+0x24
     char * pHeap; // r1+0x8
     int iScreen; // r1+0x8
     unsigned long * pScreen; // r3

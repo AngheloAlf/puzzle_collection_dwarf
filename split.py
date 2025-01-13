@@ -9,7 +9,7 @@ from pathlib import Path
 def write_buffer(current_name: str|None, buffer: list[str], directory: Path):
     if current_name is not None:
         compile_unit = directory / Path(current_name)
-        print(f"Writing {compile_unit}")
+        # print(f"Writing {compile_unit}")
         compile_unit.parent.mkdir(parents=True, exist_ok=True)
         with compile_unit.open("w") as f_unit:
             f_unit.writelines(buffer)
@@ -65,7 +65,7 @@ def set_anonymous_enums(contents: list[str], enums_by_contents: dict[str, str]) 
                 current_enum_name = enums_by_contents.get(body)
                 assert current_enum_name is not None, body
 
-                new_line = trailing_line + current_enum_name + line.split("}")[1]
+                new_line = trailing_line + current_enum_name + "}".join(line.split("}")[1:])
                 new_contents.append(new_line)
 
                 trailing_line = None
@@ -78,16 +78,105 @@ def set_anonymous_enums(contents: list[str], enums_by_contents: dict[str, str]) 
                 continue
             trailing_line = line.split("enum /* ")[0]
 
-
     return new_contents
 
 def emit_anonymous_enums(directory: Path, enums_by_contents: dict[str, str]):
     with (directory / "anonymous_enums.h").open("w") as f:
         for body, name in enums_by_contents.items():
-            f.write(f"typedef enum {{\n")
+            f.write(f"typedef enum /* {name} */ {{\n")
             for entry in body.split(","):
                 if entry != "":
                     f.write(f"    {entry},\n")
+            f.write(f"}} {name};\n")
+
+def parse_anonymous_structs_and_unions(contents: list[str]) -> dict[str, tuple[str, str]]:
+    current_unit = "no_name"
+    struct_index = 0
+    kind = "struct"
+    braces_count = 0
+    current_struct_contents: list[str] = []
+    structs_by_contents: dict[str, tuple[str, str]] = {}
+    for line in contents:
+        if braces_count > 0:
+            end = len(line)
+            if "{" in line:
+                end = line.index("{")
+            braces_count -= line.count("}", 0, end)
+
+            if braces_count > 0:
+                current_struct_contents.append((braces_count * "    ") + line.strip() + "\n")
+                braces_count -= line.count("}", end)
+                braces_count += line.count("{")
+            else:
+                body = "".join(current_struct_contents)
+                if body not in structs_by_contents:
+                    structs_by_contents[body] = (f"{kind}_{current_unit.replace('.', '_')}_{struct_index}", kind)
+                    struct_index += 1
+                current_struct_contents.clear()
+        elif line.endswith("struct {\n") or line.endswith("union {\n"):
+            if line.endswith("struct {\n"):
+                kind = "struct"
+            else:
+                kind = "union"
+            braces_count += 1
+
+        if "    Compile unit: " in line:
+            current_unit = line.strip().split("\\")[-1]
+        assert braces_count >= 0, line
+
+    assert braces_count == 0, braces_count
+
+    return structs_by_contents
+
+def set_anonymous_structs_and_unions(contents: list[str], structs_by_contents: dict[str, tuple[str, str]]) -> list[str]:
+    new_contents: list[str] = []
+
+    braces_count = 0
+
+    trailing_line: str|None = None
+    current_struct_contents: list[str] = []
+    for line in contents:
+        if trailing_line is not None:
+            end = len(line)
+            if "{" in line:
+                end = line.index("{")
+            braces_count -= line.count("}", 0, end)
+
+            if braces_count > 0:
+                current_struct_contents.append((braces_count * "    ") + line.strip() + "\n")
+                braces_count -= line.count("}", end)
+                braces_count += line.count("{")
+            else:
+                body = "".join(current_struct_contents)
+                current_struct_name = structs_by_contents.get(body)
+                assert current_struct_name is not None, f"\n{body=}\n{line=}"
+
+                new_line = trailing_line + current_struct_name[0] + "}".join(line.split("}")[1:])
+                new_contents.append(new_line)
+
+                trailing_line = None
+                current_struct_contents.clear()
+                continue
+        elif line.endswith("struct {\n") or line.endswith("union {\n"):
+            if line.endswith("struct {\n"):
+                kind = "struct"
+            else:
+                kind = "union"
+            trailing_line = line.split(f"{kind} {{")[0]
+            braces_count += 1
+        else:
+            new_contents.append(line)
+        assert braces_count >= 0, line
+
+    assert braces_count == 0, braces_count
+
+    return new_contents
+
+def emit_anonymous_structs_and_unions(directory: Path, structs_by_contents: dict[str, tuple[str, str]]):
+    with (directory / "anonymous_structs_and_unions.h").open("w") as f:
+        for body, (name, kind) in structs_by_contents.items():
+            f.write(f"typedef {kind} /* {name} */ {{\n")
+            f.write(body)
             f.write(f"}} {name};\n")
 
 def main():
@@ -108,12 +197,23 @@ def main():
         contents = f.readlines()
 
         # Deduplicate anonymous enums by giving them semi-arbitrary names and yeeting their bodies
+        print("Identifying anonymous enums")
         enums_by_contents = parse_anonymous_enums(contents)
+        print("Deduplicating anonymous enums")
         contents = set_anonymous_enums(contents, enums_by_contents)
 
+        print("Identifying anonymous structs/unions")
+        structs_by_contents = parse_anonymous_structs_and_unions(contents)
+        print("Deduplicating anonymous structs/unions")
+        contents = set_anonymous_structs_and_unions(contents, structs_by_contents)
+
+        print("Splitting")
         split(contents, directory, tu_prefix)
 
         # Emit the anonymous enums' so we don't lose their bodies.
         emit_anonymous_enums(directory, enums_by_contents)
+        emit_anonymous_structs_and_unions(directory, structs_by_contents)
+
+        print("Done")
 
 main()

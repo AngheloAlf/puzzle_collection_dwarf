@@ -122,26 +122,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } rect; // offset 0x30, size 0x18
+    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -156,32 +137,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union {
-        union {
-            struct {
-                // total size: 0x18
-                signed short objX; // offset 0x0, size 0x2
-                unsigned short scaleW; // offset 0x2, size 0x2
-                unsigned short imageW; // offset 0x4, size 0x2
-                unsigned short paddingX; // offset 0x6, size 0x2
-                signed short objY; // offset 0x8, size 0x2
-                unsigned short scaleH; // offset 0xA, size 0x2
-                unsigned short imageH; // offset 0xC, size 0x2
-                unsigned short paddingY; // offset 0xE, size 0x2
-                unsigned short imageStride; // offset 0x10, size 0x2
-                unsigned short imageAdrs; // offset 0x12, size 0x2
-                unsigned char imageFmt; // offset 0x14, size 0x1
-                unsigned char imageSiz; // offset 0x15, size 0x1
-                unsigned char imagePal; // offset 0x16, size 0x1
-                unsigned char imageFlags; // offset 0x17, size 0x1
-            } s; // offset 0x0, size 0x18
-            long long force_structure_alignment; // offset 0x0, size 0x8
-        } rect; // offset 0x0, size 0x18
-        union {
-            long m[4][4]; // offset 0x0, size 0x40
-            long long force_structure_alignment; // offset 0x0, size 0x8
-        } move; // offset 0x0, size 0x40
-    } thing; // offset 0x28, size 0x40
+    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -190,26 +146,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } rect; // offset 0x18, size 0x18
+    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -258,86 +195,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } new_block_rect[6]; // offset 0x45D0, size 0x90
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } left2D; // offset 0x4660, size 0x18
-    union {
-        struct {
-            // total size: 0x18
-            signed short objX; // offset 0x0, size 0x2
-            unsigned short scaleW; // offset 0x2, size 0x2
-            unsigned short imageW; // offset 0x4, size 0x2
-            unsigned short paddingX; // offset 0x6, size 0x2
-            signed short objY; // offset 0x8, size 0x2
-            unsigned short scaleH; // offset 0xA, size 0x2
-            unsigned short imageH; // offset 0xC, size 0x2
-            unsigned short paddingY; // offset 0xE, size 0x2
-            unsigned short imageStride; // offset 0x10, size 0x2
-            unsigned short imageAdrs; // offset 0x12, size 0x2
-            unsigned char imageFmt; // offset 0x14, size 0x1
-            unsigned char imageSiz; // offset 0x15, size 0x1
-            unsigned char imagePal; // offset 0x16, size 0x1
-            unsigned char imageFlags; // offset 0x17, size 0x1
-        } s; // offset 0x0, size 0x18
-        long long force_structure_alignment; // offset 0x0, size 0x8
-    } right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318

@@ -1,4 +1,4 @@
-typedef enum {
+typedef enum /* @enum$101main_story_c */ {
     GFX_NULL = 0,
     GFX_STORY = 1,
     GFX_TITLE = 2,
@@ -8,7 +8,7 @@ typedef enum {
     GFX_TECHMES = 6,
     GFX_BOOT_ERROR = 7,
 } @enum$101main_story_c;
-typedef enum {
+typedef enum /* @enum$98dm_title_main_c */ {
     MAIN_11 = 0,
     MAIN_12 = 1,
     MAIN_STORY = 2,
@@ -22,7 +22,7 @@ typedef enum {
     MAIN_CSUM_ERROR = 10,
     MAIN_MEMORYCARD_CHECK = 11,
 } @enum$98dm_title_main_c;
-typedef enum {
+typedef enum /* @enum$106dm_title_main_c */ {
     GSL_1PLAY = 0,
     GSL_2PLAY = 1,
     GSL_4PLAY = 2,
@@ -32,17 +32,17 @@ typedef enum {
     GSL_4DEMO = 6,
     GSL_MAX = 7,
 } @enum$106dm_title_main_c;
-typedef enum {
+typedef enum /* @enum$107dm_title_main_c */ {
     GMD_NORMAL = 0,
     GMD_FLASH = 1,
     GMD_TaiQ = 2,
     GMD_TIME_ATTACK = 3,
 } @enum$107dm_title_main_c;
-typedef enum {
+typedef enum /* @enum$110dm_title_main_c */ {
     false = 0,
     true = 1,
 } @enum$110dm_title_main_c;
-typedef enum {
+typedef enum /* @enum$99dm_game_main_c */ {
     dm_mode_null = 0,
     dm_mode_init = 1,
     dm_mode_wait = 2,
@@ -78,7 +78,7 @@ typedef enum {
     dm_mode_debug_config = 32,
     dm_mode_debug = 33,
 } @enum$99dm_game_main_c;
-typedef enum {
+typedef enum /* @enum$98dm_game_main_c */ {
     dm_cnd_null = 0,
     dm_cnd_wait = 1,
     dm_cnd_init = 2,
@@ -107,7 +107,7 @@ typedef enum {
     dm_cnd_debug_config = 25,
     dm_cnd_debug = 26,
 } @enum$98dm_game_main_c;
-typedef enum {
+typedef enum /* @enum$100dm_game_main_c */ {
     dm_ret_game_end = -2,
     dm_ret_game_over = -1,
     dm_ret_null = 0,
@@ -122,20 +122,20 @@ typedef enum {
     dm_ret_replay = 9,
     dm_ret_end = 100,
 } @enum$100dm_game_main_c;
-typedef enum {
+typedef enum /* @enum$362record_c */ {
     _1P_STORY = 0,
     _1P_LEVEL = 1,
     _1P_TaiQ = 2,
     _1P_TimeAt = 3,
 } @enum$362record_c;
-typedef enum {
+typedef enum /* @enum$494record_c */ {
     _VS_COM = 0,
     _VS_COM_FLASH = 1,
     _VS_MAN = 2,
     _VS_MAN_FLASH = 3,
     _VS_MAN_TIME_AT = 4,
 } @enum$494record_c;
-typedef enum {
+typedef enum /* @enum$856main_menu_c */ {
     MODE_MAIN = 0,
     MODE_PLAY1 = 1,
     MODE_STORY_NS = 2,
@@ -211,7 +211,7 @@ typedef enum {
     MODE_COUNT = 72,
     MODE_SCORE = 73,
 } @enum$856main_menu_c;
-typedef enum {
+typedef enum /* @enum$1025main_menu_c */ {
     CURSOR_ITEM = 0,
     CURSOR_PANEL = 1,
     CURSOR_WINDOW = 2,
@@ -223,7 +223,7 @@ typedef enum {
     CURSOR_NEW_VIRUS_LV_S = 8,
     CURSOR_TYPE_SUM = 9,
 } @enum$1025main_menu_c;
-typedef enum {
+typedef enum /* @enum$9657main_menu_c */ {
     RANK_FIG_NUMBER = 7,
     RANK_FIG_TIME = 8,
     RANK_FIG_RATIO = 9,
@@ -233,7 +233,7 @@ typedef enum {
     RANK_FIG_ALL = 13,
     RANK_FIG_SUM = 14,
 } @enum$9657main_menu_c;
-typedef enum {
+typedef enum /* @enum$165dm_manual_main_c */ {
     MODE_CAPSEL_PROC = 777,
     MODE_WAIT_MESSAGE = 778,
     MODE_WAIT_CAPSEL_FALL = 779,

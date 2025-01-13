@@ -337,10 +337,7 @@ void * gc_getEFB_RGBA16() {
     // Local variables
     int x; // r31
     int y; // r30
-    union {
-        unsigned long color; // offset 0x0, size 0x4
-        unsigned char argb[4]; // offset 0x0, size 0x4
-    } un; // r1+0x8
+    union_gc_c_105 un; // r1+0x8
     unsigned short * p; // r29
 
     // References
