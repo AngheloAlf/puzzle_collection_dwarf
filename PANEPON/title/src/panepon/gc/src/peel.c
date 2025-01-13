@@ -8,7 +8,7 @@
 static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF4480
 static int gbFadeAlpha; // size: 0x4, address: 0xF4484
 static int gnAlphaPeel; // size: 0x4, address: 0xF4488
-static union_pon_gc_tex_c_4 * gapVtxPeel[2]; // size: 0x8, address: 0xF448C
+static union_pon_gc_tex_c_1219 * gapVtxPeel[2]; // size: 0x8, address: 0xF448C
 static void * gaTile[48]; // size: 0xC0, address: 0xF4494
 static int gnWaveData; // size: 0x4, address: 0xF4554
 static char * gacWaveData; // size: 0x4, address: 0xF4558
@@ -37,7 +37,7 @@ void * gpHeapPeel; // size: 0x4, address: 0xF455C
 void peelSetup() {
     // Local variables
     int iTile; // r3
-    struct_bitmap_c_17 file; // r1+0x24
+    struct_bitmap_c_65 file; // r1+0x24
     char * pHeap; // r1+0x8
     int iScreen; // r1+0x8
     unsigned long * pScreen; // r3

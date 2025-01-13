@@ -5,32 +5,32 @@
     Code range: 0x0005F330 -> 0x00062F68
 */
 // Range: 0x5F330 -> 0x5F470
-static void imageMake(struct_image_c_39 * * ppImage /* r1+0x0 */, void * ppHeap /* r1+0x4 */, int nCount /* r1+0x8 */) {}
+static void imageMake(struct_image_c_89 * * ppImage /* r1+0x0 */, void * ppHeap /* r1+0x4 */, int nCount /* r1+0x8 */) {}
 
 // Range: 0x5F470 -> 0x5FB2C
-static void imageDrawScan(struct_image_c_39 * pImage /* r1+0x8 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+static void imageDrawScan(struct_image_c_89 * pImage /* r1+0x8 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0xC */, union_pon_gc_tex_c_12 * pObject /* r1+0x10 */) {
+} * * ppGfx /* r1+0xC */, union_pon_gc_tex_c_17914 * pObject /* r1+0x10 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r6
+    union_pon_gc_c_173 * pGfx; // r6
     int nScan; // r29
     unsigned int nColor; // r17
     int nSourceY; // r12
@@ -42,48 +42,48 @@ static void imageDrawScan(struct_image_c_39 * pImage /* r1+0x8 */, union {
     int iScan; // r1+0x8
     int nSizeX; // r16
     int nSizeScan; // r30
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r17
-    union_pon_gc_c_0 * _g; // r19
-    union_pon_gc_c_0 * _g; // r17
-    union_pon_gc_c_0 * _g; // r16
-    union_pon_gc_c_0 * _g; // r18
-    union_pon_gc_c_0 * _g; // r16
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r16
-    union_pon_gc_c_0 * _g; // r15
-    union_pon_gc_c_0 * _g; // r18
-    union_pon_gc_c_0 * _g; // r19
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r15
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r17
-    union_pon_gc_c_0 * _g; // r15
-    union_pon_gc_c_0 * _g; // r18
-    union_pon_gc_c_0 * _g; // r19
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r19
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r15
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r28
-    union_pon_gc_c_0 * _g; // r19
-    union_pon_gc_c_0 * _g; // r18
-    union_pon_gc_c_0 * _g; // r6
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r17
+    union_pon_gc_c_173 * _g; // r19
+    union_pon_gc_c_173 * _g; // r17
+    union_pon_gc_c_173 * _g; // r16
+    union_pon_gc_c_173 * _g; // r18
+    union_pon_gc_c_173 * _g; // r16
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r16
+    union_pon_gc_c_173 * _g; // r15
+    union_pon_gc_c_173 * _g; // r18
+    union_pon_gc_c_173 * _g; // r19
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r15
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r17
+    union_pon_gc_c_173 * _g; // r15
+    union_pon_gc_c_173 * _g; // r18
+    union_pon_gc_c_173 * _g; // r19
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r19
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r15
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r28
+    union_pon_gc_c_173 * _g; // r19
+    union_pon_gc_c_173 * _g; // r18
+    union_pon_gc_c_173 * _g; // r6
     int nDx; // r23
     int nDs; // r1+0x8
     int nDd; // r28
-    union_pon_gc_c_0 * _g; // r18
-    union_pon_gc_c_0 * _g; // r27
-    union_pon_gc_c_0 * _g; // r6
+    union_pon_gc_c_173 * _g; // r18
+    union_pon_gc_c_173 * _g; // r27
+    union_pon_gc_c_173 * _g; // r6
 }
 
 // Range: 0x5FB2C -> 0x5FF74
-int imageLoad(struct_image_c_39 * * ppImage /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */) {
+int imageLoad(struct_image_c_89 * * ppImage /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */) {
     // Local variables
-    struct_bitmap_c_17 file; // r1+0x28
+    struct_bitmap_c_65 file; // r1+0x28
     int iBitmap; // r26
     int bFlip; // r29
     int nSize; // r1+0x24
@@ -97,13 +97,13 @@ int imageLoad(struct_image_c_39 * * ppImage /* r31 */, void * pNameOrFile /* r28
 }
 
 // Range: 0x5FF74 -> 0x5FFF0
-int imageLoadROM(struct_image_c_39 * * ppImage /* r30 */, void * pROMData /* r4 */, void * pROMCLUT /* r5 */, int nType /* r6 */, int nSizeX /* r7 */, int nSizeY /* r8 */, void * ppHeap /* r31 */) {
+int imageLoadROM(struct_image_c_89 * * ppImage /* r30 */, void * pROMData /* r4 */, void * pROMCLUT /* r5 */, int nType /* r6 */, int nSizeX /* r7 */, int nSizeY /* r8 */, void * ppHeap /* r31 */) {
     // Local variables
-    struct_bitmap_c_16 * pBitmap; // r1+0x24
+    struct_bitmap_c_14 * pBitmap; // r1+0x24
 }
 
 // Range: 0x5FFF0 -> 0x60188
-int imageCopy(struct_image_c_39 * * ppImage /* r29 */, struct {
+int imageCopy(struct_image_c_89 * * ppImage /* r29 */, struct {
     // total size: 0xA0
     int iFrame; // offset 0x0, size 0x4
     int iObject; // offset 0x4, size 0x4
@@ -115,10 +115,10 @@ int imageCopy(struct_image_c_39 * * ppImage /* r29 */, struct {
     int * anPositionX; // offset 0x1C, size 0x4
     int * anPositionY; // offset 0x20, size 0x4
     int * anFrameDelay; // offset 0x24, size 0x4
-    struct_image_c_40 * aScan; // offset 0x28, size 0x4
-    struct_bitmap_c_16 * * apBitmap; // offset 0x2C, size 0x4
+    struct_image_c_6458 * aScan; // offset 0x28, size 0x4
+    struct_bitmap_c_14 * * apBitmap; // offset 0x2C, size 0x4
     void * apPixel[2]; // offset 0x30, size 0x8
-    union_pon_gc_tex_c_12 aObject[2]; // offset 0x38, size 0x50
+    union_pon_gc_tex_c_17914 aObject[2]; // offset 0x38, size 0x50
     int nScaleX; // offset 0x88, size 0x4
     int nScaleY; // offset 0x8C, size 0x4
     unsigned short nScrollX; // offset 0x90, size 0x2
@@ -131,7 +131,7 @@ int imageCopy(struct_image_c_39 * * ppImage /* r29 */, struct {
 }
 
 // Range: 0x60188 -> 0x60440
-int imageMakeScan(struct_image_c_39 * pImage /* r1+0x8 */, void * ppHeap /* r1+0xC */) {
+int imageMakeScan(struct_image_c_89 * pImage /* r1+0x8 */, void * ppHeap /* r1+0xC */) {
     // Local variables
     int iScan; // r14
     int nSize; // r7
@@ -139,7 +139,7 @@ int imageMakeScan(struct_image_c_39 * pImage /* r1+0x8 */, void * ppHeap /* r1+0
 }
 
 // Range: 0x60440 -> 0x60530
-int imageMakeScanBurn(struct_image_c_39 * pImage /* r1+0x0 */, int nOffset /* r4 */) {
+int imageMakeScanBurn(struct_image_c_89 * pImage /* r1+0x0 */, int nOffset /* r4 */) {
     // Local variables
     int bDone; // r8
     int iScan; // r8
@@ -149,7 +149,7 @@ static int gnSizeWaveLast; // size: 0x4, address: 0x50E00
 static int ganDeltaWave[64]; // size: 0x100, address: 0x50E04
 static float fganDeltaWave[64]; // size: 0x100, address: 0xB0C08
 // Range: 0x60530 -> 0x60964
-int imageMakeScanWave(struct_image_c_39 * pImage /* r1+0x8 */, int nSize /* r1+0xC */, int nFlag /* r1+0x10 */, int nOffset /* r6 */) {
+int imageMakeScanWave(struct_image_c_89 * pImage /* r1+0x8 */, int nSize /* r1+0xC */, int nFlag /* r1+0x10 */, int nOffset /* r6 */) {
     // Local variables
     int nOffset0; // r11
     int nOffset1; // r12
@@ -167,17 +167,17 @@ int imageMakeScanWave(struct_image_c_39 * pImage /* r1+0x8 */, int nSize /* r1+0
 }
 
 // Range: 0x60964 -> 0x609E4
-int imageSetScale(struct_image_c_39 * pImage /* r1+0x8 */, float rScaleX /* r1+0xC */, float rScaleY /* r1+0x10 */) {}
+int imageSetScale(struct_image_c_89 * pImage /* r1+0x8 */, float rScaleX /* r1+0xC */, float rScaleY /* r1+0x10 */) {}
 
 // Range: 0x609E4 -> 0x60AF8
-int imageSetFrame(struct_image_c_39 * pImage /* r1+0x0 */, int iFrame /* r4 */) {
+int imageSetFrame(struct_image_c_89 * pImage /* r1+0x0 */, int iFrame /* r4 */) {
     // Local variables
     int nTick; // r9
     int iBitmap; // r7
 }
 
 // Range: 0x60AF8 -> 0x60B84
-int imageGetFrame(struct_image_c_39 * pImage /* r1+0x0 */, int * piFrame /* r1+0x4 */) {
+int imageGetFrame(struct_image_c_89 * pImage /* r1+0x0 */, int * piFrame /* r1+0x4 */) {
     // Local variables
     int iBitmap; // r8
     int nTick0; // r9
@@ -185,72 +185,72 @@ int imageGetFrame(struct_image_c_39 * pImage /* r1+0x0 */, int * piFrame /* r1+0
 }
 
 // Range: 0x60B84 -> 0x60E4C
-int imageTick(struct_image_c_39 * pImage /* r1+0x0 */, int nTick /* r1+0x4 */) {
+int imageTick(struct_image_c_89 * pImage /* r1+0x0 */, int nTick /* r1+0x4 */) {
     // Local variables
     int iBitmap; // r10
     int nTickCount; // r5
 }
 
 // Range: 0x60E4C -> 0x61578
-static int imageDrawRGBA32(struct_image_c_39 * pImage /* r29 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+static int imageDrawRGBA32(struct_image_c_89 * pImage /* r29 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * ppGfx /* r21 */, int nX /* r22 */, int nY /* r30 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x1C
+    union_pon_gc_c_173 * pGfx; // r1+0x1C
     int iBitmap; // r1+0x18
-    struct_bitmap_c_16 * pBitmap; // r31
-    union_pon_gc_tex_c_12 * pObject; // r5
+    struct_bitmap_c_14 * pBitmap; // r31
+    union_pon_gc_tex_c_17914 * pObject; // r5
     int iScan; // r1+0x8
     int nSize; // r3
     int nSizeX; // r18
     int nSizeY; // r19
     unsigned char * aPixel; // r4
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 }
 
 struct block_t {
@@ -280,7 +280,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -295,7 +295,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -304,7 +304,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -353,10 +353,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -404,7 +404,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -437,7 +437,7 @@ struct action_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct help_t {
@@ -516,9 +516,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -527,23 +527,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -563,84 +563,84 @@ struct Game {
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 // Range: 0x61578 -> 0x62268
-int imageDraw(struct_image_c_39 * pImage /* r30 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+int imageDraw(struct_image_c_89 * pImage /* r30 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r31 */, int nX /* r25 */, int nY /* r26 */, struct_bitmap_c_33 * pTile /* r27 */) {
+} * * ppGfx /* r31 */, int nX /* r25 */, int nY /* r26 */, struct_bitmap_c_320 * pTile /* r27 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x20
-    union_pon_gc_tex_c_12 * pObject; // r29
-    struct_bitmap_c_16 * pBitmap; // r28
+    union_pon_gc_c_173 * pGfx; // r1+0x20
+    union_pon_gc_tex_c_17914 * pObject; // r29
+    struct_bitmap_c_14 * pBitmap; // r28
     int iBitmap; // r1+0x1C
     int nSizeX; // r3
     int nSizeY; // r4
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
     int a; // r7
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> struct Game gTheGame;
@@ -652,86 +652,86 @@ void imageSetup() {
     // -> static int gnSizeWaveLast;
 }
 
-struct_pon_gc_draw_c_15 * gpDynamicForMenu; // size: 0x4, address: 0xF4454
+struct_pon_gc_draw_c_2466 * gpDynamicForMenu; // size: 0x4, address: 0xF4454
 // Range: 0x62278 -> 0x62F68
-int pon_imageDraw_4pSelectStageCursor(struct_image_c_39 * pImage /* r27 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+int pon_imageDraw_4pSelectStageCursor(struct_image_c_89 * pImage /* r27 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r28 */, int nX /* r24 */, int nY /* r25 */, struct_bitmap_c_33 * pTile /* r26 */, int iArea /* r29 */) {
+} * * ppGfx /* r28 */, int nX /* r24 */, int nY /* r25 */, struct_bitmap_c_320 * pTile /* r26 */, int iArea /* r29 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x24
-    union_pon_gc_tex_c_12 * pObject; // r31
-    struct_bitmap_c_16 * pBitmap; // r30
+    union_pon_gc_c_173 * pGfx; // r1+0x24
+    union_pon_gc_tex_c_17914 * pObject; // r31
+    struct_bitmap_c_14 * pBitmap; // r30
     int iBitmap; // r1+0x20
     int nSizeX; // r3
     int nSizeY; // r4
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
     int a; // r7
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> struct [anonymous] * gpDynamicForMenu;

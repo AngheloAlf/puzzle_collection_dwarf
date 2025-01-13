@@ -4,5 +4,5 @@
     Language: C++
     Code range: 0x0005B184 -> 0x0005B184
 */
-union_drmario_gc_c_0 gfx_freebuf[27][8192]; // size: 0x1B0000, address: 0x583B0
+union_drmario_gc_c_202 gfx_freebuf[27][8192]; // size: 0x1B0000, address: 0x583B0
 

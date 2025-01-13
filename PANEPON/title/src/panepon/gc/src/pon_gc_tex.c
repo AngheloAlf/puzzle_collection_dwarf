@@ -4,14 +4,14 @@
     Language: C++
     Code range: 0x000083EC -> 0x0000A5D4
 */
-union_pon_gc_c_0 copy_texture_init_dl[14]; // size: 0x70, address: 0xA18
-union_pon_gc_c_0 alpha_texture_init_dl[13]; // size: 0x68, address: 0xA88
-union_pon_gc_c_0 normal_texture_init_dl[14]; // size: 0x70, address: 0xAF0
-static union_pon_gc_c_0 init_dl$136[4]; // size: 0x20, address: 0xB60
-static union_pon_gc_c_0 init_dl$152[5]; // size: 0x28, address: 0xB80
+union_pon_gc_c_173 copy_texture_init_dl[14]; // size: 0x70, address: 0xA18
+union_pon_gc_c_173 alpha_texture_init_dl[13]; // size: 0x68, address: 0xA88
+union_pon_gc_c_173 normal_texture_init_dl[14]; // size: 0x70, address: 0xAF0
+static union_pon_gc_c_173 init_dl$136[4]; // size: 0x20, address: 0xB60
+static union_pon_gc_c_173 init_dl$152[5]; // size: 0x28, address: 0xB80
 struct SCopyTexBlock {
     // total size: 0x28
-    union_pon_gc_c_0 * * gpp; // offset 0x0, size 0x4
+    union_pon_gc_c_173 * * gpp; // offset 0x0, size 0x4
     void * tex; // offset 0x4, size 0x4
     int x; // offset 0x8, size 0x4
     int y; // offset 0xC, size 0x4
@@ -24,8 +24,8 @@ struct SCopyTexBlock {
 };
 struct SStretchTexBlock {
     // total size: 0x6C
-    union_pon_gc_c_0 * * gpp; // offset 0x0, size 0x4
-    union_pon_gc_tex_c_4 * * vpp; // offset 0x4, size 0x4
+    union_pon_gc_c_173 * * gpp; // offset 0x0, size 0x4
+    union_pon_gc_tex_c_1219 * * vpp; // offset 0x4, size 0x4
     int texW; // offset 0x8, size 0x4
     int texH; // offset 0xC, size 0x4
     void * colorTex; // offset 0x10, size 0x4
@@ -47,8 +47,8 @@ struct SStretchTexBlock {
 };
 struct SStretchTexTile {
     // total size: 0x78
-    union_pon_gc_c_0 * * gpp; // offset 0x0, size 0x4
-    union_pon_gc_tex_c_4 * * vpp; // offset 0x4, size 0x4
+    union_pon_gc_c_173 * * gpp; // offset 0x0, size 0x4
+    union_pon_gc_tex_c_1219 * * vpp; // offset 0x4, size 0x4
     int texW; // offset 0x8, size 0x4
     int texH; // offset 0xC, size 0x4
     void * colorTex; // offset 0x10, size 0x4
@@ -74,17 +74,17 @@ struct SStretchTexTile {
 // Range: 0x83EC -> 0x857C
 static void StretchTexBlock4ia_LoadTex(struct SStretchTexBlock * st /* r1+0x0 */) {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 }
 
 // Range: 0x857C -> 0x8650
-void StretchTexBlock4ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
+void StretchTexBlock4ia(union_pon_gc_c_173 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
     // Local variables
     struct SStretchTexBlock st[1]; // r1+0x28
 }
@@ -92,17 +92,17 @@ void StretchTexBlock4ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0x
 // Range: 0x8650 -> 0x87D8
 static void StretchTexBlock32_LoadTex(struct SStretchTexBlock * st /* r1+0x0 */) {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 }
 
 // Range: 0x87D8 -> 0x88BC
-void StretchTexBlock32(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
+void StretchTexBlock32(union_pon_gc_c_173 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
     // Local variables
     struct SStretchTexBlock st[1]; // r1+0x28
 }
@@ -110,17 +110,17 @@ void StretchTexBlock32(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0xC
 // Range: 0x88BC -> 0x8A44
 static void StretchTexBlock16ia_LoadTex(struct SStretchTexBlock * st /* r1+0x0 */) {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 }
 
 // Range: 0x8A44 -> 0x8B18
-static void StretchTexBlock16ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
+static void StretchTexBlock16ia(union_pon_gc_c_173 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
     // Local variables
     struct SStretchTexBlock st[1]; // r1+0x28
 }
@@ -128,17 +128,17 @@ static void StretchTexBlock16ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW 
 // Range: 0x8B18 -> 0x8C9C
 static void StretchTexBlock8ia_LoadTex(struct SStretchTexBlock * st /* r1+0x0 */) {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 }
 
 // Range: 0x8C9C -> 0x8D70
-void StretchTexBlock8ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
+void StretchTexBlock8ia(union_pon_gc_c_173 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
     // Local variables
     struct SStretchTexBlock st[1]; // r1+0x28
 }
@@ -147,9 +147,9 @@ void StretchTexBlock8ia(union_pon_gc_c_0 * * gpp /* r1+0x8 */, int texW /* r1+0x
 static void pon_gSPObjError() {}
 
 // Range: 0x8D74 -> 0x9720
-static int pon_texture(union_pon_gc_c_0 * * glp /* r21 */, union {
-    struct_pon_gc_tex_c_5 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_6 s; // offset 0x0, size 0x28
+static int pon_texture(union_pon_gc_c_173 * * glp /* r21 */, union {
+    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
+    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * bg /* r26 */, unsigned long CycleType /* r5 */) {
     // Local variables
@@ -161,126 +161,126 @@ static int pon_texture(union_pon_gc_c_0 * * glp /* r21 */, union {
     int sprW; // r29
     int sprH; // r31
     unsigned long long * image; // r22
-    union_pon_gc_c_0 * pgfx; // r1+0x14
+    union_pon_gc_c_173 * pgfx; // r1+0x14
 }
 
-static union_pon_gc_tex_c_7 * txBlock; // size: 0x4, address: 0x188
+static union_pon_gc_tex_c_7332 * txBlock; // size: 0x4, address: 0x188
 // Range: 0x9720 -> 0x9890
-void pon_gSPObjLoadTxtr(union_pon_gc_c_0 * * glp /* r1+0x0 */, union {
-    struct_pon_gc_tex_c_8 block; // offset 0x0, size 0x18
-    struct_pon_gc_tex_c_9 tile; // offset 0x0, size 0x18
-    struct_pon_gc_tex_c_10 tlut; // offset 0x0, size 0x18
+void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union {
+    struct_pon_gc_tex_c_7513 block; // offset 0x0, size 0x18
+    struct_pon_gc_tex_c_7524 tile; // offset 0x0, size 0x18
+    struct_pon_gc_tex_c_7535 tlut; // offset 0x0, size 0x18
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * tx /* r1+0x4 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r5
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r5
+    union_pon_gc_c_173 * pgfx; // r5
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r5
 
     // References
     // -> static union [anonymous] * txBlock;
 }
 
 // Range: 0x9890 -> 0xA300
-void pon_gSPObjRectangle(union_pon_gc_c_0 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_11 s; // offset 0x0, size 0x18
+void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, union {
+    struct_pon_gc_tex_c_9927 s; // offset 0x0, size 0x18
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * sp /* r4 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r31
+    union_pon_gc_c_173 * pgfx; // r31
     unsigned long iW; // r9
     unsigned long iH; // r10
     unsigned long sW; // r3
     unsigned long sH; // r1+0x8
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r24
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r26
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r24
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r25
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r29
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r24
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r24
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r8
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r24
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r26
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r24
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r25
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r29
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r24
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r24
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r8
 
     // References
     // -> static union [anonymous] * txBlock;
 }
 
 // Range: 0xA300 -> 0xA36C
-void pon_guS2DEmuBgRect1Cyc(union_pon_gc_c_0 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_5 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_6 s; // offset 0x0, size 0x28
+void pon_guS2DEmuBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
+    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
+    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * bg /* r31 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r1+0x10
+    union_pon_gc_c_173 * pgfx; // r1+0x10
 }
 
 // Range: 0xA36C -> 0xA370
 void pon_guS2DEmuSetScissor() {}
 
 // Range: 0xA370 -> 0xA420
-void pon_gSPBgRect1Cyc(union_pon_gc_c_0 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_5 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_6 s; // offset 0x0, size 0x28
+void pon_gSPBgRect1Cyc(union_pon_gc_c_173 * * glp /* r30 */, union {
+    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
+    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * bg /* r31 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * pgfx; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 }
 
 // Range: 0xA420 -> 0xA4E4
-void pon_gSPBgRectCopy(union_pon_gc_c_0 * * glp /* r30 */, union {
-    struct_pon_gc_tex_c_5 b; // offset 0x0, size 0x28
-    struct_pon_gc_tex_c_6 s; // offset 0x0, size 0x28
+void pon_gSPBgRectCopy(union_pon_gc_c_173 * * glp /* r30 */, union {
+    struct_pon_gc_tex_c_7093 b; // offset 0x0, size 0x28
+    struct_pon_gc_tex_c_7114 s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * bg /* r31 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * pgfx; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 }
 
 // Range: 0xA4E4 -> 0xA5D4
-void pon_guS2DInitBg(union_pon_gc_tex_c_12 * bg /* r1+0x0 */) {
+void pon_guS2DInitBg(union_pon_gc_tex_c_17914 * bg /* r1+0x0 */) {
     // Local variables
     unsigned short tmemUse; // r6
     unsigned short shift; // r4

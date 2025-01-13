@@ -5,20 +5,20 @@
     Code range: 0x00002BA0 -> 0x00004990
 */
 // Range: 0x2BA0 -> 0x3594
-void story_st_new_op(union_drmario_gc_c_0 * * glp /* r31 */, int flg /* r28 */) {
+void story_st_new_op(union_drmario_gc_c_202 * * glp /* r31 */, int flg /* r28 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x50
+    union_drmario_gc_c_202 * pgfx; // r1+0x50
     long pm[4][4]; // r1+0x10
     int demo_no; // r28
     int mes_no; // r1+0x8
     int wk; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static int fin_frame$440;
@@ -47,14 +47,14 @@ void story_st_new_op(union_drmario_gc_c_0 * * glp /* r31 */, int flg /* r28 */) 
 }
 
 // Range: 0x3594 -> 0x38B0
-void story_st_new(union_drmario_gc_c_0 * * glp /* r28 */, int demo_no /* r29 */, int mes_no /* r1+0x10 */) {
+void story_st_new(union_drmario_gc_c_202 * * glp /* r28 */, int demo_no /* r29 */, int mes_no /* r1+0x10 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x54
+    union_drmario_gc_c_202 * pgfx; // r1+0x54
     long pm[4][4]; // r1+0x14
-    struct_main_story_c_1 * scn_dat; // r29
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    struct_main_story_c_211 * scn_dat; // r29
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static unsigned long story_buffer;
@@ -81,16 +81,16 @@ void story_st_new(union_drmario_gc_c_0 * * glp /* r28 */, int demo_no /* r29 */,
 }
 
 // Range: 0x38B0 -> 0x3E80
-void story_st_new2_f(union_drmario_gc_c_0 * * glp /* r24 */, int demo_no /* r25 */, int mes_no /* r26 */, int demo_no2 /* r27 */, int mes_no2 /* r28 */) {
+void story_st_new2_f(union_drmario_gc_c_202 * * glp /* r24 */, int demo_no /* r25 */, int mes_no /* r26 */, int demo_no2 /* r27 */, int mes_no2 /* r28 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x5C
+    union_drmario_gc_c_202 * pgfx; // r1+0x5C
     long pm[4][4]; // r1+0x1C
     int wk; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static int fin_frame$568;
@@ -120,13 +120,13 @@ void story_st_new2_f(union_drmario_gc_c_0 * * glp /* r24 */, int demo_no /* r25 
 }
 
 // Range: 0x3E80 -> 0x436C
-void story_st_new2(union_drmario_gc_c_0 * * glp /* r27 */, int demo_no /* r28 */, int mes_no /* r25 */, int demo_no2 /* r29 */, int mes_no2 /* r26 */) {
+void story_st_new2(union_drmario_gc_c_202 * * glp /* r27 */, int demo_no /* r28 */, int mes_no /* r25 */, int demo_no2 /* r29 */, int mes_no2 /* r26 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x5C
+    union_drmario_gc_c_202 * pgfx; // r1+0x5C
     long pm[4][4]; // r1+0x1C
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static int fin_frame$623;
@@ -154,18 +154,18 @@ void story_st_new2(union_drmario_gc_c_0 * * glp /* r27 */, int demo_no /* r28 */
 }
 
 // Range: 0x436C -> 0x4990
-static void story_m_end(union_drmario_gc_c_0 * * glp /* r27 */, int type /* r28 */, int mes /* r29 */) {
+static void story_m_end(union_drmario_gc_c_202 * * glp /* r27 */, int type /* r28 */, int mes /* r29 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x54
+    union_drmario_gc_c_202 * pgfx; // r1+0x54
     long pm[4][4]; // r1+0x14
     int a; // r1+0x8
     int r; // r1+0x8
     int g; // r4
     int b; // r5
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static int story_staff_roll;

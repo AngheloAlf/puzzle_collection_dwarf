@@ -45,7 +45,7 @@ void gfxTaskStartFrameCopyFunc_set(void (* frameCopyFunc)() /* r1+0x0 */) {
 
 long * env[70]; // size: 0x118, address: 0x18E70
 // Range: 0x26ED8 -> 0x26FF4
-void gfxTaskStart(union_drmario_gc_c_0 * gp /* r27 */, long glist_size /* r28 */, unsigned long flag /* r29 */) {
+void gfxTaskStart(union_drmario_gc_c_202 * gp /* r27 */, long glist_size /* r28 */, unsigned long flag /* r29 */) {
     // References
     // -> long * env[70];
     // -> unsigned long wb_flag;
@@ -53,21 +53,21 @@ void gfxTaskStart(union_drmario_gc_c_0 * gp /* r27 */, long glist_size /* r28 */
     // -> void (* taskStartFrameCopyFunc)();
 }
 
-static struct_main_story_c_5 vp; // size: 0x10, address: 0x52F0
+static struct_main_story_c_793 vp; // size: 0x10, address: 0x52F0
 static int rdpinit_flag$161; // size: 0x4, address: 0x5300
-union_drmario_gc_c_0 * gp; // size: 0x4, address: 0x1E9A4
-union_drmario_gc_c_0 F3SetupRSP_dl[]; // size: 0x0, address: 0x24B10
-union_drmario_gc_c_0 F3RDPinit_dl[]; // size: 0x0, address: 0x24A10
-union_drmario_gc_c_0 F3SetupRDP_dl[]; // size: 0x0, address: 0x24AF0
+union_drmario_gc_c_202 * gp; // size: 0x4, address: 0x1E9A4
+union_drmario_gc_c_202 F3SetupRSP_dl[]; // size: 0x0, address: 0x24B10
+union_drmario_gc_c_202 F3RDPinit_dl[]; // size: 0x0, address: 0x24A10
+union_drmario_gc_c_202 F3SetupRDP_dl[]; // size: 0x0, address: 0x24AF0
 // Range: 0x26FF4 -> 0x270D4
 void F3RCPinitRtn() {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * gp;
@@ -82,38 +82,38 @@ unsigned short * nuGfxCfb_ptr; // size: 0x4, address: 0x0
 // Range: 0x270D4 -> 0x271A8
 void F3ClearFZRtn(unsigned char f /* r1+0x0 */) {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * gp;
     // -> unsigned short * nuGfxCfb_ptr;
 }
 
-union_drmario_gc_c_0 S2RDPinit_dl[]; // size: 0x0, address: 0x24938
+union_drmario_gc_c_202 S2RDPinit_dl[]; // size: 0x0, address: 0x24938
 // Range: 0x271A8 -> 0x27228
 void S2RDPinitRtn(unsigned char f /* r1+0x0 */) {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * gp;
     // -> union [anonymous] S2RDPinit_dl[];
 }
 
-union_drmario_gc_c_0 S2ClearCFB_dl[]; // size: 0x0, address: 0x249A0
+union_drmario_gc_c_202 S2ClearCFB_dl[]; // size: 0x0, address: 0x249A0
 // Range: 0x27228 -> 0x272A0
 void S2ClearCFBRtn(unsigned char f /* r1+0x0 */) {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
-    union_drmario_gc_c_0 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * gp;
@@ -121,5 +121,5 @@ void S2ClearCFBRtn(unsigned char f /* r1+0x0 */) {
     // -> unsigned short * nuGfxCfb_ptr;
 }
 
-union_drmario_gc_c_0 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
+union_drmario_gc_c_202 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
 

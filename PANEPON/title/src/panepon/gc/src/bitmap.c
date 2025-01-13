@@ -4,9 +4,9 @@
     Language: C++
     Code range: 0x0003AB70 -> 0x0003BD70
 */
-static struct_bitmap_c_16 * gpBitmapLast; // size: 0x4, address: 0x1810
+static struct_bitmap_c_14 * gpBitmapLast; // size: 0x4, address: 0x1810
 // Range: 0x3AB70 -> 0x3ACFC
-static int bitmapLoadRLE(struct_bitmap_c_16 * pBitmap /* r1+0x8 */, struct {
+static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct {
     // total size: 0x10
     int iFile; // offset 0x0, size 0x4
     int nSize; // offset 0x4, size 0x4
@@ -29,9 +29,9 @@ static int bitmapLoadRLE(struct_bitmap_c_16 * pBitmap /* r1+0x8 */, struct {
 }
 
 // Range: 0x3ACFC -> 0x3B31C
-int bitmapLoad(struct_bitmap_c_16 * * ppBitmap /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */, int bDMA /* r27 */) {
+int bitmapLoad(struct_bitmap_c_14 * * ppBitmap /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */, int bDMA /* r27 */) {
     // Local variables
-    struct_bitmap_c_17 file; // r1+0x38
+    struct_bitmap_c_65 file; // r1+0x38
     int nSizeOriginalX; // r26
     unsigned int * anColor; // r26
     int nColorCount; // r1+0x34
@@ -55,7 +55,7 @@ int bitmapLoad(struct_bitmap_c_16 * * ppBitmap /* r31 */, void * pNameOrFile /* 
 }
 
 // Range: 0x3B31C -> 0x3B4E8
-int bitmapLoadROM(struct_bitmap_c_16 * * ppBitmap /* r27 */, void * pROMData /* r28 */, void * pROMCLUT /* r5 */, int nType /* r29 */, int nSizeX /* r7 */, int nSizeY /* r1+0x1C */, void * ppHeap /* r1+0x20 */) {
+int bitmapLoadROM(struct_bitmap_c_14 * * ppBitmap /* r27 */, void * pROMData /* r28 */, void * pROMCLUT /* r5 */, int nType /* r29 */, int nSizeX /* r7 */, int nSizeY /* r1+0x1C */, void * ppHeap /* r1+0x20 */) {
     // Local variables
     int nStride; // r1+0x8
     int iColor; // r1+0x8
@@ -63,7 +63,7 @@ int bitmapLoadROM(struct_bitmap_c_16 * * ppBitmap /* r27 */, void * pROMData /* 
 }
 
 // Range: 0x3B4E8 -> 0x3B594
-int bitmapFlip(struct_bitmap_c_16 * pBitmap /* r26 */) {
+int bitmapFlip(struct_bitmap_c_14 * pBitmap /* r26 */) {
     // Local variables
     int iScan; // r30
     int nSizeScan; // r29
@@ -73,83 +73,83 @@ int bitmapFlip(struct_bitmap_c_16 * pBitmap /* r26 */) {
 }
 
 // Range: 0x3B594 -> 0x3B5EC
-int bitmapLoadData(struct_bitmap_c_16 * pBitmap /* r3 */, void * pPixel /* r4 */) {}
+int bitmapLoadData(struct_bitmap_c_14 * pBitmap /* r3 */, void * pPixel /* r4 */) {}
 
 // Range: 0x3B5EC -> 0x3BD6C
-int bitmapLoadTile(struct_bitmap_c_16 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+int bitmapLoadTile(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
-} * * ppGfx /* r1+0x10 */, struct_bitmap_c_33 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
+} * * ppGfx /* r1+0x10 */, struct_bitmap_c_320 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r4
+    union_pon_gc_c_173 * pGfx; // r4
     int nSizeX; // r8
     int nSizeY; // r9
     int nType; // r10
     int nOffset; // r11
     unsigned char * pPixels; // r21
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r21
-    union_pon_gc_c_0 * _g; // r22
-    union_pon_gc_c_0 * _g; // r21
-    union_pon_gc_c_0 * _g; // r22
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r21
-    union_pon_gc_c_0 * _g; // r22
-    union_pon_gc_c_0 * _g; // r21
-    union_pon_gc_c_0 * _g; // r22
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r31
-    union_pon_gc_c_0 * _g; // r9
-    union_pon_gc_c_0 * _g; // r30
-    union_pon_gc_c_0 * _g; // r29
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r29
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r30
-    union_pon_gc_c_0 * _g; // r31
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r29
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r30
-    union_pon_gc_c_0 * _g; // r31
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r12
-    union_pon_gc_c_0 * _g; // r29
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r30
-    union_pon_gc_c_0 * _g; // r31
-    union_pon_gc_c_0 * _g; // r4
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r21
+    union_pon_gc_c_173 * _g; // r22
+    union_pon_gc_c_173 * _g; // r21
+    union_pon_gc_c_173 * _g; // r22
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r21
+    union_pon_gc_c_173 * _g; // r22
+    union_pon_gc_c_173 * _g; // r21
+    union_pon_gc_c_173 * _g; // r22
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r31
+    union_pon_gc_c_173 * _g; // r9
+    union_pon_gc_c_173 * _g; // r30
+    union_pon_gc_c_173 * _g; // r29
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r29
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r30
+    union_pon_gc_c_173 * _g; // r31
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r29
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r30
+    union_pon_gc_c_173 * _g; // r31
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r12
+    union_pon_gc_c_173 * _g; // r29
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r30
+    union_pon_gc_c_173 * _g; // r31
+    union_pon_gc_c_173 * _g; // r4
 
     // References
     // -> static struct [anonymous] * gpBitmapLast;

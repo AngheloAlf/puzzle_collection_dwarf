@@ -20,7 +20,7 @@ struct huft {
     // total size: 0x8
     unsigned char e; // offset 0x0, size 0x1
     unsigned char b; // offset 0x1, size 0x1
-    union_inflate_c_12 v; // offset 0x4, size 0x4
+    union_inflate_c_24 v; // offset 0x4, size 0x4
 };
 // Range: 0x9E04 -> 0xA41C
 int huft_build(unsigned int * b /* r3 */, unsigned int n /* r4 */, unsigned int s /* r1+0x10 */, unsigned short * d /* r1+0x14 */, unsigned short * e /* r1+0x18 */, struct huft * * t /* r8 */, int * m /* r1+0x20 */) {

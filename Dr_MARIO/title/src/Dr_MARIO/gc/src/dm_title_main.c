@@ -53,21 +53,21 @@ int dm_title_main() {
     // -> @enum$98dm_title_main_c main_old;
 }
 
-union_drmario_gc_c_0 * gp; // size: 0x4, address: 0x1E9A4
-union_drmario_gc_c_0 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
+union_drmario_gc_c_202 * gp; // size: 0x4, address: 0x1E9A4
+union_drmario_gc_c_202 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
 unsigned long wb_flag; // size: 0x4, address: 0x1E990
-union_drmario_gc_c_0 S2Spriteinit_dl[]; // size: 0x0, address: 0x249C8
+union_drmario_gc_c_202 S2Spriteinit_dl[]; // size: 0x0, address: 0x249C8
 unsigned char evs_level_21; // size: 0x1, address: 0x18F94
 // Range: 0xC874 -> 0xCAAC
 void dm_title_graphic() {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x10
-    union_drmario_gc_c_0 * _g; // r1+0x10
-    union_drmario_gc_c_0 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
     int c; // r1+0x10
     int a; // r1+0x10
-    union_drmario_gc_c_0 * _g; // r1+0x10
-    union_drmario_gc_c_0 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
 
     // References
     // -> union [anonymous] * gp;
@@ -89,7 +89,7 @@ unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 // Range: 0xCAAC -> 0xCC74
 int main_boot_error() {
     // Local variables
-    struct_dm_title_main_c_13 * st; // r31
+    struct_dm_title_main_c_1477 * st; // r31
     void * heap; // r1+0x8
     @enum$110dm_title_main_c loop; // r30
 
@@ -108,9 +108,9 @@ unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 // Range: 0xCC74 -> 0xCD58
 void graphic_boot_error() {
     // Local variables
-    struct_dm_title_main_c_13 * st; // r27
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    struct_dm_title_main_c_1477 * st; // r27
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * gp;

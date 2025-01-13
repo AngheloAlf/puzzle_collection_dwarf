@@ -4,10 +4,10 @@
     Language: C++
     Code range: 0x0000999C -> 0x00009DBC
 */
-union_drmario_gc_c_0 gzip_dummy_dl[1]; // size: 0x8, address: 0x42A0
+union_drmario_gc_c_202 gzip_dummy_dl[1]; // size: 0x8, address: 0x42A0
 static unsigned long crc_32_tab[256]; // size: 0x400, address: 0x42A8
-struct_unzip_c_11 ifd; // size: 0x8, address: 0x8E10
-struct_unzip_c_11 ofd; // size: 0x8, address: 0x8E18
+struct_unzip_c_179 ifd; // size: 0x8, address: 0x8E10
+struct_unzip_c_179 ofd; // size: 0x8, address: 0x8E18
 // Range: 0x999C -> 0x99E8
 unsigned long expand_gzip(char * src_addr /* r1+0x8 */, char * dst_addr /* r1+0xC */, unsigned long size /* r1+0x10 */) {
     // References
@@ -16,7 +16,7 @@ unsigned long expand_gzip(char * src_addr /* r1+0x8 */, char * dst_addr /* r1+0x
 }
 
 // Range: 0x99E8 -> 0x9AA8
-unsigned long data_write(struct_unzip_c_11 * outfile /* r1+0x0 */, unsigned char * src_addr /* r1+0x4 */, unsigned int size /* r5 */) {
+unsigned long data_write(struct_unzip_c_179 * outfile /* r1+0x0 */, unsigned char * src_addr /* r1+0x4 */, unsigned int size /* r5 */) {
     // Local variables
     unsigned long i; // r7
     unsigned char * dst_addr; // r8

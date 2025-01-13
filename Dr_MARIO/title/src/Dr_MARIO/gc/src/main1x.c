@@ -20,13 +20,13 @@ struct SAnimeSeq {
 struct SAnimeState {
     // total size: 0x40
     struct SAnimeSeq animeSeq[1]; // offset 0x0, size 0x1C
-    struct_tex_func_c_8 * texArray; // offset 0x1C, size 0x4
+    struct_tex_func_c_1287 * texArray; // offset 0x1C, size 0x4
     unsigned long frameCount; // offset 0x20, size 0x4
     int center[2]; // offset 0x24, size 0x8
     int charNo; // offset 0x2C, size 0x4
     int color[4]; // offset 0x30, size 0x10
 };
-struct_dm_game_main_c_17 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
+struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
 unsigned char evs_select_name_no[]; // size: 0x0, address: 0x190B0
 signed char evs_manual_no; // size: 0x1, address: 0x18F95
 int story_proc_no; // size: 0x4, address: 0x154C
@@ -48,7 +48,7 @@ int main11() {
     // -> struct [anonymous] game_state_data[4];
 }
 
-struct_aiset_c_97 ai_char_data[16]; // size: 0x6C0, address: 0x57260
+struct_aiset_c_713 ai_char_data[16]; // size: 0x6C0, address: 0x57260
 signed char evs_story_level; // size: 0x1, address: 0x4880
 signed char evs_story_no; // size: 0x1, address: 0x18F92
 unsigned char evs_playcnt; // size: 0x1, address: 0x487A
@@ -56,7 +56,7 @@ unsigned char evs_playcnt; // size: 0x1, address: 0x487A
 static void adjust_story_ai() {
     // Local variables
     int i; // r10
-    struct_aiset_c_97 * aichar; // r11
+    struct_aiset_c_713 * aichar; // r11
 
     // References
     // -> unsigned char evs_playcnt;

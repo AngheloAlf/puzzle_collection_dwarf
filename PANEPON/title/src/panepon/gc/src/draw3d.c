@@ -4,11 +4,11 @@
     Language: C++
     Code range: 0x00048D24 -> 0x00051968
 */
-union_pon_gc_c_0 * glistp; // size: 0x4, address: 0x50F48
+union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
 // Range: 0x48D24 -> 0x48D4C
 void Set3DTile() {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * glistp;
@@ -17,23 +17,23 @@ void Set3DTile() {
 // Range: 0x48D4C -> 0x48F48
 void Set3DExplodeTile() {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -76,7 +76,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -91,7 +91,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -100,7 +100,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 enum pStateEnum {
     dead = 0,
@@ -123,7 +123,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -141,11 +141,11 @@ struct flic_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 // Range: 0x48F48 -> 0x49644
-void Draw3DFrontTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x1C */, int num /* r1+0x20 */) {
+void Draw3DFrontTetrisWell(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x1C */, int num /* r1+0x20 */) {
     // Local variables
     int row; // r27
     int col; // r29
@@ -158,29 +158,29 @@ void Draw3DFrontTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x1C */, int
     char (* ptr)[12][18]; // r1+0x28
     struct block_t (* array)[12][18]; // r1+0x24
     struct block_t * block; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> int gMain;
@@ -197,7 +197,7 @@ void Draw3DFrontTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x1C */, int
 }
 
 // Range: 0x49644 -> 0x49CA8
-void Draw3DBackTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
+void Draw3DBackTetrisWell(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
     int row; // r27
     int col; // r29
@@ -208,27 +208,27 @@ void Draw3DBackTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int n
     char (* ptr)[12][18]; // r1+0x24
     struct block_t (* array)[12][18]; // r1+0x20
     struct block_t * block; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -244,17 +244,17 @@ void Draw3DBackTetrisWell(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int n
     // -> int gMain;
 }
 
-union_pon_gc_tex_c_4 * gAllVertex; // size: 0x4, address: 0xF4EA8
+union_pon_gc_tex_c_1219 * gAllVertex; // size: 0x4, address: 0xF4EA8
 // Range: 0x49CA8 -> 0x49E18
 void Draw3DTetrisBlock1(int row /* r1+0x8 */, int col /* r1+0xC */, int type /* r1+0x10 */) {
     // Local variables
     int tileoffset[8]; // r1+0x14
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -265,18 +265,18 @@ void Draw3DTetrisBlock1(int row /* r1+0x8 */, int col /* r1+0xC */, int type /* 
 void Draw3DTetrisBlock2(int col /* r1+0x8 */, int type /* r1+0xC */) {
     // Local variables
     int tileoffset[8]; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -286,22 +286,22 @@ void Draw3DTetrisBlock2(int col /* r1+0x8 */, int type /* r1+0xC */) {
 // Range: 0x4A018 -> 0x4A2B0
 void Draw3DTetrisBlockSide(int row /* r1+0x0 */, int col /* r1+0x4 */, int type /* r1+0x8 */, int flag /* r1+0xC */) {
     // Local variables
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
-    union_pon_gc_c_0 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
 
     // References
     // -> union [anonymous] * glistp;
@@ -309,31 +309,31 @@ void Draw3DTetrisBlockSide(int row /* r1+0x0 */, int col /* r1+0x4 */, int type 
 }
 
 // Range: 0x4A2B0 -> 0x4A628
-void Draw3DTetrisSwitch(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */, struct block_t * left /* r1+0x10 */, struct block_t * right /* r1+0x14 */) {
+void Draw3DTetrisSwitch(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */, struct block_t * left /* r1+0x10 */, struct block_t * right /* r1+0x14 */) {
     // Local variables
     int index; // r9
     int tileoffset[8]; // r1+0x18
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -389,10 +389,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -425,25 +425,25 @@ void Draw3DTetrisNewBlock(struct tetWell * well /* r1+0xC */) {
     int col; // r1+0x8
     unsigned char * tex; // r22
     int tileoffset[8]; // r1+0x14
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -549,9 +549,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -560,23 +560,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -596,25 +596,25 @@ struct Game {
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 // Range: 0x4A980 -> 0x4AB68
-void Draw3DCursor(struct_pon_gc_draw_c_15 * dynamicp /* r3 */) {
+void Draw3DCursor(struct_pon_gc_draw_c_2466 * dynamicp /* r3 */) {
     // Local variables
     int num; // r5
     int x; // r27
     int y; // r28
     unsigned short * tex; // r10
     struct cursor_t * cursor; // r11
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> struct Game gTheGame;
@@ -647,7 +647,7 @@ unsigned char chain011[]; // size: 0x0, address: 0xC6F30
 unsigned char chain012[]; // size: 0x0, address: 0xC7730
 unsigned char chain013[]; // size: 0x0, address: 0xC7F30
 // Range: 0x4AB68 -> 0x4B448
-void Draw3DIcon(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
+void Draw3DIcon(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
     int i; // r1+0x38
     int pos; // r1+0x8
@@ -659,35 +659,35 @@ void Draw3DIcon(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0
     struct icon_t * icon; // r1+0x8
     struct icon_t (* icn)[10]; // r5
     int tileoffset[8]; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -724,7 +724,7 @@ unsigned short colorTable[]; // size: 0x0, address: 0xB77F8
 unsigned char * explosionB; // size: 0x4, address: 0x4CA80
 unsigned char * explosionA; // size: 0x4, address: 0x4CA54
 // Range: 0x4B448 -> 0x4BC60
-void Draw3DAttackBrick(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */, int check /* r1+0x10 */) {
+void Draw3DAttackBrick(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */, int check /* r1+0x10 */) {
     // Local variables
     int count; // r1+0x8
     int x; // r1+0x8
@@ -734,61 +734,61 @@ void Draw3DAttackBrick(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num 
     unsigned char * c_tex; // r1+0x1C
     unsigned short * old_tex; // r22
     unsigned short * s_tex; // r10
-    struct_pon_gc_tex_c_11 * s; // r12
+    struct_pon_gc_tex_c_9927 * s; // r12
     struct attack_t (* attk)[40]; // r1+0x18
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -803,12 +803,12 @@ void Draw3DAttackBrick(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num 
 void Draw3DAttackBlock(int row /* r1+0x8 */, int col /* r1+0xC */, int type /* r1+0x10 */, int flag /* r1+0x14 */) {
     // Local variables
     int tileoffset[8]; // r1+0x18
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -819,7 +819,7 @@ unsigned char gblockx[]; // size: 0x0, address: 0xC8940
 unsigned char * gblockA[6]; // size: 0x18, address: 0x4CA64
 unsigned char * gblockB[6]; // size: 0x18, address: 0x4CA38
 // Range: 0x4BDC0 -> 0x4C9F8
-int Draw3DAttack(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0x24 */, int front /* r29 */) {
+int Draw3DAttack(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0x24 */, int front /* r29 */) {
     // Local variables
     int lev; // r26
     int row; // r22
@@ -841,48 +841,48 @@ int Draw3DAttack(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+
     unsigned char * tex; // r3
     struct block_t (* array)[12][18]; // r1+0x2C
     char (* ptr)[12][18]; // r1+0x28
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -892,28 +892,28 @@ int Draw3DAttack(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+
 }
 
 // Range: 0x4C9F8 -> 0x4CD00
-void Draw3DExplosion(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
+void Draw3DExplosion(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
     int count; // r1+0x8
     int ss; // r6
     int tt; // r28
     unsigned char * tex; // r8
-    struct_pon_gc_tex_c_11 * s; // r7
+    struct_pon_gc_tex_c_9927 * s; // r7
     struct explode_t (* exp)[50]; // r29
     int tileoffset[8]; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -929,27 +929,27 @@ void Draw3DClearLine(int num /* r1+0xC */) {
     // Local variables
     int row; // r1+0x8
     int index; // r5
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -962,31 +962,31 @@ void Draw3DClearLine(int num /* r1+0xC */) {
 }
 
 // Range: 0x4CFC8 -> 0x4D2C0
-void Draw3DClearSign(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
+void Draw3DClearSign(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
     int tmem; // r1+0x8
     int x; // r3
     int y; // r12
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -997,7 +997,7 @@ void Draw3DClearSign(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /*
 
 unsigned char arrow[]; // size: 0x0, address: 0xD4D60
 // Range: 0x4D2C0 -> 0x4DCA8
-void Draw3DGameOverStat(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */) {
+void Draw3DGameOverStat(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */) {
     // Local variables
     int count; // r25
     int pos; // r1+0x8
@@ -1006,56 +1006,56 @@ void Draw3DGameOverStat(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */) {
     unsigned char * tex; // r30
     struct icon_t * icon; // r1+0x8
     int tileoffset[8]; // r1+0xC
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -1089,30 +1089,30 @@ void Draw3DGameOverStat(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */) {
 
 unsigned char smokesmoke[]; // size: 0x0, address: 0xC9158
 // Range: 0x4DCA8 -> 0x4DFE0
-void Draw3DSmoke(struct_pon_gc_draw_c_15 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
+void Draw3DSmoke(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
     int col; // r8
     int tile; // r9
-    struct_pon_gc_tex_c_11 * s; // r25
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    struct_pon_gc_tex_c_9927 * s; // r25
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -1127,32 +1127,32 @@ void Draw3DEmptyStar() {
     int count; // r7
     int x; // r11
     int y; // r12
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -1161,38 +1161,38 @@ void Draw3DEmptyStar() {
 }
 
 unsigned char w_star[]; // size: 0x0, address: 0xCBF88
-struct_pon_gc_c_3 * * fb; // size: 0x4, address: 0x50DF8
+struct_pon_gc_c_674 * * fb; // size: 0x4, address: 0x50DF8
 // Range: 0x4E350 -> 0x4E6D8
 void Draw3DGameStar(int which /* r1+0x8 */) {
     // Local variables
     int x; // r8
     int y; // r9
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> struct [anonymous] * * fb;
@@ -1213,36 +1213,36 @@ void Draw3DSmallStars(int layer /* r1+0x8 */) {
     int y; // r8
     int num; // r17
     int total; // r29
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -1254,9 +1254,9 @@ void Draw3DSmallStars(int layer /* r1+0x8 */) {
 }
 
 int gSelection; // size: 0x4, address: 0xF4E94
-union_pon_gc_MemoryCard_c_14 gIdent; // size: 0x40, address: 0x50F08
+union_pon_gc_MemoryCard_c_1396 gIdent; // size: 0x40, address: 0x50F08
 // Range: 0x4EB70 -> 0x51968
-void Draw3DTetris(struct_pon_gc_draw_c_15 * dynamicp /* r19 */) {
+void Draw3DTetris(struct_pon_gc_draw_c_2466 * dynamicp /* r19 */) {
     // Local variables
     int num; // r30
     int end_attack[4]; // r1+0x168
@@ -1267,287 +1267,287 @@ void Draw3DTetris(struct_pon_gc_draw_c_15 * dynamicp /* r19 */) {
     int height; // r27
     int line; // r8
     int tmem; // r9
-    union_pon_gc_c_1 * sp; // r3
+    union_pon_gc_c_222 * sp; // r3
     int i; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
     int plt_index[8]; // r1+0x138
     int tex_index[8]; // r1+0x118
     int spr_index[8]; // r1+0xF8
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
     int plt_index[3]; // r1+0xEC
     int tex_index[3]; // r1+0xE0
     int spr_index[3]; // r1+0xD4
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
     int plt_index[8]; // r1+0xB4
     int tex_index[8]; // r1+0x94
     int spr_index[8]; // r1+0x74
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
     int plt_index[8]; // r1+0x54
     int tex_index[8]; // r1+0x34
     int spr_index[8]; // r1+0x14
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
-    union_pon_gc_c_0 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
+    union_pon_gc_c_173 * _g; // r1+0x10
 
     // References
     // -> union [anonymous] * glistp;

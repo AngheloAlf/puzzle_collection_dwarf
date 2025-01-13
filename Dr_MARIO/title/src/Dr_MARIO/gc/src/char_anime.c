@@ -39,7 +39,7 @@ void * _romDataTbl[][2]; // size: 0x0, address: 0x1DB58
 struct SAnimeState {
     // total size: 0x40
     struct SAnimeSeq animeSeq[1]; // offset 0x0, size 0x1C
-    struct_tex_func_c_8 * texArray; // offset 0x1C, size 0x4
+    struct_tex_func_c_1287 * texArray; // offset 0x1C, size 0x4
     unsigned long frameCount; // offset 0x20, size 0x4
     int center[2]; // offset 0x24, size 0x8
     int charNo; // offset 0x2C, size 0x4
@@ -49,7 +49,7 @@ struct SAnimeState {
 void animeState_load(struct SAnimeState * st /* r30 */, void * hpp /* r4 */, int charNo /* r31 */) {
     // Local variables
     unsigned char * * seqArray; // r1+0x18
-    struct_tex_func_c_8 * texArray; // r1+0x14
+    struct_tex_func_c_1287 * texArray; // r1+0x14
 
     // References
     // -> static int _centerTbl$125[20][2];
@@ -58,7 +58,7 @@ void animeState_load(struct SAnimeState * st /* r30 */, void * hpp /* r4 */, int
 }
 
 // Range: 0x29E24 -> 0x29EA8
-void animeState_init(struct SAnimeState * st /* r26 */, unsigned char * * seqArray /* r1+0xC */, struct_tex_func_c_8 * texArray /* r27 */, int cx /* r28 */, int cy /* r29 */, int charNo /* r30 */) {}
+void animeState_init(struct SAnimeState * st /* r26 */, unsigned char * * seqArray /* r1+0xC */, struct_tex_func_c_1287 * texArray /* r27 */, int cx /* r28 */, int cy /* r29 */, int charNo /* r30 */) {}
 
 // Range: 0x29EA8 -> 0x29EEC
 void animeState_set(struct SAnimeState * st /* r3 */, int animeNo /* r1+0xC */) {}
@@ -66,55 +66,55 @@ void animeState_set(struct SAnimeState * st /* r3 */, int animeNo /* r1+0xC */) 
 // Range: 0x29EEC -> 0x29F2C
 void animeState_update(struct SAnimeState * st /* r31 */) {}
 
-union_drmario_gc_c_0 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
+union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x29F2C -> 0x29FC4
-void animeState_initDL(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_0 * * gpp /* r1+0x4 */) {
+void animeState_initDL(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_202 * * gpp /* r1+0x4 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r8
-    union_drmario_gc_c_0 * _g; // r7
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r8
-    union_drmario_gc_c_0 * _g; // r5
+    union_drmario_gc_c_202 * gp; // r8
+    union_drmario_gc_c_202 * _g; // r7
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r8
+    union_drmario_gc_c_202 * _g; // r5
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
 }
 
 // Range: 0x29FC4 -> 0x2A070
-void animeState_initDL2(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_0 * * gpp /* r1+0x4 */) {
+void animeState_initDL2(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_202 * * gpp /* r1+0x4 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r10
-    union_drmario_gc_c_0 * _g; // r7
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r11
-    union_drmario_gc_c_0 * _g; // r10
-    union_drmario_gc_c_0 * _g; // r5
+    union_drmario_gc_c_202 * gp; // r10
+    union_drmario_gc_c_202 * _g; // r7
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r11
+    union_drmario_gc_c_202 * _g; // r10
+    union_drmario_gc_c_202 * _g; // r5
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
 }
 
 // Range: 0x2A070 -> 0x2A134
-void animeState_initIntensityDL(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_0 * * gpp /* r1+0x4 */) {
+void animeState_initIntensityDL(struct SAnimeState * st /* r1+0x0 */, union_drmario_gc_c_202 * * gpp /* r1+0x4 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r10
-    union_drmario_gc_c_0 * _g; // r7
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r11
-    union_drmario_gc_c_0 * _g; // r12
+    union_drmario_gc_c_202 * gp; // r10
+    union_drmario_gc_c_202 * _g; // r7
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r11
+    union_drmario_gc_c_202 * _g; // r12
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
 }
 
 // Range: 0x2A134 -> 0x2A3B0
-void animeState_draw(struct SAnimeState * st /* r1+0x10 */, union_drmario_gc_c_0 * * gpp /* r31 */, float x /* f1 */, float y /* f2 */, float sx /* f3 */, float sy /* f4 */) {
+void animeState_draw(struct SAnimeState * st /* r1+0x10 */, union_drmario_gc_c_202 * * gpp /* r31 */, float x /* f1 */, float y /* f2 */, float sx /* f3 */, float sy /* f4 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r1+0x28
-    struct_tex_func_c_8 * texC; // r7
-    struct_tex_func_c_8 * pal; // r1+0x10
+    union_drmario_gc_c_202 * gp; // r1+0x28
+    struct_tex_func_c_1287 * texC; // r7
+    struct_tex_func_c_1287 * pal; // r1+0x10
 }
 
 struct SAnimeSmog {
@@ -157,15 +157,15 @@ void animeSmog_update(struct SAnimeSmog * st /* r28 */) {
 }
 
 // Range: 0x2A738 -> 0x2A9AC
-void animeSmog_draw(struct SAnimeSmog * st /* r3 */, union_drmario_gc_c_0 * * gpp /* r26 */, float x /* f28 */, float y /* f29 */, float sx /* f30 */, float sy /* f31 */) {
+void animeSmog_draw(struct SAnimeSmog * st /* r3 */, union_drmario_gc_c_202 * * gpp /* r26 */, float x /* f28 */, float y /* f29 */, float sx /* f30 */, float sy /* f31 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r1+0x24
+    union_drmario_gc_c_202 * gp; // r1+0x24
     struct SAnimeState * state; // r3
     int i; // r27
 }
 
 // Range: 0x2A9AC -> 0x2AB38
-void loadAnimeSeq(void * hpp /* r28 */, struct_tex_func_c_8 * * texArray /* r29 */, unsigned char * * * seqArray /* r30 */, void * romStart /* r6 */, void * romEnd /* r1+0x18 */) {
+void loadAnimeSeq(void * hpp /* r28 */, struct_tex_func_c_1287 * * texArray /* r29 */, unsigned char * * * seqArray /* r30 */, void * romStart /* r6 */, void * romEnd /* r1+0x18 */) {
     // Local variables
     void * hp; // r31
     unsigned long addr; // r1+0x8

@@ -13,10 +13,10 @@ static int gnMaskRate; // size: 0x4, address: 0xF457C
 static int gnMaskRateDefault; // size: 0x4, address: 0xF4580
 static int gnFrameSkip; // size: 0x4, address: 0xF4584
 static int gnImageCount; // size: 0x4, address: 0xF4588
-static struct_image_c_39 * * gapImage; // size: 0x4, address: 0xF458C
+static struct_image_c_89 * * gapImage; // size: 0x4, address: 0xF458C
 static char * * gapNameImage; // size: 0x4, address: 0xF4590
 static int gnScreenCount; // size: 0x4, address: 0xF4594
-static struct_screen_c_48 * gaScreen; // size: 0x4, address: 0xF4598
+static struct_screen_c_446 * gaScreen; // size: 0x4, address: 0xF4598
 static int giFramePage; // size: 0x4, address: 0xF459C
 static int giScreen; // size: 0x4, address: 0xF45A0
 static int giScreenNext; // size: 0x4, address: 0xF45A4
@@ -31,45 +31,45 @@ static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF45BC
 static unsigned int gnFrameCount; // size: 0x4, address: 0xF45C0
 static int gnTagTextBase; // size: 0x4, address: 0xF45C4
 static int gnCountTextTag; // size: 0x4, address: 0xF45C8
-static struct_image_c_39 * gpImageOval; // size: 0x4, address: 0xF45CC
-static struct_image_c_39 * gpImageAlign; // size: 0x4, address: 0xF45D0
+static struct_image_c_89 * gpImageOval; // size: 0x4, address: 0xF45CC
+static struct_image_c_89 * gpImageAlign; // size: 0x4, address: 0xF45D0
 static int gnTickText; // size: 0x4, address: 0xF45D4
 static int gnTickWrap; // size: 0x4, address: 0xF45D8
 static int gnCountLayers; // size: 0x4, address: 0xF45DC
 @enum$94screen_c;
 static @enum$94screen_c geTypeBack; // size: 0x4, address: 0xF45E0
-static struct_image_c_39 * gpImagePageBack; // size: 0x4, address: 0xF45E4
-static struct_image_c_39 * gpImagePageFront; // size: 0x4, address: 0xF45E8
-static struct_image_c_39 * gpImageNo; // size: 0x4, address: 0xF45EC
-static struct_image_c_39 * gpImageYes; // size: 0x4, address: 0xF45F0
-static struct_image_c_39 * gpImageBack; // size: 0x4, address: 0xF45F4
+static struct_image_c_89 * gpImagePageBack; // size: 0x4, address: 0xF45E4
+static struct_image_c_89 * gpImagePageFront; // size: 0x4, address: 0xF45E8
+static struct_image_c_89 * gpImageNo; // size: 0x4, address: 0xF45EC
+static struct_image_c_89 * gpImageYes; // size: 0x4, address: 0xF45F0
+static struct_image_c_89 * gpImageBack; // size: 0x4, address: 0xF45F4
 static unsigned int gnColorBack0; // size: 0x4, address: 0xF45F8
 static unsigned int gnColorBack1; // size: 0x4, address: 0xF45FC
 static unsigned int gnColorBack2; // size: 0x4, address: 0xF4600
 static unsigned int gnColorBack3; // size: 0x4, address: 0xF4604
 static unsigned int gnColorBack4; // size: 0x4, address: 0xF4608
 static unsigned int gnColorBack5; // size: 0x4, address: 0xF460C
-static struct_image_c_39 * gpImageKanji; // size: 0x4, address: 0xF4610
-static struct_image_c_39 * gpImageKatakana; // size: 0x4, address: 0xF4614
-static struct_image_c_39 * gpImageHiragana; // size: 0x4, address: 0xF4618
-static struct_image_c_39 * gpImageEnglish; // size: 0x4, address: 0xF461C
-static struct_image_c_39 * gpImageDialogKanji; // size: 0x4, address: 0xF4620
-static struct_image_c_39 * gpImageDialogKatakana; // size: 0x4, address: 0xF4624
-static struct_image_c_39 * gpImageDialogHiragana; // size: 0x4, address: 0xF4628
-static struct_image_c_39 * gpImageDialogEnglish; // size: 0x4, address: 0xF462C
-static struct_image_c_39 * gpImageDigitsPink; // size: 0x4, address: 0xF4630
-static struct_image_c_39 * gpImageDigitsBlue; // size: 0x4, address: 0xF4634
-static struct_image_c_39 * gpImageDigitsNormPink; // size: 0x4, address: 0xF4638
-static struct_image_c_39 * gpImageDigitsNormBlue; // size: 0x4, address: 0xF463C
-static struct_image_c_39 * gpImageDigitsTinyPink; // size: 0x4, address: 0xF4640
-static struct_image_c_39 * gpImageDigitsTinyBlue; // size: 0x4, address: 0xF4644
-static struct_image_c_39 * gpImageDigitsItsyBitsy; // size: 0x4, address: 0xF4648
-static struct_image_c_39 * gpImageDigitsXtraPink; // size: 0x4, address: 0xF464C
-static struct_image_c_39 * gpImageDigitsXtraBlue; // size: 0x4, address: 0xF4650
-static struct_image_c_39 * gpImageLabel; // size: 0x4, address: 0xF4654
-static struct_image_c_39 * gpImageRecordKatakana; // size: 0x4, address: 0xF4658
-static struct_image_c_39 * gpImageRecordHiragana; // size: 0x4, address: 0xF465C
-static struct_image_c_39 * gpImageRecordEnglish; // size: 0x4, address: 0xF4660
+static struct_image_c_89 * gpImageKanji; // size: 0x4, address: 0xF4610
+static struct_image_c_89 * gpImageKatakana; // size: 0x4, address: 0xF4614
+static struct_image_c_89 * gpImageHiragana; // size: 0x4, address: 0xF4618
+static struct_image_c_89 * gpImageEnglish; // size: 0x4, address: 0xF461C
+static struct_image_c_89 * gpImageDialogKanji; // size: 0x4, address: 0xF4620
+static struct_image_c_89 * gpImageDialogKatakana; // size: 0x4, address: 0xF4624
+static struct_image_c_89 * gpImageDialogHiragana; // size: 0x4, address: 0xF4628
+static struct_image_c_89 * gpImageDialogEnglish; // size: 0x4, address: 0xF462C
+static struct_image_c_89 * gpImageDigitsPink; // size: 0x4, address: 0xF4630
+static struct_image_c_89 * gpImageDigitsBlue; // size: 0x4, address: 0xF4634
+static struct_image_c_89 * gpImageDigitsNormPink; // size: 0x4, address: 0xF4638
+static struct_image_c_89 * gpImageDigitsNormBlue; // size: 0x4, address: 0xF463C
+static struct_image_c_89 * gpImageDigitsTinyPink; // size: 0x4, address: 0xF4640
+static struct_image_c_89 * gpImageDigitsTinyBlue; // size: 0x4, address: 0xF4644
+static struct_image_c_89 * gpImageDigitsItsyBitsy; // size: 0x4, address: 0xF4648
+static struct_image_c_89 * gpImageDigitsXtraPink; // size: 0x4, address: 0xF464C
+static struct_image_c_89 * gpImageDigitsXtraBlue; // size: 0x4, address: 0xF4650
+static struct_image_c_89 * gpImageLabel; // size: 0x4, address: 0xF4654
+static struct_image_c_89 * gpImageRecordKatakana; // size: 0x4, address: 0xF4658
+static struct_image_c_89 * gpImageRecordHiragana; // size: 0x4, address: 0xF465C
+static struct_image_c_89 * gpImageRecordEnglish; // size: 0x4, address: 0xF4660
 static unsigned int ganTileDigits[10]; // size: 0x28, address: 0xB6A78
 static unsigned int ganTileNormal[10]; // size: 0x28, address: 0xB6AA0
 static signed short ganWave[16]; // size: 0x20, address: 0xF4664
@@ -77,15 +77,15 @@ static float garSlopePage[12]; // size: 0x30, address: 0xF4684
 static float garOffsetPage[12]; // size: 0x30, address: 0xF46B4
 static float garClipPage[48]; // size: 0xC0, address: 0xB6AC8
 // Range: 0x8373C -> 0x8459C
-static int screenGetTextData(struct_screen_c_49 * pText /* r20 */, int iText /* r1+0xC */, struct {
+static int screenGetTextData(struct_screen_c_2860 * pText /* r20 */, int iText /* r1+0xC */, struct {
     // total size: 0x10
     int nX; // offset 0x0, size 0x4
     int nY; // offset 0x4, size 0x4
     int nSizeX; // offset 0x8, size 0x4
     int nSizeY; // offset 0xC, size 0x4
-} * pTile /* r21 */, struct_image_c_39 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
+} * pTile /* r21 */, struct_image_c_89 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x8
+    struct_image_c_89 * pImage; // r1+0x8
     int nSpace; // r29
     int nCode; // r28
     int nSizeX; // r27
@@ -122,10 +122,10 @@ static int screenGetTextData(struct_screen_c_49 * pText /* r20 */, int iText /* 
 }
 
 // Range: 0x8459C -> 0x84674
-static int screenGetTextWidth(struct_screen_c_49 * pText /* r25 */, int * pnWidth /* r26 */) {
+static int screenGetTextWidth(struct_screen_c_2860 * pText /* r25 */, int * pnWidth /* r26 */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x24
-    struct_bitmap_c_33 tile; // r1+0x14
+    struct_image_c_89 * pImage; // r1+0x24
+    struct_bitmap_c_320 tile; // r1+0x14
     int nSize; // r30
     int nSizeBreak; // r29
     int iText; // r28
@@ -135,12 +135,12 @@ static int screenGetTextWidth(struct_screen_c_49 * pText /* r25 */, int * pnWidt
 }
 
 // Range: 0x84674 -> 0x848A8
-static int screenCenterText(struct_screen_c_49 * pText /* r23 */) {
+static int screenCenterText(struct_screen_c_2860 * pText /* r23 */) {
     // Local variables
     int bReturn; // r1+0x8
     int nHeight; // r31
-    struct_image_c_39 * pImage; // r1+0x20
-    struct_bitmap_c_33 tile; // r1+0x10
+    struct_image_c_89 * pImage; // r1+0x20
+    struct_bitmap_c_320 tile; // r1+0x10
     int iText; // r30
     int iTextBreak; // r29
     int nSize; // r28
@@ -153,97 +153,97 @@ static int screenCenterText(struct_screen_c_49 * pText /* r23 */) {
 }
 
 // Range: 0x848A8 -> 0x84EBC
-static void screenDrawTextOval(struct_screen_c_49 * pText /* r3 */, unsigned int nRGBA /* r26 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned int nRGBA /* r26 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * ppGfx /* r29 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r31
-    struct_bitmap_c_16 * pBitmap; // r1+0x8
+    union_pon_gc_c_173 * pGfx; // r31
+    struct_bitmap_c_14 * pBitmap; // r1+0x8
     int nX; // r30
     int nY; // r27
     int nWidth; // r1+0x14
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r9
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r4
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r9
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r4
 
     // References
     // -> static struct [anonymous] * gpImageOval;
 }
 
 // Range: 0x84EBC -> 0x86014
-static void screenDrawText(struct_screen_c_49 * pText /* r31 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+static void screenDrawText(struct_screen_c_2860 * pText /* r31 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * ppGfx /* r1+0x38 */, int iClip /* r1+0x3C */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x34
+    union_pon_gc_c_173 * pGfx; // r1+0x34
     int bLoad; // r1+0x40
-    struct_image_c_39 * pImage; // r1+0x30
+    struct_image_c_89 * pImage; // r1+0x30
     int nType; // r21
     int iSet; // r1+0x8
     int nCode; // r1+0x8
     int nFont; // r1+0x8
-    struct_bitmap_c_33 tile; // r1+0x20
+    struct_bitmap_c_320 tile; // r1+0x20
     int nLine; // r5
     int iText0; // r9
     int nClipX; // r3
@@ -257,53 +257,53 @@ static void screenDrawText(struct_screen_c_49 * pText /* r31 */, union {
     int iText; // r1+0x8
     int nPixels; // r1+0x14
     unsigned short nCharacter; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gpImageLabel;
@@ -317,10 +317,10 @@ static void screenDrawText(struct_screen_c_49 * pText /* r31 */, union {
 }
 
 // Range: 0x86014 -> 0x86780
-static void screenUpdateArea(struct_screen_c_50 * pArea /* r25 */) {
+static void screenUpdateArea(struct_screen_c_16999 * pArea /* r25 */) {
     // Local variables
     float rStep; // f2
-    struct_screen_c_49 * pText; // r28
+    struct_screen_c_2860 * pText; // r28
     int iText; // r27
     int iList; // r26
 
@@ -379,8 +379,8 @@ struct OSThread_s {
     unsigned short flags; // offset 0x12, size 0x2
     long id; // offset 0x14, size 0x4
     int fp; // offset 0x18, size 0x4
-    struct_controller_c_36 * thprof; // offset 0x1C, size 0x4
-    struct_controller_c_37 context; // offset 0x20, size 0x190
+    struct_controller_c_1238 * thprof; // offset 0x1C, size 0x4
+    struct_controller_c_1406 context; // offset 0x20, size 0x190
 };
 struct OSMesgQueue_s {
     // total size: 0x18
@@ -398,7 +398,7 @@ static void screenChange(int iScreen /* r29 */) {
     // Local variables
     int nFlag; // r26
     void * pHeap; // r1+0x18
-    struct_screen_c_48 * pScreen; // r1+0x8
+    struct_screen_c_446 * pScreen; // r1+0x8
     int iArea0; // r6
     int iArea1; // r26
     int iArea2; // r27
@@ -407,10 +407,10 @@ static void screenChange(int iScreen /* r29 */) {
     int nArea1; // r8
     int nArea2; // r9
     int nArea3; // r10
-    struct_screen_c_50 * pArea; // r1+0x8
+    struct_screen_c_16999 * pArea; // r1+0x8
     int iText; // r8
-    struct_screen_c_51 * pImage; // r25
-    struct_screen_c_52 * pDialog; // r25
+    struct_screen_c_17844 * pImage; // r25
+    struct_screen_c_17942 * pDialog; // r25
     int iArea; // r11
     int iImage; // r26
     int iDialog; // r26
@@ -474,69 +474,69 @@ static int screenLoadBack(@enum$94screen_c eType /* r3 */, void * ppHeap /* r29 
 }
 
 // Range: 0x87A60 -> 0x885A0
-static int screenDrawBack(union_pon_gc_c_0 * * ppGfx /* r30 */) {
+static int screenDrawBack(union_pon_gc_c_173 * * ppGfx /* r30 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0xC
+    union_pon_gc_c_173 * pGfx; // r1+0xC
     int nX; // r1+0x8
     int nY; // r1+0x8
     int nOffset; // r21
-    struct_bitmap_c_16 * pBitmap; // r27
+    struct_bitmap_c_14 * pBitmap; // r27
     int iRow; // r21
     int iColumn; // r28
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> static unsigned int gnFrameCount;
@@ -551,13 +551,13 @@ static int screenDrawBack(union_pon_gc_c_0 * * ppGfx /* r30 */) {
 }
 
 // Range: 0x885A0 -> 0x886B8
-static void screenDrawPageText(union_pon_gc_c_0 * * ppGfx /* r29 */) {
+static void screenDrawPageText(union_pon_gc_c_173 * * ppGfx /* r29 */) {
     // Local variables
     int iText; // r27
     int nX; // r5
     int nY; // r6
-    struct_screen_c_48 * pScreen; // r30
-    struct_screen_c_49 * pText; // r3
+    struct_screen_c_446 * pScreen; // r30
+    struct_screen_c_2860 * pText; // r3
 
     // References
     // -> static int giFramePage;
@@ -569,48 +569,48 @@ static void screenDrawPageText(union_pon_gc_c_0 * * ppGfx /* r29 */) {
 }
 
 // Range: 0x886B8 -> 0x88A64
-static void screenDrawDialog(struct_screen_c_52 * pDialog /* r1+0x0 */, union {
-    struct_bitmap_c_18 words; // offset 0x0, size 0x8
-    struct_bitmap_c_19 dma; // offset 0x0, size 0x8
-    struct_bitmap_c_20 tri; // offset 0x0, size 0x8
-    struct_bitmap_c_21 line; // offset 0x0, size 0x8
-    struct_bitmap_c_22 popmtx; // offset 0x0, size 0x8
-    struct_bitmap_c_23 segment; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeH; // offset 0x0, size 0x8
-    struct_bitmap_c_24 setothermodeL; // offset 0x0, size 0x8
-    struct_bitmap_c_25 texture; // offset 0x0, size 0x8
-    struct_bitmap_c_26 perspnorm; // offset 0x0, size 0x8
-    struct_bitmap_c_27 setimg; // offset 0x0, size 0x8
-    struct_bitmap_c_28 setcombine; // offset 0x0, size 0x8
-    struct_bitmap_c_29 setcolor; // offset 0x0, size 0x8
-    struct_bitmap_c_30 fillrect; // offset 0x0, size 0x8
-    struct_bitmap_c_31 settile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtile; // offset 0x0, size 0x8
-    struct_bitmap_c_32 settilesize; // offset 0x0, size 0x8
-    struct_bitmap_c_32 loadtlut; // offset 0x0, size 0x8
+static void screenDrawDialog(struct_screen_c_17942 * pDialog /* r1+0x0 */, union {
+    struct_bitmap_c_151 words; // offset 0x0, size 0x8
+    struct_bitmap_c_158 dma; // offset 0x0, size 0x8
+    struct_bitmap_c_168 tri; // offset 0x0, size 0x8
+    struct_bitmap_c_178 line; // offset 0x0, size 0x8
+    struct_bitmap_c_185 popmtx; // offset 0x0, size 0x8
+    struct_bitmap_c_194 segment; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeH; // offset 0x0, size 0x8
+    struct_bitmap_c_202 setothermodeL; // offset 0x0, size 0x8
+    struct_bitmap_c_219 texture; // offset 0x0, size 0x8
+    struct_bitmap_c_226 perspnorm; // offset 0x0, size 0x8
+    struct_bitmap_c_235 setimg; // offset 0x0, size 0x8
+    struct_bitmap_c_241 setcombine; // offset 0x0, size 0x8
+    struct_bitmap_c_249 setcolor; // offset 0x0, size 0x8
+    struct_bitmap_c_262 fillrect; // offset 0x0, size 0x8
+    struct_bitmap_c_282 settile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtile; // offset 0x0, size 0x8
+    struct_bitmap_c_292 settilesize; // offset 0x0, size 0x8
+    struct_bitmap_c_292 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * ppGfx /* r1+0x4 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r5
+    union_pon_gc_c_173 * pGfx; // r5
     int nColorR; // r9
-    union_pon_gc_c_0 * _g; // r9
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r9
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r9
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r6
+    union_pon_gc_c_173 * _g; // r9
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r9
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r9
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r6
 }
 
 // Range: 0x88A64 -> 0x88C68
 static void screenTickTextData() {
     // Local variables
-    struct_screen_c_50 * pArea; // r1+0x8
+    struct_screen_c_16999 * pArea; // r1+0x8
     int iArea; // r1+0x8
     int iText; // r1+0x8
     int iTextNext; // r9
@@ -647,43 +647,43 @@ int screenFlushing() {
 
 unsigned char gValidControllers; // size: 0x1, address: 0x4CF60
 // Range: 0x88CC8 -> 0x89764
-void screenDraw(union_pon_gc_c_0 * * ppGfx /* r26 */, void (* pfDraw)() /* r27 */) {
+void screenDraw(union_pon_gc_c_173 * * ppGfx /* r26 */, void (* pfDraw)() /* r27 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x14
+    union_pon_gc_c_173 * pGfx; // r1+0x14
     int nX; // r5
     int nY; // r6
     int iFrame; // r1+0x8
-    struct_screen_c_48 * pScreen; // r29
-    struct_screen_c_50 * pArea; // r1+0x8
-    struct_screen_c_49 * pText; // r20
-    struct_screen_c_51 * pImage; // r28
-    struct_screen_c_52 * pDialog; // r23
+    struct_screen_c_446 * pScreen; // r29
+    struct_screen_c_16999 * pArea; // r1+0x8
+    struct_screen_c_2860 * pText; // r20
+    struct_screen_c_17844 * pImage; // r28
+    struct_screen_c_17942 * pDialog; // r23
     int bFlag; // r25
     int iArea; // r22
     int iText; // r22
     int iImage; // r22
     int iDialog; // r22
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> static int gnAlphaFade;
@@ -704,7 +704,7 @@ void screenDraw(union_pon_gc_c_0 * * ppGfx /* r26 */, void (* pfDraw)() /* r27 *
 }
 
 // Range: 0x89764 -> 0x897F0
-static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_screen_c_51 * * ppImage /* r1+0x8 */) {
+static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_screen_c_17844 * * ppImage /* r1+0x8 */) {
     // Local variables
     int iImage; // r10
 
@@ -714,7 +714,7 @@ static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */,
 }
 
 // Range: 0x897F0 -> 0x899F0
-static int screenWrapCursor(struct_screen_c_50 * pArea /* r1+0x8 */, int iCursorX /* r4 */, int iCursorY /* r5 */, int nMove /* r1+0x14 */) {
+static int screenWrapCursor(struct_screen_c_16999 * pArea /* r1+0x8 */, int iCursorX /* r4 */, int iCursorY /* r5 */, int nMove /* r1+0x14 */) {
     // Local variables
     int iSlot; // r12
     int nCount; // r31
@@ -722,12 +722,12 @@ static int screenWrapCursor(struct_screen_c_50 * pArea /* r1+0x8 */, int iCursor
 
 @enum$96screen_c;
 // Range: 0x899F0 -> 0x89E5C
-static int screenFindAreaNear(struct_screen_c_48 * pScreen /* r30 */, struct {
+static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct {
     // total size: 0x60
     int nX; // offset 0x0, size 0x4
     int nY; // offset 0x4, size 0x4
     int iImage; // offset 0x8, size 0x4
-    struct_image_c_39 * pImage; // offset 0xC, size 0x4
+    struct_image_c_89 * pImage; // offset 0xC, size 0x4
     int nTextData; // offset 0x10, size 0x4
     int nListCount; // offset 0x14, size 0x4
     int nOffsetCursor; // offset 0x18, size 0x4
@@ -756,7 +756,7 @@ static int screenFindAreaNear(struct_screen_c_48 * pScreen /* r30 */, struct {
     int nDeltaX; // r8
     int nDeltaY; // r9
     int nDeltaBest; // r10
-    struct_screen_c_50 * pAreaBest; // r26
+    struct_screen_c_16999 * pAreaBest; // r26
 }
 
 struct SfxInitStruct {
@@ -771,14 +771,14 @@ struct SfxInitStruct {
 };
 struct SfxInitStruct SFX_INIT_TABLE[527]; // size: 0x20F0, address: 0xE0D78
 // Range: 0x89E5C -> 0x8A39C
-static void screenTickText(struct_screen_c_48 * pScreen /* r26 */) {
+static void screenTickText(struct_screen_c_446 * pScreen /* r26 */) {
     // Local variables
     int bTalk; // r6
     int bWink; // r7
     int nTag; // r6
     int nCount; // r4
-    struct_screen_c_49 * pText; // r1+0x8
-    struct_screen_c_51 * pImage; // r1+0x8
+    struct_screen_c_2860 * pText; // r1+0x8
+    struct_screen_c_17844 * pImage; // r1+0x8
     int nLine; // r10
     int iSet; // r1+0x8
     unsigned short nFont; // r3
@@ -823,7 +823,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -838,7 +838,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -847,7 +847,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -896,10 +896,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -947,7 +947,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -980,7 +980,7 @@ struct action_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct help_t {
@@ -1059,9 +1059,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -1070,23 +1070,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -1108,11 +1108,11 @@ struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 // Range: 0x8A39C -> 0x8B4E8
 void screenTick(int * anCommand /* r22 */) {
     // Local variables
-    struct_screen_c_48 * pScreen; // r30
-    struct_screen_c_49 * pText; // r1+0x8
-    struct_screen_c_50 * pArea; // r31
+    struct_screen_c_446 * pScreen; // r30
+    struct_screen_c_2860 * pText; // r1+0x8
+    struct_screen_c_16999 * pArea; // r31
     @enum$95screen_c eMode; // r21
-    struct_screen_c_52 * pDialog; // r1+0x8
+    struct_screen_c_17942 * pDialog; // r1+0x8
     int iData; // r10
     int nResult; // r26
     int bFlag; // r6
@@ -1215,7 +1215,7 @@ int screenGetArea(int iScreen /* r1+0x0 */, int * pnTagArea /* r1+0x4 */, int iP
 // Range: 0x8BA98 -> 0x8BB40
 int screenHideArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1225,7 +1225,7 @@ int screenHideArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */) {
 // Range: 0x8BB40 -> 0x8BC04
 int screenShowArea(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r3
+    struct_screen_c_16999 * pArea; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1235,7 +1235,7 @@ int screenShowArea(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */) {
 // Range: 0x8BC04 -> 0x8BCA0
 int screenGetAreaType(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1245,7 +1245,7 @@ int screenGetAreaType(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */) {
 // Range: 0x8BCA0 -> 0x8BD4C
 int screenGetAreaExtents(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */, int * pnRows /* r1+0x8 */, int * pnColumns /* r1+0xC */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1267,7 +1267,7 @@ int screenFastText() {
 // Range: 0x8BDAC -> 0x8BEB8
 int screenTextDone(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r10
+    struct_screen_c_2860 * pText; // r10
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1277,7 +1277,7 @@ int screenTextDone(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
 // Range: 0x8BEB8 -> 0x8BFC0
 int screenTextDonePage(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r10
+    struct_screen_c_2860 * pText; // r10
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1291,7 +1291,7 @@ int screenHideText(int iScreen /* r28 */, int nTagText /* r4 */) {
     int bFlag; // r3
     int nTag0; // r30
     int nTag1; // r29
-    struct_screen_c_49 * pText; // r1+0x8
+    struct_screen_c_2860 * pText; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1305,7 +1305,7 @@ int screenShowText(int iScreen /* r25 */, int nTagText /* r4 */) {
     int bFlag; // r3
     int nTag0; // r27
     int nTag1; // r26
-    struct_screen_c_49 * pText; // r1+0x8
+    struct_screen_c_2860 * pText; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1327,7 +1327,7 @@ int screenGetTextWait() {
 // Range: 0x8C208 -> 0x8C410
 int screenShowTextFull(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r3
+    struct_screen_c_2860 * pText; // r3
     int bFlag; // r10
     int nSizeText; // r5
     int iSet; // r1+0x0
@@ -1352,7 +1352,7 @@ int screenHideImage(int iScreen /* r29 */, int nTagImage /* r4 */) {
     int nTag; // r4
     int nTag0; // r31
     int nTag1; // r30
-    struct_screen_c_51 * pImage; // r1+0x8
+    struct_screen_c_17844 * pImage; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1367,7 +1367,7 @@ int screenShowImage(int iScreen /* r27 */, int nTagImage /* r4 */) {
     int nTag; // r4
     int nTag0; // r29
     int nTag1; // r28
-    struct_screen_c_51 * pImage; // r1+0x8
+    struct_screen_c_17844 * pImage; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1375,9 +1375,9 @@ int screenShowImage(int iScreen /* r27 */, int nTagImage /* r4 */) {
 }
 
 // Range: 0x8C630 -> 0x8C6E4
-int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_image_c_39 * * ppImage /* r1+0x8 */) {
+int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_image_c_89 * * ppImage /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1387,7 +1387,7 @@ int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_
 // Range: 0x8C6E4 -> 0x8C828
 int screenSetImageScale(int iScreen /* r31 */, int nTagImage /* r1+0xC */, float rScale /* f31 */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1397,7 +1397,7 @@ int screenSetImageScale(int iScreen /* r31 */, int nTagImage /* r1+0xC */, float
 // Range: 0x8C828 -> 0x8C990
 int screenSetImagePosition(int iScreen /* r29 */, int nTagImage /* r1+0xC */, int nX /* r30 */, int nY /* r31 */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1407,7 +1407,7 @@ int screenSetImagePosition(int iScreen /* r29 */, int nTagImage /* r1+0xC */, in
 // Range: 0x8C990 -> 0x8CA3C
 int screenGetImagePosition(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * pnX /* r1+0x8 */, int * pnY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1418,7 +1418,7 @@ int screenGetImagePosition(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */,
 int screenHideSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r1+0x0
-    struct_screen_c_50 * pArea; // r12
+    struct_screen_c_16999 * pArea; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1429,7 +1429,7 @@ int screenHideSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 int screenShowSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r1+0x0
-    struct_screen_c_50 * pArea; // r12
+    struct_screen_c_16999 * pArea; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1440,7 +1440,7 @@ int screenShowSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 int screenTestSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r4
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1450,7 +1450,7 @@ int screenTestSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 // Range: 0x8CCC0 -> 0x8CD54
 void screenSetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int iFrame /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1460,7 +1460,7 @@ void screenSetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int iF
 // Range: 0x8CD54 -> 0x8CDEC
 void screenGetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * piFrame /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_51 * pImage; // r4
+    struct_screen_c_17844 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1470,7 +1470,7 @@ void screenGetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * 
 // Range: 0x8CDEC -> 0x8CF9C
 void screenSetText(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, unsigned short * anText /* r1+0x10 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r3
+    struct_screen_c_2860 * pText; // r3
     int iSource; // r9
     int iTarget; // r10
 
@@ -1484,7 +1484,7 @@ void screenSetText(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, unsigned
 void screenGetText(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned short * anText /* r5 */, int nSizeText /* r1+0xC */) {
     // Local variables
     int iText; // r8
-    struct_screen_c_49 * pText; // r12
+    struct_screen_c_2860 * pText; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1494,7 +1494,7 @@ void screenGetText(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned
 // Range: 0x8D070 -> 0x8D118
 int screenSetTextColor(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned int nColor0 /* r1+0x8 */, unsigned int nColor1 /* r1+0xC */) {
     // Local variables
-    struct_screen_c_49 * pText; // r12
+    struct_screen_c_2860 * pText; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1504,7 +1504,7 @@ int screenSetTextColor(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsi
 // Range: 0x8D118 -> 0x8D1B8
 int screenGetTextType(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnType /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r4
+    struct_screen_c_2860 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1514,7 +1514,7 @@ int screenGetTextType(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int *
 // Range: 0x8D1B8 -> 0x8D258
 int screenGetTextSize(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnSize /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r4
+    struct_screen_c_2860 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1526,8 +1526,8 @@ void screenSetTextField(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, uns
     // Local variables
     int iText; // r6
     int iData; // r8
-    struct_screen_c_48 * pScreen; // r1+0x8
-    struct_screen_c_49 * pText; // r3
+    struct_screen_c_446 * pScreen; // r1+0x8
+    struct_screen_c_2860 * pText; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1538,7 +1538,7 @@ void screenSetTextField(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, uns
 // Range: 0x8D3BC -> 0x8D45C
 int screenGetTextFlag(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnFlag /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r4
+    struct_screen_c_2860 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1548,7 +1548,7 @@ int screenGetTextFlag(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int *
 // Range: 0x8D45C -> 0x8D56C
 int screenSetTextPosition(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nX /* r1+0x10 */, int nY /* r1+0x14 */) {
     // Local variables
-    struct_screen_c_49 * pText; // r3
+    struct_screen_c_2860 * pText; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1559,8 +1559,8 @@ int screenSetTextPosition(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, i
 // Range: 0x8D56C -> 0x8D708
 void screenHideDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
     // Local variables
-    struct_screen_c_48 * pScreen; // r1+0x8
-    struct_screen_c_52 * pDialog; // r29
+    struct_screen_c_446 * pScreen; // r1+0x8
+    struct_screen_c_17942 * pDialog; // r29
     int iArea; // r28
     int iText; // r6
     int iDialog; // r7
@@ -1573,8 +1573,8 @@ void screenHideDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
 // Range: 0x8D708 -> 0x8D8B8
 void screenShowDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
     // Local variables
-    struct_screen_c_48 * pScreen; // r1+0x8
-    struct_screen_c_52 * pDialog; // r29
+    struct_screen_c_446 * pScreen; // r1+0x8
+    struct_screen_c_17942 * pDialog; // r29
     int iArea; // r28
     int iText; // r6
     int iDialog; // r7
@@ -1588,7 +1588,7 @@ void screenShowDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
 void screenSetNumber(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nNumber /* r5 */, int bZeroFill /* r30 */) {
     // Local variables
     char acText[64]; // r1+0x18
-    struct_screen_c_49 * pText; // r31
+    struct_screen_c_2860 * pText; // r31
     int iText; // r7
     int nSize; // r8
     int nCode; // r1+0x8
@@ -1602,7 +1602,7 @@ void screenSetNumber(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nN
 // Range: 0x8DA30 -> 0x8DB18
 void screenSetCursor(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */, int iCursorX /* r5 */, int iCursorY /* r6 */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r31
+    struct_screen_c_16999 * pArea; // r31
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1612,7 +1612,7 @@ void screenSetCursor(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */, int iC
 // Range: 0x8DB18 -> 0x8DBB8
 void screenGetCursor(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * piCursorX /* r1+0x8 */, int * piCursorY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1622,7 +1622,7 @@ void screenGetCursor(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * 
 // Range: 0x8DBB8 -> 0x8DC58
 void screenGetCursorPosition(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * pnCursorX /* r1+0x8 */, int * pnCursorY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_50 * pArea; // r4
+    struct_screen_c_16999 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1633,7 +1633,7 @@ void screenGetCursorPosition(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */
 int screenGetAreaText(int iScreen /* r1+0x0 */, int * pnTagText /* r1+0x4 */) {
     // Local variables
     int iArea; // r1+0x0
-    struct_screen_c_50 * pArea; // r1+0x0
+    struct_screen_c_16999 * pArea; // r1+0x0
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1643,7 +1643,7 @@ int screenGetAreaText(int iScreen /* r1+0x0 */, int * pnTagText /* r1+0x4 */) {
 // Range: 0x8DCC4 -> 0x8DD60
 int screenSetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */, int nButton /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_52 * pDialog; // r4
+    struct_screen_c_17942 * pDialog; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1653,7 +1653,7 @@ int screenSetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */,
 // Range: 0x8DD60 -> 0x8DE08
 int screenGetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */, int * pnButton /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_52 * pDialog; // r4
+    struct_screen_c_17942 * pDialog; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1673,14 +1673,14 @@ int screenFind(int * piScreen /* r1+0x0 */, char * szName /* r1+0x4 */) {
 // Range: 0x8DED4 -> 0x8EBE0
 int screenLoad(char * szNameFile /* r3 */, void * ppHeap /* r28 */) {
     // Local variables
-    struct_bitmap_c_17 file; // r1+0x28
-    struct_screen_c_48 * pScreen; // r31
+    struct_bitmap_c_65 file; // r1+0x28
+    struct_screen_c_446 * pScreen; // r31
     int nScreenCount; // r1+0x24
     int nFlag; // r30
-    struct_screen_c_50 * pArea; // r20
-    struct_screen_c_49 * pText; // r20
-    struct_screen_c_51 * pImage; // r19
-    struct_screen_c_52 * pDialog; // r19
+    struct_screen_c_16999 * pArea; // r20
+    struct_screen_c_2860 * pText; // r20
+    struct_screen_c_17844 * pImage; // r19
+    struct_screen_c_17942 * pDialog; // r19
     unsigned int nHeader; // r1+0x1C
     int nSize; // r1+0x18
     int iData; // r3

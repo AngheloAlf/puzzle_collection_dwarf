@@ -12,10 +12,10 @@ static int title_wait; // size: 0x4, address: 0x102C
 static unsigned long title_data; // size: 0x4, address: 0x1030
 static unsigned long title_bmp_data; // size: 0x4, address: 0x1034
 static unsigned long title_bmp_tbl[3]; // size: 0xC, address: 0x18C8
-static struct_main_story_c_1 * * lws_data; // size: 0x4, address: 0x1038
-static struct_main_story_c_1 * lws_scene; // size: 0x4, address: 0x103C
-static struct_main_story_c_2 mess_st; // size: 0x80, address: 0x1040
-static struct_main_story_c_2 mess_roll_st; // size: 0x80, address: 0x10C0
+static struct_main_story_c_211 * * lws_data; // size: 0x4, address: 0x1038
+static struct_main_story_c_211 * lws_scene; // size: 0x4, address: 0x103C
+static struct_main_story_c_451 mess_st; // size: 0x80, address: 0x1040
+static struct_main_story_c_451 mess_roll_st; // size: 0x80, address: 0x10C0
 static unsigned char mess_heap_area[1024]; // size: 0x400, address: 0x1140
 static void * mess_heap; // size: 0x4, address: 0x18D4
 static void * mess_roll_heap; // size: 0x4, address: 0x1540
@@ -23,21 +23,21 @@ static int st_message_count; // size: 0x4, address: 0x1544
 char st_staffroll_txt[2670]; // size: 0xA6E, address: 0x18D8
 static char mes_mo1_1[53]; // size: 0x35, address: 0x2348
 static char mes_mo1_2[51]; // size: 0x33, address: 0x2380
-static struct_main_story_c_3 mes_mo1_data[3]; // size: 0x18, address: 0x23B4
+static struct_main_story_c_504 mes_mo1_data[3]; // size: 0x18, address: 0x23B4
 static char mes_wo1_1[53]; // size: 0x35, address: 0x23CC
 static char mes_wo1_2[51]; // size: 0x33, address: 0x2404
 static char mes_wo1_3[71]; // size: 0x47, address: 0x2438
-static struct_main_story_c_3 mes_wo1_data[4]; // size: 0x20, address: 0x2480
+static struct_main_story_c_504 mes_wo1_data[4]; // size: 0x20, address: 0x2480
 static char mes_o2_1[75]; // size: 0x4B, address: 0x24A0
 static char mes_o2_2[41]; // size: 0x29, address: 0x24EC
 static char mes_o2_3[41]; // size: 0x29, address: 0x2518
 static char mes_o2_3a[55]; // size: 0x37, address: 0x2544
 static char mes_o2_4[75]; // size: 0x4B, address: 0x257C
 static char mes_o2_5[71]; // size: 0x47, address: 0x25C8
-static struct_main_story_c_3 mes_o2_data[7]; // size: 0x38, address: 0x2610
+static struct_main_story_c_504 mes_o2_data[7]; // size: 0x38, address: 0x2610
 static char mes_o3_1[73]; // size: 0x49, address: 0x2648
 static char mes_o3_2[65]; // size: 0x41, address: 0x2694
-static struct_main_story_c_3 mes_o3_data[3]; // size: 0x18, address: 0x26D8
+static struct_main_story_c_504 mes_o3_data[3]; // size: 0x18, address: 0x26D8
 static char mes_01_1[63]; // size: 0x3F, address: 0x26F0
 static char mes_01_2[43]; // size: 0x2B, address: 0x2730
 static char mes_01_3[65]; // size: 0x41, address: 0x275C
@@ -45,111 +45,111 @@ static char mes_01_4[61]; // size: 0x3D, address: 0x27A0
 static char mes_01_5[75]; // size: 0x4B, address: 0x27E0
 static char mes_01_6[77]; // size: 0x4D, address: 0x282C
 static char mes_01_7[79]; // size: 0x4F, address: 0x287C
-static struct_main_story_c_3 mes_01_data[8]; // size: 0x40, address: 0x28CC
+static struct_main_story_c_504 mes_01_data[8]; // size: 0x40, address: 0x28CC
 static char mes_m02a_1[49]; // size: 0x31, address: 0x290C
 static char mes_m02a_2[67]; // size: 0x43, address: 0x2940
-static struct_main_story_c_3 mes_m02a_data[3]; // size: 0x18, address: 0x2984
+static struct_main_story_c_504 mes_m02a_data[3]; // size: 0x18, address: 0x2984
 static char mes_w02a_1[51]; // size: 0x33, address: 0x299C
 static char mes_w02a_2[73]; // size: 0x49, address: 0x29D0
-static struct_main_story_c_3 mes_w02a_data[3]; // size: 0x18, address: 0x2A1C
+static struct_main_story_c_504 mes_w02a_data[3]; // size: 0x18, address: 0x2A1C
 static char mes_m02b_1[51]; // size: 0x33, address: 0x2A34
 static char mes_m02b_2[75]; // size: 0x4B, address: 0x2A68
 static char mes_m02b_3[49]; // size: 0x31, address: 0x2AB4
 static char mes_m02b_4[45]; // size: 0x2D, address: 0x2AE8
 static char mes_m02b_5[79]; // size: 0x4F, address: 0x2B18
 static char mes_m02b_6[69]; // size: 0x45, address: 0x2B68
-static struct_main_story_c_3 mes_m02b_data[7]; // size: 0x38, address: 0x2BB0
+static struct_main_story_c_504 mes_m02b_data[7]; // size: 0x38, address: 0x2BB0
 static char mes_w02b_1[39]; // size: 0x27, address: 0x2BE8
 static char mes_w02b_1a[73]; // size: 0x49, address: 0x2C10
 static char mes_w02b_2[61]; // size: 0x3D, address: 0x2C5C
 static char mes_w02b_3[43]; // size: 0x2B, address: 0x2C9C
-static struct_main_story_c_3 mes_w02b_data[5]; // size: 0x28, address: 0x2CC8
+static struct_main_story_c_504 mes_w02b_data[5]; // size: 0x28, address: 0x2CC8
 static char mes_m03_1[71]; // size: 0x47, address: 0x2CF0
 static char mes_m03_2[71]; // size: 0x47, address: 0x2D38
 static char mes_m03_3[37]; // size: 0x25, address: 0x2D80
 static char mes_m03_4[55]; // size: 0x37, address: 0x2DA8
 static char mes_m03_5[63]; // size: 0x3F, address: 0x2DE0
-static struct_main_story_c_3 mes_m03_data[6]; // size: 0x30, address: 0x2E20
+static struct_main_story_c_504 mes_m03_data[6]; // size: 0x30, address: 0x2E20
 static char mes_w03_1[57]; // size: 0x39, address: 0x2E50
 static char mes_w03_2[81]; // size: 0x51, address: 0x2E8C
 static char mes_w03_3[61]; // size: 0x3D, address: 0x2EE0
-static struct_main_story_c_3 mes_w03_data[4]; // size: 0x20, address: 0x2F20
+static struct_main_story_c_504 mes_w03_data[4]; // size: 0x20, address: 0x2F20
 static char mes_m04_1[71]; // size: 0x47, address: 0x2F40
 static char mes_m04_2[67]; // size: 0x43, address: 0x2F88
 static char mes_m04_3[59]; // size: 0x3B, address: 0x2FCC
 static char mes_m04_4[37]; // size: 0x25, address: 0x3008
-static struct_main_story_c_3 mes_m04_data[5]; // size: 0x28, address: 0x3030
+static struct_main_story_c_504 mes_m04_data[5]; // size: 0x28, address: 0x3030
 static char mes_w04_1[71]; // size: 0x47, address: 0x3058
 static char mes_w04_2[67]; // size: 0x43, address: 0x30A0
 static char mes_w04_3[65]; // size: 0x41, address: 0x30E4
-static struct_main_story_c_3 mes_w04_data[4]; // size: 0x20, address: 0x3128
+static struct_main_story_c_504 mes_w04_data[4]; // size: 0x20, address: 0x3128
 static char mes_m05_1[37]; // size: 0x25, address: 0x3148
 static char mes_m05_2[37]; // size: 0x25, address: 0x3170
 static char mes_m05_3[65]; // size: 0x41, address: 0x3198
 static char mes_m05_4[39]; // size: 0x27, address: 0x31DC
-static struct_main_story_c_3 mes_m05_data[5]; // size: 0x28, address: 0x3204
+static struct_main_story_c_504 mes_m05_data[5]; // size: 0x28, address: 0x3204
 static char mes_w05_1[37]; // size: 0x25, address: 0x322C
 static char mes_w05_2[41]; // size: 0x29, address: 0x3254
 static char mes_w05_3[57]; // size: 0x39, address: 0x3280
 static char mes_w05_4[49]; // size: 0x31, address: 0x32BC
-static struct_main_story_c_3 mes_w05_data[5]; // size: 0x28, address: 0x32F0
+static struct_main_story_c_504 mes_w05_data[5]; // size: 0x28, address: 0x32F0
 static char mes_m06_1[71]; // size: 0x47, address: 0x3318
 static char mes_m06_2[65]; // size: 0x41, address: 0x3360
 static char mes_m06_3[49]; // size: 0x31, address: 0x33A4
 static char mes_m06_4[69]; // size: 0x45, address: 0x33D8
-static struct_main_story_c_3 mes_m06_data[5]; // size: 0x28, address: 0x3420
+static struct_main_story_c_504 mes_m06_data[5]; // size: 0x28, address: 0x3420
 static char mes_w06_1[59]; // size: 0x3B, address: 0x3448
 static char mes_w06_2[37]; // size: 0x25, address: 0x3484
 static char mes_w06_3[41]; // size: 0x29, address: 0x34AC
-static struct_main_story_c_3 mes_w06_data[4]; // size: 0x20, address: 0x34D8
+static struct_main_story_c_504 mes_w06_data[4]; // size: 0x20, address: 0x34D8
 static char mes_07_1[69]; // size: 0x45, address: 0x34F8
 static char mes_07_2[69]; // size: 0x45, address: 0x3540
 static char mes_07_3[75]; // size: 0x4B, address: 0x3588
 static char mes_07E_3[59]; // size: 0x3B, address: 0x35D4
-static struct_main_story_c_3 mes_07_data[4]; // size: 0x20, address: 0x3610
-static struct_main_story_c_3 mes_07E_data[4]; // size: 0x20, address: 0x3630
+static struct_main_story_c_504 mes_07_data[4]; // size: 0x20, address: 0x3610
+static struct_main_story_c_504 mes_07E_data[4]; // size: 0x20, address: 0x3630
 static char mes_08a_1[77]; // size: 0x4D, address: 0x3650
-static struct_main_story_c_3 mes_08a_data[2]; // size: 0x10, address: 0x36A0
+static struct_main_story_c_504 mes_08a_data[2]; // size: 0x10, address: 0x36A0
 static char mes_08Ea_1[63]; // size: 0x3F, address: 0x36B0
-static struct_main_story_c_3 mes_08Ea_data[2]; // size: 0x10, address: 0x36F0
+static struct_main_story_c_504 mes_08Ea_data[2]; // size: 0x10, address: 0x36F0
 static char mes_08b_1[63]; // size: 0x3F, address: 0x3700
 static char mes_08b_2[73]; // size: 0x49, address: 0x3740
-static struct_main_story_c_3 mes_08b_data[3]; // size: 0x18, address: 0x378C
+static struct_main_story_c_504 mes_08b_data[3]; // size: 0x18, address: 0x378C
 static char mes_m09_2[71]; // size: 0x47, address: 0x37A4
 static char mes_m09_3[71]; // size: 0x47, address: 0x37EC
 static char mes_m09_4[57]; // size: 0x39, address: 0x3834
-static struct_main_story_c_3 mes_m09_data[4]; // size: 0x20, address: 0x3870
+static struct_main_story_c_504 mes_m09_data[4]; // size: 0x20, address: 0x3870
 static char mes_w09_2[71]; // size: 0x47, address: 0x3890
 static char mes_w09_3[81]; // size: 0x51, address: 0x38D8
 static char mes_w09_4[69]; // size: 0x45, address: 0x392C
-static struct_main_story_c_3 mes_w09_data[4]; // size: 0x20, address: 0x3974
+static struct_main_story_c_504 mes_w09_data[4]; // size: 0x20, address: 0x3974
 static char mes_m0e1_1[93]; // size: 0x5D, address: 0x3994
 static char mes_m0e1_2[73]; // size: 0x49, address: 0x39F4
 static char mes_m0e1_3[65]; // size: 0x41, address: 0x3A40
-static struct_main_story_c_3 mes_m0e1_data[4]; // size: 0x20, address: 0x3A84
+static struct_main_story_c_504 mes_m0e1_data[4]; // size: 0x20, address: 0x3A84
 static char mes_m0e2_1[53]; // size: 0x35, address: 0x3AA4
 static char mes_m0e2_2[57]; // size: 0x39, address: 0x3ADC
 static char mes_m0e2_3[45]; // size: 0x2D, address: 0x3B18
 static char mes_m0e2_4[55]; // size: 0x37, address: 0x3B48
 static char mes_m0e2_5[73]; // size: 0x49, address: 0x3B80
 static char mes_m0e2_6[65]; // size: 0x41, address: 0x3BCC
-static struct_main_story_c_3 mes_m0e2_data[7]; // size: 0x38, address: 0x3C10
+static struct_main_story_c_504 mes_m0e2_data[7]; // size: 0x38, address: 0x3C10
 static char mes_m0e_1[37]; // size: 0x25, address: 0x3C48
 static char mes_m0e_2[81]; // size: 0x51, address: 0x3C70
 static char mes_m0e_3[32]; // size: 0x20, address: 0x3CC4
-static struct_main_story_c_3 mes_m0e_data[4]; // size: 0x20, address: 0x3CE4
+static struct_main_story_c_504 mes_m0e_data[4]; // size: 0x20, address: 0x3CE4
 static char mes_w0e1_1[69]; // size: 0x45, address: 0x3D04
 static char mes_w0e1_2[77]; // size: 0x4D, address: 0x3D4C
 static char mes_w0e1_3[73]; // size: 0x49, address: 0x3D9C
-static struct_main_story_c_3 mes_w0e1_data[4]; // size: 0x20, address: 0x3DE8
+static struct_main_story_c_504 mes_w0e1_data[4]; // size: 0x20, address: 0x3DE8
 static char mes_w0e2_1[67]; // size: 0x43, address: 0x3E08
 static char mes_w0e2_2[22]; // size: 0x16, address: 0x3E4C
-static struct_main_story_c_3 mes_w0e2_data[3]; // size: 0x18, address: 0x3E64
+static struct_main_story_c_504 mes_w0e2_data[3]; // size: 0x18, address: 0x3E64
 static char mes_ep1[65]; // size: 0x41, address: 0x3E7C
 static char mes_ep2[67]; // size: 0x43, address: 0x3EC0
-static struct_main_story_c_3 mes_ep_data[3]; // size: 0x18, address: 0x3F04
-static struct_main_story_c_3 * mes_data[30]; // size: 0x78, address: 0x3F1C
-static struct_main_story_c_3 * st_mes_ptr; // size: 0x4, address: 0x1548
+static struct_main_story_c_504 mes_ep_data[3]; // size: 0x18, address: 0x3F04
+static struct_main_story_c_504 * mes_data[30]; // size: 0x78, address: 0x3F1C
+static struct_main_story_c_504 * st_mes_ptr; // size: 0x4, address: 0x1548
 int story_proc_no; // size: 0x4, address: 0x154C
 char end_dumm[18]; // size: 0x12, address: 0x3F94
 char * EndingLastMessage; // size: 0x4, address: 0x3FA8
@@ -170,16 +170,16 @@ static unsigned long story_read_buf; // size: 0x4, address: 0x3FB0
 static unsigned long story_buffer; // size: 0x4, address: 0x1580
 static unsigned long story_z_buffer; // size: 0x4, address: 0x3FB4
 static unsigned short story_norm; // size: 0x2, address: 0x1584
-static union_main_story_c_4 story_viewMtx; // size: 0x40, address: 0x1588
-static union_main_story_c_4 story_objectMtx[2][240]; // size: 0x7800, address: 0x15C8
+static union_main_story_c_778 story_viewMtx; // size: 0x40, address: 0x1588
+static union_main_story_c_778 story_objectMtx[2][240]; // size: 0x7800, address: 0x15C8
 static int objMtx_FF; // size: 0x4, address: 0x8DC8
 static unsigned long wakuGraphic; // size: 0x4, address: 0x8DCC
 static unsigned long wakuGraphic_ofs[3]; // size: 0xC, address: 0x3FB8
 static unsigned long bgGraphic; // size: 0x4, address: 0x8DD0
 static unsigned long storyGraphic; // size: 0x4, address: 0x8DD4
 static unsigned long messageData; // size: 0x4, address: 0x8DD8
-static struct_main_story_c_5 vp; // size: 0x10, address: 0x3FC4
-union_drmario_gc_c_0 gfx_freebuf[27][8192]; // size: 0x1B0000, address: 0x583B0
+static struct_main_story_c_793 vp; // size: 0x10, address: 0x3FC4
+union_drmario_gc_c_202 gfx_freebuf[27][8192]; // size: 0x1B0000, address: 0x583B0
 // Range: 0x628 -> 0x640
 void mainStroy_Init() {
     // References
@@ -187,13 +187,13 @@ void mainStroy_Init() {
     // -> static unsigned long story_buffer;
 }
 
-static union_drmario_gc_c_0 story_setup[19]; // size: 0x98, address: 0x3FD8
+static union_drmario_gc_c_202 story_setup[19]; // size: 0x98, address: 0x3FD8
 static int first_copy; // size: 0x4, address: 0x8DDC
-union_drmario_gc_c_0 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
+union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x640 -> 0xA18
-void story_zoomfade(union_drmario_gc_c_0 * * glp /* r28 */, int count /* r30 */) {
+void story_zoomfade(union_drmario_gc_c_202 * * glp /* r28 */, int count /* r30 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x10
+    union_drmario_gc_c_202 * pgfx; // r1+0x10
     int i; // r1+0x8
     unsigned short * vram_addr; // r29
     float xp; // f29
@@ -201,64 +201,64 @@ void story_zoomfade(union_drmario_gc_c_0 * * glp /* r28 */, int count /* r30 */)
     float xs; // f3
     float ys; // f4
     float w; // f31
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
 }
 
 // Range: 0xA18 -> 0xA44
-void get_gbi_stat(struct_main_story_c_6 * gbi /* r1+0x0 */, unsigned long gbi_addr /* r1+0x4 */) {}
+void get_gbi_stat(struct_main_story_c_3359 * gbi /* r1+0x0 */, unsigned long gbi_addr /* r1+0x4 */) {}
 
 // Range: 0xA44 -> 0xB3C
-void curtain_proc(union_drmario_gc_c_0 * * glp /* r1+0x8 */, int count /* r4 */) {
+void curtain_proc(union_drmario_gc_c_202 * * glp /* r1+0x8 */, int count /* r4 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r5
+    union_drmario_gc_c_202 * pgfx; // r5
     int i; // r6
     float w; // f2
-    union_drmario_gc_c_0 * _g; // r5
-    union_drmario_gc_c_0 * _g; // r5
-    union_drmario_gc_c_0 * _g; // r5
-    union_drmario_gc_c_0 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r5
+    union_drmario_gc_c_202 * _g; // r5
+    union_drmario_gc_c_202 * _g; // r5
+    union_drmario_gc_c_202 * _g; // r6
 }
 
-union_drmario_gc_c_0 alpha_texture_init_dl[]; // size: 0x0, address: 0x41A0
+union_drmario_gc_c_202 alpha_texture_init_dl[]; // size: 0x0, address: 0x41A0
 // Range: 0xB3C -> 0xE10
-void curtain_proc_org(union_drmario_gc_c_0 * * glp /* r1+0x8 */, int count /* r4 */) {
+void curtain_proc_org(union_drmario_gc_c_202 * * glp /* r1+0x8 */, int count /* r4 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r6
+    union_drmario_gc_c_202 * pgfx; // r6
     int i; // r31
     int iy1; // r30
     float y; // f4
     float w; // f2
     float lim; // f1
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r7
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r30
-    union_drmario_gc_c_0 * _g; // r31
-    union_drmario_gc_c_0 * _g; // r30
-    union_drmario_gc_c_0 * _g; // r6
-    union_drmario_gc_c_0 * _g; // r30
-    union_drmario_gc_c_0 * _g; // r31
-    union_drmario_gc_c_0 * _g; // r12
-    union_drmario_gc_c_0 * _g; // r30
-    union_drmario_gc_c_0 * _g; // r11
-    union_drmario_gc_c_0 * _g; // r10
-    union_drmario_gc_c_0 * _g; // r29
-    union_drmario_gc_c_0 * _g; // r28
-    union_drmario_gc_c_0 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r7
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r30
+    union_drmario_gc_c_202 * _g; // r31
+    union_drmario_gc_c_202 * _g; // r30
+    union_drmario_gc_c_202 * _g; // r6
+    union_drmario_gc_c_202 * _g; // r30
+    union_drmario_gc_c_202 * _g; // r31
+    union_drmario_gc_c_202 * _g; // r12
+    union_drmario_gc_c_202 * _g; // r30
+    union_drmario_gc_c_202 * _g; // r11
+    union_drmario_gc_c_202 * _g; // r10
+    union_drmario_gc_c_202 * _g; // r29
+    union_drmario_gc_c_202 * _g; // r28
+    union_drmario_gc_c_202 * _g; // r6
 
     // References
     // -> unsigned char curtain_alpha_00_tex[768];
@@ -281,14 +281,14 @@ void * story_bg_init(int stage /* r1+0x8 */, unsigned long buffAddr /* r1+0xC */
 }
 
 // Range: 0xE94 -> 0x10D4
-void story_bg_proc(union_drmario_gc_c_0 * * glp /* r31 */) {
+void story_bg_proc(union_drmario_gc_c_202 * * glp /* r31 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x58
-    union_drmario_gc_c_0 * _g; // r1+0x18
-    union_drmario_gc_c_0 * _g; // r1+0x18
-    union_drmario_gc_c_0 * _g; // r1+0x18
-    union_drmario_gc_c_0 * _g; // r1+0x18
-    union_drmario_gc_c_0 * _g; // r1+0x18
+    union_drmario_gc_c_202 * pgfx; // r1+0x58
+    union_drmario_gc_c_202 * _g; // r1+0x18
+    union_drmario_gc_c_202 * _g; // r1+0x18
+    union_drmario_gc_c_202 * _g; // r1+0x18
+    union_drmario_gc_c_202 * _g; // r1+0x18
+    union_drmario_gc_c_202 * _g; // r1+0x18
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
@@ -299,9 +299,9 @@ void story_bg_proc(union_drmario_gc_c_0 * * glp /* r31 */) {
 }
 
 // Range: 0x10D4 -> 0x13F0
-static void story_spot(union_drmario_gc_c_0 * * glp /* r31 */, int x /* r1+0xC */, int y /* r1+0x10 */, int count /* r6 */, unsigned char * texAddr /* r7 */) {
+static void story_spot(union_drmario_gc_c_202 * * glp /* r31 */, int x /* r1+0xC */, int y /* r1+0x10 */, int count /* r6 */, unsigned char * texAddr /* r7 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x28
+    union_drmario_gc_c_202 * pgfx; // r1+0x28
     float fx; // f1
     float fy; // f2
     float sx; // f3
@@ -310,18 +310,18 @@ static void story_spot(union_drmario_gc_c_0 * * glp /* r31 */, int x /* r1+0xC *
     int x2; // r1+0x8
     int y1; // r4
     int y2; // r5
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
@@ -348,27 +348,27 @@ void init_coffee_break_cnt() {
 }
 
 // Range: 0x14DC -> 0x17FC
-void draw_coffee_break(union_drmario_gc_c_0 * * glp /* r28 */, int mode /* r29 */, int disp_flg /* r30 */) {
+void draw_coffee_break(union_drmario_gc_c_202 * * glp /* r28 */, int mode /* r29 */, int disp_flg /* r30 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x5C
+    union_drmario_gc_c_202 * pgfx; // r1+0x5C
     long pm[4][4]; // r1+0x1C
-    struct_main_story_c_1 * scn_dat; // r29
-    struct_main_story_c_1 * scn_dat2; // r27
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    struct_main_story_c_211 * scn_dat; // r29
+    struct_main_story_c_211 * scn_dat2; // r27
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
@@ -396,17 +396,17 @@ unsigned long init_menu_bg(unsigned long buffer /* r29 */, int flg /* r30 */) {
 }
 
 // Range: 0x18E0 -> 0x1A4C
-void draw_menu_bg(union_drmario_gc_c_0 * * glp /* r27 */, int ofsx /* r28 */, int ofsy /* r29 */) {
+void draw_menu_bg(union_drmario_gc_c_202 * * glp /* r27 */, int ofsx /* r28 */, int ofsy /* r29 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x54
+    union_drmario_gc_c_202 * pgfx; // r1+0x54
     long pm[4][4]; // r1+0x14
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
@@ -436,30 +436,30 @@ unsigned short joyupd[5]; // size: 0xA, address: 0x1CDA0
 unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 int drmario_exit_flag; // size: 0x4, address: 0x18E68
 // Range: 0x1B48 -> 0x2154
-int demo_title(union_drmario_gc_c_0 * * glp /* r30 */, int flg21 /* r26 */) {
+int demo_title(union_drmario_gc_c_202 * * glp /* r30 */, int flg21 /* r26 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x8C
+    union_drmario_gc_c_202 * pgfx; // r1+0x8C
     long pm[4][4]; // r1+0x24
     int i; // r1+0x8
     int flg; // r29
     int ret; // r31
     int mask; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] alpha_texture_init_dl[];
@@ -543,7 +543,7 @@ void main_story() {
     // -> static unsigned long story_z_buffer;
 }
 
-union_main_story_c_4 * pObjectMtx; // size: 0x4, address: 0x8E08
+union_main_story_c_778 * pObjectMtx; // size: 0x4, address: 0x8E08
 // Range: 0x24B0 -> 0x24DC
 void init_objMtx() {
     // References
@@ -553,26 +553,26 @@ void init_objMtx() {
     // -> union [anonymous] * pObjectMtx;
 }
 
-union_drmario_gc_c_0 * gp; // size: 0x4, address: 0x1E9A4
-union_drmario_gc_c_0 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
+union_drmario_gc_c_202 * gp; // size: 0x4, address: 0x1E9A4
+union_drmario_gc_c_202 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
 unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 signed char evs_story_level; // size: 0x1, address: 0x4880
 // Range: 0x24DC -> 0x2BA0
 void graphic_story() {
     // Local variables
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * gp;

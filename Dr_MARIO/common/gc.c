@@ -337,7 +337,7 @@ void * gc_getEFB_RGBA16() {
     // Local variables
     int x; // r31
     int y; // r30
-    union_gc_c_105 un; // r1+0x8
+    union_gc_c_341 un; // r1+0x8
     unsigned short * p; // r29
 
     // References

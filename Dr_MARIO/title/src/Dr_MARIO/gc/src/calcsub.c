@@ -28,7 +28,7 @@ void makeMatrix(long (* m)[4] /* r1+0x0 */, signed short xrot /* r1+0x4 */, sign
 }
 
 // Range: 0xC1D8 -> 0xC510
-void matrixConv(long (* m)[4] /* r1+0x8 */, union_main_story_c_4 * mtx /* r1+0xC */, long shift /* r10 */) {
+void matrixConv(long (* m)[4] /* r1+0x8 */, union_main_story_c_778 * mtx /* r1+0xC */, long shift /* r10 */) {
     // Local variables
     long tmpMtx[4][4]; // r1+0x34
     int i; // r1+0x8

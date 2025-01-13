@@ -4,17 +4,17 @@
     Language: C++
     Code range: 0x0000CAEC -> 0x0000D17C
 */
-static union_pon_gc_MemoryCard_c_14 _viewMtx$98; // size: 0x40, address: 0x15B0
-union_pon_gc_c_0 normal_texture_init_dl[]; // size: 0x0, address: 0xAF0
+static union_pon_gc_MemoryCard_c_1396 _viewMtx$98; // size: 0x40, address: 0x15B0
+union_pon_gc_c_173 normal_texture_init_dl[]; // size: 0x0, address: 0xAF0
 unsigned char tlu_loading_message[32]; // size: 0x20, address: 0x510
 unsigned char tex_loading_message[1152]; // size: 0x480, address: 0x90
 // Range: 0xCAEC -> 0xCBDC
-void pon_DrawLoadingMessage(union_pon_gc_c_0 * * glp /* r31 */) {
+void pon_DrawLoadingMessage(union_pon_gc_c_173 * * glp /* r31 */) {
     // Local variables
-    union_pon_gc_c_0 * pgfx; // r1+0xC
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * pgfx; // r1+0xC
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> unsigned char tex_loading_message[1152];
@@ -52,7 +52,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -67,7 +67,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -76,7 +76,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 enum pStateEnum {
     dead = 0,
@@ -99,7 +99,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -117,31 +117,31 @@ struct flic_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
-struct_pon_gc_c_3 gInfo[]; // size: 0x0, address: 0x50F68
-struct_pon_gc_c_3 * * fb; // size: 0x4, address: 0x50DF8
-union_pon_gc_c_0 * glistp; // size: 0x4, address: 0x50F48
+struct_pon_gc_c_674 gInfo[]; // size: 0x0, address: 0x50F68
+struct_pon_gc_c_674 * * fb; // size: 0x4, address: 0x50DF8
+union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
 unsigned short * nuGfxCfb_ptr; // size: 0x4, address: 0x0
-union_pon_gc_c_0 initRDPstart[]; // size: 0x0, address: 0xB0D18
+union_pon_gc_c_173 initRDPstart[]; // size: 0x0, address: 0xB0D18
 // Range: 0xCBDC -> 0xCE88
 void pon_CreateLoadingGfxTask() {
     // Local variables
-    struct_pon_gc_draw_c_15 * dynamicp; // r1+0x8
-    struct_pon_gc_c_3 * info; // r1+0xC
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    struct_pon_gc_draw_c_2466 * dynamicp; // r1+0x8
+    struct_pon_gc_c_674 * info; // r1+0xC
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -157,20 +157,20 @@ void pon_CreateLoadingGfxTask() {
     // -> struct [anonymous] gInfo[];
 }
 
-union_pon_gc_tex_c_4 tex_vtx[4][4]; // size: 0x100, address: 0xDD0
+union_pon_gc_tex_c_1219 tex_vtx[4][4]; // size: 0x100, address: 0xDD0
 float xl; // size: 0x4, address: 0xED0
 float xr; // size: 0x4, address: 0xED4
 float yt; // size: 0x4, address: 0xED8
 float yb; // size: 0x4, address: 0xEDC
 unsigned char tex_cursor_4p_0[1728]; // size: 0x6C0, address: 0x530
 // Range: 0xCE88 -> 0xD17C
-void pon_SelectStage4p(union_pon_gc_c_0 * * ppGfx /* r26 */, struct {
+void pon_SelectStage4p(union_pon_gc_c_173 * * ppGfx /* r26 */, struct {
     // total size: 0x31B88
-    union_pon_gc_c_0 glist[14336]; // offset 0x0, size 0x1C000
-    union_pon_gc_MemoryCard_c_14 projection[4]; // offset 0x1C000, size 0x100
-    union_pon_gc_MemoryCard_c_14 viewing[4]; // offset 0x1C100, size 0x100
-    union_pon_gc_MemoryCard_c_14 trans[4]; // offset 0x1C200, size 0x100
-    union_pon_gc_MemoryCard_c_14 rotate[4]; // offset 0x1C300, size 0x100
+    union_pon_gc_c_173 glist[14336]; // offset 0x0, size 0x1C000
+    union_pon_gc_MemoryCard_c_1396 projection[4]; // offset 0x1C000, size 0x100
+    union_pon_gc_MemoryCard_c_1396 viewing[4]; // offset 0x1C100, size 0x100
+    union_pon_gc_MemoryCard_c_1396 trans[4]; // offset 0x1C200, size 0x100
+    union_pon_gc_MemoryCard_c_1396 rotate[4]; // offset 0x1C300, size 0x100
     float degree[4]; // offset 0x1C400, size 0x10
     char frontTexture[4][10]; // offset 0x1C410, size 0x28
     char backTexture[4][10]; // offset 0x1C438, size 0x28
@@ -180,38 +180,38 @@ void pon_SelectStage4p(union_pon_gc_c_0 * * ppGfx /* r26 */, struct {
     struct icon_t icon[4][10]; // offset 0x28AE8, size 0x1040
     struct explode_t explosion[4][50]; // offset 0x29B28, size 0x2580
     struct cursor_t cursorBlock[4]; // offset 0x2C0A8, size 0x440
-    union_pon_gc_c_1 block_rect[4][12][6]; // offset 0x2C4E8, size 0x1B00
-    union_pon_gc_c_1 new_block_rect[4][6]; // offset 0x2DFE8, size 0x240
-    union_pon_gc_c_1 left2D[4]; // offset 0x2E228, size 0x60
-    union_pon_gc_c_1 right2D[4]; // offset 0x2E288, size 0x60
+    union_pon_gc_c_222 block_rect[4][12][6]; // offset 0x2C4E8, size 0x1B00
+    union_pon_gc_c_222 new_block_rect[4][6]; // offset 0x2DFE8, size 0x240
+    union_pon_gc_c_222 left2D[4]; // offset 0x2E228, size 0x60
+    union_pon_gc_c_222 right2D[4]; // offset 0x2E288, size 0x60
     char visible[4][12][18]; // offset 0x2E2E8, size 0x360
-    union_pon_gc_MemoryCard_c_14 left3D[4]; // offset 0x2E648, size 0x100
-    union_pon_gc_MemoryCard_c_14 right3D[4]; // offset 0x2E748, size 0x100
+    union_pon_gc_MemoryCard_c_1396 left3D[4]; // offset 0x2E648, size 0x100
+    union_pon_gc_MemoryCard_c_1396 right3D[4]; // offset 0x2E748, size 0x100
     struct flic_t flic[340]; // offset 0x2E848, size 0x2A80
     struct text_t drawText[70]; // offset 0x312C8, size 0x8C0
 } * dynamicp /* r1+0xC */, int x /* r24 */, int y /* r25 */, int num /* r1+0x1C */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r27
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r4
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r6
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r4
+    union_pon_gc_c_173 * pGfx; // r27
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r4
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r6
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r4
 
     // References
     // -> union [anonymous] tex_vtx[4][4];

@@ -111,7 +111,6 @@ def parse_anonymous_structs_and_unions(contents: list[str]) -> dict[str, tuple[s
                 body = "".join(current_struct_contents)
                 if body not in structs_by_contents:
                     structs_by_contents[body] = (f"{kind}_{current_unit.replace('.', '_')}_{struct_index}", kind)
-                    struct_index += 1
                 current_struct_contents.clear()
         elif line.endswith("struct {\n") or line.endswith("union {\n"):
             if line.endswith("struct {\n"):
@@ -122,7 +121,9 @@ def parse_anonymous_structs_and_unions(contents: list[str]) -> dict[str, tuple[s
 
         if "    Compile unit: " in line:
             current_unit = line.strip().split("\\")[-1]
+            struct_index = 0
         assert braces_count >= 0, line
+        struct_index += 1
 
     assert braces_count == 0, braces_count
 
@@ -156,7 +157,7 @@ def set_anonymous_structs_and_unions(contents: list[str], structs_by_contents: d
 
                 trailing_line = None
                 current_struct_contents.clear()
-                continue
+
         elif line.endswith("struct {\n") or line.endswith("union {\n"):
             if line.endswith("struct {\n"):
                 kind = "struct"

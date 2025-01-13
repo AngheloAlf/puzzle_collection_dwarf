@@ -9,7 +9,7 @@ unsigned char gValidControllersBak; // size: 0x1, address: 0x4CF61
 // Range: 0x44554 -> 0x44574
 void InitController() {}
 
-struct_controller_c_34 gControllerStatus[4]; // size: 0x10, address: 0x4CF64
+struct_controller_c_15 gControllerStatus[4]; // size: 0x10, address: 0x4CF64
 struct block_t {
     // total size: 0x2C
     int state; // offset 0x0, size 0x4
@@ -37,7 +37,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -52,7 +52,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -61,7 +61,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -110,10 +110,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -161,7 +161,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -194,7 +194,7 @@ struct action_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct help_t {
@@ -273,9 +273,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -284,23 +284,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -340,7 +340,7 @@ struct st_ContData {
     unsigned short trigger; // offset 0x6, size 0x2
 };
 static struct st_ContData contdata$106[4]; // size: 0x20, address: 0x4CF74
-struct_controller_c_35 gControllerData[4]; // size: 0x18, address: 0x4CF94
+struct_controller_c_1180 gControllerData[4]; // size: 0x18, address: 0x4CF94
 int gSelection; // size: 0x4, address: 0xF4E94
 int gMain; // size: 0x4, address: 0xDF59C
 // Range: 0x4463C -> 0x44970
@@ -393,8 +393,8 @@ struct OSThread_s {
     unsigned short flags; // offset 0x12, size 0x2
     long id; // offset 0x14, size 0x4
     int fp; // offset 0x18, size 0x4
-    struct_controller_c_36 * thprof; // offset 0x1C, size 0x4
-    struct_controller_c_37 context; // offset 0x20, size 0x190
+    struct_controller_c_1238 * thprof; // offset 0x1C, size 0x4
+    struct_controller_c_1406 context; // offset 0x20, size 0x190
 };
 struct OSMesgQueue_s {
     // total size: 0x18

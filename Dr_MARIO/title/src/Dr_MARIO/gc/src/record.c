@@ -23,11 +23,11 @@ static unsigned long BitField_GetBit(struct BitField * st /* r1+0x0 */, int coun
 }
 
 // Range: 0x2AEE8 -> 0x2AF60
-void dm_init_config_save(struct_dm_game_main_c_31 * config /* r1+0x0 */) {}
+void dm_init_config_save(struct_dm_game_main_c_10328 * config /* r1+0x0 */) {}
 
 int evs_default_name[]; // size: 0x0, address: 0x1909C
 // Range: 0x2AF60 -> 0x2B0A0
-void dm_init_save_mem(struct_dm_game_main_c_30 * mem /* r29 */) {
+void dm_init_save_mem(struct_dm_game_main_c_8121 * mem /* r29 */) {
     // Local variables
     int i; // r1+0x8
     int j; // r1+0x8
@@ -60,12 +60,12 @@ void dm_init_system_mem() {
     // -> static char _defName$233[8];
 }
 
-struct_dm_game_main_c_30 evs_mem_data[9]; // size: 0x750, address: 0x549C0
+struct_dm_game_main_c_8121 evs_mem_data[9]; // size: 0x750, address: 0x549C0
 // Range: 0x2B190 -> 0x2B280
 void dm_story_sort_set(int player_no /* r1+0x0 */, int char_no /* r1+0x4 */, int g_level /* r1+0x8 */, int score /* r6 */, int time /* r11 */, int c_stage /* r1+0x14 */, int ignoreFlag /* r1+0x18 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r10
-    struct_record_c_55 * ms; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r10
+    struct_record_c_266 * ms; // r1+0x0
     int hi; // r1+0x0
     int lo; // r9
 
@@ -76,7 +76,7 @@ void dm_story_sort_set(int player_no /* r1+0x0 */, int char_no /* r1+0x4 */, int
 // Range: 0x2B280 -> 0x2B2C8
 void dm_level_sort_set(int player_no /* r1+0x0 */, int g_speed /* r1+0x4 */, int score /* r5 */, int c_level /* r6 */) {
     // Local variables
-    struct_record_c_56 * ml; // r1+0x0
+    struct_record_c_281 * ml; // r1+0x0
     int hi; // r1+0x0
     int lo; // r4
 
@@ -87,7 +87,7 @@ void dm_level_sort_set(int player_no /* r1+0x0 */, int g_speed /* r1+0x4 */, int
 // Range: 0x2B2C8 -> 0x2B340
 void dm_taiQ_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int score /* r5 */, int time /* r6 */) {
     // Local variables
-    struct_record_c_57 * tq; // r4
+    struct_record_c_296 * tq; // r4
     int hi; // r3
     int lo; // r6
 
@@ -98,7 +98,7 @@ void dm_taiQ_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int scor
 // Range: 0x2B340 -> 0x2B3CC
 void dm_timeAt_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int score /* r5 */, int time /* r9 */, int erase /* r7 */) {
     // Local variables
-    struct_record_c_58 * ta; // r4
+    struct_record_c_312 * ta; // r4
     int hi; // r6
     int lo; // r8
 
@@ -109,7 +109,7 @@ void dm_timeAt_sort_set(int player_no /* r1+0x0 */, int dif /* r1+0x4 */, int sc
 // Range: 0x2B3CC -> 0x2B410
 void dm_vscom_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -118,7 +118,7 @@ void dm_vscom_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B410 -> 0x2B454
 void dm_vc_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -127,7 +127,7 @@ void dm_vc_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B454 -> 0x2B498
 void dm_vsman_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -136,7 +136,7 @@ void dm_vsman_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B498 -> 0x2B4DC
 void dm_vm_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -145,7 +145,7 @@ void dm_vm_fl_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* 
 // Range: 0x2B4DC -> 0x2B520
 void dm_vm_ta_set(int player_no /* r1+0x0 */, int win /* r1+0x4 */, int lose /* r1+0x8 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x0
+    struct_dm_game_main_c_8121 * mc; // r1+0x0
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -180,39 +180,39 @@ struct SRankSortInfo {
 @enum$362record_c;
 @enum$110dm_title_main_c;
 // Range: 0x2B520 -> 0x2B674
-static @enum$110dm_title_main_c _get1PLess(struct_dm_game_main_c_30 * mc1 /* r1+0x0 */, struct {
+static @enum$110dm_title_main_c _get1PLess(struct_dm_game_main_c_8121 * mc1 /* r1+0x0 */, struct {
     // total size: 0xD0
     unsigned char mem_use_flg; // offset 0x0, size 0x1
     unsigned char mem_name[4]; // offset 0x1, size 0x4
     int clear_stage[4][2]; // offset 0x8, size 0x20
-    struct_record_c_55 story_data[3]; // offset 0x28, size 0x24
-    struct_record_c_56 level_data[3]; // offset 0x4C, size 0x18
-    struct_record_c_57 taiQ_data[3]; // offset 0x64, size 0x18
-    struct_record_c_58 timeAt_data[3]; // offset 0x7C, size 0x24
+    struct_record_c_266 story_data[3]; // offset 0x28, size 0x24
+    struct_record_c_281 level_data[3]; // offset 0x4C, size 0x18
+    struct_record_c_296 taiQ_data[3]; // offset 0x64, size 0x18
+    struct_record_c_312 timeAt_data[3]; // offset 0x7C, size 0x24
     unsigned short vscom_data[2]; // offset 0xA0, size 0x4
     unsigned short vc_fl_data[2]; // offset 0xA4, size 0x4
     unsigned short vsman_data[2]; // offset 0xA8, size 0x4
     unsigned short vm_fl_data[2]; // offset 0xAC, size 0x4
     unsigned short vm_ta_data[2]; // offset 0xB0, size 0x4
-    struct_dm_game_main_c_31 config; // offset 0xB4, size 0x1A
+    struct_dm_game_main_c_10328 config; // offset 0xB4, size 0x1A
 } * mc2 /* r1+0x4 */, @enum$362record_c mode /* r1+0x8 */, int level /* r1+0xC */) {
     // Local variables
     int hi; // r7
     int lo; // r8
-    struct_record_c_55 * story1; // r1+0x0
-    struct_record_c_55 * story2; // r1+0x0
-    struct_record_c_56 * level1; // r1+0x0
-    struct_record_c_56 * level2; // r1+0x0
-    struct_record_c_57 * taiQ1; // r1+0x0
-    struct_record_c_57 * taiQ2; // r1+0x0
-    struct_record_c_58 * timeAt1; // r1+0x0
-    struct_record_c_58 * timeAt2; // r1+0x0
+    struct_record_c_266 * story1; // r1+0x0
+    struct_record_c_266 * story2; // r1+0x0
+    struct_record_c_281 * level1; // r1+0x0
+    struct_record_c_281 * level2; // r1+0x0
+    struct_record_c_296 * taiQ1; // r1+0x0
+    struct_record_c_296 * taiQ2; // r1+0x0
+    struct_record_c_312 * timeAt1; // r1+0x0
+    struct_record_c_312 * timeAt2; // r1+0x0
 }
 
 // Range: 0x2B674 -> 0x2B89C
 static void _sort1PMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$362record_c mode /* r23 */, int level /* r24 */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r1+0x8
+    struct_dm_game_main_c_8121 * mc; // r1+0x8
     unsigned char * sort; // r1+0x8
     int i; // r26
     int j; // r25
@@ -253,7 +253,7 @@ void dm_data_mode_timeAt_sort(struct SRankSortInfo * st /* r30 */) {
 // Range: 0x2B9DC -> 0x2BDE4
 static void _sortVsMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$494record_c mode /* r1+0xC */) {
     // Local variables
-    struct_dm_game_main_c_30 * mc; // r5
+    struct_dm_game_main_c_8121 * mc; // r5
     int i; // r31
     int j; // r31
     int aveVal; // r5
@@ -283,10 +283,10 @@ void dm_data_vm_ta_sort(struct SRankSortInfo * st /* r3 */) {}
 // Range: 0x2BE98 -> 0x2C36C
 static void RecStory_Compress(struct BitField * bf /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
-    struct_dm_game_main_c_30 * player; // r31
+    struct_dm_game_main_c_8121 * player; // r31
     int i; // r1+0x8
     int j; // r1+0x8
-    struct_record_c_55 * story; // r6
+    struct_record_c_266 * story; // r6
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -295,10 +295,10 @@ static void RecStory_Compress(struct BitField * bf /* r1+0x8 */, int num /* r1+0
 // Range: 0x2C36C -> 0x2C7C4
 static void RecStory_Extract(struct BitField * bf /* r1+0x0 */, int num /* r1+0x4 */) {
     // Local variables
-    struct_dm_game_main_c_30 * player; // r11
+    struct_dm_game_main_c_8121 * player; // r11
     int i; // r1+0x0
     int j; // r1+0x0
-    struct_record_c_55 * story; // r6
+    struct_record_c_266 * story; // r6
 
     // References
     // -> struct [anonymous] evs_mem_data[9];
@@ -352,7 +352,7 @@ enum EepRomErr EepRom_Init() {}
 // Range: 0x2D7F4 -> 0x2D878
 enum EepRomErr EepRom_InitFirst(void (* proc)(void *) /* r29 */, int (* proc2)(void *) /* r30 */, void * args /* r31 */) {}
 
-struct_record_c_59 evs_cfg_4p; // size: 0x16, address: 0x55110
+struct_record_c_1233 evs_cfg_4p; // size: 0x16, address: 0x55110
 // Range: 0x2D878 -> 0x2D948
 void EepRom_InitVars() {
     // Local variables
@@ -424,42 +424,42 @@ void EepRom_DumpErrMes() {}
 void EepRom_DumpDataSize() {}
 
 // Range: 0x2DDAC -> 0x2DE0C
-void RecWritingMsg_init(struct_record_c_60 * st /* r31 */, void * heap /* r4 */) {}
+void RecWritingMsg_init(struct_record_c_1350 * st /* r31 */, void * heap /* r4 */) {}
 
 // Range: 0x2DE0C -> 0x2DE58
-void RecWritingMsg_setStr(struct_record_c_60 * st /* r30 */, const unsigned char * str /* r31 */) {}
+void RecWritingMsg_setStr(struct_record_c_1350 * st /* r30 */, const unsigned char * str /* r31 */) {}
 
 // Range: 0x2DE58 -> 0x2DEA0
-void RecWritingMsg_calc(struct_record_c_60 * st /* r31 */) {}
+void RecWritingMsg_calc(struct_record_c_1350 * st /* r31 */) {}
 
-union_drmario_gc_c_0 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
+union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x2DEA0 -> 0x2E004
-void RecWritingMsg_draw(struct_record_c_60 * st /* r28 */, union {
-    struct_dm_game_main_c_33 words; // offset 0x0, size 0x8
-    struct_dm_game_main_c_34 dma; // offset 0x0, size 0x8
-    struct_dm_game_main_c_35 tri; // offset 0x0, size 0x8
-    struct_dm_game_main_c_36 line; // offset 0x0, size 0x8
-    struct_dm_game_main_c_37 popmtx; // offset 0x0, size 0x8
-    struct_dm_game_main_c_38 segment; // offset 0x0, size 0x8
-    struct_dm_game_main_c_39 setothermodeH; // offset 0x0, size 0x8
-    struct_dm_game_main_c_39 setothermodeL; // offset 0x0, size 0x8
-    struct_dm_game_main_c_40 texture; // offset 0x0, size 0x8
-    struct_dm_game_main_c_41 perspnorm; // offset 0x0, size 0x8
-    struct_dm_game_main_c_42 setimg; // offset 0x0, size 0x8
-    struct_dm_game_main_c_43 setcombine; // offset 0x0, size 0x8
-    struct_dm_game_main_c_44 setcolor; // offset 0x0, size 0x8
-    struct_dm_game_main_c_45 fillrect; // offset 0x0, size 0x8
-    struct_dm_game_main_c_46 settile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_47 loadtile; // offset 0x0, size 0x8
-    struct_dm_game_main_c_47 settilesize; // offset 0x0, size 0x8
-    struct_dm_game_main_c_47 loadtlut; // offset 0x0, size 0x8
+void RecWritingMsg_draw(struct_record_c_1350 * st /* r28 */, union {
+    struct_dm_game_main_c_16552 words; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16559 dma; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16569 tri; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16579 line; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16586 popmtx; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16595 segment; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16603 setothermodeH; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16603 setothermodeL; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16620 texture; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16627 perspnorm; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16636 setimg; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16642 setcombine; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16650 setcolor; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16663 fillrect; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16683 settile; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16693 loadtile; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16693 settilesize; // offset 0x0, size 0x8
+    struct_dm_game_main_c_16693 loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * gpp /* r29 */) {
     // Local variables
-    union_drmario_gc_c_0 * gp; // r1+0x18
+    union_drmario_gc_c_202 * gp; // r1+0x18
     int w; // r1+0x10
     int h; // r1+0x10
-    union_drmario_gc_c_0 * _g; // r1+0x10
+    union_drmario_gc_c_202 * _g; // r1+0x10
 
     // References
     // -> unsigned char mess_panel_tex[15456];
@@ -469,16 +469,16 @@ void RecWritingMsg_draw(struct_record_c_60 * st /* r28 */, union {
 }
 
 // Range: 0x2E004 -> 0x2E010
-void RecWritingMsg_start(struct_record_c_60 * st /* r1+0x0 */) {}
+void RecWritingMsg_start(struct_record_c_1350 * st /* r1+0x0 */) {}
 
 // Range: 0x2E010 -> 0x2E01C
-void RecWritingMsg_end(struct_record_c_60 * st /* r1+0x0 */) {}
+void RecWritingMsg_end(struct_record_c_1350 * st /* r1+0x0 */) {}
 
 // Range: 0x2E01C -> 0x2E038
-int RecWritingMsg_isEnd(struct_record_c_60 * st /* r1+0x0 */) {}
+int RecWritingMsg_isEnd(struct_record_c_1350 * st /* r1+0x0 */) {}
 
 // Range: 0x2E038 -> 0x2E044
-void RecWritingMsg_setPos(struct_record_c_60 * st /* r1+0x0 */, int x /* r1+0x4 */, int y /* r1+0x8 */) {}
+void RecWritingMsg_setPos(struct_record_c_1350 * st /* r1+0x0 */, int x /* r1+0x4 */, int y /* r1+0x8 */) {}
 
 // Range: 0x2E044 -> 0x2E048
 void setSleepTimer() {}

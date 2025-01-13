@@ -34,8 +34,8 @@ void drMarioRetrace(int gfxTaskNum /* r1+0x8 */) {
 // Range: 0x300 -> 0x320
 int memoryCard_bootCheck_init() {}
 
-union_drmario_gc_c_0 * gp; // size: 0x4, address: 0x1E9A4
-union_drmario_gc_c_0 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
+union_drmario_gc_c_202 * gp; // size: 0x4, address: 0x1E9A4
+union_drmario_gc_c_202 gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
 unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 unsigned short joyupd[5]; // size: 0xA, address: 0x1CDA0
 unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
@@ -43,8 +43,8 @@ unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 int memoryCard_bootCheck() {
     // Local variables
     int ret; // r3
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * gp;

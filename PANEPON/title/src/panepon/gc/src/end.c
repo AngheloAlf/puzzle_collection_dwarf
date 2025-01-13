@@ -39,7 +39,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -54,7 +54,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -63,7 +63,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -112,10 +112,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -158,7 +158,7 @@ void DeadBlocksShakeOne2D(struct tetWell * well /* r3 */) {
     // Local variables
     int row; // r1+0x0
     int diff; // r1+0x0
-    struct_pon_gc_tex_c_11 * s; // r10
+    struct_pon_gc_tex_c_9927 * s; // r10
 
     // References
     // -> int gSelection;
@@ -196,7 +196,7 @@ void KillRow2D(struct tetWell * well /* r3 */) {
     int row; // r1+0x0
     int col; // r1+0x0
     int done; // r1+0x0
-    union_pon_gc_c_1 * rect; // r6
+    union_pon_gc_c_222 * rect; // r6
     int dist; // r4
 
     // References
@@ -248,7 +248,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -281,7 +281,7 @@ struct action_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct help_t {
@@ -360,9 +360,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -371,23 +371,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -443,7 +443,7 @@ void DeadBlocksShakeTwo2D(struct tetWell * well /* r3 */, int num /* r1+0x4 */) 
     int row; // r1+0x0
     int diff; // r1+0x0
     int temp; // r7
-    struct_pon_gc_tex_c_11 * s; // r11
+    struct_pon_gc_tex_c_9927 * s; // r11
 
     // References
     // -> int gMain;
@@ -468,7 +468,7 @@ void WinWallUp2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     int row; // r1+0x8
     int diff; // r1+0x8
     int temp; // r1+0x8
-    struct_pon_gc_tex_c_11 * s; // r9
+    struct_pon_gc_tex_c_9927 * s; // r9
     int WinWall_Y_Max; // r5
 
     // References
@@ -483,7 +483,7 @@ void LoseWallUp2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     // Local variables
     int row; // r1+0x8
     int diff; // r1+0x8
-    struct_pon_gc_tex_c_11 * s; // r10
+    struct_pon_gc_tex_c_9927 * s; // r10
 
     // References
     // -> struct Game gTheGame;
@@ -512,7 +512,7 @@ void SmallStars() {
     int j; // r12
     int y; // r9
     int total; // r6
-    struct_pon_gc_tex_c_11 * s; // r31
+    struct_pon_gc_tex_c_9927 * s; // r31
     unsigned char stars_TMEM[4][4]; // r1+0x8
 
     // References
@@ -526,7 +526,7 @@ void pon_SmallStars4p(struct tetWell * well /* r3 */) {
     int j; // r12
     int y; // r9
     int total; // r6
-    struct_pon_gc_tex_c_11 * s; // r31
+    struct_pon_gc_tex_c_9927 * s; // r31
     unsigned char stars_TMEM[4][4]; // r1+0xC
 }
 
@@ -538,7 +538,7 @@ int CircleStars() {
     float y; // r1+0x8
     int total; // r11
     struct tetWell * well; // r1+0x8
-    struct_pon_gc_tex_c_11 * s; // r12
+    struct_pon_gc_tex_c_9927 * s; // r12
     unsigned char stars_TMEM[4][4]; // r1+0x128
     float gSinTable[36]; // r1+0x98
     float gCosTable[36]; // r1+0x8
@@ -554,7 +554,7 @@ int DoGameOverTryAgain() {
     // Local variables
     int * pos; // r31
     unsigned short button; // r1+0x8
-    union_pon_gc_tex_c_12 * bg; // r3
+    union_pon_gc_tex_c_17914 * bg; // r3
 
     // References
     // -> struct Game gTheGame;
@@ -623,7 +623,7 @@ int DoGameOverStat(struct tetWell * well /* r25 */) {
     unsigned short h_button; // r27
     unsigned short t_button; // r26
     struct icon_t * icon; // r19
-    union_pon_gc_c_1 * sp; // r8
+    union_pon_gc_c_222 * sp; // r8
 
     // References
     // -> int gMain;
@@ -662,7 +662,7 @@ int DoGameOverInput() {
     // -> static int SelectCursorSaveYesNo;
 }
 
-union_pon_gc_c_0 * glistp; // size: 0x4, address: 0x50F48
+union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
 unsigned char tlu_SaveYesNo_1[32]; // size: 0x20, address: 0xABFC8
 unsigned char tex_SaveYesNo_1[3072]; // size: 0xC00, address: 0xAB3C8
 unsigned char tlu_SaveYesNo_Cursor1[512]; // size: 0x200, address: 0xACFE8
@@ -671,9 +671,9 @@ unsigned char tex_SaveYesNo_Cursor1[4096]; // size: 0x1000, address: 0xABFE8
 void DrawNextStage() {
     // Local variables
     int window_posX; // r29
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -694,9 +694,9 @@ unsigned char tex_SaveYesNo_Cursor2[1536]; // size: 0x600, address: 0xADE08
 void DrawSaveYesNo() {
     // Local variables
     int window_posX; // r29
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -709,33 +709,33 @@ void DrawSaveYesNo() {
     // -> int gSelection;
 }
 
-union_pon_gc_tex_c_7 numberLUT[]; // size: 0x0, address: 0xD0870
-union_pon_gc_tex_c_7 arrowTexture[]; // size: 0x0, address: 0xD4F60
+union_pon_gc_tex_c_7332 numberLUT[]; // size: 0x0, address: 0xD0870
+union_pon_gc_tex_c_7332 arrowTexture[]; // size: 0x0, address: 0xD4F60
 unsigned char alphaG[4]; // size: 0x4, address: 0x17DC
 unsigned char alphaR[4]; // size: 0x4, address: 0x17E0
 unsigned char alphaB[4]; // size: 0x4, address: 0x17D8
 // Range: 0x56C8C -> 0x57288
-void Draw2DGameOver(struct_pon_gc_draw_c_15 * dynamicp /* r30 */) {
+void Draw2DGameOver(struct_pon_gc_draw_c_2466 * dynamicp /* r30 */) {
     // Local variables
     int count; // r23
     int num; // r23
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> union [anonymous] * glistp;
@@ -751,27 +751,27 @@ void Draw2DGameOver(struct_pon_gc_draw_c_15 * dynamicp /* r30 */) {
 }
 
 // Range: 0x57288 -> 0x577C4
-void Draw3DGameOver(struct_pon_gc_draw_c_15 * dynamicp /* r25 */) {
+void Draw3DGameOver(struct_pon_gc_draw_c_2466 * dynamicp /* r25 */) {
     // Local variables
     int count; // r24
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> int gMain;
@@ -785,7 +785,7 @@ void Draw3DGameOver(struct_pon_gc_draw_c_15 * dynamicp /* r25 */) {
 }
 
 // Range: 0x577C4 -> 0x57804
-void DrawGameOver(struct_pon_gc_draw_c_15 * dynamicp /* r3 */) {
+void DrawGameOver(struct_pon_gc_draw_c_2466 * dynamicp /* r3 */) {
     // References
     // -> struct Game gTheGame;
 }

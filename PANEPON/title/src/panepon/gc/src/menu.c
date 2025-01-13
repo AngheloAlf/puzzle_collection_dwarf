@@ -28,8 +28,8 @@ static int gnTickFade; // size: 0x4, address: 0xE836C
 static int gnMaskVoice; // size: 0x4, address: 0xE8370
 static int gnTickCountMenu; // size: 0x4, address: 0xE8374
 static unsigned int anTagBlinkLast[4]; // size: 0x10, address: 0xE8378
-static struct_image_c_39 * gpImageMark; // size: 0x4, address: 0xE8388
-static struct_image_c_39 * gpImageCheck; // size: 0x4, address: 0xE838C
+static struct_image_c_89 * gpImageMark; // size: 0x4, address: 0xE8388
+static struct_image_c_89 * gpImageCheck; // size: 0x4, address: 0xE838C
 static unsigned int gnTickMenu; // size: 0x4, address: 0xE8390
 static unsigned int gnFrameCount; // size: 0x4, address: 0xE8394
 static int gbHideResume; // size: 0x4, address: 0xE8398
@@ -80,7 +80,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x30, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -95,7 +95,7 @@ struct icon_t {
     int to_y; // offset 0x18, size 0x4
     int count; // offset 0x1C, size 0x4
     int distance; // offset 0x20, size 0x4
-    union_pon_gc_c_2 thing; // offset 0x28, size 0x40
+    union_pon_gc_c_262 thing; // offset 0x28, size 0x40
 };
 struct explode_t {
     // total size: 0x30
@@ -104,7 +104,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_1 rect; // offset 0x18, size 0x18
+    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -153,10 +153,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_1 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_1 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_1 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_1 right2D; // offset 0x4678, size 0x18
+    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
+    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
+    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -204,7 +204,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_1 rect; // offset 0xE8, size 0x18
+    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -237,7 +237,7 @@ struct action_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_1 word; // offset 0x0, size 0x18
+    union_pon_gc_c_222 word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct help_t {
@@ -316,9 +316,9 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_12 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x150, size 0x18
+    union_pon_gc_tex_c_17914 sign[4]; // offset 0x10, size 0xA0
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0xB0, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -327,23 +327,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7 gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_12 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_1 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    union_pon_gc_tex_c_17914 gBG[200]; // offset 0x193A0, size 0x1F40
+    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_12 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_1 shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_12 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7 bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_12 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_12 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7 signLUT; // offset 0x1D4E8, size 0x18
+    union_pon_gc_tex_c_17914 frame; // offset 0x1D228, size 0x28
+    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    union_pon_gc_tex_c_17914 bkground; // offset 0x1D2C8, size 0x28
+    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    union_pon_gc_tex_c_17914 sign[8]; // offset 0x1D308, size 0x140
+    union_pon_gc_tex_c_17914 alpha[4]; // offset 0x1D448, size 0xA0
+    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_12 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    union_pon_gc_tex_c_17914 misc[4]; // offset 0x1D508, size 0xA0
+    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -394,7 +394,7 @@ static int menuWipeUserData() {
 }
 
 // Range: 0x66B78 -> 0x66CAC
-static int menuInitUserData(struct_menu_c_43 * pData /* r29 */, int bWipe /* r1+0xC */) {
+static int menuInitUserData(struct_menu_c_1407 * pData /* r29 */, int bWipe /* r1+0xC */) {
     // Local variables
     int iName; // r30
 
@@ -411,12 +411,12 @@ static int menuInitUserData(struct_menu_c_43 * pData /* r29 */, int bWipe /* r1+
 
 static unsigned char _cache$158[16384]; // size: 0x4000, address: 0xE83C0
 // Range: 0x66CAC -> 0x66E20
-static int menuLoadUserData(struct_menu_c_43 * pData /* r31 */) {
+static int menuLoadUserData(struct_menu_c_1407 * pData /* r31 */) {
     // Local variables
     int bFlag1; // r5
     int bFlag2; // r6
-    struct_menu_c_43 data0; // r1+0xC4
-    struct_menu_c_43 data1; // r1+0xC
+    struct_menu_c_1407 data0; // r1+0xC4
+    struct_menu_c_1407 data1; // r1+0xC
 
     // References
     // -> static unsigned char _cache$158[16384];
@@ -424,7 +424,7 @@ static int menuLoadUserData(struct_menu_c_43 * pData /* r31 */) {
 
 static unsigned char _cache$187[16384]; // size: 0x4000, address: 0xEC3C0
 // Range: 0x66E20 -> 0x66FE4
-static int menuSaveUserData(struct_menu_c_43 * pData /* r29 */, int iUser /* r28 */) {
+static int menuSaveUserData(struct_menu_c_1407 * pData /* r29 */, int iUser /* r28 */) {
     // Local variables
     int iSlot; // r30
     int iSlotLast; // r5
@@ -551,7 +551,7 @@ int menuDeleteNameMain(int iNameWipe /* r30 */, int saveflag /* r31 */) {
     int iPlayer; // r6
     int iName; // r7
     struct player_t * pPlayer; // r8
-    struct_menu_c_43 data; // r1+0x10
+    struct_menu_c_1407 data; // r1+0x10
 
     // References
     // -> struct Game gTheGame;
@@ -597,7 +597,7 @@ static int menuSetScreen(@enum$105menu_c eType /* r28 */, int bBack /* r25 */) {
     // Local variables
     int bFlag; // r1+0x8
     @enum$105menu_c eTypeLast; // r30
-    struct_menu_c_44 * pMenuData; // r1+0x14
+    struct_menu_c_1876 * pMenuData; // r1+0x14
     int nPlayerCount; // r29
     int iScreen; // r3
     int iScreenMenu; // r1+0x10
@@ -619,7 +619,7 @@ static unsigned char aiFrameEye[5]; // size: 0x5, address: 0xB11A8
 int menuWinkFace(int nTagImage /* r28 */, int iScreen /* r29 */, int iPlayer /* r1+0x10 */) {
     // Local variables
     int bLast; // r30
-    struct_image_c_39 * pImage; // r1+0x18
+    struct_image_c_89 * pImage; // r1+0x18
     int nTick; // r30
     int iFrame; // r1+0x14
     int nTagLast; // r27
@@ -700,7 +700,7 @@ static void menuSave1PStandard(int iName /* r29 */, @enum$106menu_c eGame /* r30
 // Range: 0x69428 -> 0x695E0
 static void menuTickCharacterSelect1P(int iPlayer /* r28 */, int * anCommand /* r27 */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x1C
+    struct_image_c_89 * pImage; // r1+0x1C
     int iCharacter; // r28
     int nTag; // r27
     int nTagWink; // r29
@@ -812,7 +812,7 @@ static void menuInitCharacterSelect2P(int iScreen /* r28 */) {
 // Range: 0x6A24C -> 0x6A58C
 static void menuTickCharacterSelect2P(int iPlayer /* r21 */, int * anCommand /* r22 */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x28
+    struct_image_c_89 * pImage; // r1+0x28
     int nStage; // r28
     int nTag; // r22
     @enum$106menu_c eGame; // r27
@@ -893,11 +893,11 @@ static void pon_menuInitCharacterSelect4P(int iScreen /* r25 */) {
 }
 
 unsigned long nBaseColorArray[16][4]; // size: 0x100, address: 0xB125C
-union_pon_gc_tex_c_4 tex_vtx[4][4]; // size: 0x100, address: 0xDD0
+union_pon_gc_tex_c_1219 tex_vtx[4][4]; // size: 0x100, address: 0xDD0
 // Range: 0x6AA58 -> 0x6B004
 static void pon_menuTickCharacterSelect4P(int iPlayer /* r29 */, int * anCommand /* r24 */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x30
+    struct_image_c_89 * pImage; // r1+0x30
     int nStage; // r31
     int nTag; // r18
     @enum$106menu_c eGame; // r30
@@ -965,12 +965,12 @@ static void menuInit1PVS(int iScreen /* r31 */) {
 
 static int ganAnchorXY[20]; // size: 0x50, address: 0xB1364
 // Range: 0x6B880 -> 0x6BDF0
-static void menuDrawRound(union_pon_gc_c_0 * * ppGfx /* r27 */, int nTag /* r24 */) {
+static void menuDrawRound(union_pon_gc_c_173 * * ppGfx /* r27 */, int nTag /* r24 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r1+0x24
+    union_pon_gc_c_173 * pGfx; // r1+0x24
     int nOffset; // r1+0x1C
     char * acData; // r30
-    struct_bitmap_c_16 * pBitmap; // r3
+    struct_bitmap_c_14 * pBitmap; // r3
     @enum$105menu_c eTypeMenu; // r1+0x8
     int nX; // r8
     int nY; // r1+0x8
@@ -980,18 +980,18 @@ static void menuDrawRound(union_pon_gc_c_0 * * ppGfx /* r27 */, int nTag /* r24 
     int iLevel; // r25
     int iData; // r6
     char acDataPuzzle[2]; // r1+0x14
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
-    union_pon_gc_c_0 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gpImageCheck;
@@ -1050,7 +1050,7 @@ static void menuTick1P2D3D_Resume(int iScreen /* r30 */, int bFlag /* r7 */) {
 static void menuTick1P2D3D(int nFrame /* r28 */, int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x2C
-    struct_image_c_39 * pImage; // r1+0x28
+    struct_image_c_89 * pImage; // r1+0x28
     int iCursorX; // r1+0x24
     int iCursorY; // r1+0x20
 
@@ -1145,24 +1145,24 @@ static void menuInit1PStandard(int iScreen /* r31 */) {
 }
 
 // Range: 0x6D388 -> 0x6D4A0
-static void menuDraw1PStandard(union_pon_gc_c_0 * * ppGfx /* r29 */, int iScreen /* r30 */, int nTag /* r1+0x10 */) {
+static void menuDraw1PStandard(union_pon_gc_c_173 * * ppGfx /* r29 */, int iScreen /* r30 */, int nTag /* r1+0x10 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r31
+    union_pon_gc_c_173 * pGfx; // r31
     int iCursorX; // r1+0x18
     int iCursorY; // r1+0x14
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r5
-    union_pon_gc_c_0 * _g; // r7
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r5
+    union_pon_gc_c_173 * _g; // r7
 }
 
 // Range: 0x6D4A0 -> 0x6D67C
 static void menuTick1PStandard(int nFrame /* r28 */, int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x20
-    struct_image_c_39 * pImage; // r1+0x1C
+    struct_image_c_89 * pImage; // r1+0x1C
     int iCursorX; // r1+0x18
     int iCursorY; // r1+0x14
 
@@ -1249,7 +1249,7 @@ static void menuInitSE2D3D() {
 static void menuTickSE2D3D(int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x2C
-    struct_image_c_39 * pImage; // r1+0x28
+    struct_image_c_89 * pImage; // r1+0x28
     int iCursorX; // r1+0x24
     int iCursorY; // r1+0x20
 
@@ -1446,7 +1446,7 @@ static int iCursorLastY$2927; // size: 0x4, address: 0xB141C
 static void menuTickRecords(int nFrame /* r27 */, int iPlayer /* r28 */, int * anCommand /* r29 */) {
     // Local variables
     int iName; // r5
-    struct_image_c_39 * pImage; // r1+0x20
+    struct_image_c_89 * pImage; // r1+0x20
     int nTag; // r1+0x1C
     int iCursorX; // r1+0x18
     int iCursorY; // r1+0x14
@@ -1611,9 +1611,9 @@ static void menuTickPlay(int * anCommand /* r1+0x10 */) {
     // -> static int giScreenMenuLast;
 }
 
-static struct_menu_c_44 gaMenuData[62]; // size: 0x5D0, address: 0xB1640
+static struct_menu_c_1876 gaMenuData[62]; // size: 0x5D0, address: 0xB1640
 // Range: 0x738F8 -> 0x73948
-static int menuFind(struct_menu_c_44 * * ppData /* r1+0x0 */, @enum$105menu_c eType /* r1+0x4 */) {
+static int menuFind(struct_menu_c_1876 * * ppData /* r1+0x0 */, @enum$105menu_c eType /* r1+0x4 */) {
     // Local variables
     int iMenu; // r6
 
@@ -1628,7 +1628,7 @@ static unsigned char _cache$3481[16384]; // size: 0x4000, address: 0xF0420
 // Range: 0x73968 -> 0x73D48
 int menuLoadDataMain() {
     // Local variables
-    struct_menu_c_43 data; // r1+0x10
+    struct_menu_c_1407 data; // r1+0x10
     int iSlot; // r27
     int iUser; // r26
     int iName; // r26
@@ -1653,7 +1653,7 @@ int menuSaveData(int iPlayer /* r3 */) {}
 // Range: 0x73D6C -> 0x73DD0
 int menuSaveDataMain(int iPlayer /* r31 */) {
     // Local variables
-    struct_menu_c_43 data; // r1+0xC
+    struct_menu_c_1407 data; // r1+0xC
 }
 
 // Range: 0x73DD0 -> 0x74B6C
@@ -1762,7 +1762,7 @@ int menuInitUser(int iUser /* r1+0x8 */) {
 unsigned int ganColorCharacter[68]; // size: 0x110, address: 0xB1DC0
 char * * gaSegmentCharacter[17]; // size: 0x44, address: 0xB1ED0
 static int giImageFairy; // size: 0x4, address: 0xF4420
-static struct_image_c_39 * gapImageFairy[2]; // size: 0x8, address: 0xF4424
+static struct_image_c_89 * gapImageFairy[2]; // size: 0x8, address: 0xF4424
 char * Pon_Image_Heap; // size: 0x4, address: 0x184
 // Range: 0x75A44 -> 0x75B6C
 void menuInitProfile(int iScreen /* r29 */, int iCharacter /* r30 */) {
@@ -1782,26 +1782,26 @@ void menuInitProfile(int iScreen /* r29 */, int iCharacter /* r30 */) {
 void menuTickProfile(int iScreen /* r26 */, int iCharacter /* r4 */) {
     // Local variables
     int nTagText; // r27
-    struct_image_c_39 * pImage; // r1+0x10
+    struct_image_c_89 * pImage; // r1+0x10
 
     // References
     // -> unsigned int ganColorCharacter[68];
 }
 
 // Range: 0x75C64 -> 0x75DBC
-void menuDrawProfile(union_pon_gc_c_0 * * ppGfx /* r4 */, int nTag /* r1+0x10 */) {
+void menuDrawProfile(union_pon_gc_c_173 * * ppGfx /* r4 */, int nTag /* r1+0x10 */) {
     // Local variables
-    union_pon_gc_c_0 * pGfx; // r3
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r10
-    union_pon_gc_c_0 * _g; // r11
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r8
-    union_pon_gc_c_0 * _g; // r3
-    union_pon_gc_c_0 * _g; // r7
-    union_pon_gc_c_0 * _g; // r8
+    union_pon_gc_c_173 * pGfx; // r3
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r10
+    union_pon_gc_c_173 * _g; // r11
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r8
+    union_pon_gc_c_173 * _g; // r3
+    union_pon_gc_c_173 * _g; // r7
+    union_pon_gc_c_173 * _g; // r8
 
     // References
     // -> static int giImageFairy;
@@ -1822,7 +1822,7 @@ void menuInitFairy(@enum$95menu_c ePosition /* r1+0x0 */) {
 // Range: 0x75E4C -> 0x762EC
 void menuTickFairy(int iScreen /* r25 */, int nFrame /* r28 */, int nTagText /* r1+0x10 */, int nOffsetText /* r26 */, int nOffsetBox /* r29 */, @enum$95menu_c ePosition /* r1+0x1C */, int bArrow /* r27 */) {
     // Local variables
-    struct_image_c_39 * pImage; // r1+0x28
+    struct_image_c_89 * pImage; // r1+0x28
     int nOffset; // r24
     int iFrame; // r1+0x24
     float rOffset; // f4
@@ -1853,12 +1853,12 @@ void menuFindCharacterMax(int * piCharacter /* r1+0x0 */) {
     // -> struct Game gTheGame;
 }
 
-struct_pon_gc_draw_c_15 * gpDynamicForMenu; // size: 0x4, address: 0xF4454
-union_pon_gc_c_0 * glistp; // size: 0x4, address: 0x50F48
+struct_pon_gc_draw_c_2466 * gpDynamicForMenu; // size: 0x4, address: 0xF4454
+union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
 // Range: 0x76410 -> 0x76588
-void DrawMenu(struct_pon_gc_draw_c_15 * pData /* r1+0x8 */) {
+void DrawMenu(struct_pon_gc_draw_c_2466 * pData /* r1+0x8 */) {
     // Local variables
-    struct_menu_c_44 * pMenuData; // r29
+    struct_menu_c_1876 * pMenuData; // r29
 
     // References
     // -> union [anonymous] * glistp;
@@ -1877,7 +1877,7 @@ void DoMenu() {
     int iPlayer; // r18
     int nTagArea; // r1+0x6C
     int nTypeArea; // r17
-    struct_menu_c_44 * pMenuData; // r31
+    struct_menu_c_1876 * pMenuData; // r31
     int anButtonHold[4]; // r1+0x5C
     int anButtonTouch[4]; // r1+0x4C
     int anCommand[4]; // r1+0x3C
@@ -1910,7 +1910,7 @@ void pon_DoMenu4p() {
     int iPlayer; // r6
     int nTagArea; // r1+0x6C
     int nTypeArea; // r24
-    struct_menu_c_44 * pMenuData; // r17
+    struct_menu_c_1876 * pMenuData; // r17
     int anButtonHold[4]; // r1+0x5C
     int anButtonTouch[4]; // r1+0x4C
     int anCommand[4]; // r1+0x3C

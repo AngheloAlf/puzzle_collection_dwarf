@@ -5,18 +5,18 @@
     Code range: 0x00004990 -> 0x000052F4
 */
 // Range: 0x4990 -> 0x4D2C
-void story_st_new_w9(union_drmario_gc_c_0 * * glp /* r28 */, int demo_no /* r29 */, int mes_no /* r1+0x10 */) {
+void story_st_new_w9(union_drmario_gc_c_202 * * glp /* r28 */, int demo_no /* r29 */, int mes_no /* r1+0x10 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x58
+    union_drmario_gc_c_202 * pgfx; // r1+0x58
     long pm[4][4]; // r1+0x18
-    struct_main_story_c_1 * scn_dat; // r29
+    struct_main_story_c_211 * scn_dat; // r29
     int r; // r6
     int g; // r4
     int b; // r7
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static unsigned long story_buffer;
@@ -43,18 +43,18 @@ void story_st_new_w9(union_drmario_gc_c_0 * * glp /* r28 */, int demo_no /* r29 
 }
 
 // Range: 0x4D2C -> 0x52F4
-static void story_w_end(union_drmario_gc_c_0 * * glp /* r28 */, int type /* r29 */) {
+static void story_w_end(union_drmario_gc_c_202 * * glp /* r28 */, int type /* r29 */) {
     // Local variables
-    union_drmario_gc_c_0 * pgfx; // r1+0x50
+    union_drmario_gc_c_202 * pgfx; // r1+0x50
     long pm[4][4]; // r1+0x10
     int a; // r1+0x8
     int r; // r5
     int g; // r4
     int b; // r6
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
-    union_drmario_gc_c_0 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
+    union_drmario_gc_c_202 * _g; // r1+0x8
 
     // References
     // -> static int story_staff_roll;
