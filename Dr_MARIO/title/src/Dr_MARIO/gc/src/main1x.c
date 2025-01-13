@@ -5,71 +5,8 @@
     Code range: 0x00055F98 -> 0x00056DB0
 */
 static unsigned char _stageTbl[18]; // size: 0x12, address: 0x3BD8
-enum /* @enum$108main1x_c */ {
-    dm_mode_null = 0,
-    dm_mode_init = 1,
-    dm_mode_wait = 2,
-    dm_mode_throw = 3,
-    dm_mode_down = 4,
-    dm_mode_down_wait = 5,
-    dm_mode_erase_chack = 6,
-    dm_mode_erase_anime = 7,
-    dm_mode_ball_down = 8,
-    dm_mode_cap_set = 9,
-    dm_mode_stage_clear = 10,
-    dm_mode_game_over = 11,
-    dm_mode_bottom_up = 12,
-    dm_mode_win = 13,
-    dm_mode_win_retry = 14,
-    dm_mode_lose = 15,
-    dm_mode_lose_retry = 16,
-    dm_mode_draw = 17,
-    dm_mode_draw_retry = 18,
-    dm_mode_tr_chaeck = 19,
-    dm_mode_training = 20,
-    dm_mode_tr_erase_chack = 21,
-    dm_mode_tr_cap_set = 22,
-    dm_mode_pause = 23,
-    dm_mode_pause_retry = 24,
-    dm_mode_no_action = 25,
-    dm_mode_clear_wait = 26,
-    dm_mode_clear_result = 27,
-    dm_mode_gover_wait = 28,
-    dm_mode_gover_result = 29,
-    dm_mode_retire_wait = 30,
-    dm_mode_retire_result = 31,
-    dm_mode_debug_config = 32,
-    dm_mode_debug = 33,
-};
-enum /* @enum$107main1x_c */ {
-    dm_cnd_null = 0,
-    dm_cnd_wait = 1,
-    dm_cnd_init = 2,
-    dm_cnd_stage_clear = 3,
-    dm_cnd_game_over = 4,
-    dm_cnd_win = 5,
-    dm_cnd_win_retry = 6,
-    dm_cnd_win_retry_sc = 7,
-    dm_cnd_lose = 8,
-    dm_cnd_lose_retry = 9,
-    dm_cnd_lose_retry_sc = 10,
-    dm_cnd_draw = 11,
-    dm_cnd_draw_retry = 12,
-    dm_cnd_pause = 13,
-    dm_cnd_pause_re = 14,
-    dm_cnd_pause_re_sc = 15,
-    dm_cnd_retire = 16,
-    dm_cnd_tr_chack = 17,
-    dm_cnd_training = 18,
-    dm_cnd_clear_wait = 19,
-    dm_cnd_clear_result = 20,
-    dm_cnd_gover_wait = 21,
-    dm_cnd_gover_result = 22,
-    dm_cnd_retire_wait = 23,
-    dm_cnd_retire_result = 24,
-    dm_cnd_debug_config = 25,
-    dm_cnd_debug = 26,
-};
+@enum$99dm_game_main_c;
+@enum$98dm_game_main_c;
 struct SAnimeSeq {
     // total size: 0x1C
     unsigned char labelStack[4]; // offset 0x0, size 0x4
@@ -100,194 +37,12 @@ struct {
     signed short map_x; // offset 0x6, size 0x2
     signed short map_y; // offset 0x8, size 0x2
     signed char map_item_size; // offset 0xA, size 0x1
-    enum /* @enum$108main1x_c */ {
-        dm_mode_null = 0,
-        dm_mode_init = 1,
-        dm_mode_wait = 2,
-        dm_mode_throw = 3,
-        dm_mode_down = 4,
-        dm_mode_down_wait = 5,
-        dm_mode_erase_chack = 6,
-        dm_mode_erase_anime = 7,
-        dm_mode_ball_down = 8,
-        dm_mode_cap_set = 9,
-        dm_mode_stage_clear = 10,
-        dm_mode_game_over = 11,
-        dm_mode_bottom_up = 12,
-        dm_mode_win = 13,
-        dm_mode_win_retry = 14,
-        dm_mode_lose = 15,
-        dm_mode_lose_retry = 16,
-        dm_mode_draw = 17,
-        dm_mode_draw_retry = 18,
-        dm_mode_tr_chaeck = 19,
-        dm_mode_training = 20,
-        dm_mode_tr_erase_chack = 21,
-        dm_mode_tr_cap_set = 22,
-        dm_mode_pause = 23,
-        dm_mode_pause_retry = 24,
-        dm_mode_no_action = 25,
-        dm_mode_clear_wait = 26,
-        dm_mode_clear_result = 27,
-        dm_mode_gover_wait = 28,
-        dm_mode_gover_result = 29,
-        dm_mode_retire_wait = 30,
-        dm_mode_retire_result = 31,
-        dm_mode_debug_config = 32,
-        dm_mode_debug = 33,
-    } mode_now; // offset 0xC, size 0x4
-    enum /* @enum$108main1x_c */ {
-        dm_mode_null = 0,
-        dm_mode_init = 1,
-        dm_mode_wait = 2,
-        dm_mode_throw = 3,
-        dm_mode_down = 4,
-        dm_mode_down_wait = 5,
-        dm_mode_erase_chack = 6,
-        dm_mode_erase_anime = 7,
-        dm_mode_ball_down = 8,
-        dm_mode_cap_set = 9,
-        dm_mode_stage_clear = 10,
-        dm_mode_game_over = 11,
-        dm_mode_bottom_up = 12,
-        dm_mode_win = 13,
-        dm_mode_win_retry = 14,
-        dm_mode_lose = 15,
-        dm_mode_lose_retry = 16,
-        dm_mode_draw = 17,
-        dm_mode_draw_retry = 18,
-        dm_mode_tr_chaeck = 19,
-        dm_mode_training = 20,
-        dm_mode_tr_erase_chack = 21,
-        dm_mode_tr_cap_set = 22,
-        dm_mode_pause = 23,
-        dm_mode_pause_retry = 24,
-        dm_mode_no_action = 25,
-        dm_mode_clear_wait = 26,
-        dm_mode_clear_result = 27,
-        dm_mode_gover_wait = 28,
-        dm_mode_gover_result = 29,
-        dm_mode_retire_wait = 30,
-        dm_mode_retire_result = 31,
-        dm_mode_debug_config = 32,
-        dm_mode_debug = 33,
-    } mode_old; // offset 0x10, size 0x4
-    enum /* @enum$107main1x_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_now; // offset 0x14, size 0x4
-    enum /* @enum$107main1x_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_old; // offset 0x18, size 0x4
-    enum /* @enum$107main1x_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_training; // offset 0x1C, size 0x4
-    enum /* @enum$107main1x_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_static; // offset 0x20, size 0x4
+    @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
+    @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
+    @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
+    @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
+    @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
+    @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
     unsigned char virus_order_number; // offset 0x24, size 0x1
     unsigned char virus_number; // offset 0x25, size 0x1
     unsigned char virus_level; // offset 0x26, size 0x1
@@ -418,70 +173,17 @@ struct {
 unsigned char evs_select_name_no[]; // size: 0x0, address: 0x190B0
 signed char evs_manual_no; // size: 0x1, address: 0x18F95
 int story_proc_no; // size: 0x4, address: 0x154C
-enum /* @enum$101main1x_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-};
-enum /* @enum$101main1x_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel; // size: 0x4, address: 0x190B8
-enum /* @enum$93main1x_c */ {
-    MAIN_11 = 0,
-    MAIN_12 = 1,
-    MAIN_STORY = 2,
-    MAIN_TITLE = 3,
-    MAIN_MANUAL = 4,
-    MAIN_GAME = 5,
-    MAIN_MENU = 6,
-    MAIN_TECHMES = 7,
-    MAIN_CONT_ERROR = 8,
-    MAIN_TV_ERROR = 9,
-    MAIN_CSUM_ERROR = 10,
-    MAIN_MEMORYCARD_CHECK = 11,
-};
+@enum$106dm_title_main_c;
+@enum$106dm_title_main_c evs_gamesel; // size: 0x4, address: 0x190B8
+@enum$98dm_title_main_c;
 // Range: 0x55F98 -> 0x561B0
 int main11() {
     // Local variables
-    enum /* @enum$93main1x_c */ {
-        MAIN_11 = 0,
-        MAIN_12 = 1,
-        MAIN_STORY = 2,
-        MAIN_TITLE = 3,
-        MAIN_MANUAL = 4,
-        MAIN_GAME = 5,
-        MAIN_MENU = 6,
-        MAIN_TECHMES = 7,
-        MAIN_CONT_ERROR = 8,
-        MAIN_TV_ERROR = 9,
-        MAIN_CSUM_ERROR = 10,
-        MAIN_MEMORYCARD_CHECK = 11,
-    } no; // r31
+    @enum$98dm_title_main_c no; // r31
     int handover_demono; // r1+0x8
 
     // References
-    // -> enum /* @enum$101main1x_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel;
+    // -> @enum$106dm_title_main_c evs_gamesel;
     // -> static unsigned char _stageTbl[18];
     // -> int story_proc_no;
     // -> signed char evs_manual_no;
@@ -563,16 +265,7 @@ int main12() {
     // -> static unsigned char _seqTbl$224[10];
     // -> signed char evs_story_level;
     // -> static signed char _story4PChar_tbl$229[2][4];
-    // -> enum /* @enum$101main1x_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel;
+    // -> @enum$106dm_title_main_c evs_gamesel;
     // -> static signed char _team_flg$230[3][4];
     // -> static unsigned char StoryVirLv$226[3][10];
     // -> static signed char _stageToChar_tbl$228[2][10];

@@ -6,19 +6,8 @@
 */
 static char g_bInit; // size: 0x1, address: 0x116FC8
 static int gbLogoTitle; // size: 0x4, address: 0x116FCC
-enum /* @enum$107title_c */ {
-    TM_NONE = 0,
-    TM_CARD = 1,
-    TM_LOGO = 2,
-    TM_MAIN = 3,
-    TM_CHAR = 4,
-};
-enum /* @enum$95title_c */ {
-    SPM_HOLD = 0,
-    SPM_WRAP = 1,
-    SPM_LOOP = 2,
-    SPM_PACK = 3,
-};
+@enum$107title_c;
+@enum$96story_c;
 static struct {
     // total size: 0x354
     int nTick; // offset 0x0, size 0x4
@@ -35,13 +24,7 @@ static struct {
     int nAlphaRnbow; // offset 0x2C, size 0x4
     int nAlphaText1; // offset 0x30, size 0x4
     int nAlphaText2; // offset 0x34, size 0x4
-    enum /* @enum$107title_c */ {
-        TM_NONE = 0,
-        TM_CARD = 1,
-        TM_LOGO = 2,
-        TM_MAIN = 3,
-        TM_CHAR = 4,
-    } eMode; // offset 0x38, size 0x4
+    @enum$107title_c eMode; // offset 0x38, size 0x4
     int nOffsetTrees; // offset 0x3C, size 0x4
     int nOffsetFairy; // offset 0x40, size 0x4
     int nOffsetPuppy; // offset 0x44, size 0x4
@@ -315,12 +298,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathSeatF; // offset 0x60, size 0x4
@@ -422,12 +400,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathSeatP; // offset 0x64, size 0x4
@@ -529,12 +502,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathRingF; // offset 0x68, size 0x4
@@ -636,12 +604,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathRingP; // offset 0x6C, size 0x4
@@ -743,12 +706,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffB1; // offset 0x70, size 0x4
@@ -850,12 +808,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffB2; // offset 0x74, size 0x4
@@ -957,12 +910,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffB3; // offset 0x78, size 0x4
@@ -1064,12 +1012,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffB4; // offset 0x7C, size 0x4
@@ -1171,12 +1114,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffB5; // offset 0x80, size 0x4
@@ -1278,12 +1216,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffS1; // offset 0x84, size 0x4
@@ -1385,12 +1318,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffS2; // offset 0x88, size 0x4
@@ -1492,12 +1420,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffS3; // offset 0x8C, size 0x4
@@ -1599,12 +1522,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffS4; // offset 0x90, size 0x4
@@ -1706,12 +1624,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathPuffS5; // offset 0x94, size 0x4
@@ -1813,12 +1726,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathFlowerL; // offset 0x98, size 0x4
@@ -1920,12 +1828,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathFlowerR; // offset 0x9C, size 0x4
@@ -2027,12 +1930,7 @@ static struct {
             unsigned int nColor0; // offset 0x94, size 0x4
             unsigned int nColor1; // offset 0x98, size 0x4
         } * * apImage; // offset 0x30, size 0x4
-        enum /* @enum$95title_c */ {
-            SPM_HOLD = 0,
-            SPM_WRAP = 1,
-            SPM_LOOP = 2,
-            SPM_PACK = 3,
-        } eMode; // offset 0x34, size 0x4
+        @enum$96story_c eMode; // offset 0x34, size 0x4
         int iFrameWrap0; // offset 0x38, size 0x4
         int iFrameWrap1; // offset 0x3C, size 0x4
     } * pPathFlowerM; // offset 0xA0, size 0x4
@@ -2075,36 +1973,8 @@ static struct {
         int nDeltaY; // offset 0x14, size 0x4
     } aDustPuppy[8]; // offset 0x294, size 0xC0
 } * gpData; // size: 0x4, address: 0x116FD0
-enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-};
-static enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-} geDemoTitle; // size: 0x4, address: 0x116FD4
+@enum$105title_c;
+static @enum$105title_c geDemoTitle; // size: 0x4, address: 0x116FD4
 static int gnLogoEndOKFlag; // size: 0x4, address: 0x116FD8
 static int gnThreadOKFlag; // size: 0x4, address: 0x116FDC
 static int Logo_PadReset; // size: 0x4, address: 0x116FE0
@@ -15017,21 +14887,7 @@ void DoTitle() {
     // -> int gReset;
     // -> int gMain;
     // -> struct Game gTheGame;
-    // -> static enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-} geDemoTitle;
+    // -> static @enum$105title_c geDemoTitle;
     // -> int gSelection;
     // -> static char g_bInit;
     // -> struct ai_t brainbrain[4];
@@ -15050,24 +14906,7 @@ void DoTitle() {
 
 int from_title; // size: 0x4, address: 0xB1190
 char * Pon_Image_Heap; // size: 0x4, address: 0x184
-enum /* @enum$94title_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-};
+@enum$94peel_c;
 // Range: 0xA7CD8 -> 0xA82D4
 void InitTitle() {
     // Local variables
@@ -15156,43 +14995,12 @@ void InitTitle() {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * pImage; // r1+0x24
-    enum /* @enum$94title_c */ {
-        PT_NONE = -1,
-        PT_PICK = 0,
-        PT_SPIN = 1,
-        PT_DROP = 2,
-        PT_LEFT = 3,
-        PT_RIGHT = 4,
-        PT_RISE = 5,
-        PT_MOSAIC = 6,
-        PT_PICKLAST_ = 7,
-        PT_WAVE = 8,
-        PT_DOOR_LR = 9,
-        PT_DOOR_UD = 10,
-        PT_SPLIT_LR = 11,
-        PT_SPLIT_UD = 12,
-        PT_SCATTER = 13,
-        PT_FADE = 14,
-    } ePeel; // r1+0x8
+    @enum$94peel_c ePeel; // r1+0x8
 
     // References
     // -> int gDemo;
     // -> static struct [anonymous] * gpData;
-    // -> static enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-} geDemoTitle;
+    // -> static @enum$105title_c geDemoTitle;
     // -> static int gbLogoTitle;
     // -> static char g_bInit;
     // -> char * Pon_Image_Heap;
@@ -15211,21 +15019,7 @@ void titleSetup() {
     // References
     // -> struct player_t * gPlayer[4];
     // -> unsigned short gGameStatus;
-    // -> static enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-} geDemoTitle;
+    // -> static @enum$105title_c geDemoTitle;
     // -> int gbOpenTitle;
     // -> static int gbLogoTitle;
 }
@@ -15236,21 +15030,7 @@ void InitFirstLogo() {
     // -> static int Logo_PadReset;
     // -> static int gnThreadOKFlag;
     // -> static int gnLogoEndOKFlag;
-    // -> static enum /* @enum$105title_c */ {
-    TD_NONE = 0,
-    TD_PROFILE = 1,
-    TD_RULES_1 = 2,
-    TD_ENDLESS_2D = 3,
-    TD_RULES_2 = 4,
-    TD_ENDLESS_3D = 5,
-    TD_RULES_VS1 = 6,
-    TD_VS_2D = 7,
-    TD_RULES_VS2 = 8,
-    TD_VS_3D = 9,
-    TD_RULES_4P = 10,
-    TD_VS_4P = 11,
-    TD_LAST = 12,
-} geDemoTitle;
+    // -> static @enum$105title_c geDemoTitle;
     // -> int gbOpenTitle;
     // -> static int gbLogoTitle;
 }

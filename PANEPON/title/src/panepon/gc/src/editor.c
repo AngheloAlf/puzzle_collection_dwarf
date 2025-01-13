@@ -4,45 +4,9 @@
     Language: C++
     Code range: 0x00051968 -> 0x00052EF0
 */
-enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-};
-static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode; // size: 0x4, address: 0x4CFF8
-static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geModeLast; // size: 0x4, address: 0x4CFFC
+@enum$100editor_c;
+static @enum$100editor_c geMode; // size: 0x4, address: 0x4CFF8
+static @enum$100editor_c geModeLast; // size: 0x4, address: 0x4CFFC
 static int gnTickCount; // size: 0x4, address: 0x4D000
 static int gnFlushCount; // size: 0x4, address: 0x4D004
 static int giScreenEdit; // size: 0x4, address: 0x4D008
@@ -1222,19 +1186,7 @@ static void editTick(int * anCommand /* r29 */) {
 static void editTickMake(int iFrame /* r3 */, int * anCommand /* r31 */) {
     // References
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geModeLast;
+    // -> static @enum$100editor_c geModeLast;
 }
 
 // Range: 0x51BD0 -> 0x51D84
@@ -1247,19 +1199,7 @@ static void editTickMakeMove(int * anCommand /* r30 */) {
     // -> static int gnMoveCount;
     // -> struct Game gTheGame;
     // -> static int giScreenEdit;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
 }
 
 // Range: 0x51D84 -> 0x51EE0
@@ -1281,19 +1221,7 @@ static void editTickMenu(int iFrame /* r29 */, int * anCommand /* r30 */) {
     // -> static int giSlot;
     // -> static int giMenu;
     // -> static int giScreenEdit;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
 }
 
 // Range: 0x521B0 -> 0x52438
@@ -1307,38 +1235,14 @@ static void editTickEditSlot(int * anCommand /* r30 */) {
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int giScreenEdit;
     // -> static int giSlot;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geModeLast;
+    // -> static @enum$100editor_c geModeLast;
 }
 
 // Range: 0x52438 -> 0x52494
 static void editTickEdit(int iFrame /* r3 */, int * anCommand /* r31 */) {
     // References
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geModeLast;
+    // -> static @enum$100editor_c geModeLast;
 }
 
 // Range: 0x52494 -> 0x5270C
@@ -1352,19 +1256,7 @@ static void editTickWipe(int * anCommand /* r30 */) {
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int giScreenEdit;
     // -> static int giSlot;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geModeLast;
+    // -> static @enum$100editor_c geModeLast;
 }
 
 // Range: 0x5270C -> 0x527F0
@@ -1381,51 +1273,15 @@ static void editTickWipeSure(int * anCommand /* r29 */) {
 
 static struct {
     // total size: 0x8
-    enum /* @enum$100editor_c */ {
-        EM_NONE = 0,
-        EM_MAKE = 1,
-        EM_MAKE_MOVE = 2,
-        EM_MAKE_SLOT = 3,
-        EM_MENU = 4,
-        EM_EDIT_SLOT = 5,
-        EM_EDIT = 6,
-        EM_WIPE = 7,
-        EM_WIPE_SURE = 8,
-        EM_BACK = 9,
-        EM_PLAY = 10,
-    } eMode; // offset 0x0, size 0x4
+    @enum$100editor_c eMode; // offset 0x0, size 0x4
     void (* pfTick)(int, int *); // offset 0x4, size 0x4
 } gaEditData[8]; // size: 0x40, address: 0xAFF60
 // Range: 0x527F0 -> 0x52954
-static int editSetMode(enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} eMode /* r30 */) {
+static int editSetMode(@enum$100editor_c eMode /* r30 */) {
     // References
     // -> static int giScreenEdit;
     // -> static int gnCursorData;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
     // -> static struct [anonymous] gaEditData[8];
     // -> static int gnFlushCount;
 }
@@ -3797,19 +3653,7 @@ void DrawEditor(struct {
     // -> static int giSlot;
     // -> int gSelection;
     // -> int gMain;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
     // -> int gReset;
 }
 
@@ -3818,19 +3662,7 @@ void DoEditor() {
     // Local variables
     struct {
         // total size: 0x8
-        enum /* @enum$100editor_c */ {
-            EM_NONE = 0,
-            EM_MAKE = 1,
-            EM_MAKE_MOVE = 2,
-            EM_MAKE_SLOT = 3,
-            EM_MENU = 4,
-            EM_EDIT_SLOT = 5,
-            EM_EDIT = 6,
-            EM_WIPE = 7,
-            EM_WIPE_SURE = 8,
-            EM_BACK = 9,
-            EM_PLAY = 10,
-        } eMode; // offset 0x0, size 0x4
+        @enum$100editor_c eMode; // offset 0x0, size 0x4
         void (* pfTick)(int, int *); // offset 0x4, size 0x4
     } * pData; // r30
     int anCommand[4]; // r1+0x8
@@ -3840,19 +3672,7 @@ void DoEditor() {
     // -> static int gnTickCount;
     // -> static int giScreenEdit;
     // -> static struct [anonymous] gaEditData[8];
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
     // -> struct Game gTheGame;
     // -> static int gnFlushCount;
 }
@@ -3876,19 +3696,7 @@ void InitEditor() {
     // -> static int gnCursorData;
     // -> static int gnFlushCount;
     // -> static int gnTickCount;
-    // -> static enum /* @enum$100editor_c */ {
-    EM_NONE = 0,
-    EM_MAKE = 1,
-    EM_MAKE_MOVE = 2,
-    EM_MAKE_SLOT = 3,
-    EM_MENU = 4,
-    EM_EDIT_SLOT = 5,
-    EM_EDIT = 6,
-    EM_WIPE = 7,
-    EM_WIPE_SURE = 8,
-    EM_BACK = 9,
-    EM_PLAY = 10,
-} geMode;
+    // -> static @enum$100editor_c geMode;
 }
 
 

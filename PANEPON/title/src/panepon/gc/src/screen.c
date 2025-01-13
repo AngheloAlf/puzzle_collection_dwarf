@@ -453,62 +453,10 @@ static int giScreenPage; // size: 0x4, address: 0xF45A8
 static int gnPlayerCount; // size: 0x4, address: 0xF45AC
 static int gnPlayerCountNext; // size: 0x4, address: 0xF45B0
 static int gnAlphaFade; // size: 0x4, address: 0xF45B4
-enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-};
-static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade; // size: 0x4, address: 0xF45B8
-enum /* @enum$93screen_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-};
-static enum /* @enum$93screen_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel; // size: 0x4, address: 0xF45BC
+@enum$95screen_c;
+static @enum$95screen_c geModeFade; // size: 0x4, address: 0xF45B8
+@enum$94peel_c;
+static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF45BC
 static unsigned int gnFrameCount; // size: 0x4, address: 0xF45C0
 static int gnTagTextBase; // size: 0x4, address: 0xF45C4
 static int gnCountTextTag; // size: 0x4, address: 0xF45C8
@@ -683,46 +631,8 @@ static struct {
 static int gnTickText; // size: 0x4, address: 0xF45D4
 static int gnTickWrap; // size: 0x4, address: 0xF45D8
 static int gnCountLayers; // size: 0x4, address: 0xF45DC
-enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-};
-static enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} geTypeBack; // size: 0x4, address: 0xF45E0
+@enum$94screen_c;
+static @enum$94screen_c geTypeBack; // size: 0x4, address: 0xF45E0
 static struct {
     // total size: 0xA0
     int iFrame; // offset 0x0, size 0x4
@@ -17127,16 +17037,7 @@ static void screenUpdateArea(struct {
     // References
     // -> static int giScreen;
     // -> static struct [anonymous] * gaScreen;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static int gnScreenCount;
 }
 
@@ -18052,26 +17953,7 @@ static void screenChange(int iScreen /* r29 */) {
     // -> static void * gpHeapNext;
     // -> static struct [anonymous] * * gapImage;
     // -> static char * * gapNameImage;
-    // -> static enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} geTypeBack;
+    // -> static @enum$94screen_c geTypeBack;
     // -> static struct [anonymous] * gpImageLabel;
     // -> static struct [anonymous] * gpImageRecordEnglish;
     // -> static struct [anonymous] * gpImageRecordHiragana;
@@ -18099,42 +17981,14 @@ static void screenChange(int iScreen /* r29 */) {
     // -> static int gnFrameSkip;
     // -> static struct [anonymous] * gpImageAlign;
     // -> static void * gpHeap;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static int gnTagTextBase;
     // -> static struct [anonymous] * gaScreen;
     // -> static int gnScreenCount;
 }
 
 // Range: 0x874EC -> 0x87A60
-static int screenLoadBack(enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} eType /* r3 */, void * ppHeap /* r29 */) {
+static int screenLoadBack(@enum$94screen_c eType /* r3 */, void * ppHeap /* r29 */) {
     // Local variables
     char * szName; // r4
 
@@ -35404,16 +35258,7 @@ void screenDraw(union {
 
     // References
     // -> static int gnAlphaFade;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static struct [anonymous] * gpImageNo;
     // -> static unsigned int gnFrameCount;
     // -> static struct [anonymous] * gpImageYes;
@@ -35652,13 +35497,7 @@ static int screenWrapCursor(struct {
     int nCount; // r31
 }
 
-enum /* @enum$96screen_c */ {
-    SAF_NONE = 0,
-    SAF_LEFT = 1,
-    SAF_RIGHT = 2,
-    SAF_UP = 3,
-    SAF_DOWN = 4,
-};
+@enum$96screen_c;
 // Range: 0x899F0 -> 0x89E5C
 static int screenFindAreaNear(struct {
     // total size: 0x48
@@ -36115,13 +35954,7 @@ static int screenFindAreaNear(struct {
     int nCursorX1; // offset 0x54, size 0x4
     int nCursorY1; // offset 0x58, size 0x4
     unsigned short * anCursorList; // offset 0x5C, size 0x4
-} * pArea /* r4 */, enum /* @enum$96screen_c */ {
-    SAF_NONE = 0,
-    SAF_LEFT = 1,
-    SAF_RIGHT = 2,
-    SAF_UP = 3,
-    SAF_DOWN = 4,
-} eFind /* r31 */, int iPlayer /* r28 */) {
+} * pArea /* r4 */, @enum$96screen_c eFind /* r31 */, int iPlayer /* r28 */) {
     // Local variables
     int nMaskPlayer; // r6
     int iArea; // r7
@@ -38377,16 +38210,7 @@ void screenTick(int * anCommand /* r22 */) {
         int nCursorY1; // offset 0x58, size 0x4
         unsigned short * anCursorList; // offset 0x5C, size 0x4
     } * pArea; // r31
-    enum /* @enum$95screen_c */ {
-        SFM_NONE = 0,
-        SFM_FADEIN = 1,
-        SFM_FADEOUT = 2,
-        SFM_PAGEIN = 3,
-        SFM_PAGEOUT = 4,
-        SFM_PEELOUT = 5,
-        SFM_PAGEPEELIN = 6,
-        SFM_PAGEPEELOUT = 7,
-    } eMode; // r21
+    @enum$95screen_c eMode; // r21
     struct {
         // total size: 0x30
         int nTag; // offset 0x0, size 0x4
@@ -38499,16 +38323,7 @@ void screenTick(int * anCommand /* r22 */) {
     // -> static struct [anonymous] * gaScreen;
     // -> static int gnScreenCount;
     // -> static int giScreen;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static int gnPlayerCountNext;
     // -> static int gnPlayerCount;
     // -> static int giScreenNext;
@@ -38528,24 +38343,7 @@ void screenTick(int * anCommand /* r22 */) {
 int screenSet(char * szName /* r28 */, int nMode /* r30 */) {
     // Local variables
     int iScreen; // r1+0x10
-    enum /* @enum$93screen_c */ {
-        PT_NONE = -1,
-        PT_PICK = 0,
-        PT_SPIN = 1,
-        PT_DROP = 2,
-        PT_LEFT = 3,
-        PT_RIGHT = 4,
-        PT_RISE = 5,
-        PT_MOSAIC = 6,
-        PT_PICKLAST_ = 7,
-        PT_WAVE = 8,
-        PT_DOOR_LR = 9,
-        PT_DOOR_UD = 10,
-        PT_SPLIT_LR = 11,
-        PT_SPLIT_UD = 12,
-        PT_SCATTER = 13,
-        PT_FADE = 14,
-    } eType; // r29
+    @enum$94peel_c eType; // r29
     int iImage; // r9
     int iImageLast; // r1+0x8
 
@@ -38553,16 +38351,7 @@ int screenSet(char * szName /* r28 */, int nMode /* r30 */) {
     // -> static int gnPlayerCountNext;
     // -> static int giScreenNext;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static int giScreenPage;
     // -> static int giFramePage;
     // -> static int giScreen;
@@ -38570,45 +38359,9 @@ int screenSet(char * szName /* r28 */, int nMode /* r30 */) {
     // -> static struct [anonymous] * gaScreen;
     // -> static int gnAlphaFade;
     // -> static int gnTickWait;
-    // -> static enum /* @enum$93screen_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel;
+    // -> static @enum$94peel_c geTypePeel;
     // -> static int gbKillPeel;
-    // -> static enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} geTypeBack;
+    // -> static @enum$94screen_c geTypeBack;
 }
 
 // Range: 0x8B8A0 -> 0x8B8B0
@@ -38618,50 +38371,12 @@ int screenGet() {
 }
 
 // Range: 0x8B8B0 -> 0x8B92C
-void screenSetBack(enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} eType /* r3 */) {
+void screenSetBack(@enum$94screen_c eType /* r3 */) {
     // Local variables
     void * pHeap; // r1+0xC
 
     // References
-    // -> static enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} geTypeBack;
+    // -> static @enum$94screen_c geTypeBack;
     // -> char * Pon_Image_Heap;
     // -> static int giScreenNext;
 }
@@ -43761,36 +43476,8 @@ int screenLoad(char * szNameFile /* r3 */, void * ppHeap /* r28 */) {
     // -> static char * * gapNameImage;
     // -> static struct [anonymous] * * gapImage;
     // -> static int gnAlphaFade;
-    // -> static enum /* @enum$94screen_c */ {
-    SBT_NONE = -1,
-    SBT_FLOWER = 0,
-    SBT_ICE = 1,
-    SBT_JEWEL = 2,
-    SBT_WATER = 3,
-    SBT_FIRE = 4,
-    SBT_CLOUD = 5,
-    SBT_GREEN = 6,
-    SBT_OCEAN = 7,
-    SBT_MOON = 8,
-    SBT_PICK = 9,
-    SBT_PRINCE = 10,
-    SBT_DRAGON = 11,
-    SBT_JOKER = 12,
-    SBT_DEVIL = 13,
-    SBT_GODDESS = 14,
-    SBT_WHALE = 15,
-    SBT_WITCH = 16,
-} geTypeBack;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$94screen_c geTypeBack;
+    // -> static @enum$95screen_c geModeFade;
     // -> static int gnTickWrap;
     // -> static int giScreenNext;
     // -> static int giScreen;
@@ -43813,16 +43500,7 @@ void screenSetup() {
     // -> static int giScreenNext;
     // -> static int giScreen;
     // -> static int gnAlphaFade;
-    // -> static enum /* @enum$95screen_c */ {
-    SFM_NONE = 0,
-    SFM_FADEIN = 1,
-    SFM_FADEOUT = 2,
-    SFM_PAGEIN = 3,
-    SFM_PAGEOUT = 4,
-    SFM_PEELOUT = 5,
-    SFM_PAGEPEELIN = 6,
-    SFM_PAGEPEELOUT = 7,
-} geModeFade;
+    // -> static @enum$95screen_c geModeFade;
     // -> static unsigned int gnFrameCount;
     // -> static int gnScreenCount;
     // -> static int gnImageCount;

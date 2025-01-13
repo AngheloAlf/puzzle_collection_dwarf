@@ -5,26 +5,8 @@
     Code range: 0x00026DA0 -> 0x000272A0
 */
 unsigned long wb_flag; // size: 0x4, address: 0x1E990
-enum /* @enum$93graphic_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-};
-enum /* @enum$93graphic_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no; // size: 0x4, address: 0x1E994
+@enum$101main_story_c;
+@enum$101main_story_c graphic_no; // size: 0x4, address: 0x1E994
 unsigned long pendingGFX; // size: 0x4, address: 0x1E998
 void (* taskStartFrameCopyFunc)(); // size: 0x4, address: 0x1E99C
 unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
@@ -32,16 +14,7 @@ unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 void gfxInit() {
     // References
     // -> unsigned long gfx_gtask_no;
-    // -> enum /* @enum$93graphic_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no;
+    // -> @enum$101main_story_c graphic_no;
 }
 
 // Range: 0x26DBC -> 0x26DE8
@@ -54,16 +27,7 @@ void gfxproc() {
 static void gfxproc_onRetrace() {
     // References
     // -> unsigned long pendingGFX;
-    // -> enum /* @enum$93graphic_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no;
+    // -> @enum$101main_story_c graphic_no;
 }
 
 void (* subproc_nuGfxFunc)(); // size: 0x4, address: 0x4

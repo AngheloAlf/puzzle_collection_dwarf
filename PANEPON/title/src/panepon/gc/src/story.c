@@ -185,65 +185,13 @@ static int gnColorBackRed; // size: 0x4, address: 0xF47FC
 static int gnColorBackGreen; // size: 0x4, address: 0xF4800
 static int gnColorBackBlue; // size: 0x4, address: 0xF4804
 static int gnColorBackAlpha; // size: 0x4, address: 0xF4808
-enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-};
-static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra; // size: 0x4, address: 0xF480C
-static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext; // size: 0x4, address: 0xF4810
-enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-};
-static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geMode; // size: 0x4, address: 0xF4814
-static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext; // size: 0x4, address: 0xF4818
-static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeLast; // size: 0x4, address: 0xF481C
+@enum$106story_c;
+static @enum$106story_c geXtra; // size: 0x4, address: 0xF480C
+static @enum$106story_c geXtraNext; // size: 0x4, address: 0xF4810
+@enum$105story_c;
+static @enum$105story_c geMode; // size: 0x4, address: 0xF4814
+static @enum$105story_c geModeNext; // size: 0x4, address: 0xF4818
+static @enum$105story_c geModeLast; // size: 0x4, address: 0xF481C
 static int gnPickStory; // size: 0x4, address: 0xF4820
 static int giMovieStory; // size: 0x4, address: 0xF4824
 static int gnOffsetWipe; // size: 0x4, address: 0xF4828
@@ -513,11 +461,7 @@ static struct {
     int nDustCount; // offset 0x10, size 0x4
     int nDeltaX; // offset 0x14, size 0x4
     int nDeltaY; // offset 0x18, size 0x4
-    enum /* @enum$107story_c */ {
-        SDT_BITS = 0,
-        SDT_BALL = 1,
-        SDT_GLOW = 2,
-    } eType; // offset 0x1C, size 0x4
+    @enum$107story_c eType; // offset 0x1C, size 0x4
     unsigned int * anStep; // offset 0x20, size 0x4
     unsigned int * anRGBA; // offset 0x24, size 0x4
     unsigned int * anData; // offset 0x28, size 0x4
@@ -525,17 +469,9 @@ static struct {
     unsigned int * anDataY; // offset 0x30, size 0x4
 } * gapDustBall[8]; // size: 0x20, address: 0xF4AC0
 static unsigned int ganColorDust[8]; // size: 0x20, address: 0xDDF58
-enum /* @enum$107story_c */ {
-    SDT_BITS = 0,
-    SDT_BALL = 1,
-    SDT_GLOW = 2,
-};
+@enum$107story_c;
 // Range: 0x8F774 -> 0x8FEDC
-static int storyMakeDustBall(void * ppHeap /* r21 */, enum /* @enum$107story_c */ {
-    SDT_BITS = 0,
-    SDT_BALL = 1,
-    SDT_GLOW = 2,
-} eType /* r26 */, int nX /* r1+0x10 */, int nY /* r1+0x14 */, int nDustCount /* r14 */) {
+static int storyMakeDustBall(void * ppHeap /* r21 */, @enum$107story_c eType /* r26 */, int nX /* r1+0x10 */, int nY /* r1+0x14 */, int nDustCount /* r14 */) {
     // Local variables
     int iBall; // r1+0x24
     int nLife; // r4
@@ -555,11 +491,7 @@ static int storyMakeDustBall(void * ppHeap /* r21 */, enum /* @enum$107story_c *
         int nDustCount; // offset 0x10, size 0x4
         int nDeltaX; // offset 0x14, size 0x4
         int nDeltaY; // offset 0x18, size 0x4
-        enum /* @enum$107story_c */ {
-            SDT_BITS = 0,
-            SDT_BALL = 1,
-            SDT_GLOW = 2,
-        } eType; // offset 0x1C, size 0x4
+        @enum$107story_c eType; // offset 0x1C, size 0x4
         unsigned int * anStep; // offset 0x20, size 0x4
         unsigned int * anRGBA; // offset 0x24, size 0x4
         unsigned int * anData; // offset 0x28, size 0x4
@@ -599,11 +531,7 @@ static void storyTickDustBall() {
         int nDustCount; // offset 0x10, size 0x4
         int nDeltaX; // offset 0x14, size 0x4
         int nDeltaY; // offset 0x18, size 0x4
-        enum /* @enum$107story_c */ {
-            SDT_BITS = 0,
-            SDT_BALL = 1,
-            SDT_GLOW = 2,
-        } eType; // offset 0x1C, size 0x4
+        @enum$107story_c eType; // offset 0x1C, size 0x4
         unsigned int * anStep; // offset 0x20, size 0x4
         unsigned int * anRGBA; // offset 0x24, size 0x4
         unsigned int * anData; // offset 0x28, size 0x4
@@ -985,11 +913,7 @@ static void storyDrawDustBall(union {
     int iTileX; // r29
     int iTileY; // r31
     unsigned int nRGBA; // r11
-    enum /* @enum$107story_c */ {
-        SDT_BITS = 0,
-        SDT_BALL = 1,
-        SDT_GLOW = 2,
-    } eTypeLast; // r12
+    @enum$107story_c eTypeLast; // r12
     struct {
         // total size: 0x34
         int nStep; // offset 0x0, size 0x4
@@ -999,11 +923,7 @@ static void storyDrawDustBall(union {
         int nDustCount; // offset 0x10, size 0x4
         int nDeltaX; // offset 0x14, size 0x4
         int nDeltaY; // offset 0x18, size 0x4
-        enum /* @enum$107story_c */ {
-            SDT_BITS = 0,
-            SDT_BALL = 1,
-            SDT_GLOW = 2,
-        } eType; // offset 0x1C, size 0x4
+        @enum$107story_c eType; // offset 0x1C, size 0x4
         unsigned int * anStep; // offset 0x20, size 0x4
         unsigned int * anRGBA; // offset 0x24, size 0x4
         unsigned int * anData; // offset 0x28, size 0x4
@@ -12162,22 +12082,8 @@ void storySetupStage() {
     // References
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int giLevelStory;
     // -> struct Game gTheGame;
 }
@@ -16652,12 +16558,7 @@ static void storyDrawRainbow(union {
 static int gnMagnitudeShake; // size: 0x4, address: 0xF4C38
 static int gnOffsetShakeX; // size: 0x4, address: 0xF4C3C
 static int gnOffsetShakeY; // size: 0x4, address: 0xF4C40
-enum /* @enum$96story_c */ {
-    SPM_HOLD = 0,
-    SPM_WRAP = 1,
-    SPM_LOOP = 2,
-    SPM_PACK = 3,
-};
+@enum$96story_c;
 // Range: 0x91BDC -> 0x91F28
 int storyLoadPath2(struct {
     // total size: 0x40
@@ -16757,20 +16658,10 @@ int storyLoadPath2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
-} * * ppPath /* r26 */, char * szName /* r4 */, void * ppHeap /* r27 */, enum /* @enum$96story_c */ {
-    SPM_HOLD = 0,
-    SPM_WRAP = 1,
-    SPM_LOOP = 2,
-    SPM_PACK = 3,
-} eMode /* r28 */) {
+} * * ppPath /* r26 */, char * szName /* r4 */, void * ppHeap /* r27 */, @enum$96story_c eMode /* r28 */) {
     // Local variables
     struct {
         // total size: 0x10
@@ -16895,12 +16786,7 @@ int storySetPathBlur2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r1+0x0 */, int bFlag /* r1+0x4 */) {}
@@ -17004,12 +16890,7 @@ int storySetPathWrap2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r1+0x0 */, int iSet0 /* r1+0x4 */, int iSet1 /* r1+0x8 */) {}
@@ -17113,12 +16994,7 @@ int storySetPathImage2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r1+0x0 */, int nAlpha /* r1+0x4 */) {}
@@ -17222,12 +17098,7 @@ int storyGetPathImage2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r1+0x0 */, int nOffsetFrame /* r1+0x4 */, int iPack /* r1+0x8 */, struct {
@@ -17504,12 +17375,7 @@ int storyTickPath2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r29 */) {
@@ -17706,12 +17572,7 @@ int storyDrawPath2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r24 */, int nDeltaX /* r25 */, int nDeltaY /* r26 */, float rDeltaScale /* f29 */, int * pnX /* r27 */, int * pnY /* r28 */, float * prScale /* r29 */, union {
@@ -18091,12 +17952,7 @@ int storyDonePath2(struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * pPath /* r1+0x0 */) {
@@ -18111,12 +17967,7 @@ static int storyTickPath3(struct {
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x10, size 0x4
+    @enum$96story_c eMode; // offset 0x10, size 0x4
 } * pPath /* r1+0x0 */, int * pnOffset /* r1+0x4 */, int * pnHeight /* r1+0x8 */, int * piFrame /* r1+0xC */) {
     // Local variables
     int iData; // r9
@@ -18148,11 +17999,7 @@ static int storyLoadPath(struct {
     unsigned int nCount; // r1+0x14
 
     // References
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
 }
 
 // Range: 0x92AC0 -> 0x92BE0
@@ -26662,51 +26509,15 @@ static void storyDrawRays(union {
     // -> static int gnAlphaRays;
 }
 
-enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-};
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0; // size: 0x4, address: 0xF4C50
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1; // size: 0x4, address: 0xF4C54
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2; // size: 0x4, address: 0xF4C58
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory3; // size: 0x4, address: 0xF4C5C
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory4; // size: 0x4, address: 0xF4C60
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory5; // size: 0x4, address: 0xF4C64
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory6; // size: 0x4, address: 0xF4C68
-static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory7; // size: 0x4, address: 0xF4C6C
+@enum$1241story_c;
+static @enum$1241story_c geHoldStory0; // size: 0x4, address: 0xF4C50
+static @enum$1241story_c geHoldStory1; // size: 0x4, address: 0xF4C54
+static @enum$1241story_c geHoldStory2; // size: 0x4, address: 0xF4C58
+static @enum$1241story_c geHoldStory3; // size: 0x4, address: 0xF4C5C
+static @enum$1241story_c geHoldStory4; // size: 0x4, address: 0xF4C60
+static @enum$1241story_c geHoldStory5; // size: 0x4, address: 0xF4C64
+static @enum$1241story_c geHoldStory6; // size: 0x4, address: 0xF4C68
+static @enum$1241story_c geHoldStory7; // size: 0x4, address: 0xF4C6C
 static void * gaszNameHold[8]; // size: 0x20, address: 0xDDFDC
 static int gbSkipScript; // size: 0x4, address: 0xF4C70
 static int gbSkipScriptText; // size: 0x4, address: 0xF4C74
@@ -26717,20 +26528,8 @@ static int gnData; // size: 0x4, address: 0xF4C84
 static int * ganCode; // size: 0x4, address: 0xF4C88
 static unsigned int ganFadeScript[8]; // size: 0x20, address: 0xF4C8C
 static void * gaszNameScript; // size: 0x4, address: 0xF4CAC
-enum /* @enum$1240story_c */ {
-    SSTM_NONE = 0,
-    SSTM_SHOW = 1,
-    SSTM_TYPE = 2,
-    SSTM_WAIT = 3,
-    SSTM_HIDE = 4,
-};
-static enum /* @enum$1240story_c */ {
-    SSTM_NONE = 0,
-    SSTM_SHOW = 1,
-    SSTM_TYPE = 2,
-    SSTM_WAIT = 3,
-    SSTM_HIDE = 4,
-} geModeText; // size: 0x4, address: 0xF4CB0
+@enum$1240story_c;
+static @enum$1240story_c geModeText; // size: 0x4, address: 0xF4CB0
 // Range: 0x93C70 -> 0x93D7C
 static void storyTickScriptFade(int nFrame /* r1+0x8 */) {
     // Local variables
@@ -26836,46 +26635,14 @@ static void storySetupScript(int * anScriptCode /* r1+0x0 */, void * aszNameScri
     // -> static unsigned int ganFadeScript[8];
     // -> static int gbSkipScriptText;
     // -> static int gbSkipScript;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory7;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory6;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory5;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory4;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory3;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory7;
+    // -> static @enum$1241story_c geHoldStory6;
+    // -> static @enum$1241story_c geHoldStory5;
+    // -> static @enum$1241story_c geHoldStory4;
+    // -> static @enum$1241story_c geHoldStory3;
+    // -> static @enum$1241story_c geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static void * gaszNameScript;
     // -> static int * ganCode;
     // -> static int giCode;
@@ -26905,50 +26672,12 @@ struct SongInitStruct {
 };
 struct SongInitStruct BGM_INIT_TABLE[91]; // size: 0x16C, address: 0xAF7F0
 long last_song_handle; // size: 0x4, address: 0xF46E8
-enum /* @enum$93story_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-};
+@enum$94peel_c;
 // Range: 0x93DE8 -> 0x9441C
 static void storyTickScript(int nFrame /* r3 */, int bSkip /* r1+0xC */) {
     // Local variables
-    enum /* @enum$93story_c */ {
-        PT_NONE = -1,
-        PT_PICK = 0,
-        PT_SPIN = 1,
-        PT_DROP = 2,
-        PT_LEFT = 3,
-        PT_RIGHT = 4,
-        PT_RISE = 5,
-        PT_MOSAIC = 6,
-        PT_PICKLAST_ = 7,
-        PT_WAVE = 8,
-        PT_DOOR_LR = 9,
-        PT_DOOR_UD = 10,
-        PT_SPLIT_LR = 11,
-        PT_SPLIT_UD = 12,
-        PT_SCATTER = 13,
-        PT_FADE = 14,
-    } eType; // r5
-    enum /* @enum$1241story_c */ {
-        SSH_WAIT = 0,
-        SSH_HOLD = 1,
-        SSH_DONE = 2,
-    } * peHold; // r3
+    @enum$94peel_c eType; // r5
+    @enum$1241story_c * peHold; // r3
     int iBuffer; // r17
     int nTag; // r17
     int iFade; // r21
@@ -26964,13 +26693,7 @@ static void storyTickScript(int nFrame /* r3 */, int bSkip /* r1+0xC */) {
     // References
     // -> static int gnCountScript;
     // -> static int gnCode;
-    // -> static enum /* @enum$1240story_c */ {
-    SSTM_NONE = 0,
-    SSTM_SHOW = 1,
-    SSTM_TYPE = 2,
-    SSTM_WAIT = 3,
-    SSTM_HIDE = 4,
-} geModeText;
+    // -> static @enum$1240story_c geModeText;
     // -> static void * gaszNameScript;
     // -> static int giScreenStory;
     // -> static int gnData;
@@ -27277,11 +27000,7 @@ static void storyLoadIsleIsland(int iImage /* r1+0x8 */, int iIsle /* r23 */, vo
 
     // References
     // -> static int gnOffsetSun;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static int gnOffsetSunMax;
     // -> static signed short ganOffsetIsle[3][5];
     // -> static struct [anonymous] * gapImageIsle[3][5];
@@ -27597,30 +27316,8 @@ static void storyTickIsleTitle() {
 }
 
 static int giBallGirl; // size: 0x4, address: 0xF4D68
-enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-};
-static enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-} geModeGirl; // size: 0x4, address: 0xF4D6C
+@enum$1588story_c;
+static @enum$1588story_c geModeGirl; // size: 0x4, address: 0xF4D6C
 static struct {
     // total size: 0xA0
     int iFrame; // offset 0x0, size 0x4
@@ -27803,12 +27500,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathFlower; // size: 0x4, address: 0xF4D74
@@ -27818,12 +27510,7 @@ static struct {
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x10, size 0x4
+    @enum$96story_c eMode; // offset 0x10, size 0x4
 } * gpPathGirlWait; // size: 0x4, address: 0xF4D78
 static struct {
     // total size: 0x14
@@ -27831,12 +27518,7 @@ static struct {
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x10, size 0x4
+    @enum$96story_c eMode; // offset 0x10, size 0x4
 } * gpPathGirlGlad; // size: 0x4, address: 0xF4D7C
 static struct {
     // total size: 0x14
@@ -27844,12 +27526,7 @@ static struct {
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x10, size 0x4
+    @enum$96story_c eMode; // offset 0x10, size 0x4
 } * gpPathGirlMove; // size: 0x4, address: 0xF4D80
 static struct {
     // total size: 0x14
@@ -27857,12 +27534,7 @@ static struct {
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x10, size 0x4
+    @enum$96story_c eMode; // offset 0x10, size 0x4
 } * gpPathGirlWave; // size: 0x4, address: 0xF4D84
 static struct {
     // total size: 0x40
@@ -27962,12 +27634,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gapPathBits[2]; // size: 0x8, address: 0xF4D88
@@ -27980,18 +27647,7 @@ static void storyTickIsleGirl(int bSkip /* r1+0xC */) {
     // -> static int giLevelStory;
     // -> int gReset;
     // -> int gMain;
-    // -> static enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-} geModeGirl;
+    // -> static @enum$1588story_c geModeGirl;
     // -> static struct [anonymous] * gapPathBits[2];
     // -> static struct [anonymous] * gpPathFlower;
     // -> static int gnCode;
@@ -28487,18 +28143,7 @@ static void storyDrawIsle(union {
     // -> static struct [anonymous] * gapDustBall[8];
     // -> static int gnDustBallCount;
     // -> static int giBallGirl;
-    // -> static enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-} geModeGirl;
+    // -> static @enum$1588story_c geModeGirl;
     // -> static struct [anonymous] * gpImageGirl;
     // -> static int giFrameGirl;
     // -> static int gnDeltaY;
@@ -28525,26 +28170,8 @@ static void storyDrawIsle(union {
 
 static int ganCommandIsle[27]; // size: 0x6C, address: 0xDE3DC
 static int ganCommandIsleSun[58]; // size: 0xE8, address: 0xDE448
-enum /* @enum$1773story_c */ {
-    SIM_NONE = 0,
-    SIM_LAST = 1,
-    SIM_SPAN = 2,
-    SIM_MOVE = 3,
-    SIM_NEXT = 4,
-    SIM_RISE = 5,
-    SIM_FLY1 = 6,
-    SIM_FLY2 = 7,
-};
-static enum /* @enum$1773story_c */ {
-    SIM_NONE = 0,
-    SIM_LAST = 1,
-    SIM_SPAN = 2,
-    SIM_MOVE = 3,
-    SIM_NEXT = 4,
-    SIM_RISE = 5,
-    SIM_FLY1 = 6,
-    SIM_FLY2 = 7,
-} geModeIsle; // size: 0x4, address: 0xF4D9C
+@enum$1773story_c;
+static @enum$1773story_c geModeIsle; // size: 0x4, address: 0xF4D9C
 // Range: 0x956EC -> 0x95EE8
 static void storyTickIsle(int iFrame /* r29 */, int bSkip /* r30 */) {
     // Local variables
@@ -28640,41 +28267,14 @@ static void storyTickIsle(int iFrame /* r29 */, int bSkip /* r30 */) {
     // References
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int giLevelStory;
-    // -> static enum /* @enum$1773story_c */ {
-    SIM_NONE = 0,
-    SIM_LAST = 1,
-    SIM_SPAN = 2,
-    SIM_MOVE = 3,
-    SIM_NEXT = 4,
-    SIM_RISE = 5,
-    SIM_FLY1 = 6,
-    SIM_FLY2 = 7,
-} geModeIsle;
+    // -> static @enum$1773story_c geModeIsle;
     // -> static struct [anonymous] * gpPathFlower;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int gnCode;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gbGfxHeap;
     // -> static int gnOffsetGirl;
     // -> static int gnTagTitle;
@@ -28685,23 +28285,8 @@ static void storyTickIsle(int iFrame /* r29 */, int bSkip /* r30 */) {
     // -> static int gnOffsetSunMax;
     // -> static int gnOffsetCloudMax;
     // -> static int giScreenStory;
-    // -> static enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-} geModeGirl;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$1588story_c geModeGirl;
+    // -> static @enum$106story_c geXtra;
     // -> static int gbSkipScriptText;
     // -> static struct [anonymous] * gpPathGirlGlad;
     // -> static float grPercent1;
@@ -28711,16 +28296,8 @@ static void storyTickIsle(int iFrame /* r29 */, int bSkip /* r30 */) {
     // -> struct Game gTheGame;
     // -> int gMain;
     // -> int gReset;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory2;
 }
 
 char * Pon_Image_Heap; // size: 0x4, address: 0x184
@@ -28739,11 +28316,7 @@ static void storySetupIsle() {
     // -> static int gnOffsetCloudMax;
     // -> static int giScreenStory;
     // -> static int gnOffsetCloud;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static int giLevelStory;
     // -> static int ganCommandIsleSun[58];
     // -> static int ganCommandIsle[27];
@@ -28758,29 +28331,9 @@ static void storySetupIsle() {
     // -> static float garOffsetIsland[10];
     // -> static float garOffsetIsle[3];
     // -> static struct [anonymous] * gapImageIsle[3][5];
-    // -> static enum /* @enum$1588story_c */ {
-    SGM_NONE = 0,
-    SGM_WAIT = 1,
-    SGM_GLAD = 2,
-    SGM_MOVE = 3,
-    SGM_WAVE = 4,
-    SGM_GLOW = 5,
-    SGM_FADE = 6,
-    SGM_FLY1 = 7,
-    SGM_FLY2 = 8,
-    SGM_PLAY = 9,
-} geModeGirl;
+    // -> static @enum$1588story_c geModeGirl;
     // -> static int gnOffsetGirl;
-    // -> static enum /* @enum$1773story_c */ {
-    SIM_NONE = 0,
-    SIM_LAST = 1,
-    SIM_SPAN = 2,
-    SIM_MOVE = 3,
-    SIM_NEXT = 4,
-    SIM_RISE = 5,
-    SIM_FLY1 = 6,
-    SIM_FLY2 = 7,
-} geModeIsle;
+    // -> static @enum$1773story_c geModeIsle;
     // -> static struct [anonymous] * gpImageGirl;
     // -> static struct [anonymous] * gapPathBits[2];
     // -> static struct [anonymous] * gpPathFlower;
@@ -28814,34 +28367,12 @@ static void storyTickOpen(int iFrame /* r3 */, int bSkip /* r4 */) {
     // References
     // -> static int giScreenStory;
     // -> static int giScreenStorm;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int giLevelStory;
     // -> static int gnPickStory;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
@@ -28953,12 +28484,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathEye1; // size: 0x4, address: 0xF4DAC
@@ -29060,12 +28586,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathEye2; // size: 0x4, address: 0xF4DB0
@@ -29166,22 +28687,8 @@ static void storyTickDone(int iFrame /* r3 */, int bSkip /* r4 */) {
     // References
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> struct Game gTheGame;
     // -> int gMain;
     // -> int gReset;
@@ -29192,22 +28699,14 @@ static void storyTickDone(int iFrame /* r3 */, int bSkip /* r4 */) {
     // -> static float grScaleWitch;
     // -> static int gnTickStory;
     // -> static int gnTickAnchor;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gbGfxHeap;
     // -> static int gnMagnitudeShake;
     // -> static int gnCode;
     // -> static struct [anonymous] * gpPathEye2;
     // -> static struct [anonymous] * gpPathEye1;
     // -> static struct [anonymous] * gapPathBits[2];
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gnTickWhale;
     // -> static void * gaszNameEnd[3];
     // -> static int ganCommandDoneEnd1[11];
@@ -29221,20 +28720,8 @@ static void * gaszNameHags[1]; // size: 0x4, address: 0xDED30
 static int ganCommandHags[70]; // size: 0x118, address: 0xDED34
 static void * gaszNameCast[1]; // size: 0x4, address: 0xDEE60
 static int ganCommandCast[8]; // size: 0x20, address: 0xDEE64
-enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-};
-static enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-} geTypeCast; // size: 0x4, address: 0xF4DB4
+@enum$2278story_c;
+static @enum$2278story_c geTypeCast; // size: 0x4, address: 0xF4DB4
 static int gnTagCheat; // size: 0x4, address: 0xF4DB8
 static int giBackStory; // size: 0x4, address: 0xF4DBC
 static void * gapHeapBack[2]; // size: 0x8, address: 0xF4DC0
@@ -29448,24 +28935,14 @@ static void storySetupCast() {
     // -> static int giScreenStory;
     // -> struct Game gTheGame;
     // -> static struct [anonymous] * gapImageBack[6];
-    // -> static enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-} geTypeCast;
+    // -> static @enum$2278story_c geTypeCast;
     // -> static struct [anonymous] * gpBitsCast;
     // -> static unsigned int ganColorBits[8];
     // -> static float garHeight[3];
     // -> static union [anonymous] * gapVtxRainbow[2][2];
     // -> static int gaiPageRainbow[2];
     // -> static struct [anonymous] * gpPathGirlMove;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static struct [anonymous] * gpImageRainbow;
     // -> static struct [anonymous] * gpImageGirl;
     // -> static float grAngleBob;
@@ -29577,28 +29054,14 @@ static int storyTickCastRainbow(int iFrame /* r27 */) {
     char * acName; // r28
 
     // References
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gnTickAnchor;
     // -> static int gnTagCheat;
     // -> static int giBackStory;
     // -> static struct [anonymous] * gapImageBack[6];
     // -> static int giScreenStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
-    // -> static enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-} geTypeCast;
+    // -> static @enum$1241story_c geHoldStory0;
+    // -> static @enum$2278story_c geTypeCast;
     // -> static void * gapHeapBack[2];
     // -> static int gbGfxHeap;
     // -> static int nFlagLast$2447;
@@ -29707,38 +29170,16 @@ static int storyTickCastProfile(int iFrame /* r28 */) {
 
     // References
     // -> static int giScreenStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gnTickAnchor;
     // -> static int gnTagCheat;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> struct Game gTheGame;
     // -> int gSelection;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> unsigned int ganColorCharacter[];
     // -> static struct [anonymous] * gapImageBack[6];
     // -> char * * gaSegmentCharacter[];
@@ -29769,32 +29210,12 @@ static void storyTickCast(int iFrame /* r28 */, int bSkip /* r29 */) {
     // -> int gReset;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int gnPickStory;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int gnCode;
-    // -> static enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-} geTypeCast;
+    // -> static @enum$2278story_c geTypeCast;
 }
 
 // Range: 0x98674 -> 0x98814
@@ -29806,17 +29227,7 @@ static void storySetupChar() {
 
     // References
     // -> struct Game gTheGame;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeLast;
+    // -> static @enum$105story_c geModeLast;
     // -> static int giScreenStory;
     // -> struct player_t * gPlayer[4];
     // -> static int gnColorBackAlpha;
@@ -29930,24 +29341,8 @@ static void storyTickChar(int bSkip /* r26 */) {
     // -> struct player_t * gPlayer[4];
 }
 
-enum /* @enum$2732story_c */ {
-    SEM_NONE = 0,
-    SEM_WAIT = 1,
-    SEM_GROW = 2,
-    SEM_BLAM = 3,
-    SEM_FILL = 4,
-    SEM_FADE = 5,
-    SEM_HOLD = 6,
-};
-static enum /* @enum$2732story_c */ {
-    SEM_NONE = 0,
-    SEM_WAIT = 1,
-    SEM_GROW = 2,
-    SEM_BLAM = 3,
-    SEM_FILL = 4,
-    SEM_FADE = 5,
-    SEM_HOLD = 6,
-} geModeEnemy; // size: 0x4, address: 0xF4DEC
+@enum$2732story_c;
+static @enum$2732story_c geModeEnemy; // size: 0x4, address: 0xF4DEC
 static struct {
     // total size: 0x40
     int iKey; // offset 0x0, size 0x4
@@ -30046,12 +29441,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathNote; // size: 0x4, address: 0xF4DF0
@@ -30153,12 +29543,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBaby; // size: 0x4, address: 0xF4DF4
@@ -30260,12 +29645,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat1; // size: 0x4, address: 0xF4DF8
@@ -30367,12 +29747,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat2; // size: 0x4, address: 0xF4DFC
@@ -30474,12 +29849,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat3; // size: 0x4, address: 0xF4E00
@@ -30581,12 +29951,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat4; // size: 0x4, address: 0xF4E04
@@ -30688,12 +30053,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat5; // size: 0x4, address: 0xF4E08
@@ -30795,12 +30155,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat1X; // size: 0x4, address: 0xF4E0C
@@ -30902,12 +30257,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat2X; // size: 0x4, address: 0xF4E10
@@ -31009,12 +30359,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat3X; // size: 0x4, address: 0xF4E14
@@ -31116,12 +30461,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat4X; // size: 0x4, address: 0xF4E18
@@ -31223,12 +30563,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathBat5X; // size: 0x4, address: 0xF4E1C
@@ -31330,12 +30665,7 @@ static struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathMother; // size: 0x4, address: 0xF4E20
@@ -31939,12 +31269,7 @@ struct {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * * apImage; // offset 0x30, size 0x4
-    enum /* @enum$96story_c */ {
-        SPM_HOLD = 0,
-        SPM_WRAP = 1,
-        SPM_LOOP = 2,
-        SPM_PACK = 3,
-    } eMode; // offset 0x34, size 0x4
+    @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
 } * gpPathGirl; // size: 0x4, address: 0xF4E50
@@ -32058,43 +31383,17 @@ static void storyTickKeysDragon(int iFrame /* r30 */) {
     // -> static struct [anonymous] * gpPathNote;
     // -> struct [anonymous] * gpPathGirl;
     // -> static int gnTickStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gnTickAnchor;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gnOffsetShakeY;
     // -> static int gnOffsetShakeX;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int gbGfxHeap;
     // -> static int giLevelStory;
     // -> static int gnHeightSky;
@@ -32102,11 +31401,7 @@ static void storyTickKeysDragon(int iFrame /* r30 */) {
     // -> static struct [anonymous] * gapPathBits[2];
     // -> static int gnMagnitudeShake;
     // -> static int gnColorBackAlpha;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
 }
 
 // Range: 0x990C0 -> 0x99298
@@ -32315,56 +31610,22 @@ static void storyTickKeysJoker(int iFrame /* r29 */) {
 
     // References
     // -> static int giScreenStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int gnTickAnchor;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gnTickStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory2;
     // -> struct [anonymous] * gpPathGirl;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int gnColorBackAlpha;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory3;
+    // -> static @enum$1241story_c geHoldStory3;
     // -> static int gbGfxHeap;
     // -> static int giLevelStory;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
 }
 
 static int ganCommandDevilMeet[18]; // size: 0x48, address: 0xDF068
@@ -32470,52 +31731,22 @@ static void storyTickKeysSanatos(int iFrame /* r28 */) {
     // -> static int gnTickAnchor;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int gnTickStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gnMagnitudeShake;
     // -> static int gnAlphaRays;
     // -> struct [anonymous] * gpPathGirl;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int gnColorBackAlpha;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gbGfxHeap;
     // -> static int giLevelStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory5;
+    // -> static @enum$1241story_c geHoldStory5;
     // -> static float grPercentZoom;
     // -> static int gnCountZoom;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory3;
+    // -> static @enum$1241story_c geHoldStory3;
     // -> static struct [anonymous] * gpPathBat5X;
     // -> static struct [anonymous] * gpPathBat5;
     // -> static struct [anonymous] * gpPathBat4X;
@@ -32526,23 +31757,11 @@ static void storyTickKeysSanatos(int iFrame /* r28 */) {
     // -> static struct [anonymous] * gpPathBat2;
     // -> static struct [anonymous] * gpPathBat1X;
     // -> static struct [anonymous] * gpPathBat1;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory2;
     // -> static struct [anonymous] * gapPathNote[3];
     // -> static struct [anonymous] * gpPathNote;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory4;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$1241story_c geHoldStory4;
+    // -> static @enum$106story_c geXtra;
     // -> static struct [anonymous] * gapPathBits[2];
 }
 
@@ -38419,83 +37638,33 @@ static void storyTickKeysGoddess(int iFrame /* r27 */) {
         unsigned int nColor0; // offset 0x94, size 0x4
         unsigned int nColor1; // offset 0x98, size 0x4
     } * pImage; // r1+0xC
-    enum /* @enum$2732story_c */ {
-        SEM_NONE = 0,
-        SEM_WAIT = 1,
-        SEM_GROW = 2,
-        SEM_BLAM = 3,
-        SEM_FILL = 4,
-        SEM_FADE = 5,
-        SEM_HOLD = 6,
-    } eMode; // r28
+    @enum$2732story_c eMode; // r28
     int nFrame; // r1+0x8
     int nAlpha; // r28
     int nSize; // r3
 
     // References
-    // -> static enum /* @enum$2732story_c */ {
-    SEM_NONE = 0,
-    SEM_WAIT = 1,
-    SEM_GROW = 2,
-    SEM_BLAM = 3,
-    SEM_FILL = 4,
-    SEM_FADE = 5,
-    SEM_HOLD = 6,
-} geModeEnemy;
+    // -> static @enum$2732story_c geModeEnemy;
     // -> static int gnTickStory;
     // -> static signed short gnDataGlow;
     // -> static int giScreenStory;
     // -> static int gnColorBackAlpha;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> struct [anonymous] * gpPathGirl;
     // -> static struct [anonymous] * gpBeamGoddess;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gbGfxHeap;
     // -> static int giLevelStory;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory4;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory2;
+    // -> static @enum$1241story_c geHoldStory4;
+    // -> static @enum$1241story_c geHoldStory2;
     // -> static struct [anonymous] * gpPathBaby;
     // -> static int gnTickAnchor;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
 }
 
 static int ganCommandWhaleMeet[34]; // size: 0x88, address: 0xDF230
@@ -38602,18 +37771,10 @@ static void storyTickKeysWhale(int iFrame /* r26 */) {
     // -> static int giScreenStory;
     // -> static struct [anonymous] * gapPathNote[3];
     // -> static int gnMagnitudeShake;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory1;
+    // -> static @enum$1241story_c geHoldStory1;
     // -> static int gnTickFlash;
     // -> static int gbGfxHeap;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int * ganWaitRockLarge;
     // -> static int * ganWaitRockSmall;
     // -> static int gnColorBackAlpha;
@@ -38717,17 +37878,7 @@ static void storyTickKeys(int iFrame /* r30 */, int bSkip /* r29 */) {
     // -> static int giScreenStory;
     // -> static int giLevelStory;
     // -> static struct [anonymous] * gapPathNote[3];
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static struct [anonymous] * gpPathBat5;
     // -> static struct [anonymous] * gpPathBat4;
     // -> static struct [anonymous] * gpPathBat3;
@@ -38742,16 +37893,8 @@ static void storyTickKeys(int iFrame /* r30 */, int bSkip /* r29 */) {
     // -> int gReset;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$106story_c geXtra;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> static int gnCode;
 }
@@ -38888,23 +38031,11 @@ static void storySetupKeys() {
     // -> struct [anonymous] * gpPathGirl;
     // -> static int ganCommandGoddessBeat[33];
     // -> static int ganCommandGoddessMeet[27];
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static struct [anonymous] * gpImageGlow;
     // -> static struct [anonymous] * gpImageRing;
     // -> static struct [anonymous] * gpBeamGoddess;
-    // -> static enum /* @enum$2732story_c */ {
-    SEM_NONE = 0,
-    SEM_WAIT = 1,
-    SEM_GROW = 2,
-    SEM_BLAM = 3,
-    SEM_FILL = 4,
-    SEM_FADE = 5,
-    SEM_HOLD = 6,
-} geModeEnemy;
+    // -> static @enum$2732story_c geModeEnemy;
     // -> static struct [anonymous] * gpPathBat5X;
     // -> static struct [anonymous] * gpPathBat4X;
     // -> static struct [anonymous] * gpPathBat3X;
@@ -38937,17 +38068,7 @@ static void storySetupKeys() {
 // Range: 0x9C8CC -> 0x9CBC0
 static void storyTickPick(int bSkip /* r28 */) {
     // Local variables
-    enum /* @enum$105story_c */ {
-        SM_NONE = 0,
-        SM_PICK = 1,
-        SM_OPEN = 2,
-        SM_ISLE = 3,
-        SM_KEYS = 4,
-        SM_DONE = 5,
-        SM_HAGS = 6,
-        SM_CAST = 7,
-        SM_CHAR = 8,
-    } eMode; // r30
+    @enum$105story_c eMode; // r30
     int iCursorX; // r1+0x58
     int iCursorY; // r1+0x54
     int nLimit; // r29
@@ -38956,22 +38077,8 @@ static void storyTickPick(int bSkip /* r28 */) {
     // References
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int giMovieStory;
     // -> static int gbGfxHeap;
     // -> static int gnPickStory;
@@ -38998,58 +38105,20 @@ void DoStory() {
     // -> static int gnFlushCount;
     // -> static int gnTickStory;
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> static int gnPickStory;
     // -> static int gnCode;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory0;
+    // -> static @enum$1241story_c geHoldStory0;
     // -> static int gnOffsetWipe;
     // -> static int gbGfxHeap;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geMode;
+    // -> static @enum$105story_c geMode;
     // -> int gReset;
     // -> int gMain;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> struct Game gTheGame;
     // -> static int gnSkipCount;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeLast;
+    // -> static @enum$105story_c geModeLast;
     // -> struct player_t * gPlayer[4];
     // -> static void * gaszNameHags[1];
     // -> static int ganCommandHags[70];
@@ -39070,11 +38139,7 @@ void DoStory() {
     // -> static int gnColorBackBlue;
     // -> static int gnColorBackGreen;
     // -> static int gnColorBackRed;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static int gnTickAnchor;
     // -> static int gnMagnitudeShake;
     // -> static struct [anonymous] * gpImageDustGlow;
@@ -50696,13 +49761,7 @@ static void storyDrawImage(union {
     // -> static float grFOV;
     // -> static float grAngleBob;
     // -> static float garBaseRainbow[2][2];
-    // -> static enum /* @enum$2278story_c */ {
-    SCT_NONE = 0,
-    SCT_RAINBOW = 1,
-    SCT_MASCOTS = 2,
-    SCT_PROFILE = 3,
-    SCT_FARIES = 4,
-} geTypeCast;
+    // -> static @enum$2278story_c geTypeCast;
     // -> static int gnOffsetWipe;
     // -> static struct [anonymous] * gpPathBat5;
     // -> static struct [anonymous] * gpPathBat4;
@@ -50714,28 +49773,16 @@ static void storyDrawImage(union {
     // -> static int gnOffsetShakeX;
     // -> struct [anonymous] * gpPathGirl;
     // -> static float grPercentZoom;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory3;
+    // -> static @enum$1241story_c geHoldStory3;
     // -> static struct [anonymous] * gapPathBits[2];
     // -> static struct [anonymous] * gpPathNote;
-    // -> static enum /* @enum$1241story_c */ {
-    SSH_WAIT = 0,
-    SSH_HOLD = 1,
-    SSH_DONE = 2,
-} geHoldStory4;
+    // -> static @enum$1241story_c geHoldStory4;
     // -> static struct [anonymous] * gpPathMother;
     // -> static struct [anonymous] * gpImageBubble;
     // -> static struct [anonymous] * gpPathFlower;
     // -> static struct [anonymous] * gpPathBaby;
     // -> static int gnCode;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$106story_c geXtra;
     // -> static struct [anonymous] * gpPathEye2;
     // -> static struct [anonymous] * gpPathEye1;
     // -> static int gnColorBackGreen;
@@ -53647,54 +52694,16 @@ void InitStory() {
     // References
     // -> struct OSMesgQueue_s gfxFrameMsgQ;
     // -> static int gnFlushCount;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtraNext;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeNext;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
     // -> struct Game gTheGame;
     // -> struct player_t * gPlayer[4];
     // -> int gSelection;
     // -> static int giMovieStory;
     // -> static int gnPickStory;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geModeLast;
-    // -> static enum /* @enum$105story_c */ {
-    SM_NONE = 0,
-    SM_PICK = 1,
-    SM_OPEN = 2,
-    SM_ISLE = 3,
-    SM_KEYS = 4,
-    SM_DONE = 5,
-    SM_HAGS = 6,
-    SM_CAST = 7,
-    SM_CHAR = 8,
-} geMode;
-    // -> static enum /* @enum$106story_c */ {
-    SX_NONE = 0,
-    SX_BEAT = 1,
-    SX_MEET = 2,
-} geXtra;
+    // -> static @enum$105story_c geModeLast;
+    // -> static @enum$105story_c geMode;
+    // -> static @enum$106story_c geXtra;
     // -> static int gnTickStory;
     // -> static int gnAlphaBack;
     // -> static int gbGfxHeap;

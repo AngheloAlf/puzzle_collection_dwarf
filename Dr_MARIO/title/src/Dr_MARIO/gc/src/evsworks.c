@@ -29,37 +29,9 @@ unsigned char CapsMagazine[256]; // size: 0x100, address: 0x18F9C
 int evs_default_name[4]; // size: 0x10, address: 0x1909C
 unsigned long evs_game_time; // size: 0x4, address: 0x190AC
 unsigned char evs_select_name_no[2]; // size: 0x2, address: 0x190B0
-enum /* @enum$104evsworks_c */ {
-    GMD_NORMAL = 0,
-    GMD_FLASH = 1,
-    GMD_TaiQ = 2,
-    GMD_TIME_ATTACK = 3,
-};
-enum /* @enum$104evsworks_c */ {
-    GMD_NORMAL = 0,
-    GMD_FLASH = 1,
-    GMD_TaiQ = 2,
-    GMD_TIME_ATTACK = 3,
-} evs_gamemode; // size: 0x4, address: 0x190B4
-enum /* @enum$103evsworks_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-};
-enum /* @enum$103evsworks_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel; // size: 0x4, address: 0x190B8
+@enum$107dm_title_main_c;
+@enum$107dm_title_main_c evs_gamemode; // size: 0x4, address: 0x190B4
+@enum$106dm_title_main_c;
+@enum$106dm_title_main_c evs_gamesel; // size: 0x4, address: 0x190B8
 unsigned char evs_playmax; // size: 0x1, address: 0x190BC
 

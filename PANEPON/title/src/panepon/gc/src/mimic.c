@@ -13441,32 +13441,8 @@ void Draw3DMT(struct {
 static int gnTickMimic; // size: 0x4, address: 0xF4458
 static int giScreenMimic; // size: 0x4, address: 0xF445C
 static int gaiCursorX[4]; // size: 0x10, address: 0xF4460
-enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-};
-static enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-} geModeMimic; // size: 0x4, address: 0xF4470
+@enum$635mimic_c;
+static @enum$635mimic_c geModeMimic; // size: 0x4, address: 0xF4470
 static int gnTagTextMimic; // size: 0x4, address: 0xF4474
 static int gnTickTextMimic; // size: 0x4, address: 0xF4478
 // Range: 0x7A5B0 -> 0x7A6DC
@@ -13481,19 +13457,7 @@ static void mimicTickText(int bSkip /* r30 */) {
     // -> static int giScreenMimic;
     // -> static int gnTickMimic;
     // -> struct Game gTheGame;
-    // -> static enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-} geModeMimic;
+    // -> static @enum$635mimic_c geModeMimic;
 }
 
 struct {
@@ -14075,19 +14039,7 @@ void DrawMT(struct {
 } * dynamicp /* r31 */) {
     // References
     // -> struct Game gTheGame;
-    // -> static enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-} geModeMimic;
+    // -> static @enum$635mimic_c geModeMimic;
     // -> int gMain;
     // -> union [anonymous] * glistp;
     // -> struct [anonymous] * tut_dynamicp;
@@ -14101,19 +14053,7 @@ void DoMimic() {
     int nTagText; // r5
     int nLoad; // r26
     int bBack; // r31
-    enum /* @enum$635mimic_c */ {
-        MM_NONE = 0,
-        MM_GIRLTEXT = 1,
-        MM_LEVEL = 2,
-        MM_STAGE = 3,
-        MM_VIEWTEXT1 = 4,
-        MM_VIEW = 5,
-        MM_VIEWTEXT2 = 6,
-        MM_PLAYTEXT1 = 7,
-        MM_PLAY = 8,
-        MM_PLAYTEXT2 = 9,
-        MM_PLAYTEXT3 = 10,
-    } eMode; // r30
+    @enum$635mimic_c eMode; // r30
     int iCursorX; // r1+0x70
     int iCursorY; // r1+0x6C
     int anCommand[4]; // r1+0x5C
@@ -14125,19 +14065,7 @@ void DoMimic() {
     // -> int gMain;
     // -> struct ai_t brainbrain[4];
     // -> struct Game gTheGame;
-    // -> static enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-} geModeMimic;
+    // -> static @enum$635mimic_c geModeMimic;
     // -> static int giScreenMimic;
     // -> static int gnTagTextMimic;
     // -> static int gnTickTextMimic;
@@ -14157,19 +14085,7 @@ void InitMimic() {
     // -> static int gnTickTextMimic;
     // -> struct Game gTheGame;
     // -> static int gnTickMimic;
-    // -> static enum /* @enum$635mimic_c */ {
-    MM_NONE = 0,
-    MM_GIRLTEXT = 1,
-    MM_LEVEL = 2,
-    MM_STAGE = 3,
-    MM_VIEWTEXT1 = 4,
-    MM_VIEW = 5,
-    MM_VIEWTEXT2 = 6,
-    MM_PLAYTEXT1 = 7,
-    MM_PLAY = 8,
-    MM_PLAYTEXT2 = 9,
-    MM_PLAYTEXT3 = 10,
-} geModeMimic;
+    // -> static @enum$635mimic_c geModeMimic;
     // -> char * nextSegment;
     // -> char * Pon_Image_Heap;
     // -> unsigned short gGameStatus;

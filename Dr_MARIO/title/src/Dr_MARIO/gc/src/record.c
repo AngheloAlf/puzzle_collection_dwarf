@@ -119,26 +119,8 @@ void dm_init_save_mem(struct {
 
 static char _defName$233[8]; // size: 0x8, address: 0x1408
 unsigned char evs_stereo; // size: 0x1, address: 0x4878
-enum /* @enum$96record_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-};
-enum /* @enum$96record_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel; // size: 0x4, address: 0x190B8
+@enum$106dm_title_main_c;
+@enum$106dm_title_main_c evs_gamesel; // size: 0x4, address: 0x190B8
 unsigned char evs_secret_flg[]; // size: 0x0, address: 0x4884
 unsigned char evs_level_21; // size: 0x1, address: 0x18F94
 int evs_vs_count; // size: 0x4, address: 0x4888
@@ -153,16 +135,7 @@ void dm_init_system_mem() {
     // -> int evs_vs_count;
     // -> unsigned char evs_level_21;
     // -> unsigned char evs_secret_flg[];
-    // -> enum /* @enum$96record_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel;
+    // -> @enum$106dm_title_main_c evs_gamesel;
     // -> unsigned char evs_stereo;
     // -> int evs_default_name[];
     // -> static char _defName$233[8];
@@ -702,21 +675,10 @@ struct SRankSortInfo {
     unsigned char vm_ta_rank[8]; // offset 0x148, size 0x8
     unsigned short vm_ta_ave[8]; // offset 0x150, size 0x10
 };
-enum /* @enum$362record_c */ {
-    _1P_STORY = 0,
-    _1P_LEVEL = 1,
-    _1P_TaiQ = 2,
-    _1P_TimeAt = 3,
-};
-enum /* @enum$100record_c */ {
-    false = 0,
-    true = 1,
-};
+@enum$362record_c;
+@enum$110dm_title_main_c;
 // Range: 0x2B520 -> 0x2B674
-static enum /* @enum$100record_c */ {
-    false = 0,
-    true = 1,
-} _get1PLess(struct {
+static @enum$110dm_title_main_c _get1PLess(struct {
     // total size: 0xD0
     unsigned char mem_use_flg; // offset 0x0, size 0x1
     unsigned char mem_name[4]; // offset 0x1, size 0x4
@@ -830,12 +792,7 @@ static enum /* @enum$100record_c */ {
         unsigned char vm_st; // offset 0x18, size 0x1
         unsigned char vm_m; // offset 0x19, size 0x1
     } config; // offset 0xB4, size 0x1A
-} * mc2 /* r1+0x4 */, enum /* @enum$362record_c */ {
-    _1P_STORY = 0,
-    _1P_LEVEL = 1,
-    _1P_TaiQ = 2,
-    _1P_TimeAt = 3,
-} mode /* r1+0x8 */, int level /* r1+0xC */) {
+} * mc2 /* r1+0x4 */, @enum$362record_c mode /* r1+0x8 */, int level /* r1+0xC */) {
     // Local variables
     int hi; // r7
     int lo; // r8
@@ -886,12 +843,7 @@ static enum /* @enum$100record_c */ {
 }
 
 // Range: 0x2B674 -> 0x2B89C
-static void _sort1PMode(struct SRankSortInfo * st /* r1+0x8 */, enum /* @enum$362record_c */ {
-    _1P_STORY = 0,
-    _1P_LEVEL = 1,
-    _1P_TaiQ = 2,
-    _1P_TimeAt = 3,
-} mode /* r23 */, int level /* r24 */) {
+static void _sort1PMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$362record_c mode /* r23 */, int level /* r24 */) {
     // Local variables
     struct {
         // total size: 0xD0
@@ -987,21 +939,9 @@ void dm_data_mode_timeAt_sort(struct SRankSortInfo * st /* r30 */) {
     int i; // r31
 }
 
-enum /* @enum$494record_c */ {
-    _VS_COM = 0,
-    _VS_COM_FLASH = 1,
-    _VS_MAN = 2,
-    _VS_MAN_FLASH = 3,
-    _VS_MAN_TIME_AT = 4,
-};
+@enum$494record_c;
 // Range: 0x2B9DC -> 0x2BDE4
-static void _sortVsMode(struct SRankSortInfo * st /* r1+0x8 */, enum /* @enum$494record_c */ {
-    _VS_COM = 0,
-    _VS_COM_FLASH = 1,
-    _VS_MAN = 2,
-    _VS_MAN_FLASH = 3,
-    _VS_MAN_TIME_AT = 4,
-} mode /* r1+0xC */) {
+static void _sortVsMode(struct SRankSortInfo * st /* r1+0x8 */, @enum$494record_c mode /* r1+0xC */) {
     // Local variables
     struct {
         // total size: 0xD0
@@ -1303,10 +1243,7 @@ void EepRom_InitVars() {
     // -> struct [anonymous] evs_cfg_4p;
 }
 
-static enum /* @enum$100record_c */ {
-    false = 0,
-    true = 1,
-} _cached$1332; // size: 0x4, address: 0x55128
+static @enum$110dm_title_main_c _cached$1332; // size: 0x4, address: 0x55128
 static unsigned char _cache$1333[512]; // size: 0x200, address: 0x55140
 unsigned char * eeprom_bufferp; // size: 0x4, address: 0xC
 // Range: 0x2D948 -> 0x2DAB0
@@ -1341,10 +1278,7 @@ enum EepRomErr EepRom_ReadAll() {
     // References
     // -> static char eeprom_header[4];
     // -> static unsigned char _cache$1333[512];
-    // -> static enum /* @enum$100record_c */ {
-    false = 0,
-    true = 1,
-} _cached$1332;
+    // -> static @enum$110dm_title_main_c _cached$1332;
     // -> unsigned char * eeprom_bufferp;
 }
 
@@ -1359,10 +1293,7 @@ enum EepRomErr EepRom_WriteAll(void (* proc)(void *) /* r28 */, int (* proc2)(vo
 
     // References
     // -> static unsigned char _cache$1333[512];
-    // -> static enum /* @enum$100record_c */ {
-    false = 0,
-    true = 1,
-} _cached$1332;
+    // -> static @enum$110dm_title_main_c _cached$1332;
     // -> unsigned char * eeprom_bufferp;
 }
 

@@ -19486,26 +19486,8 @@ static int fin_frame$667; // size: 0x4, address: 0x8DFC
 static int fin_frame$737; // size: 0x4, address: 0x8E00
 static int fin_frame$768; // size: 0x4, address: 0x8E04
 static int snd_tbl$838[24]; // size: 0x60, address: 0x4070
-enum /* @enum$101main_story_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-};
-enum /* @enum$101main_story_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no; // size: 0x4, address: 0x1E994
+@enum$101main_story_c;
+@enum$101main_story_c graphic_no; // size: 0x4, address: 0x1E994
 unsigned short joyflg[4]; // size: 0x8, address: 0x1CE38
 unsigned long pendingGFX; // size: 0x4, address: 0x1E998
 signed char evs_story_no; // size: 0x1, address: 0x18F92
@@ -19520,16 +19502,7 @@ void main_story() {
     // -> unsigned char evs_seqnumb;
     // -> int story_proc_no;
     // -> unsigned long pendingGFX;
-    // -> enum /* @enum$101main_story_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no;
+    // -> @enum$101main_story_c graphic_no;
     // -> static int loop_flg;
     // -> static int story_zoom;
     // -> static int story_doing;

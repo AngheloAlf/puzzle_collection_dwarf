@@ -88,16 +88,9 @@ static void menuItem_updateColor(struct SMenuItem * st /* r30 */, struct SMenuIt
 // Range: 0x2E71C -> 0x2E764
 static void menuItem_setColorDir(struct SMenuItem * st /* r1+0x0 */, int dir /* r1+0x4 */) {}
 
-enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-};
+@enum$110dm_title_main_c;
 // Range: 0x2E764 -> 0x2E838
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuItem_outOfScreen(struct SMenuItem * st /* r1+0x8 */, int width /* r1+0xC */, int height /* r1+0x10 */) {}
-
+static @enum$110dm_title_main_c menuItem_outOfScreen(struct SMenuItem * st /* r1+0x8 */, int width /* r1+0xC */, int height /* r1+0x10 */) {
 // Range: 0x2E838 -> 0x2EB70
 static int menuItem_drawTex(struct SMenuItem * st /* r7 */, union {
     struct {
@@ -1353,82 +1346,7 @@ static char _mesWriting[71]; // size: 0x47, address: 0x2B88
 static char _mesDeleting[73]; // size: 0x49, address: 0x2BD0
 static unsigned char _gameLvItemColor[3][2][4]; // size: 0x18, address: 0x2C1C
 static unsigned char _musicItemColor[2][4]; // size: 0x8, address: 0x2C34
-enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-};
+@enum$856main_menu_c;
 // Range: 0x2EF5C -> 0x2F02C
 static void menuTitle_setTitle(struct {
     // total size: 0x130
@@ -1436,82 +1354,7 @@ static void menuTitle_setTitle(struct {
     int current; // offset 0x4, size 0x4
     int titleNo[2]; // offset 0x8, size 0x8
     struct SMenuItem miBase[2]; // offset 0x10, size 0x120
-} * st /* r1+0x0 */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r1+0x4 */) {
+} * st /* r1+0x0 */, @enum$856main_menu_c mode /* r1+0x4 */) {
     // Local variables
     int titleNo; // r6
 }
@@ -2383,34 +2226,12 @@ static void menuTitle_draw(struct {
 
 static int _menuCursor_cursor_4_pattern[30]; // size: 0x78, address: 0x2C3C
 static float _color$1040[4][3]; // size: 0x30, address: 0x2CB4
-enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-};
+@enum$1025main_menu_c;
 // Range: 0x2F310 -> 0x2F5E0
 static void menuCursor_init2(struct {
     // total size: 0x260
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$1025main_menu_c */ {
-        CURSOR_ITEM = 0,
-        CURSOR_PANEL = 1,
-        CURSOR_WINDOW = 2,
-        CURSOR_THICK = 3,
-        CURSOR_NEW_4P = 4,
-        CURSOR_NEW_MUSIC = 5,
-        CURSOR_NEW_SPEED = 6,
-        CURSOR_NEW_VIRUS_LV_L = 7,
-        CURSOR_NEW_VIRUS_LV_S = 8,
-        CURSOR_TYPE_SUM = 9,
-    } type; // offset 0x4, size 0x4
+    @enum$1025main_menu_c type; // offset 0x4, size 0x4
     int playerCount; // offset 0x8, size 0x4
     int cpuCount; // offset 0xC, size 0x4
     int playerNo; // offset 0x10, size 0x4
@@ -2426,18 +2247,7 @@ static void menuCursor_init2(struct {
     struct SMenuItem miCursor[1]; // offset 0xB0, size 0x90
     struct SMenuItem miFinger[1]; // offset 0x140, size 0x90
     struct SMenuItem miPlayer[1]; // offset 0x1D0, size 0x90
-} * st /* r29 */, void * global /* r1+0xC */, enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} type /* r30 */, int playerCount /* r1+0x14 */, int cpuCount /* r1+0x18 */, int playerNo /* r28 */, int x /* r9 */, int y /* r10 */, int w /* r1+0x98 */, int h /* r31 */) {
+} * st /* r29 */, void * global /* r1+0xC */, @enum$1025main_menu_c type /* r30 */, int playerCount /* r1+0x14 */, int cpuCount /* r1+0x18 */, int playerNo /* r28 */, int x /* r9 */, int y /* r10 */, int w /* r1+0x98 */, int h /* r31 */) {
     // Local variables
     int i; // r1+0x8
 
@@ -2449,18 +2259,7 @@ static void menuCursor_init2(struct {
 static void menuCursor_update(struct {
     // total size: 0x260
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$1025main_menu_c */ {
-        CURSOR_ITEM = 0,
-        CURSOR_PANEL = 1,
-        CURSOR_WINDOW = 2,
-        CURSOR_THICK = 3,
-        CURSOR_NEW_4P = 4,
-        CURSOR_NEW_MUSIC = 5,
-        CURSOR_NEW_SPEED = 6,
-        CURSOR_NEW_VIRUS_LV_L = 7,
-        CURSOR_NEW_VIRUS_LV_S = 8,
-        CURSOR_TYPE_SUM = 9,
-    } type; // offset 0x4, size 0x4
+    @enum$1025main_menu_c type; // offset 0x4, size 0x4
     int playerCount; // offset 0x8, size 0x4
     int cpuCount; // offset 0xC, size 0x4
     int playerNo; // offset 0x10, size 0x4
@@ -2486,18 +2285,7 @@ static int _pnts$1106[9][8]; // size: 0x120, address: 0x2CF0
 static void menuCursor_draw1(struct {
     // total size: 0x260
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$1025main_menu_c */ {
-        CURSOR_ITEM = 0,
-        CURSOR_PANEL = 1,
-        CURSOR_WINDOW = 2,
-        CURSOR_THICK = 3,
-        CURSOR_NEW_4P = 4,
-        CURSOR_NEW_MUSIC = 5,
-        CURSOR_NEW_SPEED = 6,
-        CURSOR_NEW_VIRUS_LV_L = 7,
-        CURSOR_NEW_VIRUS_LV_S = 8,
-        CURSOR_TYPE_SUM = 9,
-    } type; // offset 0x4, size 0x4
+    @enum$1025main_menu_c type; // offset 0x4, size 0x4
     int playerCount; // offset 0x8, size 0x4
     int cpuCount; // offset 0xC, size 0x4
     int playerNo; // offset 0x10, size 0x4
@@ -2855,18 +2643,7 @@ static void menuCursor_draw1(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -5622,18 +5399,7 @@ static int _type$1345[4][4]; // size: 0x40, address: 0x2E18
 static void menuCursor_draw2(struct {
     // total size: 0x260
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$1025main_menu_c */ {
-        CURSOR_ITEM = 0,
-        CURSOR_PANEL = 1,
-        CURSOR_WINDOW = 2,
-        CURSOR_THICK = 3,
-        CURSOR_NEW_4P = 4,
-        CURSOR_NEW_MUSIC = 5,
-        CURSOR_NEW_SPEED = 6,
-        CURSOR_NEW_VIRUS_LV_L = 7,
-        CURSOR_NEW_VIRUS_LV_S = 8,
-        CURSOR_TYPE_SUM = 9,
-    } type; // offset 0x4, size 0x4
+    @enum$1025main_menu_c type; // offset 0x4, size 0x4
     int playerCount; // offset 0x8, size 0x4
     int cpuCount; // offset 0xC, size 0x4
     int playerNo; // offset 0x10, size 0x4
@@ -5991,18 +5757,7 @@ static void menuCursor_draw2(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -9619,18 +9374,7 @@ static void menuBottle_draw(struct {
 
 static float _lvGauge_step[3]; // size: 0xC, address: 0x3094
 static int _size$1542[3][2]; // size: 0x18, address: 0x30A0
-static enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} _type$1543[3]; // size: 0xC, address: 0x30B8
+static @enum$1025main_menu_c _type$1543[3]; // size: 0xC, address: 0x30B8
 struct SMenuLvGauge {
     // total size: 0x300
     void * global; // offset 0x0, size 0x4
@@ -9641,18 +9385,7 @@ struct SMenuLvGauge {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10709,18 +10442,7 @@ static void menuYN_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10740,18 +10462,7 @@ static void menuYN_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10778,10 +10489,7 @@ static void menuYN_init(struct {
 }
 
 // Range: 0x31074 -> 0x31118
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuYN_input(struct {
+static @enum$110dm_title_main_c menuYN_input(struct {
     // total size: 0x678
     void * global; // offset 0x0, size 0x4
     int select; // offset 0x4, size 0x4
@@ -10790,18 +10498,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10821,18 +10518,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10866,18 +10552,7 @@ static void menuYN_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -10897,18 +10572,7 @@ static void menuYN_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -11831,18 +11495,7 @@ static void menuMes_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -12411,18 +12064,7 @@ static void menuSpeedAsk_draw(struct {
 }
 
 static int _size$1948[4][2]; // size: 0x20, address: 0x311C
-static enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} _type$1949[4]; // size: 0x10, address: 0x21D6C
+static @enum$1025main_menu_c _type$1949[4]; // size: 0x10, address: 0x21D6C
 static signed char _pos$1959[4][2]; // size: 0x8, address: 0x313C
 // Range: 0x31810 -> 0x31ADC
 static void menuSpeedItem_init(struct {
@@ -12441,18 +12083,7 @@ static void menuSpeedItem_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -12477,18 +12108,7 @@ static void menuSpeedItem_init(struct {
     int k; // r1+0x10
 
     // References
-    // -> static enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} _type$1949[4];
+    // -> static @enum$1025main_menu_c _type$1949[4];
     // -> static int _size$1948[4][2];
     // -> static signed char _pos$1959[4][2];
     // -> static unsigned char _gameLvItemColor[3][2][4];
@@ -12511,18 +12131,7 @@ static void menuSpeedItem_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -12567,18 +12176,7 @@ static void menuSpeedItem_draw1(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -12950,18 +12548,7 @@ static void menuSpeedItem_draw1(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -13349,18 +12936,7 @@ static void menuMusicItem_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -13405,18 +12981,7 @@ static void menuMusicItem_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -13458,18 +13023,7 @@ static void menuMusicItem_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -13513,18 +13067,7 @@ static void menuMusicItem_draw1(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -13895,18 +13438,7 @@ static void menuMusicItem_draw1(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -14123,18 +13655,7 @@ static void menuMusicItem_draw2(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -17559,18 +17080,7 @@ static void menuMainPanel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -17593,10 +17103,7 @@ static void menuMainPanel_init(struct {
 }
 
 // Range: 0x35080 -> 0x35138
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuMainPanel_input(struct {
+static @enum$110dm_title_main_c menuMainPanel_input(struct {
     // total size: 0x678
     void * global; // offset 0x0, size 0x4
     int size; // offset 0x4, size 0x4
@@ -17608,18 +17115,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -17657,18 +17153,7 @@ static void menuMainPanel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18225,18 +17710,7 @@ static void menuNameSelPanel_clear(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18279,18 +17753,7 @@ static void menuNameSelPanel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18331,18 +17794,7 @@ static void menuNameSelPanel_input1(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18373,10 +17825,7 @@ static void menuNameSelPanel_input1(struct {
 }
 
 // Range: 0x35D98 -> 0x35E8C
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuNameSelPanel_input(struct {
+static @enum$110dm_title_main_c menuNameSelPanel_input(struct {
     // total size: 0xA88
     void * global; // offset 0x0, size 0x4
     int playerCount; // offset 0x4, size 0x4
@@ -18393,18 +17842,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18445,18 +17883,7 @@ static void menuNameSelPanel_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -18556,18 +17983,7 @@ static void menuNameSelPanel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -19802,18 +19218,7 @@ static void menuNameOpPanel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -19839,10 +19244,7 @@ static void menuNameOpPanel_init(struct {
 }
 
 // Range: 0x36C60 -> 0x36D10
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuNameOpPanel_input(struct {
+static @enum$110dm_title_main_c menuNameOpPanel_input(struct {
     // total size: 0x4B0
     void * global; // offset 0x0, size 0x4
     int type; // offset 0x4, size 0x4
@@ -19854,18 +19256,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -19902,18 +19293,7 @@ static void menuNameOpPanel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -20988,18 +20368,7 @@ static void menuSndSelPanel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -21027,10 +20396,7 @@ static void menuSndSelPanel_init(struct {
 
 static unsigned char _tbl$4036[103]; // size: 0x67, address: 0x323C
 // Range: 0x376B0 -> 0x37828
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuSndSelPanel_input(struct {
+static @enum$110dm_title_main_c menuSndSelPanel_input(struct {
     // total size: 0x69C
     void * global; // offset 0x0, size 0x4
     int select; // offset 0x4, size 0x4
@@ -21055,18 +20421,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -21120,18 +20475,7 @@ static void menuSndSelPanel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -21709,18 +21053,9 @@ static int _cursor$4317[2][2][4]; // size: 0x40, address: 0x3348
 static void menuPlay2Panel_init(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -21774,18 +21109,7 @@ static void menuPlay2Panel_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -21808,18 +21132,7 @@ static void menuPlay2Panel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -21859,18 +21172,7 @@ static void menuPlay2Panel_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -21901,18 +21203,7 @@ static void menuPlay2Panel_init(struct {
     // -> static int _speedAsk$4312[2][2];
     // -> static float _lvNumScale$4308[2][2];
     // -> static int _lvNum$4310[2][2];
-    // -> static enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} _type$1543[3];
+    // -> static @enum$1025main_menu_c _type$1543[3];
     // -> static int _size$1542[3][2];
     // -> static int _lvGauge$4311[2][2];
     // -> static int _glvItem$4315[2][2];
@@ -21924,18 +21215,9 @@ static void menuPlay2Panel_init(struct {
 static void menuPlay2Panel_copyConfig(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -21989,18 +21271,7 @@ static void menuPlay2Panel_copyConfig(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22023,18 +21294,7 @@ static void menuPlay2Panel_copyConfig(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -22074,18 +21334,7 @@ static void menuPlay2Panel_copyConfig(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22106,18 +21355,9 @@ static void menuPlay2Panel_copyConfig(struct {
 } * st /* r1+0x0 */, struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -22171,18 +21411,7 @@ static void menuPlay2Panel_copyConfig(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22205,18 +21434,7 @@ static void menuPlay2Panel_copyConfig(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -22256,18 +21474,7 @@ static void menuPlay2Panel_copyConfig(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22291,18 +21498,9 @@ static void menuPlay2Panel_copyConfig(struct {
 static void menuPlay2Panel_copyCursor(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -22356,18 +21554,7 @@ static void menuPlay2Panel_copyCursor(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22390,18 +21577,7 @@ static void menuPlay2Panel_copyCursor(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -22441,18 +21617,7 @@ static void menuPlay2Panel_copyCursor(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22473,18 +21638,9 @@ static void menuPlay2Panel_copyCursor(struct {
 } * st /* r1+0x0 */, struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -22538,18 +21694,7 @@ static void menuPlay2Panel_copyCursor(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22572,18 +21717,7 @@ static void menuPlay2Panel_copyCursor(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -22623,18 +21757,7 @@ static void menuPlay2Panel_copyCursor(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22661,18 +21784,9 @@ static void menuPlay2Panel_copyCursor(struct {
 static void menuPlay2Panel_input(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -22726,18 +21840,7 @@ static void menuPlay2Panel_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22760,18 +21863,7 @@ static void menuPlay2Panel_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -22811,18 +21903,7 @@ static void menuPlay2Panel_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22852,18 +21933,9 @@ static void menuPlay2Panel_input(struct {
 static void menuPlay2Panel_update(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -22917,18 +21989,7 @@ static void menuPlay2Panel_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -22951,18 +22012,7 @@ static void menuPlay2Panel_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -23002,18 +22052,7 @@ static void menuPlay2Panel_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -23048,18 +22087,9 @@ static int _texPanelP2$4618[2]; // size: 0x8, address: 0x340C
 static void menuPlay2Panel_draw(struct {
     // total size: 0x1920
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } flash; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } timeAt; // offset 0x8, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } FL_TA; // offset 0xC, size 0x4
+    @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+    @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
     int size; // offset 0x10, size 0x4
     int playerCount; // offset 0x14, size 0x4
     int cpuCount; // offset 0x18, size 0x4
@@ -23113,18 +22143,7 @@ static void menuPlay2Panel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -23147,18 +22166,7 @@ static void menuPlay2Panel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -23198,18 +22206,7 @@ static void menuPlay2Panel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -23569,18 +22566,9 @@ static void menuPlay2Panel_draw(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -23634,18 +22622,7 @@ static void menuPlay2Panel_draw(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -23668,18 +22645,7 @@ static void menuPlay2Panel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -23719,18 +22685,7 @@ static void menuPlay2Panel_draw(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -24308,18 +23263,7 @@ static void menuPlay2PanelSub_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -24355,18 +23299,7 @@ static void menuPlay2PanelSub_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -24394,10 +23327,7 @@ static void menuPlay2PanelSub_init(struct {
 }
 
 // Range: 0x3A344 -> 0x3A5B4
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuPlay2PanelSub_input(struct {
+static @enum$110dm_title_main_c menuPlay2PanelSub_input(struct {
     // total size: 0x105C
     void * global; // offset 0x0, size 0x4
     int depth; // offset 0x4, size 0x4
@@ -24419,18 +23349,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -24466,18 +23385,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -24525,18 +23433,7 @@ static void menuPlay2PanelSub_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -24572,18 +23469,7 @@ static void menuPlay2PanelSub_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -24629,18 +23515,7 @@ static void menuPlay2PanelSub_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -24676,18 +23551,7 @@ static void menuPlay2PanelSub_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -25735,82 +24599,7 @@ static void menuPlay2PanelSub_draw(struct {
     // -> static union [anonymous] fade_normal_texture_init_dl[3];
 }
 
-enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuMain_lastMode; // size: 0x4, address: 0x55344
+@enum$856main_menu_c _menuMain_lastMode; // size: 0x4, address: 0x55344
 static char * _tblMain$5279[4]; // size: 0x10, address: 0x21DF0
 static char * _tblPlay1$5280[6]; // size: 0x18, address: 0x21E00
 static char * _tblPlay2$5281[3]; // size: 0xC, address: 0x21E18
@@ -25821,88 +24610,10 @@ static char * _tblSound$5285[4]; // size: 0x10, address: 0x21E58
 static char * _tblMisc$5286[3]; // size: 0xC, address: 0x21E68
 static char * _loopTbl$5287[16]; // size: 0x40, address: 0x21E74
 // Range: 0x3B358 -> 0x3B53C
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuMain_setMsgStr(struct {
+static @enum$110dm_title_main_c menuMain_setMsgStr(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -25921,18 +24632,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -25967,18 +24667,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26008,18 +24697,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26062,18 +24740,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26157,18 +24824,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26188,18 +24844,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26265,18 +24910,7 @@ static enum /* @enum$93main_menu_c */ {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26294,89 +24928,11 @@ static enum /* @enum$93main_menu_c */ {
             struct SMenuItem miPlayer[1]; // offset 0x1D0, size 0x90
         } window[1]; // offset 0x114, size 0x260
     } message[1]; // offset 0x31E4, size 0x374
-} * st /* r30 */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r1+0xC */, int select /* r1+0x10 */) {
+} * st /* r30 */, @enum$856main_menu_c mode /* r1+0xC */, int select /* r1+0x10 */) {
     // Local variables
     const char * * tbl; // r6
     const char * mes; // r27
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } res; // r31
+    @enum$110dm_title_main_c res; // r31
     int i; // r26
 
     // References
@@ -26421,82 +24977,7 @@ static int _score$5352[2]; // size: 0x8, address: 0x3530
 static void menuMain_initPanel(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -26515,18 +24996,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26561,18 +25031,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26602,18 +25061,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26656,18 +25104,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26751,18 +25188,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26782,18 +25208,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26859,18 +25274,7 @@ static void menuMain_initPanel(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -26888,82 +25292,7 @@ static void menuMain_initPanel(struct {
             struct SMenuItem miPlayer[1]; // offset 0x1D0, size 0x90
         } window[1]; // offset 0x114, size 0x260
     } message[1]; // offset 0x31E4, size 0x374
-} * st /* r8 */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r1+0xC */, int panelSw /* r1+0x10 */, int select /* r6 */) {
+} * st /* r8 */, @enum$856main_menu_c mode /* r1+0xC */, int panelSw /* r1+0x10 */, int select /* r6 */) {
     // Local variables
     const int * table; // r7
     int count; // r1+0x8
@@ -26991,82 +25320,7 @@ int _menuMain_lastSelect[8]; // size: 0x20, address: 0x5534C
 static void menuMain_init(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -27085,18 +25339,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27131,18 +25374,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27172,18 +25404,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27226,18 +25447,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27321,18 +25531,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27352,18 +25551,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27429,18 +25617,7 @@ static void menuMain_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -27466,1253 +25643,37 @@ static void menuMain_init(struct {
     // References
     // -> int _menuMain_lastSelect[8];
     // -> int _menuMain_lastDepth;
-    // -> enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuMain_lastMode;
+    // -> @enum$856main_menu_c _menuMain_lastMode;
 }
 
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5517[4]; // size: 0x10, address: 0x3548
+static @enum$856main_menu_c tbl$5517[4]; // size: 0x10, address: 0x3548
 static int _n$5535[6]; // size: 0x18, address: 0x3558
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5538[6]; // size: 0x18, address: 0x3570
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode$5557[3]; // size: 0xC, address: 0x3588
+static @enum$856main_menu_c _mode$5538[6]; // size: 0x18, address: 0x3570
+static @enum$856main_menu_c mode$5557[3]; // size: 0xC, address: 0x3588
 static char _mode$5570[4]; // size: 0x4, address: 0x3594
 static char * mes$5577[3]; // size: 0xC, address: 0x221FC
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tbl$5598[3][2]; // size: 0x18, address: 0x3598
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblLS$5599[3][3]; // size: 0x24, address: 0x35B0
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblVM$5600[3][3]; // size: 0x24, address: 0x35D4
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblVC$5601[3][2]; // size: 0x18, address: 0x35F8
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5648[5]; // size: 0x14, address: 0x3610
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5664[3]; // size: 0xC, address: 0x3624
+static @enum$856main_menu_c _tbl$5598[3][2]; // size: 0x18, address: 0x3598
+static @enum$856main_menu_c _tblLS$5599[3][3]; // size: 0x24, address: 0x35B0
+static @enum$856main_menu_c _tblVM$5600[3][3]; // size: 0x24, address: 0x35D4
+static @enum$856main_menu_c _tblVC$5601[3][2]; // size: 0x18, address: 0x35F8
+static @enum$856main_menu_c tbl$5648[5]; // size: 0x14, address: 0x3610
+static @enum$856main_menu_c tbl$5664[3]; // size: 0xC, address: 0x3624
 static char _team$5687[3][4]; // size: 0xC, address: 0x3630
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5688[3]; // size: 0xC, address: 0x363C
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _game$5689[3]; // size: 0xC, address: 0x3648
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5701[2]; // size: 0x8, address: 0x3654
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode1$5709[6]; // size: 0x18, address: 0x365C
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode2$5710[3]; // size: 0xC, address: 0x3674
+static @enum$856main_menu_c _mode$5688[3]; // size: 0xC, address: 0x363C
+static @enum$856main_menu_c _game$5689[3]; // size: 0xC, address: 0x3648
+static @enum$856main_menu_c _mode$5701[2]; // size: 0x8, address: 0x3654
+static @enum$856main_menu_c _mode1$5709[6]; // size: 0x18, address: 0x365C
+static @enum$856main_menu_c _mode2$5710[3]; // size: 0xC, address: 0x3674
 static int tbl$5735[2]; // size: 0x8, address: 0x3680
 unsigned char evs_playmax; // size: 0x1, address: 0x190BC
-enum /* @enum$863main_menu_c */ {
-    GMD_NORMAL = 0,
-    GMD_FLASH = 1,
-    GMD_TaiQ = 2,
-    GMD_TIME_ATTACK = 3,
-};
-enum /* @enum$863main_menu_c */ {
-    GMD_NORMAL = 0,
-    GMD_FLASH = 1,
-    GMD_TaiQ = 2,
-    GMD_TIME_ATTACK = 3,
-} evs_gamemode; // size: 0x4, address: 0x190B4
+@enum$107dm_title_main_c;
+@enum$107dm_title_main_c evs_gamemode; // size: 0x4, address: 0x190B4
 unsigned char evs_playcnt; // size: 0x1, address: 0x487A
 signed char evs_story_flg; // size: 0x1, address: 0x18F91
-enum /* @enum$862main_menu_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-};
-enum /* @enum$862main_menu_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel; // size: 0x4, address: 0x190B8
-enum /* @enum$868main_menu_c */ {
-    dm_mode_null = 0,
-    dm_mode_init = 1,
-    dm_mode_wait = 2,
-    dm_mode_throw = 3,
-    dm_mode_down = 4,
-    dm_mode_down_wait = 5,
-    dm_mode_erase_chack = 6,
-    dm_mode_erase_anime = 7,
-    dm_mode_ball_down = 8,
-    dm_mode_cap_set = 9,
-    dm_mode_stage_clear = 10,
-    dm_mode_game_over = 11,
-    dm_mode_bottom_up = 12,
-    dm_mode_win = 13,
-    dm_mode_win_retry = 14,
-    dm_mode_lose = 15,
-    dm_mode_lose_retry = 16,
-    dm_mode_draw = 17,
-    dm_mode_draw_retry = 18,
-    dm_mode_tr_chaeck = 19,
-    dm_mode_training = 20,
-    dm_mode_tr_erase_chack = 21,
-    dm_mode_tr_cap_set = 22,
-    dm_mode_pause = 23,
-    dm_mode_pause_retry = 24,
-    dm_mode_no_action = 25,
-    dm_mode_clear_wait = 26,
-    dm_mode_clear_result = 27,
-    dm_mode_gover_wait = 28,
-    dm_mode_gover_result = 29,
-    dm_mode_retire_wait = 30,
-    dm_mode_retire_result = 31,
-    dm_mode_debug_config = 32,
-    dm_mode_debug = 33,
-};
-enum /* @enum$867main_menu_c */ {
-    dm_cnd_null = 0,
-    dm_cnd_wait = 1,
-    dm_cnd_init = 2,
-    dm_cnd_stage_clear = 3,
-    dm_cnd_game_over = 4,
-    dm_cnd_win = 5,
-    dm_cnd_win_retry = 6,
-    dm_cnd_win_retry_sc = 7,
-    dm_cnd_lose = 8,
-    dm_cnd_lose_retry = 9,
-    dm_cnd_lose_retry_sc = 10,
-    dm_cnd_draw = 11,
-    dm_cnd_draw_retry = 12,
-    dm_cnd_pause = 13,
-    dm_cnd_pause_re = 14,
-    dm_cnd_pause_re_sc = 15,
-    dm_cnd_retire = 16,
-    dm_cnd_tr_chack = 17,
-    dm_cnd_training = 18,
-    dm_cnd_clear_wait = 19,
-    dm_cnd_clear_result = 20,
-    dm_cnd_gover_wait = 21,
-    dm_cnd_gover_result = 22,
-    dm_cnd_retire_wait = 23,
-    dm_cnd_retire_result = 24,
-    dm_cnd_debug_config = 25,
-    dm_cnd_debug = 26,
-};
+@enum$106dm_title_main_c;
+@enum$106dm_title_main_c evs_gamesel; // size: 0x4, address: 0x190B8
+@enum$99dm_game_main_c;
+@enum$98dm_game_main_c;
 struct {
     // total size: 0x3C4
     unsigned long game_score; // offset 0x0, size 0x4
@@ -28720,194 +25681,12 @@ struct {
     signed short map_x; // offset 0x6, size 0x2
     signed short map_y; // offset 0x8, size 0x2
     signed char map_item_size; // offset 0xA, size 0x1
-    enum /* @enum$868main_menu_c */ {
-        dm_mode_null = 0,
-        dm_mode_init = 1,
-        dm_mode_wait = 2,
-        dm_mode_throw = 3,
-        dm_mode_down = 4,
-        dm_mode_down_wait = 5,
-        dm_mode_erase_chack = 6,
-        dm_mode_erase_anime = 7,
-        dm_mode_ball_down = 8,
-        dm_mode_cap_set = 9,
-        dm_mode_stage_clear = 10,
-        dm_mode_game_over = 11,
-        dm_mode_bottom_up = 12,
-        dm_mode_win = 13,
-        dm_mode_win_retry = 14,
-        dm_mode_lose = 15,
-        dm_mode_lose_retry = 16,
-        dm_mode_draw = 17,
-        dm_mode_draw_retry = 18,
-        dm_mode_tr_chaeck = 19,
-        dm_mode_training = 20,
-        dm_mode_tr_erase_chack = 21,
-        dm_mode_tr_cap_set = 22,
-        dm_mode_pause = 23,
-        dm_mode_pause_retry = 24,
-        dm_mode_no_action = 25,
-        dm_mode_clear_wait = 26,
-        dm_mode_clear_result = 27,
-        dm_mode_gover_wait = 28,
-        dm_mode_gover_result = 29,
-        dm_mode_retire_wait = 30,
-        dm_mode_retire_result = 31,
-        dm_mode_debug_config = 32,
-        dm_mode_debug = 33,
-    } mode_now; // offset 0xC, size 0x4
-    enum /* @enum$868main_menu_c */ {
-        dm_mode_null = 0,
-        dm_mode_init = 1,
-        dm_mode_wait = 2,
-        dm_mode_throw = 3,
-        dm_mode_down = 4,
-        dm_mode_down_wait = 5,
-        dm_mode_erase_chack = 6,
-        dm_mode_erase_anime = 7,
-        dm_mode_ball_down = 8,
-        dm_mode_cap_set = 9,
-        dm_mode_stage_clear = 10,
-        dm_mode_game_over = 11,
-        dm_mode_bottom_up = 12,
-        dm_mode_win = 13,
-        dm_mode_win_retry = 14,
-        dm_mode_lose = 15,
-        dm_mode_lose_retry = 16,
-        dm_mode_draw = 17,
-        dm_mode_draw_retry = 18,
-        dm_mode_tr_chaeck = 19,
-        dm_mode_training = 20,
-        dm_mode_tr_erase_chack = 21,
-        dm_mode_tr_cap_set = 22,
-        dm_mode_pause = 23,
-        dm_mode_pause_retry = 24,
-        dm_mode_no_action = 25,
-        dm_mode_clear_wait = 26,
-        dm_mode_clear_result = 27,
-        dm_mode_gover_wait = 28,
-        dm_mode_gover_result = 29,
-        dm_mode_retire_wait = 30,
-        dm_mode_retire_result = 31,
-        dm_mode_debug_config = 32,
-        dm_mode_debug = 33,
-    } mode_old; // offset 0x10, size 0x4
-    enum /* @enum$867main_menu_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_now; // offset 0x14, size 0x4
-    enum /* @enum$867main_menu_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_old; // offset 0x18, size 0x4
-    enum /* @enum$867main_menu_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_training; // offset 0x1C, size 0x4
-    enum /* @enum$867main_menu_c */ {
-        dm_cnd_null = 0,
-        dm_cnd_wait = 1,
-        dm_cnd_init = 2,
-        dm_cnd_stage_clear = 3,
-        dm_cnd_game_over = 4,
-        dm_cnd_win = 5,
-        dm_cnd_win_retry = 6,
-        dm_cnd_win_retry_sc = 7,
-        dm_cnd_lose = 8,
-        dm_cnd_lose_retry = 9,
-        dm_cnd_lose_retry_sc = 10,
-        dm_cnd_draw = 11,
-        dm_cnd_draw_retry = 12,
-        dm_cnd_pause = 13,
-        dm_cnd_pause_re = 14,
-        dm_cnd_pause_re_sc = 15,
-        dm_cnd_retire = 16,
-        dm_cnd_tr_chack = 17,
-        dm_cnd_training = 18,
-        dm_cnd_clear_wait = 19,
-        dm_cnd_clear_result = 20,
-        dm_cnd_gover_wait = 21,
-        dm_cnd_gover_result = 22,
-        dm_cnd_retire_wait = 23,
-        dm_cnd_retire_result = 24,
-        dm_cnd_debug_config = 25,
-        dm_cnd_debug = 26,
-    } cnd_static; // offset 0x20, size 0x4
+    @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
+    @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
+    @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
+    @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
+    @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
+    @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
     unsigned char virus_order_number; // offset 0x24, size 0x1
     unsigned char virus_number; // offset 0x25, size 0x1
     unsigned char virus_level; // offset 0x26, size 0x1
@@ -29043,82 +25822,7 @@ signed char evs_manual_no; // size: 0x1, address: 0x18F95
 static void menuMain_input(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -29137,18 +25841,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29183,18 +25876,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29224,18 +25906,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29278,18 +25949,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29373,18 +26033,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29404,18 +26053,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29481,18 +26119,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29524,18 +26151,7 @@ static void menuMain_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -29566,235 +26182,10 @@ static void menuMain_input(struct {
     int ynDir; // r31
     int mesDir; // r21
     int sndSelDir; // r30
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r4
+    @enum$856main_menu_c mode; // r4
     int flow[2]; // r1+0x3C
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } * modes; // r1+0x8
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r4
+    @enum$856main_menu_c * modes; // r1+0x8
+    @enum$856main_menu_c mode; // r4
     float time; // f31
     int playerCount; // r5
     float time; // f31
@@ -29802,1260 +26193,46 @@ static void menuMain_input(struct {
     // References
     // -> int _menuMain_lastSelect[8];
     // -> int _menuMain_lastDepth;
-    // -> enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuMain_lastMode;
+    // -> @enum$856main_menu_c _menuMain_lastMode;
     // -> unsigned char evs_select_name_no[];
     // -> struct [anonymous] evs_mem_data[9];
     // -> unsigned char evs_stereo;
     // -> static int tbl$5735[2];
     // -> int evs_vs_count;
     // -> signed char evs_manual_no;
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode2$5710[3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode1$5709[6];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5701[2];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5688[3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _game$5689[3];
-    // -> enum /* @enum$863main_menu_c */ {
-    GMD_NORMAL = 0,
-    GMD_FLASH = 1,
-    GMD_TaiQ = 2,
-    GMD_TIME_ATTACK = 3,
-} evs_gamemode;
+    // -> static @enum$856main_menu_c _mode2$5710[3];
+    // -> static @enum$856main_menu_c _mode1$5709[6];
+    // -> static @enum$856main_menu_c _mode$5701[2];
+    // -> static @enum$856main_menu_c _mode$5688[3];
+    // -> static @enum$856main_menu_c _game$5689[3];
+    // -> @enum$107dm_title_main_c evs_gamemode;
     // -> struct [anonymous] game_state_data[4];
     // -> static char _team$5687[3][4];
     // -> unsigned char evs_score_flag;
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5664[3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5648[5];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblVC$5601[3][2];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblVM$5600[3][3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tblLS$5599[3][3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _tbl$5598[3][2];
+    // -> static @enum$856main_menu_c tbl$5664[3];
+    // -> static @enum$856main_menu_c tbl$5648[5];
+    // -> static @enum$856main_menu_c _tblVC$5601[3][2];
+    // -> static @enum$856main_menu_c _tblVM$5600[3][3];
+    // -> static @enum$856main_menu_c _tblLS$5599[3][3];
+    // -> static @enum$856main_menu_c _tbl$5598[3][2];
     // -> static char * mes$5577[3];
-    // -> enum /* @enum$862main_menu_c */ {
-    GSL_1PLAY = 0,
-    GSL_2PLAY = 1,
-    GSL_4PLAY = 2,
-    GSL_VSCPU = 3,
-    GSL_1DEMO = 4,
-    GSL_2DEMO = 5,
-    GSL_4DEMO = 6,
-    GSL_MAX = 7,
-} evs_gamesel;
+    // -> @enum$106dm_title_main_c evs_gamesel;
     // -> signed char evs_story_flg;
     // -> unsigned char evs_playcnt;
     // -> static char _mode$5570[4];
     // -> unsigned char evs_playmax;
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode$5557[3];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _mode$5538[6];
+    // -> static @enum$856main_menu_c mode$5557[3];
+    // -> static @enum$856main_menu_c _mode$5538[6];
     // -> static int _n$5535[6];
     // -> static char _mesNoCont2[51];
-    // -> static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} tbl$5517[4];
+    // -> static @enum$856main_menu_c tbl$5517[4];
 }
 
 // Range: 0x3D5B8 -> 0x3DBB8
 static void menuMain_update(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -31074,18 +26251,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31120,18 +26286,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31161,18 +26316,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31215,18 +26359,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31310,18 +26443,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31341,18 +26463,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31418,18 +26529,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31461,18 +26561,7 @@ static void menuMain_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31500,82 +26589,7 @@ static int _pat$6137[6]; // size: 0x18, address: 0x3698
 static void menuMain_drawKaSaMaRu(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -31594,18 +26608,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31640,18 +26643,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31681,18 +26673,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31735,18 +26716,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31830,18 +26800,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31861,18 +26820,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -31938,18 +26886,7 @@ static void menuMain_drawKaSaMaRu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -33881,82 +28818,7 @@ static void menuMain_drawKaSaMaRu(struct {
 static void menuMain_draw(struct {
     // total size: 0x3558
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     int depth; // offset 0x8, size 0x4
     int select[8]; // offset 0xC, size 0x20
     int screenNo; // offset 0x2C, size 0x4
@@ -33975,18 +28837,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34021,18 +28872,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34062,18 +28902,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34116,18 +28945,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34211,18 +29029,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34242,18 +29049,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34319,18 +29115,7 @@ static void menuMain_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34887,18 +29672,7 @@ static void menuStory_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -34938,18 +29712,7 @@ static void menuStory_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -34987,18 +29750,7 @@ static void menuStory_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35137,18 +29889,7 @@ static void menuStory_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35188,18 +29929,7 @@ static void menuStory_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -35237,18 +29967,7 @@ static void menuStory_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35299,10 +30018,7 @@ static void menuStory_input(struct {
     int vec; // r4
     int select; // r1+0x8
     int sound; // r26
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } special; // r31
+    @enum$110dm_title_main_c special; // r31
 
     // References
     // -> unsigned long evs_high_score;
@@ -35332,18 +30048,7 @@ static void menuStory_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35383,18 +30088,7 @@ static void menuStory_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -35432,18 +30126,7 @@ static void menuStory_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35491,18 +30174,7 @@ static void menuStory_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -35542,18 +30214,7 @@ static void menuStory_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -35591,18 +30252,7 @@ static void menuStory_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -38360,82 +33010,7 @@ static int _cursor$7325[3][4]; // size: 0x30, address: 0x3880
 static void menuLvSel_init(struct {
     // total size: 0x2574
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     struct SMenuItem miBase[1]; // offset 0x8, size 0x90
     struct SMenuItem miPanel[2]; // offset 0x98, size 0x120
     struct {
@@ -38475,18 +33050,7 @@ static void menuLvSel_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -38519,18 +33083,7 @@ static void menuLvSel_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -38558,18 +33111,7 @@ static void menuLvSel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -38611,18 +33153,7 @@ static void menuLvSel_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -38733,18 +33264,7 @@ static void menuLvSel_init(struct {
 
     // References
     // -> static int _cursor$7325[3][4];
-    // -> static enum /* @enum$1025main_menu_c */ {
-    CURSOR_ITEM = 0,
-    CURSOR_PANEL = 1,
-    CURSOR_WINDOW = 2,
-    CURSOR_THICK = 3,
-    CURSOR_NEW_4P = 4,
-    CURSOR_NEW_MUSIC = 5,
-    CURSOR_NEW_SPEED = 6,
-    CURSOR_NEW_VIRUS_LV_L = 7,
-    CURSOR_NEW_VIRUS_LV_S = 8,
-    CURSOR_TYPE_SUM = 9,
-} _type$1543[3];
+    // -> static @enum$1025main_menu_c _type$1543[3];
     // -> static int _size$1542[3][2];
     // -> unsigned char evs_select_name_no[];
     // -> struct [anonymous] evs_mem_data[9];
@@ -38756,82 +33276,7 @@ unsigned char evs_seqence; // size: 0x1, address: 0x4879
 static void menuLvSel_input(struct {
     // total size: 0x2574
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     struct SMenuItem miBase[1]; // offset 0x8, size 0x90
     struct SMenuItem miPanel[2]; // offset 0x98, size 0x120
     struct {
@@ -38871,18 +33316,7 @@ static void menuLvSel_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -38915,18 +33349,7 @@ static void menuLvSel_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -38954,18 +33377,7 @@ static void menuLvSel_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -39007,18 +33419,7 @@ static void menuLvSel_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39072,194 +33473,12 @@ static void menuLvSel_input(struct {
         signed short map_x; // offset 0x6, size 0x2
         signed short map_y; // offset 0x8, size 0x2
         signed char map_item_size; // offset 0xA, size 0x1
-        enum /* @enum$868main_menu_c */ {
-            dm_mode_null = 0,
-            dm_mode_init = 1,
-            dm_mode_wait = 2,
-            dm_mode_throw = 3,
-            dm_mode_down = 4,
-            dm_mode_down_wait = 5,
-            dm_mode_erase_chack = 6,
-            dm_mode_erase_anime = 7,
-            dm_mode_ball_down = 8,
-            dm_mode_cap_set = 9,
-            dm_mode_stage_clear = 10,
-            dm_mode_game_over = 11,
-            dm_mode_bottom_up = 12,
-            dm_mode_win = 13,
-            dm_mode_win_retry = 14,
-            dm_mode_lose = 15,
-            dm_mode_lose_retry = 16,
-            dm_mode_draw = 17,
-            dm_mode_draw_retry = 18,
-            dm_mode_tr_chaeck = 19,
-            dm_mode_training = 20,
-            dm_mode_tr_erase_chack = 21,
-            dm_mode_tr_cap_set = 22,
-            dm_mode_pause = 23,
-            dm_mode_pause_retry = 24,
-            dm_mode_no_action = 25,
-            dm_mode_clear_wait = 26,
-            dm_mode_clear_result = 27,
-            dm_mode_gover_wait = 28,
-            dm_mode_gover_result = 29,
-            dm_mode_retire_wait = 30,
-            dm_mode_retire_result = 31,
-            dm_mode_debug_config = 32,
-            dm_mode_debug = 33,
-        } mode_now; // offset 0xC, size 0x4
-        enum /* @enum$868main_menu_c */ {
-            dm_mode_null = 0,
-            dm_mode_init = 1,
-            dm_mode_wait = 2,
-            dm_mode_throw = 3,
-            dm_mode_down = 4,
-            dm_mode_down_wait = 5,
-            dm_mode_erase_chack = 6,
-            dm_mode_erase_anime = 7,
-            dm_mode_ball_down = 8,
-            dm_mode_cap_set = 9,
-            dm_mode_stage_clear = 10,
-            dm_mode_game_over = 11,
-            dm_mode_bottom_up = 12,
-            dm_mode_win = 13,
-            dm_mode_win_retry = 14,
-            dm_mode_lose = 15,
-            dm_mode_lose_retry = 16,
-            dm_mode_draw = 17,
-            dm_mode_draw_retry = 18,
-            dm_mode_tr_chaeck = 19,
-            dm_mode_training = 20,
-            dm_mode_tr_erase_chack = 21,
-            dm_mode_tr_cap_set = 22,
-            dm_mode_pause = 23,
-            dm_mode_pause_retry = 24,
-            dm_mode_no_action = 25,
-            dm_mode_clear_wait = 26,
-            dm_mode_clear_result = 27,
-            dm_mode_gover_wait = 28,
-            dm_mode_gover_result = 29,
-            dm_mode_retire_wait = 30,
-            dm_mode_retire_result = 31,
-            dm_mode_debug_config = 32,
-            dm_mode_debug = 33,
-        } mode_old; // offset 0x10, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_now; // offset 0x14, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_old; // offset 0x18, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_training; // offset 0x1C, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_static; // offset 0x20, size 0x4
+        @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
+        @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
+        @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
+        @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
+        @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
+        @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
         unsigned char virus_order_number; // offset 0x24, size 0x1
         unsigned char virus_number; // offset 0x25, size 0x1
         unsigned char virus_level; // offset 0x26, size 0x1
@@ -39406,82 +33625,7 @@ static void menuLvSel_input(struct {
 static void menuLvSel_update(struct {
     // total size: 0x2574
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     struct SMenuItem miBase[1]; // offset 0x8, size 0x90
     struct SMenuItem miPanel[2]; // offset 0x98, size 0x120
     struct {
@@ -39521,18 +33665,7 @@ static void menuLvSel_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39565,18 +33698,7 @@ static void menuLvSel_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39604,18 +33726,7 @@ static void menuLvSel_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -39657,18 +33768,7 @@ static void menuLvSel_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39702,82 +33802,7 @@ static void menuLvSel_update(struct {
 static void menuLvSel_draw(struct {
     // total size: 0x2574
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
     struct SMenuItem miBase[1]; // offset 0x8, size 0x90
     struct SMenuItem miPanel[2]; // offset 0x98, size 0x120
     struct {
@@ -39817,18 +33842,7 @@ static void menuLvSel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39861,18 +33875,7 @@ static void menuLvSel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -39900,18 +33903,7 @@ static void menuLvSel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -39953,18 +33945,7 @@ static void menuLvSel_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -40547,18 +34528,7 @@ static void menuChSel_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -40580,82 +34550,7 @@ static void menuChSel_init(struct {
     struct SMenuItem * item; // r4
     int i; // r8
     int charNo; // r29
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r1+0x10
+    @enum$856main_menu_c mode; // r1+0x10
 
     // References
     // -> static int _pos$7882[4][2];
@@ -40666,10 +34561,7 @@ static void menuChSel_init(struct {
 }
 
 // Range: 0x43710 -> 0x43760
-static enum /* @enum$93main_menu_c */ {
-    false = 0,
-    true = 1,
-} menuChSel_checkSelected(struct {
+static @enum$110dm_title_main_c menuChSel_checkSelected(struct {
     // total size: 0x2D4C
     void * global; // offset 0x0, size 0x4
     int allCount; // offset 0x4, size 0x4
@@ -40699,18 +34591,7 @@ static enum /* @enum$93main_menu_c */ {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -40764,18 +34645,7 @@ static void menuChSel_input1(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -40840,18 +34710,7 @@ static void menuChSel_inputMan(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -40906,18 +34765,7 @@ static void menuChSel_inputCom(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -40974,18 +34822,7 @@ static void menuChSel_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -41029,82 +34866,7 @@ static void menuChSel_input(struct {
         unsigned char vm_st; // offset 0x18, size 0x1
         unsigned char vm_m; // offset 0x19, size 0x1
     } * cfg; // r5
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r30
+    @enum$856main_menu_c mode; // r30
     int i; // r6
 
     // References
@@ -41147,18 +34909,7 @@ static void menuChSel_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -41182,18 +34933,7 @@ static void menuChSel_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -41248,18 +34988,7 @@ static void menuChSel_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -42502,18 +36231,9 @@ static void menuPlay2_init(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -42567,18 +36287,7 @@ static void menuPlay2_init(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -42601,18 +36310,7 @@ static void menuPlay2_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -42652,18 +36350,7 @@ static void menuPlay2_init(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -42704,18 +36391,7 @@ static void menuPlay2_init(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -42751,18 +36427,7 @@ static void menuPlay2_init(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -42814,194 +36479,12 @@ static void menuPlay2_init(struct {
         signed short map_x; // offset 0x6, size 0x2
         signed short map_y; // offset 0x8, size 0x2
         signed char map_item_size; // offset 0xA, size 0x1
-        enum /* @enum$868main_menu_c */ {
-            dm_mode_null = 0,
-            dm_mode_init = 1,
-            dm_mode_wait = 2,
-            dm_mode_throw = 3,
-            dm_mode_down = 4,
-            dm_mode_down_wait = 5,
-            dm_mode_erase_chack = 6,
-            dm_mode_erase_anime = 7,
-            dm_mode_ball_down = 8,
-            dm_mode_cap_set = 9,
-            dm_mode_stage_clear = 10,
-            dm_mode_game_over = 11,
-            dm_mode_bottom_up = 12,
-            dm_mode_win = 13,
-            dm_mode_win_retry = 14,
-            dm_mode_lose = 15,
-            dm_mode_lose_retry = 16,
-            dm_mode_draw = 17,
-            dm_mode_draw_retry = 18,
-            dm_mode_tr_chaeck = 19,
-            dm_mode_training = 20,
-            dm_mode_tr_erase_chack = 21,
-            dm_mode_tr_cap_set = 22,
-            dm_mode_pause = 23,
-            dm_mode_pause_retry = 24,
-            dm_mode_no_action = 25,
-            dm_mode_clear_wait = 26,
-            dm_mode_clear_result = 27,
-            dm_mode_gover_wait = 28,
-            dm_mode_gover_result = 29,
-            dm_mode_retire_wait = 30,
-            dm_mode_retire_result = 31,
-            dm_mode_debug_config = 32,
-            dm_mode_debug = 33,
-        } mode_now; // offset 0xC, size 0x4
-        enum /* @enum$868main_menu_c */ {
-            dm_mode_null = 0,
-            dm_mode_init = 1,
-            dm_mode_wait = 2,
-            dm_mode_throw = 3,
-            dm_mode_down = 4,
-            dm_mode_down_wait = 5,
-            dm_mode_erase_chack = 6,
-            dm_mode_erase_anime = 7,
-            dm_mode_ball_down = 8,
-            dm_mode_cap_set = 9,
-            dm_mode_stage_clear = 10,
-            dm_mode_game_over = 11,
-            dm_mode_bottom_up = 12,
-            dm_mode_win = 13,
-            dm_mode_win_retry = 14,
-            dm_mode_lose = 15,
-            dm_mode_lose_retry = 16,
-            dm_mode_draw = 17,
-            dm_mode_draw_retry = 18,
-            dm_mode_tr_chaeck = 19,
-            dm_mode_training = 20,
-            dm_mode_tr_erase_chack = 21,
-            dm_mode_tr_cap_set = 22,
-            dm_mode_pause = 23,
-            dm_mode_pause_retry = 24,
-            dm_mode_no_action = 25,
-            dm_mode_clear_wait = 26,
-            dm_mode_clear_result = 27,
-            dm_mode_gover_wait = 28,
-            dm_mode_gover_result = 29,
-            dm_mode_retire_wait = 30,
-            dm_mode_retire_result = 31,
-            dm_mode_debug_config = 32,
-            dm_mode_debug = 33,
-        } mode_old; // offset 0x10, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_now; // offset 0x14, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_old; // offset 0x18, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_training; // offset 0x1C, size 0x4
-        enum /* @enum$867main_menu_c */ {
-            dm_cnd_null = 0,
-            dm_cnd_wait = 1,
-            dm_cnd_init = 2,
-            dm_cnd_stage_clear = 3,
-            dm_cnd_game_over = 4,
-            dm_cnd_win = 5,
-            dm_cnd_win_retry = 6,
-            dm_cnd_win_retry_sc = 7,
-            dm_cnd_lose = 8,
-            dm_cnd_lose_retry = 9,
-            dm_cnd_lose_retry_sc = 10,
-            dm_cnd_draw = 11,
-            dm_cnd_draw_retry = 12,
-            dm_cnd_pause = 13,
-            dm_cnd_pause_re = 14,
-            dm_cnd_pause_re_sc = 15,
-            dm_cnd_retire = 16,
-            dm_cnd_tr_chack = 17,
-            dm_cnd_training = 18,
-            dm_cnd_clear_wait = 19,
-            dm_cnd_clear_result = 20,
-            dm_cnd_gover_wait = 21,
-            dm_cnd_gover_result = 22,
-            dm_cnd_retire_wait = 23,
-            dm_cnd_retire_result = 24,
-            dm_cnd_debug_config = 25,
-            dm_cnd_debug = 26,
-        } cnd_static; // offset 0x20, size 0x4
+        @enum$99dm_game_main_c mode_now; // offset 0xC, size 0x4
+        @enum$99dm_game_main_c mode_old; // offset 0x10, size 0x4
+        @enum$98dm_game_main_c cnd_now; // offset 0x14, size 0x4
+        @enum$98dm_game_main_c cnd_old; // offset 0x18, size 0x4
+        @enum$98dm_game_main_c cnd_training; // offset 0x1C, size 0x4
+        @enum$98dm_game_main_c cnd_static; // offset 0x20, size 0x4
         unsigned char virus_order_number; // offset 0x24, size 0x1
         unsigned char virus_number; // offset 0x25, size 0x1
         unsigned char virus_level; // offset 0x26, size 0x1
@@ -43160,18 +36643,9 @@ static void menuPlay2_inputMan(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -43225,18 +36699,7 @@ static void menuPlay2_inputMan(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43259,18 +36722,7 @@ static void menuPlay2_inputMan(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -43310,18 +36762,7 @@ static void menuPlay2_inputMan(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43362,18 +36803,7 @@ static void menuPlay2_inputMan(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43409,18 +36839,7 @@ static void menuPlay2_inputMan(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -43443,18 +36862,9 @@ static void menuPlay2_inputMan(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -43508,18 +36918,7 @@ static void menuPlay2_inputMan(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43542,18 +36941,7 @@ static void menuPlay2_inputMan(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -43593,18 +36981,7 @@ static void menuPlay2_inputMan(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43627,82 +37004,7 @@ static void menuPlay2_inputMan(struct {
     int ok; // r26
     int cancel; // r25
     int playerNo; // r1+0x8
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r25
+    @enum$856main_menu_c mode; // r25
 
     // References
     // -> static int _moveTbl$8521[2];
@@ -43723,18 +37025,9 @@ static void menuPlay2_inputCpu(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -43788,18 +37081,7 @@ static void menuPlay2_inputCpu(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43822,18 +37104,7 @@ static void menuPlay2_inputCpu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -43873,18 +37144,7 @@ static void menuPlay2_inputCpu(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43925,18 +37185,7 @@ static void menuPlay2_inputCpu(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -43972,18 +37221,7 @@ static void menuPlay2_inputCpu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44006,18 +37244,9 @@ static void menuPlay2_inputCpu(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -44071,18 +37300,7 @@ static void menuPlay2_inputCpu(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44105,18 +37323,7 @@ static void menuPlay2_inputCpu(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44156,18 +37363,7 @@ static void menuPlay2_inputCpu(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44206,18 +37402,9 @@ static void menuPlay2_input(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -44271,18 +37458,7 @@ static void menuPlay2_input(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44305,18 +37481,7 @@ static void menuPlay2_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44356,18 +37521,7 @@ static void menuPlay2_input(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44408,18 +37562,7 @@ static void menuPlay2_input(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44455,18 +37598,7 @@ static void menuPlay2_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44514,18 +37646,9 @@ static void menuPlay2_input(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -44579,18 +37702,7 @@ static void menuPlay2_input(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44613,18 +37725,7 @@ static void menuPlay2_input(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44664,18 +37765,7 @@ static void menuPlay2_input(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44727,18 +37817,9 @@ static void menuPlay2_update(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -44792,18 +37873,7 @@ static void menuPlay2_update(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44826,18 +37896,7 @@ static void menuPlay2_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -44877,18 +37936,7 @@ static void menuPlay2_update(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44929,18 +37977,7 @@ static void menuPlay2_update(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -44976,18 +38013,7 @@ static void menuPlay2_update(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -45026,18 +38052,9 @@ static void menuPlay2_draw(struct {
     struct {
         // total size: 0x1920
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } flash; // offset 0x4, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } timeAt; // offset 0x8, size 0x4
-        enum /* @enum$93main_menu_c */ {
-            false = 0,
-            true = 1,
-        } FL_TA; // offset 0xC, size 0x4
+        @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+        @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+        @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
         int size; // offset 0x10, size 0x4
         int playerCount; // offset 0x14, size 0x4
         int cpuCount; // offset 0x18, size 0x4
@@ -45091,18 +38108,7 @@ static void menuPlay2_draw(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -45125,18 +38131,7 @@ static void menuPlay2_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -45176,18 +38171,7 @@ static void menuPlay2_draw(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -45228,18 +38212,7 @@ static void menuPlay2_draw(struct {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -45275,18 +38248,7 @@ static void menuPlay2_draw(struct {
         struct {
             // total size: 0x260
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$1025main_menu_c */ {
-                CURSOR_ITEM = 0,
-                CURSOR_PANEL = 1,
-                CURSOR_WINDOW = 2,
-                CURSOR_THICK = 3,
-                CURSOR_NEW_4P = 4,
-                CURSOR_NEW_MUSIC = 5,
-                CURSOR_NEW_SPEED = 6,
-                CURSOR_NEW_VIRUS_LV_L = 7,
-                CURSOR_NEW_VIRUS_LV_S = 8,
-                CURSOR_TYPE_SUM = 9,
-            } type; // offset 0x4, size 0x4
+            @enum$1025main_menu_c type; // offset 0x4, size 0x4
             int playerCount; // offset 0x8, size 0x4
             int cpuCount; // offset 0xC, size 0x4
             int playerNo; // offset 0x10, size 0x4
@@ -46014,18 +38976,7 @@ static void menuNmEnt_init(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -46131,18 +39082,7 @@ static void menuNmEnt_input(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -46293,82 +39233,7 @@ static void menuNmEnt_input(struct {
             unsigned char vm_m; // offset 0x19, size 0x1
         } config; // offset 0xB4, size 0x1A
     } * mc; // r19
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r16
+    @enum$856main_menu_c mode; // r16
     struct {
         // total size: 0xD0
         unsigned char mem_use_flg; // offset 0x0, size 0x1
@@ -46454,18 +39319,7 @@ static void menuNmEnt_update(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -46509,18 +39363,7 @@ static void menuNmEnt_draw(struct {
     struct {
         // total size: 0x260
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$1025main_menu_c */ {
-            CURSOR_ITEM = 0,
-            CURSOR_PANEL = 1,
-            CURSOR_WINDOW = 2,
-            CURSOR_THICK = 3,
-            CURSOR_NEW_4P = 4,
-            CURSOR_NEW_MUSIC = 5,
-            CURSOR_NEW_SPEED = 6,
-            CURSOR_NEW_VIRUS_LV_L = 7,
-            CURSOR_NEW_VIRUS_LV_S = 8,
-            CURSOR_TYPE_SUM = 9,
-        } type; // offset 0x4, size 0x4
+        @enum$1025main_menu_c type; // offset 0x4, size 0x4
         int playerCount; // offset 0x8, size 0x4
         int cpuCount; // offset 0xC, size 0x4
         int playerNo; // offset 0x10, size 0x4
@@ -49669,44 +42512,17 @@ static void menuRankNum_draw(struct {
 }
 
 static unsigned char _color$9658[8][3]; // size: 0x18, address: 0x3980
-enum /* @enum$9657main_menu_c */ {
-    RANK_FIG_NUMBER = 7,
-    RANK_FIG_TIME = 8,
-    RANK_FIG_RATIO = 9,
-    RANK_FIG_LEVEL = 10,
-    RANK_FIG_TIME2 = 11,
-    RANK_FIG_CLEAR = 12,
-    RANK_FIG_ALL = 13,
-    RANK_FIG_SUM = 14,
-};
+@enum$9657main_menu_c;
 // Range: 0x48358 -> 0x484F4
 static void menuRankFig_init(struct {
     // total size: 0xC8
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$9657main_menu_c */ {
-        RANK_FIG_NUMBER = 7,
-        RANK_FIG_TIME = 8,
-        RANK_FIG_RATIO = 9,
-        RANK_FIG_LEVEL = 10,
-        RANK_FIG_TIME2 = 11,
-        RANK_FIG_CLEAR = 12,
-        RANK_FIG_ALL = 13,
-        RANK_FIG_SUM = 14,
-    } type; // offset 0x4, size 0x4
+    @enum$9657main_menu_c type; // offset 0x4, size 0x4
     int column; // offset 0x8, size 0x4
     int columns[10]; // offset 0xC, size 0x28
     int number; // offset 0x34, size 0x4
     struct SMenuItem miBase[1]; // offset 0x38, size 0x90
-} * st /* r31 */, void * global /* r1+0xC */, enum /* @enum$9657main_menu_c */ {
-    RANK_FIG_NUMBER = 7,
-    RANK_FIG_TIME = 8,
-    RANK_FIG_RATIO = 9,
-    RANK_FIG_LEVEL = 10,
-    RANK_FIG_TIME2 = 11,
-    RANK_FIG_CLEAR = 12,
-    RANK_FIG_ALL = 13,
-    RANK_FIG_SUM = 14,
-} column /* r1+0x10 */, int number /* r1+0x14 */, int color /* r30 */, int x /* r8 */, int y /* r9 */) {
+} * st /* r31 */, void * global /* r1+0xC */, @enum$9657main_menu_c column /* r1+0x10 */, int number /* r1+0x14 */, int color /* r30 */, int x /* r8 */, int y /* r9 */) {
     // Local variables
     struct SMenuItem * item; // r7
     const unsigned char * colorP; // r8
@@ -49719,16 +42535,7 @@ static void menuRankFig_init(struct {
 static void menuRankFig_update(struct {
     // total size: 0xC8
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$9657main_menu_c */ {
-        RANK_FIG_NUMBER = 7,
-        RANK_FIG_TIME = 8,
-        RANK_FIG_RATIO = 9,
-        RANK_FIG_LEVEL = 10,
-        RANK_FIG_TIME2 = 11,
-        RANK_FIG_CLEAR = 12,
-        RANK_FIG_ALL = 13,
-        RANK_FIG_SUM = 14,
-    } type; // offset 0x4, size 0x4
+    @enum$9657main_menu_c type; // offset 0x4, size 0x4
     int column; // offset 0x8, size 0x4
     int columns[10]; // offset 0xC, size 0x28
     int number; // offset 0x34, size 0x4
@@ -49749,16 +42556,7 @@ static int * _posX_tbl$9716[7]; // size: 0x1C, address: 0x22ECC
 static void menuRankFig_draw(struct {
     // total size: 0xC8
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$9657main_menu_c */ {
-        RANK_FIG_NUMBER = 7,
-        RANK_FIG_TIME = 8,
-        RANK_FIG_RATIO = 9,
-        RANK_FIG_LEVEL = 10,
-        RANK_FIG_TIME2 = 11,
-        RANK_FIG_CLEAR = 12,
-        RANK_FIG_ALL = 13,
-        RANK_FIG_SUM = 14,
-    } type; // offset 0x4, size 0x4
+    @enum$9657main_menu_c type; // offset 0x4, size 0x4
     int column; // offset 0x8, size 0x4
     int columns[10]; // offset 0xC, size 0x28
     int number; // offset 0x34, size 0x4
@@ -50105,16 +42903,7 @@ static void menuRankFig_draw(struct {
     struct {
         // total size: 0xC8
         void * global; // offset 0x0, size 0x4
-        enum /* @enum$9657main_menu_c */ {
-            RANK_FIG_NUMBER = 7,
-            RANK_FIG_TIME = 8,
-            RANK_FIG_RATIO = 9,
-            RANK_FIG_LEVEL = 10,
-            RANK_FIG_TIME2 = 11,
-            RANK_FIG_CLEAR = 12,
-            RANK_FIG_ALL = 13,
-            RANK_FIG_SUM = 14,
-        } type; // offset 0x4, size 0x4
+        @enum$9657main_menu_c type; // offset 0x4, size 0x4
         int column; // offset 0x8, size 0x4
         int columns[10]; // offset 0xC, size 0x28
         int number; // offset 0x34, size 0x4
@@ -51787,16 +44576,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51805,16 +44585,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51823,16 +44594,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51844,16 +44606,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51862,16 +44615,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51883,16 +44627,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51901,16 +44636,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51922,16 +44648,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51940,16 +44657,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51958,16 +44666,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51979,16 +44678,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -51997,16 +44687,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52015,16 +44696,7 @@ static void menuRankPanel_update(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52062,16 +44734,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52080,16 +44743,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52098,16 +44752,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52119,16 +44764,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52137,16 +44773,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52158,16 +44785,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52176,16 +44794,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52197,16 +44806,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52215,16 +44815,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52233,16 +44824,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52254,16 +44836,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52272,16 +44845,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52290,16 +44854,7 @@ static void menuRankPanel_draw(struct {
             struct {
                 // total size: 0xC8
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$9657main_menu_c */ {
-                    RANK_FIG_NUMBER = 7,
-                    RANK_FIG_TIME = 8,
-                    RANK_FIG_RATIO = 9,
-                    RANK_FIG_LEVEL = 10,
-                    RANK_FIG_TIME2 = 11,
-                    RANK_FIG_CLEAR = 12,
-                    RANK_FIG_ALL = 13,
-                    RANK_FIG_SUM = 14,
-                } type; // offset 0x4, size 0x4
+                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                 int column; // offset 0x8, size 0x4
                 int columns[10]; // offset 0xC, size 0x28
                 int number; // offset 0x34, size 0x4
@@ -52673,16 +45228,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52691,16 +45237,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52709,16 +45246,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52730,16 +45258,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52748,16 +45267,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52769,16 +45279,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52787,16 +45288,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52808,16 +45300,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52826,16 +45309,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52844,16 +45318,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52865,16 +45330,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52883,16 +45339,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52901,16 +45348,7 @@ static void menuRankPanel_draw(struct {
                 struct {
                     // total size: 0xC8
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$9657main_menu_c */ {
-                        RANK_FIG_NUMBER = 7,
-                        RANK_FIG_TIME = 8,
-                        RANK_FIG_RATIO = 9,
-                        RANK_FIG_LEVEL = 10,
-                        RANK_FIG_TIME2 = 11,
-                        RANK_FIG_CLEAR = 12,
-                        RANK_FIG_ALL = 13,
-                        RANK_FIG_SUM = 14,
-                    } type; // offset 0x4, size 0x4
+                    @enum$9657main_menu_c type; // offset 0x4, size 0x4
                     int column; // offset 0x8, size 0x4
                     int columns[10]; // offset 0xC, size 0x28
                     int number; // offset 0x34, size 0x4
@@ -52954,86 +45392,8 @@ struct SRankSortInfo {
 static void menuRank_setNameBaseScale(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -53099,16 +45459,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53117,16 +45468,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53135,16 +45477,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53156,16 +45489,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53174,16 +45498,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53195,16 +45510,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53213,16 +45519,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53234,16 +45531,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53252,16 +45540,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53270,16 +45549,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53291,16 +45561,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53309,16 +45570,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53327,16 +45579,7 @@ static void menuRank_setNameBaseScale(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53357,86 +45600,8 @@ static void menuRank_setNameBaseScale(struct {
 static void menuRank_setSlide(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -53502,16 +45667,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53520,16 +45676,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53538,16 +45685,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53559,16 +45697,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53577,16 +45706,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53598,16 +45718,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53616,16 +45727,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53637,16 +45739,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53655,16 +45748,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53673,16 +45757,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53694,16 +45769,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53712,16 +45778,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53730,16 +45787,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53794,16 +45842,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53812,16 +45851,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53830,16 +45860,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53851,16 +45872,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53869,16 +45881,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53890,16 +45893,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53908,16 +45902,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53929,16 +45914,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53947,16 +45923,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53965,16 +45932,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -53986,16 +45944,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54004,16 +45953,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54022,16 +45962,7 @@ static void menuRank_setSlide(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54050,86 +45981,8 @@ static int _pos$10346[2]; // size: 0x8, address: 0x3A60
 static void menuRank_setFrame(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -54195,16 +46048,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54213,16 +46057,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54231,16 +46066,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54252,16 +46078,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54270,16 +46087,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54291,16 +46099,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54309,16 +46108,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54330,16 +46120,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54348,16 +46129,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54366,16 +46138,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54387,16 +46150,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54405,16 +46159,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54423,16 +46168,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54487,16 +46223,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54505,16 +46232,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54523,16 +46241,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54544,16 +46253,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54562,16 +46262,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54583,16 +46274,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54601,16 +46283,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54622,16 +46295,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54640,16 +46304,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54658,16 +46313,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54679,16 +46325,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54697,16 +46334,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54715,16 +46343,7 @@ static void menuRank_setFrame(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54761,86 +46380,8 @@ static int _hedVsY$10407[4]; // size: 0x10, address: 0x3B44
 static void menuRank_setPanel(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -54906,16 +46447,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54924,16 +46456,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54942,16 +46465,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54963,16 +46477,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -54981,16 +46486,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55002,16 +46498,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55020,16 +46507,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55041,16 +46519,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55059,16 +46528,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55077,16 +46537,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55098,16 +46549,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55116,16 +46558,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55134,16 +46567,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55153,82 +46577,7 @@ static void menuRank_setPanel(struct {
             } misc; // offset 0x1CC, size 0x258
         } panel[8]; // offset 0x3A8, size 0x2120
     } ct[2]; // offset 0x590, size 0x4990
-} * st /* r25 */, int buf /* r1+0xC */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r15 */, int level /* r1+0x24 */) {
+} * st /* r25 */, int buf /* r1+0xC */, @enum$856main_menu_c mode /* r15 */, int level /* r1+0x24 */) {
     // Local variables
     struct {
         // total size: 0x24C8
@@ -55273,16 +46622,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55291,16 +46631,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55309,16 +46640,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55330,16 +46652,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55348,16 +46661,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55369,16 +46673,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55387,16 +46682,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55408,16 +46694,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55426,16 +46703,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55444,16 +46712,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55465,16 +46724,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55483,16 +46733,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55501,16 +46742,7 @@ static void menuRank_setPanel(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55637,86 +46869,8 @@ static int _lr$10544[2][2]; // size: 0x10, address: 0x3B54
 static void menuRank_init(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -55782,16 +46936,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55800,16 +46945,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55818,16 +46954,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55839,16 +46966,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55857,16 +46975,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55878,16 +46987,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55896,16 +46996,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55917,16 +47008,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55935,16 +47017,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55953,16 +47026,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55974,16 +47038,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -55992,16 +47047,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56010,16 +47056,7 @@ static void menuRank_init(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56041,86 +47078,8 @@ static void menuRank_init(struct {
 static void menuRank_input(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -56186,16 +47145,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56204,16 +47154,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56222,16 +47163,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56243,16 +47175,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56261,16 +47184,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56282,16 +47196,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56300,16 +47205,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56321,16 +47217,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56339,16 +47226,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56357,16 +47235,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56378,16 +47247,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56396,16 +47256,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56414,16 +47265,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56478,16 +47320,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56496,16 +47329,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56514,16 +47338,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56535,16 +47350,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56553,16 +47359,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56574,16 +47371,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56592,16 +47380,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56613,16 +47392,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56631,16 +47401,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56649,16 +47410,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56670,16 +47422,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56688,16 +47431,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56706,16 +47440,7 @@ static void menuRank_input(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56735,86 +47460,8 @@ static void menuRank_input(struct {
 static void menuRank_update(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -56880,16 +47527,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56898,16 +47536,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56916,16 +47545,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56937,16 +47557,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56955,16 +47566,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56976,16 +47578,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -56994,16 +47587,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57015,16 +47599,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57033,16 +47608,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57051,16 +47617,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57072,16 +47629,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57090,16 +47638,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57108,16 +47647,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57175,16 +47705,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57193,16 +47714,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57211,16 +47723,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57232,16 +47735,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57250,16 +47744,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57271,16 +47756,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57289,16 +47765,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57310,16 +47777,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57328,16 +47786,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57346,16 +47795,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57367,16 +47807,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57385,16 +47816,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57403,16 +47825,7 @@ static void menuRank_update(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57430,86 +47843,8 @@ static int _dir$10660[2]; // size: 0x8, address: 0x3B64
 static void menuRank_draw(struct {
     // total size: 0x4F20
     void * global; // offset 0x0, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // offset 0x4, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } vsFlag; // offset 0x8, size 0x4
+    @enum$856main_menu_c mode; // offset 0x4, size 0x4
+    @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
     int level; // offset 0xC, size 0x4
     int levelOld; // offset 0x10, size 0x4
     int curBuf; // offset 0x14, size 0x4
@@ -57575,16 +47910,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57593,16 +47919,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57611,16 +47928,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57632,16 +47940,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57650,16 +47949,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57671,16 +47961,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57689,16 +47970,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57710,16 +47982,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57728,16 +47991,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57746,16 +48000,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57767,16 +48012,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57785,16 +48021,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -57803,16 +48030,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58385,16 +48603,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58403,16 +48612,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58421,16 +48621,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58442,16 +48633,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58460,16 +48642,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58481,16 +48654,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58499,16 +48663,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58520,16 +48675,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58538,16 +48684,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58556,16 +48693,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58577,16 +48705,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58595,16 +48714,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58613,16 +48723,7 @@ static void menuRank_draw(struct {
                     struct {
                         // total size: 0xC8
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$9657main_menu_c */ {
-                            RANK_FIG_NUMBER = 7,
-                            RANK_FIG_TIME = 8,
-                            RANK_FIG_RATIO = 9,
-                            RANK_FIG_LEVEL = 10,
-                            RANK_FIG_TIME2 = 11,
-                            RANK_FIG_CLEAR = 12,
-                            RANK_FIG_ALL = 13,
-                            RANK_FIG_SUM = 14,
-                        } type; // offset 0x4, size 0x4
+                        @enum$9657main_menu_c type; // offset 0x4, size 0x4
                         int column; // offset 0x8, size 0x4
                         int columns[10]; // offset 0xC, size 0x28
                         int number; // offset 0x34, size 0x4
@@ -58639,82 +48740,7 @@ static void menuRank_draw(struct {
     // -> static union [anonymous] fade_normal_texture_init_dl[3];
 }
 
-enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuAll_lastMode; // size: 0x4, address: 0x5536C
+@enum$856main_menu_c _menuAll_lastMode; // size: 0x4, address: 0x5536C
 struct SMenuAll {
     // total size: 0x15A38
     union {
@@ -58857,82 +48883,7 @@ struct SMenuAll {
         struct {
             // total size: 0x3558
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$856main_menu_c */ {
-                MODE_MAIN = 0,
-                MODE_PLAY1 = 1,
-                MODE_STORY_NS = 2,
-                MODE_STORY_NE = 3,
-                MODE_STORY = 4,
-                MODE_LVSEL_NS = 5,
-                MODE_LVSEL_NE = 6,
-                MODE_LVSEL = 7,
-                MODE_LVSEL_TQ_NS = 8,
-                MODE_LVSEL_TQ_NE = 9,
-                MODE_LVSEL_TQ = 10,
-                MODE_LVSEL_TA_NS = 11,
-                MODE_LVSEL_TA_NE = 12,
-                MODE_LVSEL_TA = 13,
-                MODE_VSCOM_NS = 14,
-                MODE_VSCOM_NE = 15,
-                MODE_VSCOM_CH = 16,
-                MODE_VSCOM = 17,
-                MODE_VSCOM_FL_NS = 18,
-                MODE_VSCOM_FL_NE = 19,
-                MODE_VSCOM_FL_CH = 20,
-                MODE_VSCOM_FL = 21,
-                MODE_PLAY2 = 22,
-                MODE_VSMAN_NS = 23,
-                MODE_VSMAN_NE = 24,
-                MODE_VSMAN_CH = 25,
-                MODE_VSMAN = 26,
-                MODE_VSMAN_FL_NS = 27,
-                MODE_VSMAN_FL_NE = 28,
-                MODE_VSMAN_FL_CH = 29,
-                MODE_VSMAN_FL = 30,
-                MODE_VSMAN_TA_NS = 31,
-                MODE_VSMAN_TA_NE = 32,
-                MODE_VSMAN_TA_CH = 33,
-                MODE_VSMAN_TA = 34,
-                MODE_PLAY4 = 35,
-                MODE_PLAY4_TYPE1 = 36,
-                MODE_PLAY4_TYPE2 = 37,
-                MODE_PLAY4_TYPE3 = 38,
-                MODE_PLAY4_TYPE4 = 39,
-                MODE_PLAY4_CH = 40,
-                MODE_PLAY4_LV = 41,
-                MODE_PLAY4_TB_CH = 42,
-                MODE_PLAY4_TB_LV = 43,
-                MODE_PLAY4_FL_CH = 44,
-                MODE_PLAY4_FL_LV = 45,
-                MODE_OPTION = 46,
-                MODE_RECORD_MS = 47,
-                MODE_RECORD_PLAY1 = 48,
-                MODE_RECORD_ST = 49,
-                MODE_RECORD_LS = 50,
-                MODE_RECORD_LS_TQ = 51,
-                MODE_RECORD_LS_TA = 52,
-                MODE_RECORD_VC = 53,
-                MODE_RECORD_VC_FL = 54,
-                MODE_RECORD_PLAY2 = 55,
-                MODE_RECORD_VM = 56,
-                MODE_RECORD_VM_FL = 57,
-                MODE_RECORD_VM_TA = 58,
-                MODE_TUTORIAL = 59,
-                MODE_CONT = 60,
-                MODE_NAME_NS = 61,
-                MODE_NAME = 62,
-                MODE_NAME_NE = 63,
-                MODE_NAME_NE2 = 64,
-                MODE_NAME_DEL_YN = 65,
-                MODE_NAME_DEL_MES = 66,
-                MODE_BACKUP = 67,
-                MODE_BACKUP_YN = 68,
-                MODE_BACKUP_MES = 69,
-                MODE_MISC = 70,
-                MODE_SOUND = 71,
-                MODE_COUNT = 72,
-                MODE_SCORE = 73,
-            } mode; // offset 0x4, size 0x4
+            @enum$856main_menu_c mode; // offset 0x4, size 0x4
             int depth; // offset 0x8, size 0x4
             int select[8]; // offset 0xC, size 0x20
             int screenNo; // offset 0x2C, size 0x4
@@ -58951,18 +48902,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -58997,18 +48937,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59038,18 +48967,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59092,18 +49010,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59187,18 +49094,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59218,18 +49114,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59295,18 +49180,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59340,18 +49214,7 @@ struct SMenuAll {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -59391,18 +49254,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59440,18 +49292,7 @@ struct SMenuAll {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -59472,82 +49313,7 @@ struct SMenuAll {
         struct {
             // total size: 0x2574
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$856main_menu_c */ {
-                MODE_MAIN = 0,
-                MODE_PLAY1 = 1,
-                MODE_STORY_NS = 2,
-                MODE_STORY_NE = 3,
-                MODE_STORY = 4,
-                MODE_LVSEL_NS = 5,
-                MODE_LVSEL_NE = 6,
-                MODE_LVSEL = 7,
-                MODE_LVSEL_TQ_NS = 8,
-                MODE_LVSEL_TQ_NE = 9,
-                MODE_LVSEL_TQ = 10,
-                MODE_LVSEL_TA_NS = 11,
-                MODE_LVSEL_TA_NE = 12,
-                MODE_LVSEL_TA = 13,
-                MODE_VSCOM_NS = 14,
-                MODE_VSCOM_NE = 15,
-                MODE_VSCOM_CH = 16,
-                MODE_VSCOM = 17,
-                MODE_VSCOM_FL_NS = 18,
-                MODE_VSCOM_FL_NE = 19,
-                MODE_VSCOM_FL_CH = 20,
-                MODE_VSCOM_FL = 21,
-                MODE_PLAY2 = 22,
-                MODE_VSMAN_NS = 23,
-                MODE_VSMAN_NE = 24,
-                MODE_VSMAN_CH = 25,
-                MODE_VSMAN = 26,
-                MODE_VSMAN_FL_NS = 27,
-                MODE_VSMAN_FL_NE = 28,
-                MODE_VSMAN_FL_CH = 29,
-                MODE_VSMAN_FL = 30,
-                MODE_VSMAN_TA_NS = 31,
-                MODE_VSMAN_TA_NE = 32,
-                MODE_VSMAN_TA_CH = 33,
-                MODE_VSMAN_TA = 34,
-                MODE_PLAY4 = 35,
-                MODE_PLAY4_TYPE1 = 36,
-                MODE_PLAY4_TYPE2 = 37,
-                MODE_PLAY4_TYPE3 = 38,
-                MODE_PLAY4_TYPE4 = 39,
-                MODE_PLAY4_CH = 40,
-                MODE_PLAY4_LV = 41,
-                MODE_PLAY4_TB_CH = 42,
-                MODE_PLAY4_TB_LV = 43,
-                MODE_PLAY4_FL_CH = 44,
-                MODE_PLAY4_FL_LV = 45,
-                MODE_OPTION = 46,
-                MODE_RECORD_MS = 47,
-                MODE_RECORD_PLAY1 = 48,
-                MODE_RECORD_ST = 49,
-                MODE_RECORD_LS = 50,
-                MODE_RECORD_LS_TQ = 51,
-                MODE_RECORD_LS_TA = 52,
-                MODE_RECORD_VC = 53,
-                MODE_RECORD_VC_FL = 54,
-                MODE_RECORD_PLAY2 = 55,
-                MODE_RECORD_VM = 56,
-                MODE_RECORD_VM_FL = 57,
-                MODE_RECORD_VM_TA = 58,
-                MODE_TUTORIAL = 59,
-                MODE_CONT = 60,
-                MODE_NAME_NS = 61,
-                MODE_NAME = 62,
-                MODE_NAME_NE = 63,
-                MODE_NAME_NE2 = 64,
-                MODE_NAME_DEL_YN = 65,
-                MODE_NAME_DEL_MES = 66,
-                MODE_BACKUP = 67,
-                MODE_BACKUP_YN = 68,
-                MODE_BACKUP_MES = 69,
-                MODE_MISC = 70,
-                MODE_SOUND = 71,
-                MODE_COUNT = 72,
-                MODE_SCORE = 73,
-            } mode; // offset 0x4, size 0x4
+            @enum$856main_menu_c mode; // offset 0x4, size 0x4
             struct SMenuItem miBase[1]; // offset 0x8, size 0x90
             struct SMenuItem miPanel[2]; // offset 0x98, size 0x120
             struct {
@@ -59587,18 +49353,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59631,18 +49386,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59670,18 +49414,7 @@ struct SMenuAll {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -59723,18 +49456,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59769,18 +49491,9 @@ struct SMenuAll {
             struct {
                 // total size: 0x1920
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$93main_menu_c */ {
-                    false = 0,
-                    true = 1,
-                } flash; // offset 0x4, size 0x4
-                enum /* @enum$93main_menu_c */ {
-                    false = 0,
-                    true = 1,
-                } timeAt; // offset 0x8, size 0x4
-                enum /* @enum$93main_menu_c */ {
-                    false = 0,
-                    true = 1,
-                } FL_TA; // offset 0xC, size 0x4
+                @enum$110dm_title_main_c flash; // offset 0x4, size 0x4
+                @enum$110dm_title_main_c timeAt; // offset 0x8, size 0x4
+                @enum$110dm_title_main_c FL_TA; // offset 0xC, size 0x4
                 int size; // offset 0x10, size 0x4
                 int playerCount; // offset 0x14, size 0x4
                 int cpuCount; // offset 0x18, size 0x4
@@ -59834,18 +49547,7 @@ struct SMenuAll {
                     struct {
                         // total size: 0x260
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$1025main_menu_c */ {
-                            CURSOR_ITEM = 0,
-                            CURSOR_PANEL = 1,
-                            CURSOR_WINDOW = 2,
-                            CURSOR_THICK = 3,
-                            CURSOR_NEW_4P = 4,
-                            CURSOR_NEW_MUSIC = 5,
-                            CURSOR_NEW_SPEED = 6,
-                            CURSOR_NEW_VIRUS_LV_L = 7,
-                            CURSOR_NEW_VIRUS_LV_S = 8,
-                            CURSOR_TYPE_SUM = 9,
-                        } type; // offset 0x4, size 0x4
+                        @enum$1025main_menu_c type; // offset 0x4, size 0x4
                         int playerCount; // offset 0x8, size 0x4
                         int cpuCount; // offset 0xC, size 0x4
                         int playerNo; // offset 0x10, size 0x4
@@ -59868,18 +49570,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -59919,18 +49610,7 @@ struct SMenuAll {
                     struct {
                         // total size: 0x260
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$1025main_menu_c */ {
-                            CURSOR_ITEM = 0,
-                            CURSOR_PANEL = 1,
-                            CURSOR_WINDOW = 2,
-                            CURSOR_THICK = 3,
-                            CURSOR_NEW_4P = 4,
-                            CURSOR_NEW_MUSIC = 5,
-                            CURSOR_NEW_SPEED = 6,
-                            CURSOR_NEW_VIRUS_LV_L = 7,
-                            CURSOR_NEW_VIRUS_LV_S = 8,
-                            CURSOR_TYPE_SUM = 9,
-                        } type; // offset 0x4, size 0x4
+                        @enum$1025main_menu_c type; // offset 0x4, size 0x4
                         int playerCount; // offset 0x8, size 0x4
                         int cpuCount; // offset 0xC, size 0x4
                         int playerNo; // offset 0x10, size 0x4
@@ -59971,18 +49651,7 @@ struct SMenuAll {
                     struct {
                         // total size: 0x260
                         void * global; // offset 0x0, size 0x4
-                        enum /* @enum$1025main_menu_c */ {
-                            CURSOR_ITEM = 0,
-                            CURSOR_PANEL = 1,
-                            CURSOR_WINDOW = 2,
-                            CURSOR_THICK = 3,
-                            CURSOR_NEW_4P = 4,
-                            CURSOR_NEW_MUSIC = 5,
-                            CURSOR_NEW_SPEED = 6,
-                            CURSOR_NEW_VIRUS_LV_L = 7,
-                            CURSOR_NEW_VIRUS_LV_S = 8,
-                            CURSOR_TYPE_SUM = 9,
-                        } type; // offset 0x4, size 0x4
+                        @enum$1025main_menu_c type; // offset 0x4, size 0x4
                         int playerCount; // offset 0x8, size 0x4
                         int cpuCount; // offset 0xC, size 0x4
                         int playerNo; // offset 0x10, size 0x4
@@ -60018,18 +49687,7 @@ struct SMenuAll {
                 struct {
                     // total size: 0x260
                     void * global; // offset 0x0, size 0x4
-                    enum /* @enum$1025main_menu_c */ {
-                        CURSOR_ITEM = 0,
-                        CURSOR_PANEL = 1,
-                        CURSOR_WINDOW = 2,
-                        CURSOR_THICK = 3,
-                        CURSOR_NEW_4P = 4,
-                        CURSOR_NEW_MUSIC = 5,
-                        CURSOR_NEW_SPEED = 6,
-                        CURSOR_NEW_VIRUS_LV_L = 7,
-                        CURSOR_NEW_VIRUS_LV_S = 8,
-                        CURSOR_TYPE_SUM = 9,
-                    } type; // offset 0x4, size 0x4
+                    @enum$1025main_menu_c type; // offset 0x4, size 0x4
                     int playerCount; // offset 0x8, size 0x4
                     int cpuCount; // offset 0xC, size 0x4
                     int playerNo; // offset 0x10, size 0x4
@@ -60078,18 +49736,7 @@ struct SMenuAll {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -60125,18 +49772,7 @@ struct SMenuAll {
             struct {
                 // total size: 0x260
                 void * global; // offset 0x0, size 0x4
-                enum /* @enum$1025main_menu_c */ {
-                    CURSOR_ITEM = 0,
-                    CURSOR_PANEL = 1,
-                    CURSOR_WINDOW = 2,
-                    CURSOR_THICK = 3,
-                    CURSOR_NEW_4P = 4,
-                    CURSOR_NEW_MUSIC = 5,
-                    CURSOR_NEW_SPEED = 6,
-                    CURSOR_NEW_VIRUS_LV_L = 7,
-                    CURSOR_NEW_VIRUS_LV_S = 8,
-                    CURSOR_TYPE_SUM = 9,
-                } type; // offset 0x4, size 0x4
+                @enum$1025main_menu_c type; // offset 0x4, size 0x4
                 int playerCount; // offset 0x8, size 0x4
                 int cpuCount; // offset 0xC, size 0x4
                 int playerNo; // offset 0x10, size 0x4
@@ -60159,86 +49795,8 @@ struct SMenuAll {
         struct {
             // total size: 0x4F20
             void * global; // offset 0x0, size 0x4
-            enum /* @enum$856main_menu_c */ {
-                MODE_MAIN = 0,
-                MODE_PLAY1 = 1,
-                MODE_STORY_NS = 2,
-                MODE_STORY_NE = 3,
-                MODE_STORY = 4,
-                MODE_LVSEL_NS = 5,
-                MODE_LVSEL_NE = 6,
-                MODE_LVSEL = 7,
-                MODE_LVSEL_TQ_NS = 8,
-                MODE_LVSEL_TQ_NE = 9,
-                MODE_LVSEL_TQ = 10,
-                MODE_LVSEL_TA_NS = 11,
-                MODE_LVSEL_TA_NE = 12,
-                MODE_LVSEL_TA = 13,
-                MODE_VSCOM_NS = 14,
-                MODE_VSCOM_NE = 15,
-                MODE_VSCOM_CH = 16,
-                MODE_VSCOM = 17,
-                MODE_VSCOM_FL_NS = 18,
-                MODE_VSCOM_FL_NE = 19,
-                MODE_VSCOM_FL_CH = 20,
-                MODE_VSCOM_FL = 21,
-                MODE_PLAY2 = 22,
-                MODE_VSMAN_NS = 23,
-                MODE_VSMAN_NE = 24,
-                MODE_VSMAN_CH = 25,
-                MODE_VSMAN = 26,
-                MODE_VSMAN_FL_NS = 27,
-                MODE_VSMAN_FL_NE = 28,
-                MODE_VSMAN_FL_CH = 29,
-                MODE_VSMAN_FL = 30,
-                MODE_VSMAN_TA_NS = 31,
-                MODE_VSMAN_TA_NE = 32,
-                MODE_VSMAN_TA_CH = 33,
-                MODE_VSMAN_TA = 34,
-                MODE_PLAY4 = 35,
-                MODE_PLAY4_TYPE1 = 36,
-                MODE_PLAY4_TYPE2 = 37,
-                MODE_PLAY4_TYPE3 = 38,
-                MODE_PLAY4_TYPE4 = 39,
-                MODE_PLAY4_CH = 40,
-                MODE_PLAY4_LV = 41,
-                MODE_PLAY4_TB_CH = 42,
-                MODE_PLAY4_TB_LV = 43,
-                MODE_PLAY4_FL_CH = 44,
-                MODE_PLAY4_FL_LV = 45,
-                MODE_OPTION = 46,
-                MODE_RECORD_MS = 47,
-                MODE_RECORD_PLAY1 = 48,
-                MODE_RECORD_ST = 49,
-                MODE_RECORD_LS = 50,
-                MODE_RECORD_LS_TQ = 51,
-                MODE_RECORD_LS_TA = 52,
-                MODE_RECORD_VC = 53,
-                MODE_RECORD_VC_FL = 54,
-                MODE_RECORD_PLAY2 = 55,
-                MODE_RECORD_VM = 56,
-                MODE_RECORD_VM_FL = 57,
-                MODE_RECORD_VM_TA = 58,
-                MODE_TUTORIAL = 59,
-                MODE_CONT = 60,
-                MODE_NAME_NS = 61,
-                MODE_NAME = 62,
-                MODE_NAME_NE = 63,
-                MODE_NAME_NE2 = 64,
-                MODE_NAME_DEL_YN = 65,
-                MODE_NAME_DEL_MES = 66,
-                MODE_BACKUP = 67,
-                MODE_BACKUP_YN = 68,
-                MODE_BACKUP_MES = 69,
-                MODE_MISC = 70,
-                MODE_SOUND = 71,
-                MODE_COUNT = 72,
-                MODE_SCORE = 73,
-            } mode; // offset 0x4, size 0x4
-            enum /* @enum$93main_menu_c */ {
-                false = 0,
-                true = 1,
-            } vsFlag; // offset 0x8, size 0x4
+            @enum$856main_menu_c mode; // offset 0x4, size 0x4
+            @enum$110dm_title_main_c vsFlag; // offset 0x8, size 0x4
             int level; // offset 0xC, size 0x4
             int levelOld; // offset 0x10, size 0x4
             int curBuf; // offset 0x14, size 0x4
@@ -60304,16 +49862,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60322,16 +49871,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60340,16 +49880,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60361,16 +49892,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60379,16 +49901,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60400,16 +49913,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60418,16 +49922,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60439,16 +49934,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60457,16 +49943,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60475,16 +49952,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60496,16 +49964,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60514,16 +49973,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60532,16 +49982,7 @@ struct SMenuAll {
                             struct {
                                 // total size: 0xC8
                                 void * global; // offset 0x0, size 0x4
-                                enum /* @enum$9657main_menu_c */ {
-                                    RANK_FIG_NUMBER = 7,
-                                    RANK_FIG_TIME = 8,
-                                    RANK_FIG_RATIO = 9,
-                                    RANK_FIG_LEVEL = 10,
-                                    RANK_FIG_TIME2 = 11,
-                                    RANK_FIG_CLEAR = 12,
-                                    RANK_FIG_ALL = 13,
-                                    RANK_FIG_SUM = 14,
-                                } type; // offset 0x4, size 0x4
+                                @enum$9657main_menu_c type; // offset 0x4, size 0x4
                                 int column; // offset 0x8, size 0x4
                                 int columns[10]; // offset 0xC, size 0x28
                                 int number; // offset 0x34, size 0x4
@@ -60555,246 +49996,15 @@ struct SMenuAll {
     } context[2]; // offset 0x6E30, size 0xEB48
     int nowContext; // offset 0x15978, size 0x4
     int oldContext; // offset 0x1597C, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } oldMode; // offset 0x15980, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } nowMode; // offset 0x15984, size 0x4
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } newMode; // offset 0x15988, size 0x4
+    @enum$856main_menu_c oldMode; // offset 0x15980, size 0x4
+    @enum$856main_menu_c nowMode; // offset 0x15984, size 0x4
+    @enum$856main_menu_c newMode; // offset 0x15988, size 0x4
     int nextMain; // offset 0x1598C, size 0x4
     int eepRom; // offset 0x15990, size 0x4
     float fadeRatio; // offset 0x15994, size 0x4
     float fadeStep; // offset 0x15998, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } mainFirst; // offset 0x1599C, size 0x4
-    enum /* @enum$93main_menu_c */ {
-        false = 0,
-        true = 1,
-    } grapFirst; // offset 0x159A0, size 0x4
+    @enum$110dm_title_main_c mainFirst; // offset 0x1599C, size 0x4
+    @enum$110dm_title_main_c grapFirst; // offset 0x159A0, size 0x4
     unsigned long mainCount; // offset 0x159A4, size 0x4
     unsigned long grapCount; // offset 0x159A8, size 0x4
     unsigned long graphicThreadPri; // offset 0x159AC, size 0x4
@@ -61054,319 +50264,16 @@ static int _getKeyRep(int contNo /* r1+0x4 */) {
 }
 
 // Range: 0x4BFB8 -> 0x4BFC4
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _getMode(void * global /* r1+0x0 */) {}
-
+static @enum$856main_menu_c _getMode(void * global /* r1+0x0 */) {
 // Range: 0x4BFC4 -> 0x4BFD0
-static enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _getModeOld(void * global /* r1+0x0 */) {}
-
+static @enum$856main_menu_c _getModeOld(void * global /* r1+0x0 */) {
 // Range: 0x4BFD0 -> 0x4BFDC
-static void _setMode(void * global /* r1+0x0 */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r1+0x4 */) {}
-
+static void _setMode(void * global /* r1+0x0 */, @enum$856main_menu_c mode /* r1+0x4 */) {
 // Range: 0x4BFDC -> 0x4BFE8
 static void _setNextMain(void * global /* r1+0x0 */, int nextMain /* r1+0x4 */) {}
 
 // Range: 0x4BFE8 -> 0x4C00C
-static void _setTitle(void * global /* r3 */, enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} mode /* r4 */) {
+static void _setTitle(void * global /* r3 */, @enum$856main_menu_c mode /* r4 */) {
     // Local variables
     struct SMenuAll * st; // r1+0x8
 }
@@ -61389,82 +50296,7 @@ static void menuAll_init(struct SMenuAll * st /* r29 */, void * hpp /* r30 */) {
     // References
     // -> unsigned char evs_one_game_flg;
     // -> struct [anonymous] game_state_data[4];
-    // -> enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuAll_lastMode;
+    // -> @enum$856main_menu_c _menuAll_lastMode;
     // -> unsigned char evs_level_21;
     // -> void * _romDataTbl[][2];
 }
@@ -61499,82 +50331,7 @@ static void menuAll_input(struct SMenuAll * st /* r4 */) {
 static void menuAll_update(struct SMenuAll * st /* r31 */) {
     // Local variables
     struct SMenuItem * item; // r5
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r1+0x8
+    @enum$856main_menu_c mode; // r1+0x8
     int i; // r28
     int j; // r1+0x8
     float fade; // r1+0x8
@@ -62442,82 +51199,7 @@ static void menuAll_draw(struct SMenuAll * st /* r25 */, union {
     long long force_structure_alignment; // offset 0x0, size 0x8
 } * * gpp /* r26 */) {
     // Local variables
-    enum /* @enum$856main_menu_c */ {
-        MODE_MAIN = 0,
-        MODE_PLAY1 = 1,
-        MODE_STORY_NS = 2,
-        MODE_STORY_NE = 3,
-        MODE_STORY = 4,
-        MODE_LVSEL_NS = 5,
-        MODE_LVSEL_NE = 6,
-        MODE_LVSEL = 7,
-        MODE_LVSEL_TQ_NS = 8,
-        MODE_LVSEL_TQ_NE = 9,
-        MODE_LVSEL_TQ = 10,
-        MODE_LVSEL_TA_NS = 11,
-        MODE_LVSEL_TA_NE = 12,
-        MODE_LVSEL_TA = 13,
-        MODE_VSCOM_NS = 14,
-        MODE_VSCOM_NE = 15,
-        MODE_VSCOM_CH = 16,
-        MODE_VSCOM = 17,
-        MODE_VSCOM_FL_NS = 18,
-        MODE_VSCOM_FL_NE = 19,
-        MODE_VSCOM_FL_CH = 20,
-        MODE_VSCOM_FL = 21,
-        MODE_PLAY2 = 22,
-        MODE_VSMAN_NS = 23,
-        MODE_VSMAN_NE = 24,
-        MODE_VSMAN_CH = 25,
-        MODE_VSMAN = 26,
-        MODE_VSMAN_FL_NS = 27,
-        MODE_VSMAN_FL_NE = 28,
-        MODE_VSMAN_FL_CH = 29,
-        MODE_VSMAN_FL = 30,
-        MODE_VSMAN_TA_NS = 31,
-        MODE_VSMAN_TA_NE = 32,
-        MODE_VSMAN_TA_CH = 33,
-        MODE_VSMAN_TA = 34,
-        MODE_PLAY4 = 35,
-        MODE_PLAY4_TYPE1 = 36,
-        MODE_PLAY4_TYPE2 = 37,
-        MODE_PLAY4_TYPE3 = 38,
-        MODE_PLAY4_TYPE4 = 39,
-        MODE_PLAY4_CH = 40,
-        MODE_PLAY4_LV = 41,
-        MODE_PLAY4_TB_CH = 42,
-        MODE_PLAY4_TB_LV = 43,
-        MODE_PLAY4_FL_CH = 44,
-        MODE_PLAY4_FL_LV = 45,
-        MODE_OPTION = 46,
-        MODE_RECORD_MS = 47,
-        MODE_RECORD_PLAY1 = 48,
-        MODE_RECORD_ST = 49,
-        MODE_RECORD_LS = 50,
-        MODE_RECORD_LS_TQ = 51,
-        MODE_RECORD_LS_TA = 52,
-        MODE_RECORD_VC = 53,
-        MODE_RECORD_VC_FL = 54,
-        MODE_RECORD_PLAY2 = 55,
-        MODE_RECORD_VM = 56,
-        MODE_RECORD_VM_FL = 57,
-        MODE_RECORD_VM_TA = 58,
-        MODE_TUTORIAL = 59,
-        MODE_CONT = 60,
-        MODE_NAME_NS = 61,
-        MODE_NAME = 62,
-        MODE_NAME_NE = 63,
-        MODE_NAME_NE2 = 64,
-        MODE_NAME_DEL_YN = 65,
-        MODE_NAME_DEL_MES = 66,
-        MODE_BACKUP = 67,
-        MODE_BACKUP_YN = 68,
-        MODE_BACKUP_MES = 69,
-        MODE_MISC = 70,
-        MODE_SOUND = 71,
-        MODE_COUNT = 72,
-        MODE_SCORE = 73,
-    } mode; // r1+0x8
+    @enum$856main_menu_c mode; // r1+0x8
     int i; // r27
     int j; // r1+0x8
     int fade; // r1+0x8
@@ -62866,34 +51548,8 @@ static void menuAll_draw(struct SMenuAll * st /* r25 */, union {
 }
 
 unsigned char * Heap_bufferp; // size: 0x4, address: 0x18
-enum /* @enum$5277main_menu_c */ {
-    MAIN_11 = 0,
-    MAIN_12 = 1,
-    MAIN_STORY = 2,
-    MAIN_TITLE = 3,
-    MAIN_MANUAL = 4,
-    MAIN_GAME = 5,
-    MAIN_MENU = 6,
-    MAIN_TECHMES = 7,
-    MAIN_CONT_ERROR = 8,
-    MAIN_TV_ERROR = 9,
-    MAIN_CSUM_ERROR = 10,
-    MAIN_MEMORYCARD_CHECK = 11,
-};
-enum /* @enum$5277main_menu_c */ {
-    MAIN_11 = 0,
-    MAIN_12 = 1,
-    MAIN_STORY = 2,
-    MAIN_TITLE = 3,
-    MAIN_MANUAL = 4,
-    MAIN_GAME = 5,
-    MAIN_MENU = 6,
-    MAIN_TECHMES = 7,
-    MAIN_CONT_ERROR = 8,
-    MAIN_TV_ERROR = 9,
-    MAIN_CSUM_ERROR = 10,
-    MAIN_MEMORYCARD_CHECK = 11,
-} main_old; // size: 0x4, address: 0x18F88
+@enum$98dm_title_main_c;
+@enum$98dm_title_main_c main_old; // size: 0x4, address: 0x18F88
 struct SMenuAll * watchMenu; // size: 0x4, address: 0x55370
 unsigned short joyflg[4]; // size: 0x8, address: 0x1CE38
 unsigned short joycur1; // size: 0x2, address: 0x1CE4C
@@ -63067,26 +51723,8 @@ union {
     } loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } gfx_glist[3][9216]; // size: 0x36000, address: 0x1E9A8
-enum /* @enum$10820main_menu_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-};
-enum /* @enum$10820main_menu_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no; // size: 0x4, address: 0x1E994
+@enum$101main_story_c;
+@enum$101main_story_c graphic_no; // size: 0x4, address: 0x1E994
 unsigned long pendingGFX; // size: 0x4, address: 0x1E998
 unsigned short joyold[5]; // size: 0xA, address: 0x1CD94
 // Range: 0x4D36C -> 0x4D5F4
@@ -63096,92 +51734,8 @@ int main_menu() {
     struct SMenuAll * st; // r23
 
     // References
-    // -> enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuAll_lastMode;
-    // -> enum /* @enum$10820main_menu_c */ {
-    GFX_NULL = 0,
-    GFX_STORY = 1,
-    GFX_TITLE = 2,
-    GFX_MANUAL = 3,
-    GFX_GAME = 4,
-    GFX_MENU = 5,
-    GFX_TECHMES = 6,
-    GFX_BOOT_ERROR = 7,
-} graphic_no;
+    // -> @enum$856main_menu_c _menuAll_lastMode;
+    // -> @enum$101main_story_c graphic_no;
     // -> unsigned short joycur[5];
     // -> unsigned short joyupd[5];
     // -> unsigned short joyold[5];
@@ -63197,96 +51751,8 @@ int main_menu() {
     // -> struct SMenuAll * watchMenu;
     // -> int _menuMain_lastSelect[8];
     // -> int _menuMain_lastDepth;
-    // -> enum /* @enum$856main_menu_c */ {
-    MODE_MAIN = 0,
-    MODE_PLAY1 = 1,
-    MODE_STORY_NS = 2,
-    MODE_STORY_NE = 3,
-    MODE_STORY = 4,
-    MODE_LVSEL_NS = 5,
-    MODE_LVSEL_NE = 6,
-    MODE_LVSEL = 7,
-    MODE_LVSEL_TQ_NS = 8,
-    MODE_LVSEL_TQ_NE = 9,
-    MODE_LVSEL_TQ = 10,
-    MODE_LVSEL_TA_NS = 11,
-    MODE_LVSEL_TA_NE = 12,
-    MODE_LVSEL_TA = 13,
-    MODE_VSCOM_NS = 14,
-    MODE_VSCOM_NE = 15,
-    MODE_VSCOM_CH = 16,
-    MODE_VSCOM = 17,
-    MODE_VSCOM_FL_NS = 18,
-    MODE_VSCOM_FL_NE = 19,
-    MODE_VSCOM_FL_CH = 20,
-    MODE_VSCOM_FL = 21,
-    MODE_PLAY2 = 22,
-    MODE_VSMAN_NS = 23,
-    MODE_VSMAN_NE = 24,
-    MODE_VSMAN_CH = 25,
-    MODE_VSMAN = 26,
-    MODE_VSMAN_FL_NS = 27,
-    MODE_VSMAN_FL_NE = 28,
-    MODE_VSMAN_FL_CH = 29,
-    MODE_VSMAN_FL = 30,
-    MODE_VSMAN_TA_NS = 31,
-    MODE_VSMAN_TA_NE = 32,
-    MODE_VSMAN_TA_CH = 33,
-    MODE_VSMAN_TA = 34,
-    MODE_PLAY4 = 35,
-    MODE_PLAY4_TYPE1 = 36,
-    MODE_PLAY4_TYPE2 = 37,
-    MODE_PLAY4_TYPE3 = 38,
-    MODE_PLAY4_TYPE4 = 39,
-    MODE_PLAY4_CH = 40,
-    MODE_PLAY4_LV = 41,
-    MODE_PLAY4_TB_CH = 42,
-    MODE_PLAY4_TB_LV = 43,
-    MODE_PLAY4_FL_CH = 44,
-    MODE_PLAY4_FL_LV = 45,
-    MODE_OPTION = 46,
-    MODE_RECORD_MS = 47,
-    MODE_RECORD_PLAY1 = 48,
-    MODE_RECORD_ST = 49,
-    MODE_RECORD_LS = 50,
-    MODE_RECORD_LS_TQ = 51,
-    MODE_RECORD_LS_TA = 52,
-    MODE_RECORD_VC = 53,
-    MODE_RECORD_VC_FL = 54,
-    MODE_RECORD_PLAY2 = 55,
-    MODE_RECORD_VM = 56,
-    MODE_RECORD_VM_FL = 57,
-    MODE_RECORD_VM_TA = 58,
-    MODE_TUTORIAL = 59,
-    MODE_CONT = 60,
-    MODE_NAME_NS = 61,
-    MODE_NAME = 62,
-    MODE_NAME_NE = 63,
-    MODE_NAME_NE2 = 64,
-    MODE_NAME_DEL_YN = 65,
-    MODE_NAME_DEL_MES = 66,
-    MODE_BACKUP = 67,
-    MODE_BACKUP_YN = 68,
-    MODE_BACKUP_MES = 69,
-    MODE_MISC = 70,
-    MODE_SOUND = 71,
-    MODE_COUNT = 72,
-    MODE_SCORE = 73,
-} _menuMain_lastMode;
-    // -> enum /* @enum$5277main_menu_c */ {
-    MAIN_11 = 0,
-    MAIN_12 = 1,
-    MAIN_STORY = 2,
-    MAIN_TITLE = 3,
-    MAIN_MANUAL = 4,
-    MAIN_GAME = 5,
-    MAIN_MENU = 6,
-    MAIN_TECHMES = 7,
-    MAIN_CONT_ERROR = 8,
-    MAIN_TV_ERROR = 9,
-    MAIN_CSUM_ERROR = 10,
-    MAIN_MEMORYCARD_CHECK = 11,
-} main_old;
+    // -> @enum$856main_menu_c _menuMain_lastMode;
+    // -> @enum$98dm_title_main_c main_old;
     // -> unsigned char * Heap_bufferp;
 }
 

@@ -4,42 +4,8 @@
     Language: C++
     Code range: 0x0007FBA0 -> 0x0007FE50
 */
-enum /* @enum$94peel_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-};
-static enum /* @enum$94peel_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel; // size: 0x4, address: 0xF4480
+@enum$94peel_c;
+static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF4480
 static int gbFadeAlpha; // size: 0x4, address: 0xF4484
 static int gnAlphaPeel; // size: 0x4, address: 0xF4488
 static union {
@@ -70,47 +36,13 @@ void peelTick() {}
 void peelStop() {
     // References
     // -> static int gnAlphaPeel;
-    // -> static enum /* @enum$94peel_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel;
+    // -> static @enum$94peel_c geTypePeel;
 }
 
 // Range: 0x7FBC4 -> 0x7FC2C
 int peelActive() {
     // References
-    // -> static enum /* @enum$94peel_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel;
+    // -> static @enum$94peel_c geTypePeel;
     // -> static int gnAlphaPeel;
     // -> static int gbFadeAlpha;
 }
@@ -141,24 +73,7 @@ void peelSetup() {
     // -> static union [anonymous] * gapVtxPeel[2];
     // -> unsigned short cfb_16_a[];
     // -> unsigned short cfb_16_b[];
-    // -> static enum /* @enum$94peel_c */ {
-    PT_NONE = -1,
-    PT_PICK = 0,
-    PT_SPIN = 1,
-    PT_DROP = 2,
-    PT_LEFT = 3,
-    PT_RIGHT = 4,
-    PT_RISE = 5,
-    PT_MOSAIC = 6,
-    PT_PICKLAST_ = 7,
-    PT_WAVE = 8,
-    PT_DOOR_LR = 9,
-    PT_DOOR_UD = 10,
-    PT_SPLIT_LR = 11,
-    PT_SPLIT_UD = 12,
-    PT_SCATTER = 13,
-    PT_FADE = 14,
-} geTypePeel;
+    // -> static @enum$94peel_c geTypePeel;
     // -> static int gbFadeAlpha;
 }
 
