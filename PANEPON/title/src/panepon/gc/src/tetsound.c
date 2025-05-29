@@ -122,7 +122,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
+    uObjSprite rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -146,7 +146,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
+    uObjSprite rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -195,10 +195,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
+    uObjSprite block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    uObjSprite new_block_rect[6]; // offset 0x45D0, size 0x90
+    uObjSprite left2D; // offset 0x4660, size 0x18
+    uObjSprite right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318

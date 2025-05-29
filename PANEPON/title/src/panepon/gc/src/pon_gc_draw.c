@@ -52,7 +52,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
+    uObjSprite rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -76,7 +76,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
+    uObjSprite rect; // offset 0x18, size 0x18
 };
 enum pStateEnum {
     dead = 0,
@@ -99,7 +99,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
+    uObjSprite rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -117,7 +117,7 @@ struct flic_t {
 };
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_222 word; // offset 0x0, size 0x18
+    uObjSprite word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 struct_pon_gc_c_674 gInfo[]; // size: 0x0, address: 0x50F68

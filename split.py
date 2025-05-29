@@ -6,6 +6,8 @@
 import argparse
 from pathlib import Path
 
+# "union_pon_gc_c_222": "uObjSprite",
+
 def write_buffer(current_name: str|None, buffer: list[str], directory: Path):
     if current_name is not None:
         compile_unit = directory / Path(current_name)

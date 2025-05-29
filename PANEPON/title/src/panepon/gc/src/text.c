@@ -6,7 +6,7 @@
 */
 struct text_t {
     // total size: 0x20
-    union_pon_gc_c_222 word; // offset 0x0, size 0x18
+    uObjSprite word; // offset 0x0, size 0x18
     int texture; // offset 0x18, size 0x4
 };
 // Range: 0xA229C -> 0xA24C0
@@ -42,7 +42,7 @@ struct attack_t {
     int expression; // offset 0x20, size 0x4
     int currRow; // offset 0x24, size 0x4
     int slot; // offset 0x28, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x30, size 0x18
+    uObjSprite rect; // offset 0x30, size 0x18
     int ChainCriminalPlayerNo; // offset 0x48, size 0x4
     int ComboCriminalPlayerNo; // offset 0x4C, size 0x4
 };
@@ -66,7 +66,7 @@ struct explode_t {
     int pos; // offset 0x8, size 0x4
     int x; // offset 0xC, size 0x4
     int y; // offset 0x10, size 0x4
-    union_pon_gc_c_222 rect; // offset 0x18, size 0x18
+    uObjSprite rect; // offset 0x18, size 0x18
 };
 struct chain_t {
     // total size: 0x8
@@ -115,10 +115,10 @@ struct tetWell {
     struct attack_t attack[40]; // offset 0x2520, size 0xC80
     struct icon_t icon[10]; // offset 0x31A0, size 0x410
     struct explode_t explosion[50]; // offset 0x35B0, size 0x960
-    union_pon_gc_c_222 block_rect[12][6]; // offset 0x3F10, size 0x6C0
-    union_pon_gc_c_222 new_block_rect[6]; // offset 0x45D0, size 0x90
-    union_pon_gc_c_222 left2D; // offset 0x4660, size 0x18
-    union_pon_gc_c_222 right2D; // offset 0x4678, size 0x18
+    uObjSprite block_rect[12][6]; // offset 0x3F10, size 0x6C0
+    uObjSprite new_block_rect[6]; // offset 0x45D0, size 0x90
+    uObjSprite left2D; // offset 0x4660, size 0x18
+    uObjSprite right2D; // offset 0x4678, size 0x18
     char visible[12][18]; // offset 0x4690, size 0xD8
     float translation; // offset 0x4768, size 0x4
     struct block_t new_block[18]; // offset 0x476C, size 0x318
@@ -166,7 +166,7 @@ struct cursor_t {
     int frame_d; // offset 0x24, size 0x4
     int target[43]; // offset 0x28, size 0xAC
     int store[5]; // offset 0xD4, size 0x14
-    union_pon_gc_c_222 rect; // offset 0xE8, size 0x18
+    uObjSprite rect; // offset 0xE8, size 0x18
     enum pStateEnum pstate; // offset 0x100, size 0x4
     int GameEnd_Value; // offset 0x104, size 0x4
     int AttackWhomLockOnto; // offset 0x108, size 0x4
@@ -287,12 +287,12 @@ struct Game {
     union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
     union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
     union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
-    union_pon_gc_c_222 gSPRITE[160]; // offset 0x1BA60, size 0xF00
+    uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
     union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
     union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
-    union_pon_gc_c_222 shadeBOX[4]; // offset 0x1D268, size 0x60
+    uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
     union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
     union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
     union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
@@ -418,7 +418,7 @@ union_pon_gc_tex_c_7332 numberTexture4[]; // size: 0x0, address: 0xD38D0
 union_pon_gc_tex_c_7332 numberTexture5[]; // size: 0x0, address: 0xD38E8
 union_pon_gc_tex_c_7332 numberTexture6[]; // size: 0x0, address: 0xD3900
 union_pon_gc_tex_c_7332 shadow2Texture[]; // size: 0x0, address: 0xD4D48
-union_pon_gc_c_222 mini_shadow[4]; // size: 0x60, address: 0x1768
+uObjSprite mini_shadow[4]; // size: 0x60, address: 0x1768
 // Range: 0xA429C -> 0xA467C
 void Draw2DText(struct_pon_gc_draw_c_2466 * dynamicp /* r25 */) {
     // Local variables

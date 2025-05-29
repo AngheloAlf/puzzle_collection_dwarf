@@ -183,7 +183,7 @@ void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union_pon_gc_te
 }
 
 // Range: 0x9890 -> 0xA300
-void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, union_pon_gc_c_222 * sp /* r4 */) {
+void pon_gSPObjRectangle(union_pon_gc_c_173 * * glp /* r30 */, uObjSprite * sp /* r4 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r31
     unsigned long iW; // r9

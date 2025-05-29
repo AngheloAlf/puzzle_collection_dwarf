@@ -167,7 +167,7 @@ typedef union /* union_pon_gc_c_173 */ {
     } loadtlut; // offset 0x0, size 0x8
     long long force_structure_alignment; // offset 0x0, size 0x8
 } union_pon_gc_c_173;
-typedef union /* union_pon_gc_c_222 */ {
+typedef union /* uObjSprite */ {
     struct {
         // total size: 0x18
         signed short objX; // offset 0x0, size 0x2
@@ -186,7 +186,7 @@ typedef union /* union_pon_gc_c_222 */ {
         unsigned char imageFlags; // offset 0x17, size 0x1
     } s; // offset 0x0, size 0x18
     long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_c_222;
+} uObjSprite;
 typedef union /* union_pon_gc_c_262 */ {
     union {
         struct {
