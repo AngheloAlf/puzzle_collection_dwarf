@@ -160,9 +160,9 @@ static int pon_texture(union_pon_gc_c_173 * * glp /* r21 */, union_pon_gc_tex_c_
     union_pon_gc_c_173 * pgfx; // r1+0x14
 }
 
-static union_pon_gc_tex_c_7332 * txBlock; // size: 0x4, address: 0x188
+static uObjTxtr * txBlock; // size: 0x4, address: 0x188
 // Range: 0x9720 -> 0x9890
-void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, union_pon_gc_tex_c_7332 * tx /* r1+0x4 */) {
+void pon_gSPObjLoadTxtr(union_pon_gc_c_173 * * glp /* r1+0x0 */, uObjTxtr * tx /* r1+0x4 */) {
     // Local variables
     union_pon_gc_c_173 * pgfx; // r5
     union_pon_gc_c_173 * _g; // r6

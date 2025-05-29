@@ -580,7 +580,7 @@ typedef union /* union_pon_gc_tex_c_7116 */ {
     } s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
 } union_pon_gc_tex_c_7116;
-typedef union /* union_pon_gc_tex_c_7332 */ {
+typedef union /* uObjTxtr */ {
     struct {
         // total size: 0x18
         unsigned long type; // offset 0x0, size 0x4
@@ -615,7 +615,7 @@ typedef union /* union_pon_gc_tex_c_7332 */ {
         unsigned long mask; // offset 0x14, size 0x4
     } tlut; // offset 0x0, size 0x18
     long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_tex_c_7332;
+} uObjTxtr;
 typedef struct /* struct_pon_gc_MemoryCard_c_23 */ {
     // total size: 0x2C
     int status; // offset 0x0, size 0x4

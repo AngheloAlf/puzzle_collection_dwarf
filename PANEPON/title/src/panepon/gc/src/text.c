@@ -275,7 +275,7 @@ struct MultiModeData_t {
     int Ranking[4]; // offset 0x0, size 0x10
     union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
+    uObjTxtr signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -284,23 +284,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    uObjTxtr gLUT[40]; // offset 0x18FE0, size 0x3C0
     union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    uObjTxtr gTEXT[80]; // offset 0x1B2E0, size 0x780
     uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
     union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    uObjTxtr frameLUT; // offset 0x1D250, size 0x18
     uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
     union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    uObjTxtr bkgroundLUT; // offset 0x1D2F0, size 0x18
     union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
+    uObjTxtr signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
     union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    uObjTxtr miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -371,19 +371,19 @@ void pon_UpdateText4p() {
 }
 
 union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
-union_pon_gc_tex_c_7332 otherLUT[]; // size: 0x0, address: 0xC9770
-union_pon_gc_tex_c_7332 otherTexture1[]; // size: 0x0, address: 0xD0508
-union_pon_gc_tex_c_7332 otherTexture2[]; // size: 0x0, address: 0xD0520
-union_pon_gc_tex_c_7332 otherTexture3[]; // size: 0x0, address: 0xD0538
-union_pon_gc_tex_c_7332 otherTexture4[]; // size: 0x0, address: 0xD0550
-union_pon_gc_tex_c_7332 otherTexture5[]; // size: 0x0, address: 0xD0568
-union_pon_gc_tex_c_7332 otherTexture7[]; // size: 0x0, address: 0xD0598
-union_pon_gc_tex_c_7332 otherTexture8[]; // size: 0x0, address: 0xD05B0
-union_pon_gc_tex_c_7332 otherTexture12[]; // size: 0x0, address: 0xD0610
-union_pon_gc_tex_c_7332 otherTexture13[]; // size: 0x0, address: 0xD0628
-union_pon_gc_tex_c_7332 otherTexture14[]; // size: 0x0, address: 0xD0640
-union_pon_gc_tex_c_7332 otherTexture15[]; // size: 0x0, address: 0xD0658
-union_pon_gc_tex_c_7332 otherTexture6[]; // size: 0x0, address: 0xD0580
+uObjTxtr otherLUT[]; // size: 0x0, address: 0xC9770
+uObjTxtr otherTexture1[]; // size: 0x0, address: 0xD0508
+uObjTxtr otherTexture2[]; // size: 0x0, address: 0xD0520
+uObjTxtr otherTexture3[]; // size: 0x0, address: 0xD0538
+uObjTxtr otherTexture4[]; // size: 0x0, address: 0xD0550
+uObjTxtr otherTexture5[]; // size: 0x0, address: 0xD0568
+uObjTxtr otherTexture7[]; // size: 0x0, address: 0xD0598
+uObjTxtr otherTexture8[]; // size: 0x0, address: 0xD05B0
+uObjTxtr otherTexture12[]; // size: 0x0, address: 0xD0610
+uObjTxtr otherTexture13[]; // size: 0x0, address: 0xD0628
+uObjTxtr otherTexture14[]; // size: 0x0, address: 0xD0640
+uObjTxtr otherTexture15[]; // size: 0x0, address: 0xD0658
+uObjTxtr otherTexture6[]; // size: 0x0, address: 0xD0580
 // Range: 0xA403C -> 0xA429C
 void Draw2DTemplate(struct_pon_gc_draw_c_2466 * dynamicp /* r15 */) {
     // Local variables
@@ -410,14 +410,14 @@ void Draw2DTemplate(struct_pon_gc_draw_c_2466 * dynamicp /* r15 */) {
     // -> union [anonymous] otherLUT[];
 }
 
-union_pon_gc_tex_c_7332 numberLUT[]; // size: 0x0, address: 0xD0870
-union_pon_gc_tex_c_7332 numberTexture1[]; // size: 0x0, address: 0xD3888
-union_pon_gc_tex_c_7332 numberTexture2[]; // size: 0x0, address: 0xD38A0
-union_pon_gc_tex_c_7332 numberTexture3[]; // size: 0x0, address: 0xD38B8
-union_pon_gc_tex_c_7332 numberTexture4[]; // size: 0x0, address: 0xD38D0
-union_pon_gc_tex_c_7332 numberTexture5[]; // size: 0x0, address: 0xD38E8
-union_pon_gc_tex_c_7332 numberTexture6[]; // size: 0x0, address: 0xD3900
-union_pon_gc_tex_c_7332 shadow2Texture[]; // size: 0x0, address: 0xD4D48
+uObjTxtr numberLUT[]; // size: 0x0, address: 0xD0870
+uObjTxtr numberTexture1[]; // size: 0x0, address: 0xD3888
+uObjTxtr numberTexture2[]; // size: 0x0, address: 0xD38A0
+uObjTxtr numberTexture3[]; // size: 0x0, address: 0xD38B8
+uObjTxtr numberTexture4[]; // size: 0x0, address: 0xD38D0
+uObjTxtr numberTexture5[]; // size: 0x0, address: 0xD38E8
+uObjTxtr numberTexture6[]; // size: 0x0, address: 0xD3900
+uObjTxtr shadow2Texture[]; // size: 0x0, address: 0xD4D48
 uObjSprite mini_shadow[4]; // size: 0x60, address: 0x1768
 // Range: 0xA429C -> 0xA467C
 void Draw2DText(struct_pon_gc_draw_c_2466 * dynamicp /* r25 */) {

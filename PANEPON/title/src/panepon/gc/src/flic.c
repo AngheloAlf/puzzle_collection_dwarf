@@ -258,7 +258,7 @@ struct MultiModeData_t {
     int Ranking[4]; // offset 0x0, size 0x10
     union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
+    uObjTxtr signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -267,23 +267,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    uObjTxtr gLUT[40]; // offset 0x18FE0, size 0x3C0
     union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    uObjTxtr gTEXT[80]; // offset 0x1B2E0, size 0x780
     uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
     union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    uObjTxtr frameLUT; // offset 0x1D250, size 0x18
     uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
     union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    uObjTxtr bkgroundLUT; // offset 0x1D2F0, size 0x18
     union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
+    uObjTxtr signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
     union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    uObjTxtr miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -335,7 +335,7 @@ int InitAnimeColor(char * currSegment /* r3 */, int base /* r1+0x4 */, int color
     int i; // r1+0x0
     int offset; // r7
     signed short * infor; // r8
-    union_pon_gc_tex_c_7332 * lut; // r9
+    uObjTxtr * lut; // r9
 
     // References
     // -> struct Game gTheGame;
@@ -367,7 +367,7 @@ int InitAnimeText(char * currSegment /* r1+0x8 */, int offset /* r31 */, int bas
     // Local variables
     int i; // r1+0x8
     signed short * infor; // r11
-    union_pon_gc_tex_c_7332 * txtr; // r12
+    uObjTxtr * txtr; // r12
 
     // References
     // -> struct Game gTheGame;

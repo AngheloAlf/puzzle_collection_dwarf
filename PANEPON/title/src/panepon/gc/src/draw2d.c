@@ -7,16 +7,16 @@
 static int gLastOverflow; // size: 0x4, address: 0x4CFF0
 int gMain; // size: 0x4, address: 0xDF59C
 union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
-union_pon_gc_tex_c_7332 tetrisBlock1[]; // size: 0x0, address: 0xBD640
-union_pon_gc_tex_c_7332 tetrisBlock2[]; // size: 0x0, address: 0xBD658
-union_pon_gc_tex_c_7332 tetrisBlock3[]; // size: 0x0, address: 0xBD670
-union_pon_gc_tex_c_7332 tetrisBlock4[]; // size: 0x0, address: 0xBD688
-union_pon_gc_tex_c_7332 tetrisBlock5[]; // size: 0x0, address: 0xBD6A0
-union_pon_gc_tex_c_7332 tetrisBlock6[]; // size: 0x0, address: 0xBD6B8
-union_pon_gc_tex_c_7332 tetrisBlock7[]; // size: 0x0, address: 0xBD6D0
-union_pon_gc_tex_c_7332 tetrisBlock8[]; // size: 0x0, address: 0xBD6E8
-union_pon_gc_tex_c_7332 tetrisBlock9[]; // size: 0x0, address: 0xBD700
-union_pon_gc_tex_c_7332 tetrisBlockNew[]; // size: 0x0, address: 0xBD718
+uObjTxtr tetrisBlock1[]; // size: 0x0, address: 0xBD640
+uObjTxtr tetrisBlock2[]; // size: 0x0, address: 0xBD658
+uObjTxtr tetrisBlock3[]; // size: 0x0, address: 0xBD670
+uObjTxtr tetrisBlock4[]; // size: 0x0, address: 0xBD688
+uObjTxtr tetrisBlock5[]; // size: 0x0, address: 0xBD6A0
+uObjTxtr tetrisBlock6[]; // size: 0x0, address: 0xBD6B8
+uObjTxtr tetrisBlock7[]; // size: 0x0, address: 0xBD6D0
+uObjTxtr tetrisBlock8[]; // size: 0x0, address: 0xBD6E8
+uObjTxtr tetrisBlock9[]; // size: 0x0, address: 0xBD700
+uObjTxtr tetrisBlockNew[]; // size: 0x0, address: 0xBD718
 struct block_t {
     // total size: 0x2C
     int state; // offset 0x0, size 0x4
@@ -217,8 +217,8 @@ void Draw2DTetrisWell(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x14 */, struct
     // -> static int gLastOverflow;
 }
 
-union_pon_gc_tex_c_7332 cursorBig[]; // size: 0x0, address: 0xB8610
-union_pon_gc_tex_c_7332 cursorSmall[]; // size: 0x0, address: 0xB8628
+uObjTxtr cursorBig[]; // size: 0x0, address: 0xB8610
+uObjTxtr cursorSmall[]; // size: 0x0, address: 0xB8628
 int gSelection; // size: 0x4, address: 0xF4E94
 struct gamepad_t {
     // total size: 0x10
@@ -313,7 +313,7 @@ struct MultiModeData_t {
     int Ranking[4]; // offset 0x0, size 0x10
     union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x150, size 0x18
+    uObjTxtr signLUT; // offset 0x150, size 0x18
 };
 struct Game {
     // total size: 0x21C08
@@ -322,23 +322,23 @@ struct Game {
     struct gamepad_t controller[4]; // offset 0x16340, size 0x40
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
-    union_pon_gc_tex_c_7332 gLUT[40]; // offset 0x18FE0, size 0x3C0
+    uObjTxtr gLUT[40]; // offset 0x18FE0, size 0x3C0
     union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
-    union_pon_gc_tex_c_7332 gTEXT[80]; // offset 0x1B2E0, size 0x780
+    uObjTxtr gTEXT[80]; // offset 0x1B2E0, size 0x780
     uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
     union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
-    union_pon_gc_tex_c_7332 frameLUT; // offset 0x1D250, size 0x18
+    uObjTxtr frameLUT; // offset 0x1D250, size 0x18
     uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
     union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
-    union_pon_gc_tex_c_7332 bkgroundLUT; // offset 0x1D2F0, size 0x18
+    uObjTxtr bkgroundLUT; // offset 0x1D2F0, size 0x18
     union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
     union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
-    union_pon_gc_tex_c_7332 signLUT; // offset 0x1D4E8, size 0x18
+    uObjTxtr signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
     union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
-    union_pon_gc_tex_c_7332 miscLUT[4]; // offset 0x1D5A8, size 0x60
+    uObjTxtr miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
     int seed; // offset 0x1D610, size 0x4
@@ -372,28 +372,28 @@ void Draw2DCursor(struct_pon_gc_draw_c_2466 * dynamicp /* r27 */) {
 }
 
 unsigned short gGameStatus; // size: 0x2, address: 0xF4E9C
-union_pon_gc_tex_c_7332 combo1Block[]; // size: 0x0, address: 0xC8730
-union_pon_gc_tex_c_7332 combo2Block[]; // size: 0x0, address: 0xC8748
-union_pon_gc_tex_c_7332 combo3Block[]; // size: 0x0, address: 0xC8760
-union_pon_gc_tex_c_7332 combo4Block[]; // size: 0x0, address: 0xC8778
-union_pon_gc_tex_c_7332 combo5Block[]; // size: 0x0, address: 0xC8790
-union_pon_gc_tex_c_7332 combo6Block[]; // size: 0x0, address: 0xC87A8
-union_pon_gc_tex_c_7332 combo7Block[]; // size: 0x0, address: 0xC87C0
-union_pon_gc_tex_c_7332 combo8Block[]; // size: 0x0, address: 0xC87D8
-union_pon_gc_tex_c_7332 combo9Block[]; // size: 0x0, address: 0xC87F0
-union_pon_gc_tex_c_7332 chain1Block[]; // size: 0x0, address: 0xC8808
-union_pon_gc_tex_c_7332 chain2Block[]; // size: 0x0, address: 0xC8820
-union_pon_gc_tex_c_7332 chain3Block[]; // size: 0x0, address: 0xC8838
-union_pon_gc_tex_c_7332 chain4Block[]; // size: 0x0, address: 0xC8850
-union_pon_gc_tex_c_7332 chain5Block[]; // size: 0x0, address: 0xC8868
-union_pon_gc_tex_c_7332 chain6Block[]; // size: 0x0, address: 0xC8880
-union_pon_gc_tex_c_7332 chain7Block[]; // size: 0x0, address: 0xC8898
-union_pon_gc_tex_c_7332 chain8Block[]; // size: 0x0, address: 0xC88B0
-union_pon_gc_tex_c_7332 chain9Block[]; // size: 0x0, address: 0xC88C8
-union_pon_gc_tex_c_7332 chain10Block[]; // size: 0x0, address: 0xC88E0
-union_pon_gc_tex_c_7332 chain11Block[]; // size: 0x0, address: 0xC88F8
-union_pon_gc_tex_c_7332 chain12Block[]; // size: 0x0, address: 0xC8910
-union_pon_gc_tex_c_7332 chain13Block[]; // size: 0x0, address: 0xC8928
+uObjTxtr combo1Block[]; // size: 0x0, address: 0xC8730
+uObjTxtr combo2Block[]; // size: 0x0, address: 0xC8748
+uObjTxtr combo3Block[]; // size: 0x0, address: 0xC8760
+uObjTxtr combo4Block[]; // size: 0x0, address: 0xC8778
+uObjTxtr combo5Block[]; // size: 0x0, address: 0xC8790
+uObjTxtr combo6Block[]; // size: 0x0, address: 0xC87A8
+uObjTxtr combo7Block[]; // size: 0x0, address: 0xC87C0
+uObjTxtr combo8Block[]; // size: 0x0, address: 0xC87D8
+uObjTxtr combo9Block[]; // size: 0x0, address: 0xC87F0
+uObjTxtr chain1Block[]; // size: 0x0, address: 0xC8808
+uObjTxtr chain2Block[]; // size: 0x0, address: 0xC8820
+uObjTxtr chain3Block[]; // size: 0x0, address: 0xC8838
+uObjTxtr chain4Block[]; // size: 0x0, address: 0xC8850
+uObjTxtr chain5Block[]; // size: 0x0, address: 0xC8868
+uObjTxtr chain6Block[]; // size: 0x0, address: 0xC8880
+uObjTxtr chain7Block[]; // size: 0x0, address: 0xC8898
+uObjTxtr chain8Block[]; // size: 0x0, address: 0xC88B0
+uObjTxtr chain9Block[]; // size: 0x0, address: 0xC88C8
+uObjTxtr chain10Block[]; // size: 0x0, address: 0xC88E0
+uObjTxtr chain11Block[]; // size: 0x0, address: 0xC88F8
+uObjTxtr chain12Block[]; // size: 0x0, address: 0xC8910
+uObjTxtr chain13Block[]; // size: 0x0, address: 0xC8928
 // Range: 0x46A90 -> 0x47090
 void Draw2DIcon(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1+0xC */) {
     // Local variables
@@ -437,13 +437,13 @@ void Draw2DIcon(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r1
     // -> int gMain;
 }
 
-union_pon_gc_tex_c_7332 brickA[3]; // size: 0x48, address: 0x4C948
-union_pon_gc_tex_c_7332 brickB[3]; // size: 0x48, address: 0x4C990
-union_pon_gc_tex_c_7332 brickTxtr[4][3]; // size: 0x120, address: 0x4CCD0
-union_pon_gc_tex_c_7332 colorLUT[]; // size: 0x0, address: 0xB79F8
-union_pon_gc_tex_c_7332 explodeB; // size: 0x18, address: 0x4CA20
-union_pon_gc_tex_c_7332 explodeA; // size: 0x18, address: 0x4CA08
-union_pon_gc_tex_c_7332 explodeTxtr[4]; // size: 0x60, address: 0x4CE50
+uObjTxtr brickA[3]; // size: 0x48, address: 0x4C948
+uObjTxtr brickB[3]; // size: 0x48, address: 0x4C990
+uObjTxtr brickTxtr[4][3]; // size: 0x120, address: 0x4CCD0
+uObjTxtr colorLUT[]; // size: 0x0, address: 0xB79F8
+uObjTxtr explodeB; // size: 0x18, address: 0x4CA20
+uObjTxtr explodeA; // size: 0x18, address: 0x4CA08
+uObjTxtr explodeTxtr[4]; // size: 0x60, address: 0x4CE50
 // Range: 0x47090 -> 0x475DC
 void Draw2DAttackBrick(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r30 */, int check /* r23 */) {
     // Local variables
@@ -478,13 +478,13 @@ void Draw2DAttackBrick(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int nu
     // -> union [anonymous] brickA[3];
 }
 
-union_pon_gc_tex_c_7332 attackA[6]; // size: 0x90, address: 0x4C828
-union_pon_gc_tex_c_7332 attackB[6]; // size: 0x90, address: 0x4C8B8
-union_pon_gc_tex_c_7332 attackx[]; // size: 0x0, address: 0xC9140
-union_pon_gc_tex_c_7332 attackTxtr[4][6]; // size: 0x240, address: 0x4CA90
-union_pon_gc_tex_c_7332 faceA; // size: 0x18, address: 0x4C9D8
-union_pon_gc_tex_c_7332 faceB; // size: 0x18, address: 0x4C9F0
-union_pon_gc_tex_c_7332 faceTxtr[4]; // size: 0x60, address: 0x4CDF0
+uObjTxtr attackA[6]; // size: 0x90, address: 0x4C828
+uObjTxtr attackB[6]; // size: 0x90, address: 0x4C8B8
+uObjTxtr attackx[]; // size: 0x0, address: 0xC9140
+uObjTxtr attackTxtr[4][6]; // size: 0x240, address: 0x4CA90
+uObjTxtr faceA; // size: 0x18, address: 0x4C9D8
+uObjTxtr faceB; // size: 0x18, address: 0x4C9F0
+uObjTxtr faceTxtr[4]; // size: 0x60, address: 0x4CDF0
 // Range: 0x475DC -> 0x47E9C
 int Draw2DAttackBlock(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r19 */) {
     // Local variables
@@ -544,8 +544,8 @@ void Draw2DExplosion(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num 
     // -> struct Game gTheGame;
 }
 
-union_pon_gc_tex_c_7332 numberLUT[]; // size: 0x0, address: 0xD0870
-union_pon_gc_tex_c_7332 clearTexture[]; // size: 0x0, address: 0xD4118
+uObjTxtr numberLUT[]; // size: 0x0, address: 0xD0870
+uObjTxtr clearTexture[]; // size: 0x0, address: 0xD4118
 int gCounter; // size: 0x4, address: 0xF4E80
 // Range: 0x4816C -> 0x48378
 void Draw2DClearLine(struct_pon_gc_draw_c_2466 * dynamicp /* r30 */, int num /* r26 */) {
@@ -572,7 +572,7 @@ void Draw2DClearLine(struct_pon_gc_draw_c_2466 * dynamicp /* r30 */, int num /* 
     // -> int gMain;
 }
 
-union_pon_gc_tex_c_7332 deadsmoke[]; // size: 0x0, address: 0xC9558
+uObjTxtr deadsmoke[]; // size: 0x0, address: 0xC9558
 // Range: 0x48378 -> 0x48544
 void Draw2DSmoke(struct_pon_gc_draw_c_2466 * dynamicp /* r28 */, int num /* r26 */) {
     // Local variables
@@ -593,8 +593,8 @@ void Draw2DSmoke(struct_pon_gc_draw_c_2466 * dynamicp /* r28 */, int num /* r26 
     // -> union [anonymous] deadsmoke[];
 }
 
-union_pon_gc_tex_c_7332 stars1Texture[]; // size: 0x0, address: 0xD5F78
-union_pon_gc_tex_c_7332 stars2Texture[]; // size: 0x0, address: 0xD5F90
+uObjTxtr stars1Texture[]; // size: 0x0, address: 0xD5F78
+uObjTxtr stars2Texture[]; // size: 0x0, address: 0xD5F90
 // Range: 0x48544 -> 0x486C0
 void Draw2DSmallStars(struct_pon_gc_draw_c_2466 * dynamicp /* r25 */, int layer /* r26 */) {
     // Local variables
