@@ -533,7 +533,7 @@ typedef union /* union_pon_gc_tex_c_1219 */ {
     } n; // offset 0x0, size 0x10
     long long force_structure_alignment; // offset 0x0, size 0x8
 } union_pon_gc_tex_c_1219;
-typedef union /* union_pon_gc_tex_c_7116 */ {
+typedef union /* uObjBg */ {
     struct {
         // total size: 0x28
         unsigned short imageX; // offset 0x0, size 0x2
@@ -579,7 +579,7 @@ typedef union /* union_pon_gc_tex_c_7116 */ {
         unsigned char padding[4]; // offset 0x24, size 0x4
     } s; // offset 0x0, size 0x28
     long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_tex_c_7116;
+} uObjBg;
 typedef union /* uObjTxtr */ {
     struct {
         // total size: 0x18

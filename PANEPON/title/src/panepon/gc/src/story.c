@@ -459,8 +459,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
+    uObjBg sign[4]; // offset 0x10, size 0xA0
+    uObjBg alpha[4]; // offset 0xB0, size 0xA0
     uObjTxtr signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -471,21 +471,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     uObjTxtr gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
+    uObjBg gBG[200]; // offset 0x193A0, size 0x1F40
     uObjTxtr gTEXT[80]; // offset 0x1B2E0, size 0x780
     uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
+    uObjBg frame; // offset 0x1D228, size 0x28
     uObjTxtr frameLUT; // offset 0x1D250, size 0x18
     uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
+    uObjBg bkground; // offset 0x1D2C8, size 0x28
     uObjTxtr bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
+    uObjBg sign[8]; // offset 0x1D308, size 0x140
+    uObjBg alpha[4]; // offset 0x1D448, size 0xA0
     uObjTxtr signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
+    uObjBg misc[4]; // offset 0x1D508, size 0xA0
     uObjTxtr miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4

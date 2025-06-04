@@ -271,8 +271,8 @@ struct player_t {
 struct MultiModeData_t {
     // total size: 0x168
     int Ranking[4]; // offset 0x0, size 0x10
-    union_pon_gc_tex_c_7116 sign[4]; // offset 0x10, size 0xA0
-    union_pon_gc_tex_c_7116 alpha[4]; // offset 0xB0, size 0xA0
+    uObjBg sign[4]; // offset 0x10, size 0xA0
+    uObjBg alpha[4]; // offset 0xB0, size 0xA0
     uObjTxtr signLUT; // offset 0x150, size 0x18
 };
 struct Game {
@@ -283,21 +283,21 @@ struct Game {
     struct flic_t flic[340]; // offset 0x16380, size 0x2A80
     struct action_t action[40]; // offset 0x18E00, size 0x1E0
     uObjTxtr gLUT[40]; // offset 0x18FE0, size 0x3C0
-    union_pon_gc_tex_c_7116 gBG[200]; // offset 0x193A0, size 0x1F40
+    uObjBg gBG[200]; // offset 0x193A0, size 0x1F40
     uObjTxtr gTEXT[80]; // offset 0x1B2E0, size 0x780
     uObjSprite gSPRITE[160]; // offset 0x1BA60, size 0xF00
     int currentText; // offset 0x1C960, size 0x4
     struct text_t drawText[70]; // offset 0x1C968, size 0x8C0
-    union_pon_gc_tex_c_7116 frame; // offset 0x1D228, size 0x28
+    uObjBg frame; // offset 0x1D228, size 0x28
     uObjTxtr frameLUT; // offset 0x1D250, size 0x18
     uObjSprite shadeBOX[4]; // offset 0x1D268, size 0x60
-    union_pon_gc_tex_c_7116 bkground; // offset 0x1D2C8, size 0x28
+    uObjBg bkground; // offset 0x1D2C8, size 0x28
     uObjTxtr bkgroundLUT; // offset 0x1D2F0, size 0x18
-    union_pon_gc_tex_c_7116 sign[8]; // offset 0x1D308, size 0x140
-    union_pon_gc_tex_c_7116 alpha[4]; // offset 0x1D448, size 0xA0
+    uObjBg sign[8]; // offset 0x1D308, size 0x140
+    uObjBg alpha[4]; // offset 0x1D448, size 0xA0
     uObjTxtr signLUT; // offset 0x1D4E8, size 0x18
     int miscToggle; // offset 0x1D500, size 0x4
-    union_pon_gc_tex_c_7116 misc[4]; // offset 0x1D508, size 0xA0
+    uObjBg misc[4]; // offset 0x1D508, size 0xA0
     uObjTxtr miscLUT[4]; // offset 0x1D5A8, size 0x60
     int totalPlayer; // offset 0x1D608, size 0x4
     int dimension; // offset 0x1D60C, size 0x4
@@ -322,7 +322,7 @@ int gSelection; // size: 0x4, address: 0xF4E94
 void InitPause() {
     // Local variables
     int count; // r30
-    union_pon_gc_tex_c_7116 * bg; // r3
+    uObjBg * bg; // r3
     uObjTxtr * txtr; // r12
     uObjSprite * sp; // r25
     char * currSegment; // r29
@@ -382,7 +382,7 @@ void LoadGameOver2D() {
     int push; // r25
     struct cursor_t * cursor1; // r6
     struct cursor_t * cursor2; // r8
-    union_pon_gc_tex_c_7116 * bg; // r1+0x8
+    uObjBg * bg; // r1+0x8
     uObjTxtr * txtr; // r4
     int posX[4]; // r1+0x78
     int height[4]; // r1+0x68
@@ -431,7 +431,7 @@ void LoadGameOver3D() {
     int push; // r11
     struct cursor_t * cursor1; // r5
     struct cursor_t * cursor2; // r8
-    union_pon_gc_tex_c_7116 * bg; // r12
+    uObjBg * bg; // r12
     uObjTxtr * txtr; // r11
 
     // References
@@ -470,7 +470,7 @@ void AnimateGameOver3D(struct tetWell * well /* r1+0x0 */) {
 }
 
 // Range: 0x82AD4 -> 0x82C6C
-void AnimateWin2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 * bg /* r1+0xC */, union_pon_gc_tex_c_7116 * alpha /* r1+0x10 */) {
+void AnimateWin2D(struct tetWell * well /* r1+0x8 */, uObjBg * bg /* r1+0xC */, uObjBg * alpha /* r1+0x10 */) {
     // Local variables
     int diff; // r8
     int base; // r9
@@ -484,7 +484,7 @@ void AnimateWin2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 * 
 }
 
 // Range: 0x82C6C -> 0x82D24
-void AnimateWin3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 * bg /* r1+0x4 */, union_pon_gc_tex_c_7116 * alpha /* r1+0x8 */) {
+void AnimateWin3D(struct tetWell * well /* r1+0x0 */, uObjBg * bg /* r1+0x4 */, uObjBg * alpha /* r1+0x8 */) {
     // Local variables
     int diff; // r8
 
@@ -494,7 +494,7 @@ void AnimateWin3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 * 
 }
 
 // Range: 0x82D24 -> 0x82EBC
-void AnimateLose2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 * bg /* r1+0xC */, union_pon_gc_tex_c_7116 * alpha /* r1+0x10 */) {
+void AnimateLose2D(struct tetWell * well /* r1+0x8 */, uObjBg * bg /* r1+0xC */, uObjBg * alpha /* r1+0x10 */) {
     // Local variables
     int diff; // r8
     int base; // r9
@@ -508,7 +508,7 @@ void AnimateLose2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 *
 }
 
 // Range: 0x82EBC -> 0x82F74
-void AnimateLose3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 * bg /* r1+0x4 */, union_pon_gc_tex_c_7116 * alpha /* r1+0x8 */) {
+void AnimateLose3D(struct tetWell * well /* r1+0x0 */, uObjBg * bg /* r1+0x4 */, uObjBg * alpha /* r1+0x8 */) {
     // Local variables
     int diff; // r8
 
@@ -518,7 +518,7 @@ void AnimateLose3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 *
 }
 
 // Range: 0x82F74 -> 0x830F0
-void AnimateDraw2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 * bg /* r1+0xC */, union_pon_gc_tex_c_7116 * alpha /* r1+0x10 */) {
+void AnimateDraw2D(struct tetWell * well /* r1+0x8 */, uObjBg * bg /* r1+0xC */, uObjBg * alpha /* r1+0x10 */) {
     // Local variables
     int diff; // r8
     int base; // r8
@@ -532,7 +532,7 @@ void AnimateDraw2D(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 *
 }
 
 // Range: 0x830F0 -> 0x831A8
-void AnimateDraw3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 * bg /* r1+0x4 */, union_pon_gc_tex_c_7116 * alpha /* r1+0x8 */) {
+void AnimateDraw3D(struct tetWell * well /* r1+0x0 */, uObjBg * bg /* r1+0x4 */, uObjBg * alpha /* r1+0x8 */) {
     // Local variables
     int diff; // r8
 
@@ -542,7 +542,7 @@ void AnimateDraw3D(struct tetWell * well /* r1+0x0 */, union_pon_gc_tex_c_7116 *
 }
 
 // Range: 0x831A8 -> 0x8323C
-void AnimatePauseKey(union_pon_gc_tex_c_7116 * bg /* r1+0x0 */) {
+void AnimatePauseKey(uObjBg * bg /* r1+0x0 */) {
     // References
     // -> signed char pushkeyShake[30];
     // -> struct Game gTheGame;
@@ -550,14 +550,14 @@ void AnimatePauseKey(union_pon_gc_tex_c_7116 * bg /* r1+0x0 */) {
 
 int gWhatever; // size: 0x4, address: 0xF4EB0
 // Range: 0x8323C -> 0x8329C
-void AnimatePushKey(union_pon_gc_tex_c_7116 * bg /* r1+0x0 */) {
+void AnimatePushKey(uObjBg * bg /* r1+0x0 */) {
     // References
     // -> int gWhatever;
     // -> signed char pushkeyShake[30];
 }
 
 // Range: 0x8329C -> 0x8373C
-void pon_Animate2DRanking4p(struct tetWell * well /* r1+0x8 */, union_pon_gc_tex_c_7116 * bg /* r1+0xC */, union_pon_gc_tex_c_7116 * alpha /* r1+0x10 */, int ranking /* r1+0x14 */, int VSAttackFlag /* r1+0x18 */) {
+void pon_Animate2DRanking4p(struct tetWell * well /* r1+0x8 */, uObjBg * bg /* r1+0xC */, uObjBg * alpha /* r1+0x10 */, int ranking /* r1+0x14 */, int VSAttackFlag /* r1+0x18 */) {
     // Local variables
     int diff; // r1+0x8
     int base; // r4

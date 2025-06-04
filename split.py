@@ -8,6 +8,7 @@ from pathlib import Path
 
 # "union_pon_gc_c_222": "uObjSprite",
 # "union_pon_gc_tex_c_7332": "uObjTxtr",
+# "union_pon_gc_tex_c_7116": "uObjBg",
 
 def write_buffer(current_name: str|None, buffer: list[str], directory: Path):
     if current_name is not None:
