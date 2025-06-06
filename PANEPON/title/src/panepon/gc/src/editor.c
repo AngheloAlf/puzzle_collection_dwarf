@@ -18,6 +18,42 @@ static int gnTile; // size: 0x4, address: 0x4D01C
 static int giCursorX; // size: 0x4, address: 0x4D020
 static int giCursorY; // size: 0x4, address: 0x4D024
 static int gnCursorData; // size: 0x4, address: 0x4D028
+// Erased
+static int editDecrementSlot() {
+    // Local variables
+    int iSlot; // r31
+
+    // References
+    // -> static int giSlot;
+}
+
+// Erased
+static int editIncrementSlot() {
+    // Local variables
+    int iSlot; // r31
+
+    // References
+    // -> static int giSlot;
+}
+
+// Erased
+static int editFindSlotOpen() {
+    // Local variables
+    int iSlot; // r31
+
+    // References
+    // -> static int giSlot;
+}
+
+// Erased
+static int editFindSlotUsed() {
+    // Local variables
+    int iSlot; // r31
+
+    // References
+    // -> static int giSlot;
+}
+
 struct block_t {
     // total size: 0x2C
     int state; // offset 0x0, size 0x4
@@ -443,7 +479,16 @@ static void editTickWipeSure(int * anCommand /* r29 */) {
     // -> static int giSlot;
 }
 
-static struct_editor_c_1276 gaEditData[8]; // size: 0x40, address: 0xAFF60
+static struct_editor_c_1312 gaEditData[8]; // size: 0x40, address: 0xAFF60
+// Erased
+static int editGetData(@enum$100editor_c eMode /* r1+0x0 */, struct_editor_c_1312 * * ppData /* r1+0x4 */) {
+    // Local variables
+    int iData; // r6
+
+    // References
+    // -> static struct [anonymous] gaEditData[8];
+}
+
 // Range: 0x527F0 -> 0x52954
 static int editSetMode(@enum$100editor_c eMode /* r30 */) {
     // References
@@ -525,7 +570,7 @@ void DrawEditor(struct_pon_gc_draw_c_2466 * pDynamic /* r30 */) {
 // Range: 0x52B48 -> 0x52D28
 void DoEditor() {
     // Local variables
-    struct_editor_c_1276 * pData; // r30
+    struct_editor_c_1312 * pData; // r30
     int anCommand[4]; // r1+0x8
 
     // References

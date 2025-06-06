@@ -28,9 +28,9 @@ static int gnPickStory; // size: 0x4, address: 0xF4820
 static int giMovieStory; // size: 0x4, address: 0xF4824
 static int gnOffsetWipe; // size: 0x4, address: 0xF4828
 static union_pon_gc_MemoryCard_c_1396 gaMtxStory[5][2]; // size: 0x280, address: 0xF4830
-static struct_image_c_89 * gpImageDustBits; // size: 0x4, address: 0xF4AB0
-static struct_image_c_89 * gpImageDustBall; // size: 0x4, address: 0xF4AB4
-static struct_image_c_89 * gpImageDustGlow; // size: 0x4, address: 0xF4AB8
+static struct_image_c_92 * gpImageDustBits; // size: 0x4, address: 0xF4AB0
+static struct_image_c_92 * gpImageDustBall; // size: 0x4, address: 0xF4AB4
+static struct_image_c_92 * gpImageDustGlow; // size: 0x4, address: 0xF4AB8
 static int gnDustBallCount; // size: 0x4, address: 0xF4ABC
 static struct_story_c_468 * gapDustBall[8]; // size: 0x20, address: 0xF4AC0
 static unsigned int ganColorDust[8]; // size: 0x20, address: 0xDDF58
@@ -60,6 +60,20 @@ static int storyMakeDustBall(void * ppHeap /* r21 */, @enum$107story_c eType /* 
     // -> static unsigned int ganColorDust[8];
     // -> static int gnDustBallCount;
     // -> static struct [anonymous] * gapDustBall[8];
+}
+
+// Erased
+static int storySetDustBall(int iBall /* r1+0x0 */, int bFlag /* r1+0x4 */) {
+    // References
+    // -> static struct [anonymous] * gapDustBall[8];
+    // -> static int gnDustBallCount;
+}
+
+// Erased
+static int storySetDustBallPosition(int iBall /* r1+0x0 */, int nX /* r1+0x4 */, int nY /* r1+0x8 */) {
+    // References
+    // -> static struct [anonymous] * gapDustBall[8];
+    // -> static int gnDustBallCount;
 }
 
 // Range: 0x8FEDC -> 0x900C8
@@ -173,6 +187,15 @@ static void storyDrawDustBall(union_pon_gc_c_173 * * ppGfx /* r1+0x8 */, int iBa
     // -> static int gnDustBallCount;
 }
 
+// Erased
+static void storyResetDustBall() {
+    // References
+    // -> static struct [anonymous] * gpImageDustGlow;
+    // -> static struct [anonymous] * gpImageDustBall;
+    // -> static struct [anonymous] * gpImageDustBits;
+    // -> static int gnDustBallCount;
+}
+
 struct OSThread_s {
     // total size: 0x1B0
     struct OSThread_s * next; // offset 0x0, size 0x4
@@ -196,6 +219,19 @@ struct OSMesgQueue_s {
     void * msg; // offset 0x14, size 0x4
 };
 struct OSMesgQueue_s gfxFrameMsgQ; // size: 0x18, address: 0x50F4C
+// Erased
+static void storySetMode(@enum$105story_c eMode /* r1+0x0 */, enum /* @enum$106story_c */ {
+    SX_NONE = 0,
+    SX_BEAT = 1,
+    SX_MEET = 2,
+} eXtra /* r1+0x4 */) {
+    // References
+    // -> struct OSMesgQueue_s gfxFrameMsgQ;
+    // -> static int gnFlushCount;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
+}
+
 struct block_t {
     // total size: 0x2C
     int state; // offset 0x0, size 0x4
@@ -533,6 +569,27 @@ static float grCameraSourceZ; // size: 0x4, address: 0xF4BFC
 static float grCameraTargetX; // size: 0x4, address: 0xF4C00
 static float grCameraTargetY; // size: 0x4, address: 0xF4C04
 static float grCameraTargetZ; // size: 0x4, address: 0xF4C08
+// Erased
+static void storyUpdateCamera() {
+    // Local variables
+    float rAngle; // f30
+
+    // References
+    // -> static union [anonymous] gMtxView;
+    // -> static float garView[4][4];
+    // -> static float grFOV;
+    // -> static unsigned short gnNormalize;
+    // -> static union [anonymous] gMtxLook;
+    // -> static float garLook[4][4];
+    // -> static float grCameraTargetZ;
+    // -> static float grCameraTargetY;
+    // -> static float grCameraTargetX;
+    // -> static float grCameraSourceZ;
+    // -> static float grCameraSourceY;
+    // -> static float grCameraSourceX;
+    // -> static float grDistanceCamera;
+}
+
 // Range: 0x9117C -> 0x912D4
 static void storySetCamera(float rFOV /* r1+0x10 */, float rSourceX /* r1+0x14 */, float rSourceY /* r1+0x18 */, float rSourceZ /* r1+0x1C */, float rTargetX /* r1+0x20 */, float rTargetY /* r1+0x24 */, float rTargetZ /* r1+0x28 */) {
     // References
@@ -565,10 +622,21 @@ static int storyGetScreen(float rX /* f1 */, float rY /* f2 */, float rZ /* f3 *
     // -> static float garLook[4][4];
 }
 
-static struct_image_c_89 * gpImageRainbow; // size: 0x4, address: 0xF4C0C
+static struct_image_c_92 * gpImageRainbow; // size: 0x4, address: 0xF4C0C
 static int gaiPageRainbow[2]; // size: 0x8, address: 0xF4C10
 static float garBaseRainbow[2][2]; // size: 0x10, address: 0xF4C18
 static union_pon_gc_tex_c_1219 * gapVtxRainbow[2][2]; // size: 0x10, address: 0xF4C28
+// Erased
+static int storyGetRainbowBase(int nOffset /* r1+0x8 */, int * pnBase /* r31 */) {
+    // Local variables
+    int iRainbow; // r5
+    float rDelta; // f31
+    float rAngle; // f30
+
+    // References
+    // -> static float garBaseRainbow[2][2];
+}
+
 // Range: 0x914CC -> 0x91808
 static void storyMakeRainbow(union_pon_gc_tex_c_1219 * aVtx /* r20 */, int nOffset /* r21 */, float rBase0 /* f28 */, float rBase1 /* r1+0x14 */, float r0 /* f29 */, float r1 /* r1+0x1C */) {
     // Local variables
@@ -631,11 +699,30 @@ static void storyDrawRainbow(union_pon_gc_c_173 * * ppGfx /* r1+0x8 */, int iRai
 static int gnMagnitudeShake; // size: 0x4, address: 0xF4C38
 static int gnOffsetShakeX; // size: 0x4, address: 0xF4C3C
 static int gnOffsetShakeY; // size: 0x4, address: 0xF4C40
+// Erased
+static void storyMakeKeysShake(int nMagnitude /* r3 */) {
+    // References
+    // -> static int gnMagnitudeShake;
+}
+
+// Erased
+static void storyTickKeysShake() {
+    // Local variables
+    int nStep; // r3
+    signed short iAngle; // r30
+
+    // References
+    // -> static int gnOffsetShakeY;
+    // -> static int gnOffsetShakeX;
+    // -> static int gnMagnitudeShake;
+    // -> static int gbGfxHeap;
+}
+
 @enum$96story_c;
 // Range: 0x91BDC -> 0x91F28
-int storyLoadPath2(struct_story_c_16662 * * ppPath /* r26 */, char * szName /* r4 */, void * ppHeap /* r27 */, @enum$96story_c eMode /* r28 */) {
+int storyLoadPath2(struct_story_c_16749 * * ppPath /* r26 */, char * szName /* r4 */, void * ppHeap /* r27 */, @enum$96story_c eMode /* r28 */) {
     // Local variables
-    struct_bitmap_c_31 file; // r1+0x30
+    struct_bitmap_c_43 file; // r1+0x30
     void * pHeap; // r1+0x8
     char acNameImage[16]; // r1+0x20
     int iImage; // r29
@@ -654,28 +741,31 @@ int storyHackPath2(int nTick /* r1+0x0 */) {
 }
 
 // Range: 0x91F4C -> 0x91F6C
-int storySetPathBlur2(struct_story_c_16662 * pPath /* r1+0x0 */, int bFlag /* r1+0x4 */) {}
+int storySetPathBlur2(struct_story_c_16749 * pPath /* r1+0x0 */, int bFlag /* r1+0x4 */) {}
+
+// Erased
+static int storySetPathMode2(struct_story_c_16749 * pPath /* r1+0x0 */, @enum$96story_c eMode /* r1+0x4 */) {}
 
 // Range: 0x91F6C -> 0x91FE4
-int storySetPathWrap2(struct_story_c_16662 * pPath /* r1+0x0 */, int iSet0 /* r1+0x4 */, int iSet1 /* r1+0x8 */) {}
+int storySetPathWrap2(struct_story_c_16749 * pPath /* r1+0x0 */, int iSet0 /* r1+0x4 */, int iSet1 /* r1+0x8 */) {}
 
 // Range: 0x91FE4 -> 0x91FF0
-int storySetPathImage2(struct_story_c_16662 * pPath /* r1+0x0 */, int nAlpha /* r1+0x4 */) {}
+int storySetPathImage2(struct_story_c_16749 * pPath /* r1+0x0 */, int nAlpha /* r1+0x4 */) {}
 
 // Range: 0x91FF0 -> 0x92124
-int storyGetPathImage2(struct_story_c_16662 * pPath /* r1+0x0 */, int nOffsetFrame /* r1+0x4 */, int iPack /* r1+0x8 */, struct_image_c_89 * * ppImage /* r1+0xC */, int * piFrame /* r1+0x10 */) {
+int storyGetPathImage2(struct_story_c_16749 * pPath /* r1+0x0 */, int nOffsetFrame /* r1+0x4 */, int iPack /* r1+0x8 */, struct_image_c_92 * * ppImage /* r1+0xC */, int * piFrame /* r1+0x10 */) {
     // Local variables
     int bSkip; // r1+0x0
-    struct_image_c_89 * pImage; // r4
+    struct_image_c_92 * pImage; // r4
     int iFramePath; // r8
     int iImage; // r1+0x0
     int iFrame; // r5
 }
 
 // Range: 0x92124 -> 0x92468
-int storyTickPath2(struct_story_c_16662 * pPath /* r29 */) {
+int storyTickPath2(struct_story_c_16749 * pPath /* r29 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0xC
+    struct_image_c_92 * pImage; // r1+0xC
     int bFlag; // r30
     int iPack; // r7
 
@@ -686,10 +776,10 @@ int storyTickPath2(struct_story_c_16662 * pPath /* r29 */) {
 }
 
 // Range: 0x92468 -> 0x92758
-int storyDrawPath2(struct_story_c_16662 * pPath /* r24 */, int nDeltaX /* r25 */, int nDeltaY /* r26 */, float rDeltaScale /* f29 */, int * pnX /* r27 */, int * pnY /* r28 */, float * prScale /* r29 */, union_pon_gc_c_173 * * ppGfx /* r30 */) {
+int storyDrawPath2(struct_story_c_16749 * pPath /* r24 */, int nDeltaX /* r25 */, int nDeltaY /* r26 */, float rDeltaScale /* f29 */, int * pnX /* r27 */, int * pnY /* r28 */, float * prScale /* r29 */, union_pon_gc_c_173 * * ppGfx /* r30 */) {
     // Local variables
     int iPack; // r20
-    struct_image_c_89 * pImage; // r1+0x34
+    struct_image_c_92 * pImage; // r1+0x34
     int bFlag; // r19
     int bSkip; // r1+0x8
     struct_bitmap_c_14 * pBitmap; // r4
@@ -705,13 +795,23 @@ int storyDrawPath2(struct_story_c_16662 * pPath /* r24 */, int nDeltaX /* r25 */
 }
 
 // Range: 0x92758 -> 0x927D4
-int storyDonePath2(struct_story_c_16662 * pPath /* r1+0x0 */) {
+int storyDonePath2(struct_story_c_16749 * pPath /* r1+0x0 */) {
     // Local variables
     int iPack; // r1+0x0
 }
 
+// Erased
+static int storyLoadPath3(struct_story_c_18160 * * ppPath /* r30 */, char * szName /* r4 */, void * ppHeap /* r31 */, @enum$96story_c eMode /* r1+0x14 */) {
+    // Local variables
+    struct_bitmap_c_43 file; // r1+0x1C
+    int nHeader; // r1+0x18
+
+    // References
+    // -> static @enum$106story_c geXtra;
+}
+
 // Range: 0x927D4 -> 0x92968
-static int storyTickPath3(struct_story_c_17969 * pPath /* r1+0x0 */, int * pnOffset /* r1+0x4 */, int * pnHeight /* r1+0x8 */, int * piFrame /* r1+0xC */) {
+static int storyTickPath3(struct_story_c_18160 * pPath /* r1+0x0 */, int * pnOffset /* r1+0x4 */, int * pnHeight /* r1+0x8 */, int * piFrame /* r1+0xC */) {
     // Local variables
     int iData; // r9
     int bFlag; // r1+0x0
@@ -720,10 +820,19 @@ static int storyTickPath3(struct_story_c_17969 * pPath /* r1+0x0 */, int * pnOff
     // -> static int gnTickStory;
 }
 
-// Range: 0x92968 -> 0x92AC0
-static int storyLoadPath(struct_story_c_17987 * * ppPath /* r30 */, char * szName /* r4 */, void * ppHeap /* r31 */) {
+// Erased
+static int storyGetPathFrame3(struct_story_c_18160 * pPath /* r1+0x0 */, int * piFrame /* r1+0x4 */) {
     // Local variables
-    struct_bitmap_c_31 file; // r1+0x20
+    int iData; // r1+0x0
+}
+
+// Erased
+static int storyDonePath3(struct_story_c_18160 * pPath /* r1+0x0 */) {}
+
+// Range: 0x92968 -> 0x92AC0
+static int storyLoadPath(struct_story_c_18224 * * ppPath /* r30 */, char * szName /* r4 */, void * ppHeap /* r31 */) {
+    // Local variables
+    struct_bitmap_c_43 file; // r1+0x20
     unsigned int nHeader; // r1+0x18
     unsigned int nCount; // r1+0x14
 
@@ -732,10 +841,10 @@ static int storyLoadPath(struct_story_c_17987 * * ppPath /* r30 */, char * szNam
 }
 
 // Range: 0x92AC0 -> 0x92BE0
-static int storyGetPath(struct_story_c_17987 * pPath /* r1+0x8 */, float * prWorldX /* r1+0xC */, float * prWorldY /* r1+0x10 */, float * prWorldZ /* r1+0x14 */, int * pnFrame /* r1+0x18 */) {}
+static int storyGetPath(struct_story_c_18224 * pPath /* r1+0x8 */, float * prWorldX /* r1+0xC */, float * prWorldY /* r1+0x10 */, float * prWorldZ /* r1+0x14 */, int * pnFrame /* r1+0x18 */) {}
 
 // Range: 0x92BE0 -> 0x93074
-static void storyMakeBeam(struct_story_c_18049 * * ppBeam /* r23 */, int nCount /* r1+0x2C */, int nX /* r1+0x10 */, int nZ /* r1+0x14 */, void * ppHeap /* r1+0x18 */) {
+static void storyMakeBeam(struct_story_c_18286 * * ppBeam /* r23 */, int nCount /* r1+0x2C */, int nX /* r1+0x10 */, int nZ /* r1+0x14 */, void * ppHeap /* r1+0x18 */) {
     // Local variables
     union_pon_gc_tex_c_1219 * pVtx; // r3
     int iBeam; // r4
@@ -759,7 +868,7 @@ static void storyMakeBeam(struct_story_c_18049 * * ppBeam /* r23 */, int nCount 
 }
 
 // Range: 0x93074 -> 0x933C8
-static void storyDrawBeam(struct_story_c_18049 * pBeam /* r31 */, union_pon_gc_c_173 * * ppGfx /* r14 */) {
+static void storyDrawBeam(struct_story_c_18286 * pBeam /* r31 */, union_pon_gc_c_173 * * ppGfx /* r14 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r17
     float rScale; // f1
@@ -787,7 +896,7 @@ static void storyDrawBeam(struct_story_c_18049 * pBeam /* r31 */, union_pon_gc_c
 }
 
 // Range: 0x933C8 -> 0x93574
-static void storyTickBeam(struct_story_c_18049 * pBeam /* r31 */) {
+static void storyTickBeam(struct_story_c_18286 * pBeam /* r31 */) {
     // Local variables
     int iBeam; // r1+0x8
     float rAngle; // f1
@@ -801,6 +910,12 @@ static float grAngleRay; // size: 0x4, address: 0xF4C48
 static union_pon_gc_tex_c_1219 * gaVtxRay; // size: 0x4, address: 0xF4C4C
 static int ganOffsetRayHeight[8]; // size: 0x20, address: 0xDDF9C
 static int ganOffsetRayWidth[8]; // size: 0x20, address: 0xDDFBC
+// Erased
+static void storySetRaysAlpha(int nAlpha /* r3 */) {
+    // References
+    // -> static int gnAlphaRays;
+}
+
 // Range: 0x93574 -> 0x938C8
 static void storyMakeRays(void * ppHeap /* r1+0x8 */) {
     // Local variables
@@ -877,10 +992,25 @@ static unsigned int ganFadeScript[8]; // size: 0x20, address: 0xF4C8C
 static void * gaszNameScript; // size: 0x4, address: 0xF4CAC
 @enum$1240story_c;
 static @enum$1240story_c geModeText; // size: 0x4, address: 0xF4CB0
+// Erased
+static int storyScriptTestFade(int iFade /* r1+0x0 */) {
+    // References
+    // -> static unsigned int ganFadeScript[8];
+}
+
+// Erased
+static int storyScriptAddFade(int nTagImage /* r1+0x0 */, int nAlphaTarget /* r1+0x4 */, int nStep /* r1+0x8 */, int * piFade /* r1+0xC */) {
+    // Local variables
+    int iFade; // r8
+
+    // References
+    // -> static unsigned int ganFadeScript[8];
+}
+
 // Range: 0x93C70 -> 0x93D7C
 static void storyTickScriptFade(int nFrame /* r1+0x8 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0xC
+    struct_image_c_92 * pImage; // r1+0xC
     int iFade; // r28
     int bDone; // r4
     int nTag; // r4
@@ -911,6 +1041,12 @@ static void storySetupScript(int * anScriptCode /* r1+0x0 */, void * aszNameScri
     // -> static int * ganCode;
     // -> static int giCode;
     // -> static int gnData;
+    // -> static int gnCode;
+}
+
+// Erased
+static int storyDoneScript() {
+    // References
     // -> static int gnCode;
 }
 
@@ -979,7 +1115,7 @@ static void storyTickScript(int nFrame /* r3 */, int bSkip /* r1+0xC */) {
 }
 
 static float garOffsetIsland[10]; // size: 0x28, address: 0xDE074
-static struct_story_c_26721 gaLayerIsland[10][5]; // size: 0x190, address: 0xDE210
+static struct_story_c_26985 gaLayerIsland[10][5]; // size: 0x190, address: 0xDE210
 static int gnOffsetSun; // size: 0x4, address: 0xF4CB8
 static int gnOffsetSunMax; // size: 0x4, address: 0xF4CBC
 static int gnOffsetCloud; // size: 0x4, address: 0xF4CC0
@@ -988,15 +1124,15 @@ static int gnHeightGirl; // size: 0x4, address: 0xF4CC8
 static int gnJumpGirl; // size: 0x4, address: 0xF4CCC
 static int giFrameGirl; // size: 0x4, address: 0xF4CD0
 static int gnOffsetGirl; // size: 0x4, address: 0xF4CD4
-static struct_image_c_89 * gpImageGirl; // size: 0x4, address: 0xF4CD8
+static struct_image_c_92 * gpImageGirl; // size: 0x4, address: 0xF4CD8
 static float garOffsetIsle[3]; // size: 0xC, address: 0xF4CDC
 static signed short ganOffsetIsle[3][5]; // size: 0x1E, address: 0xF4CE8
-static struct_image_c_89 * gapImageIsle[3][5]; // size: 0x3C, address: 0xF4D08
+static struct_image_c_92 * gapImageIsle[3][5]; // size: 0x3C, address: 0xF4D08
 // Range: 0x9441C -> 0x94668
 static void storyLoadIsleIsland(int iImage /* r1+0x8 */, int iIsle /* r23 */, void * ppHeap /* r24 */) {
     // Local variables
     int iLayer; // r25
-    struct_image_c_89 * pImage; // r1+0x14
+    struct_image_c_92 * pImage; // r1+0x14
     struct_bitmap_c_14 * pBitmap; // r4
 
     // References
@@ -1039,9 +1175,9 @@ static void storyTickIsleBackground() {
     int nDeltaX; // r30
     int nDeltaY; // r29
     int nColor0; // r1+0x8
-    struct_image_c_89 * pImage; // r1+0x18
-    struct_image_c_89 * pImage0; // r1+0x14
-    struct_image_c_89 * pImage1; // r1+0x10
+    struct_image_c_92 * pImage; // r1+0x18
+    struct_image_c_92 * pImage0; // r1+0x14
+    struct_image_c_92 * pImage1; // r1+0x10
 
     // References
     // -> static int giLevelStory;
@@ -1070,13 +1206,13 @@ static void storyTickIsleTitle() {
 static int giBallGirl; // size: 0x4, address: 0xF4D68
 @enum$1588story_c;
 static @enum$1588story_c geModeGirl; // size: 0x4, address: 0xF4D6C
-static struct_image_c_89 * gpImageBubble; // size: 0x4, address: 0xF4D70
-static struct_story_c_16662 * gpPathFlower; // size: 0x4, address: 0xF4D74
-static struct_story_c_17969 * gpPathGirlWait; // size: 0x4, address: 0xF4D78
-static struct_story_c_17969 * gpPathGirlGlad; // size: 0x4, address: 0xF4D7C
-static struct_story_c_17969 * gpPathGirlMove; // size: 0x4, address: 0xF4D80
-static struct_story_c_17969 * gpPathGirlWave; // size: 0x4, address: 0xF4D84
-static struct_story_c_16662 * gapPathBits[2]; // size: 0x8, address: 0xF4D88
+static struct_image_c_92 * gpImageBubble; // size: 0x4, address: 0xF4D70
+static struct_story_c_16749 * gpPathFlower; // size: 0x4, address: 0xF4D74
+static struct_story_c_18160 * gpPathGirlWait; // size: 0x4, address: 0xF4D78
+static struct_story_c_18160 * gpPathGirlGlad; // size: 0x4, address: 0xF4D7C
+static struct_story_c_18160 * gpPathGirlMove; // size: 0x4, address: 0xF4D80
+static struct_story_c_18160 * gpPathGirlWave; // size: 0x4, address: 0xF4D84
+static struct_story_c_16749 * gapPathBits[2]; // size: 0x8, address: 0xF4D88
 int gMain; // size: 0x4, address: 0xDF59C
 int gReset; // size: 0x4, address: 0xDF598
 // Range: 0x94B08 -> 0x94D70
@@ -1110,7 +1246,7 @@ static void storyTickIsleGirl(int bSkip /* r1+0xC */) {
 static int storyDrawIsleIsland(int iImage /* r26 */, union_pon_gc_c_173 * * ppGfx /* r24 */, int * pnScreenX /* r25 */, int * pnScreenY /* r23 */) {
     // Local variables
     int iLayer; // r27
-    struct_image_c_89 * pImage; // r26
+    struct_image_c_92 * pImage; // r26
     float rX; // f31
     float rY; // f2
     float rZ; // f30
@@ -1188,7 +1324,7 @@ static void storyTickIsle(int iFrame /* r29 */, int bSkip /* r30 */) {
     // Local variables
     int nAlpha; // r27
     float rScale; // f31
-    struct_image_c_89 * pImage; // r1+0x14
+    struct_image_c_92 * pImage; // r1+0x14
     int iRainbow; // r26
     int iIsland; // r25
 
@@ -1286,6 +1422,18 @@ static void storySetupIsle() {
 
 static void * gaszNameOpen[3]; // size: 0xC, address: 0xDE600
 static int giScreenStorm; // size: 0x4, address: 0xF4DA0
+// Erased
+static void storySetupOpen() {
+    // Local variables
+    void * pHeap; // r1+0x8
+
+    // References
+    // -> static void * gaszNameOpen[3];
+    // -> int ganCommandOpen[203];
+    // -> static int giScreenStorm;
+    // -> char * Pon_Image_Heap;
+}
+
 // Range: 0x9670C -> 0x96898
 static void storyTickOpen(int iFrame /* r3 */, int bSkip /* r4 */) {
     // Local variables
@@ -1314,13 +1462,29 @@ static int ganCommandDoneEnd1[11]; // size: 0x2C, address: 0xDEBF8
 static int ganCommandDoneEnd2[48]; // size: 0xC0, address: 0xDEC24
 static int gnTickWhale; // size: 0x4, address: 0xF4DA4
 static float grScaleWitch; // size: 0x4, address: 0xF4DA8
-static struct_story_c_16662 * gpPathEye1; // size: 0x4, address: 0xF4DAC
-static struct_story_c_16662 * gpPathEye2; // size: 0x4, address: 0xF4DB0
+static struct_story_c_16749 * gpPathEye1; // size: 0x4, address: 0xF4DAC
+static struct_story_c_16749 * gpPathEye2; // size: 0x4, address: 0xF4DB0
+// Erased
+static void storySetupDone() {
+    // Local variables
+    void * pHeap; // r1+0x8
+
+    // References
+    // -> static void * gaszNameEnd[3];
+    // -> static int ganCommandDone[164];
+    // -> static struct [anonymous] * gapPathBits[2];
+    // -> static struct [anonymous] * gpPathEye2;
+    // -> static struct [anonymous] * gpPathEye1;
+    // -> char * Pon_Image_Heap;
+    // -> static int gnTickWhale;
+    // -> static float grScaleWitch;
+}
+
 struct player_t * gPlayer[4]; // size: 0x10, address: 0x116F78
 // Range: 0x96898 -> 0x971F4
 static void storyTickDone(int iFrame /* r3 */, int bSkip /* r4 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x14
+    struct_image_c_92 * pImage; // r1+0x14
     int nOffsetX; // r27
     int nOffsetY; // r26
     int bFlag; // r30
@@ -1361,6 +1525,32 @@ static void storyTickDone(int iFrame /* r3 */, int bSkip /* r4 */) {
 
 static void * gaszNameHags[1]; // size: 0x4, address: 0xDED30
 static int ganCommandHags[70]; // size: 0x118, address: 0xDED34
+// Erased
+static void storySetupHags() {
+    // Local variables
+    void * pHeap; // r1+0x8
+
+    // References
+    // -> static void * gaszNameHags[1];
+    // -> static int ganCommandHags[70];
+    // -> static int gnOffsetWipe;
+    // -> char * Pon_Image_Heap;
+}
+
+// Erased
+static void storyTickHags(int iFrame /* r3 */) {
+    // References
+    // -> struct OSMesgQueue_s gfxFrameMsgQ;
+    // -> static int gnFlushCount;
+    // -> static @enum$106story_c geXtraNext;
+    // -> static @enum$105story_c geModeNext;
+    // -> static int gnPickStory;
+    // -> static int gnCode;
+    // -> static @enum$1241story_c geHoldStory0;
+    // -> static int gnOffsetWipe;
+    // -> static int gbGfxHeap;
+}
+
 static void * gaszNameCast[1]; // size: 0x4, address: 0xDEE60
 static int ganCommandCast[8]; // size: 0x20, address: 0xDEE64
 @enum$2278story_c;
@@ -1368,8 +1558,8 @@ static @enum$2278story_c geTypeCast; // size: 0x4, address: 0xF4DB4
 static int gnTagCheat; // size: 0x4, address: 0xF4DB8
 static int giBackStory; // size: 0x4, address: 0xF4DBC
 static void * gapHeapBack[2]; // size: 0x8, address: 0xF4DC0
-static struct_image_c_89 * gapImageBack[6]; // size: 0x18, address: 0xF4DC8
-static struct_story_c_28911 * gpBitsCast; // size: 0x4, address: 0xF4DE0
+static struct_image_c_92 * gapImageBack[6]; // size: 0x18, address: 0xF4DC8
+static struct_story_c_29229 * gpBitsCast; // size: 0x4, address: 0xF4DE0
 static int ganCommandWait[3]; // size: 0xC, address: 0xDEE84
 static unsigned int ganColorBits[8]; // size: 0x20, address: 0xDEE90
 int gSelection; // size: 0x4, address: 0xF4E94
@@ -1414,12 +1604,41 @@ static void storySetupCast() {
     // -> char * Pon_Image_Heap;
 }
 
+// Erased
+static void storyDrawCastRainbow(union_pon_gc_c_173 * * ppGfx /* r27 */) {
+    // Local variables
+    int nHeight; // r28
+    float rScale; // r1+0x20
+    float rRatio; // f1
+    int nScreenX; // r1+0x1C
+    int nScreenY; // r1+0x18
+
+    // References
+    // -> static struct [anonymous] * gpImageGirl;
+    // -> static int giFrameGirl;
+    // -> static union [anonymous] gMtxView;
+    // -> static float garView[4][4];
+    // -> static float grFOV;
+    // -> static unsigned short gnNormalize;
+    // -> static union [anonymous] gMtxLook;
+    // -> static float garLook[4][4];
+    // -> static float grCameraTargetZ;
+    // -> static float grCameraTargetY;
+    // -> static float grCameraTargetX;
+    // -> static float grCameraSourceZ;
+    // -> static float grCameraSourceY;
+    // -> static float grCameraSourceX;
+    // -> static float grDistanceCamera;
+    // -> static float grAngleBob;
+    // -> static float garBaseRainbow[2][2];
+}
+
 static int nFlagLast$2447; // size: 0x4, address: 0xF4DE4
 // Range: 0x97ACC -> 0x97EC0
 static int storyTickCastRainbow(int iFrame /* r27 */) {
     // Local variables
     void * pHeap; // r1+0x24
-    struct_image_c_89 * pImage; // r1+0x8
+    struct_image_c_92 * pImage; // r1+0x8
     int iFrame0; // r1+0x20
     int iFrame1; // r1+0x1C
     int nType; // r1+0x18
@@ -1452,7 +1671,7 @@ unsigned int ganColorCharacter[]; // size: 0x0, address: 0xB1DC0
 static int storyTickCastProfile(int iFrame /* r28 */) {
     // Local variables
     void * pHeap; // r1+0x24
-    struct_image_c_89 * pImage; // r1+0x20
+    struct_image_c_92 * pImage; // r1+0x20
     int iCharacter; // r30
     int nWait; // r3
     int nType; // r1+0x1C
@@ -1534,7 +1753,7 @@ static void storySetupChar() {
 static void storyTickChar(int bSkip /* r26 */) {
     // Local variables
     signed short nMask; // r27
-    struct_image_c_89 * pImage; // r1+0x18
+    struct_image_c_92 * pImage; // r1+0x18
     int iCharacter; // r29
     int nTag; // r28
     int nTagWink; // r27
@@ -1553,35 +1772,35 @@ static void storyTickChar(int bSkip /* r26 */) {
 
 @enum$2732story_c;
 static @enum$2732story_c geModeEnemy; // size: 0x4, address: 0xF4DEC
-static struct_story_c_16662 * gpPathNote; // size: 0x4, address: 0xF4DF0
-static struct_story_c_16662 * gpPathBaby; // size: 0x4, address: 0xF4DF4
-static struct_story_c_16662 * gpPathBat1; // size: 0x4, address: 0xF4DF8
-static struct_story_c_16662 * gpPathBat2; // size: 0x4, address: 0xF4DFC
-static struct_story_c_16662 * gpPathBat3; // size: 0x4, address: 0xF4E00
-static struct_story_c_16662 * gpPathBat4; // size: 0x4, address: 0xF4E04
-static struct_story_c_16662 * gpPathBat5; // size: 0x4, address: 0xF4E08
-static struct_story_c_16662 * gpPathBat1X; // size: 0x4, address: 0xF4E0C
-static struct_story_c_16662 * gpPathBat2X; // size: 0x4, address: 0xF4E10
-static struct_story_c_16662 * gpPathBat3X; // size: 0x4, address: 0xF4E14
-static struct_story_c_16662 * gpPathBat4X; // size: 0x4, address: 0xF4E18
-static struct_story_c_16662 * gpPathBat5X; // size: 0x4, address: 0xF4E1C
-static struct_story_c_16662 * gpPathMother; // size: 0x4, address: 0xF4E20
-static struct_story_c_17987 * gapPathNote[3]; // size: 0xC, address: 0xF4E24
+static struct_story_c_16749 * gpPathNote; // size: 0x4, address: 0xF4DF0
+static struct_story_c_16749 * gpPathBaby; // size: 0x4, address: 0xF4DF4
+static struct_story_c_16749 * gpPathBat1; // size: 0x4, address: 0xF4DF8
+static struct_story_c_16749 * gpPathBat2; // size: 0x4, address: 0xF4DFC
+static struct_story_c_16749 * gpPathBat3; // size: 0x4, address: 0xF4E00
+static struct_story_c_16749 * gpPathBat4; // size: 0x4, address: 0xF4E04
+static struct_story_c_16749 * gpPathBat5; // size: 0x4, address: 0xF4E08
+static struct_story_c_16749 * gpPathBat1X; // size: 0x4, address: 0xF4E0C
+static struct_story_c_16749 * gpPathBat2X; // size: 0x4, address: 0xF4E10
+static struct_story_c_16749 * gpPathBat3X; // size: 0x4, address: 0xF4E14
+static struct_story_c_16749 * gpPathBat4X; // size: 0x4, address: 0xF4E18
+static struct_story_c_16749 * gpPathBat5X; // size: 0x4, address: 0xF4E1C
+static struct_story_c_16749 * gpPathMother; // size: 0x4, address: 0xF4E20
+static struct_story_c_18224 * gapPathNote[3]; // size: 0xC, address: 0xF4E24
 static int gnHeightSky; // size: 0x4, address: 0xF4E30
 static float grAngleSky; // size: 0x4, address: 0xF4E34
 static struct_model_c_289 * gpModelSky; // size: 0x4, address: 0xF4E38
-static struct_image_c_89 * gpImageRing; // size: 0x4, address: 0xF4E3C
-static struct_image_c_89 * gpImageGlow; // size: 0x4, address: 0xF4E40
-static struct_story_c_18049 * gpBeamGoddess; // size: 0x4, address: 0xF4E44
+static struct_image_c_92 * gpImageRing; // size: 0x4, address: 0xF4E3C
+static struct_image_c_92 * gpImageGlow; // size: 0x4, address: 0xF4E40
+static struct_story_c_18286 * gpBeamGoddess; // size: 0x4, address: 0xF4E44
 static int gnCountZoom; // size: 0x4, address: 0xF4E48
 static float grPercentZoom; // size: 0x4, address: 0xF4E4C
 static int ganCommandDragonMeet[21]; // size: 0x54, address: 0xDEF1C
 static int ganCommandDragonBeat[18]; // size: 0x48, address: 0xDEF70
-struct_story_c_16662 * gpPathGirl; // size: 0x4, address: 0xF4E50
+struct_story_c_16749 * gpPathGirl; // size: 0x4, address: 0xF4E50
 // Range: 0x98A5C -> 0x990C0
 static void storyTickKeysDragon(int iFrame /* r30 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x24
+    struct_image_c_92 * pImage; // r1+0x24
     int iKey; // r4
     int nFrame; // r1+0x20
     int nOffset; // r1+0x8
@@ -1627,10 +1846,10 @@ static void storyTickKeysDragon(int iFrame /* r30 */) {
 }
 
 // Range: 0x990C0 -> 0x99298
-static void storyTickKeysNotes(struct_story_c_17987 * * apPath /* r3 */, int iFrame /* r1+0xC */) {
+static void storyTickKeysNotes(struct_story_c_18224 * * apPath /* r3 */, int iFrame /* r1+0xC */) {
     // Local variables
     float rScale; // r1+0x28
-    struct_image_c_89 * pImage; // r1+0x24
+    struct_image_c_92 * pImage; // r1+0x24
     float rX; // r1+0x20
     float rY; // r1+0x1C
     float rZ; // r1+0x18
@@ -1649,7 +1868,7 @@ static int ganCommandJokerBeat[11]; // size: 0x2C, address: 0xDF03C
 // Range: 0x99298 -> 0x99768
 static void storyTickKeysJoker(int iFrame /* r29 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x10
+    struct_image_c_92 * pImage; // r1+0x10
     int nAlpha; // r6
     int nFrame; // r1+0xC
     int bBlur; // r30
@@ -1684,7 +1903,7 @@ static void storyTickKeysSanatos(int iFrame /* r28 */) {
     int nX; // r5
     int nY; // r6
     float rScale; // f4
-    struct_image_c_89 * pImage; // r1+0x20
+    struct_image_c_92 * pImage; // r1+0x20
     int iImage; // r3
     int nOffset; // r29
     int nAlpha; // r1+0x8
@@ -1798,7 +2017,7 @@ static int ganCommandGoddessBeat[33]; // size: 0x84, address: 0xDF190
 static void storyTickKeysGoddess(int iFrame /* r27 */) {
     // Local variables
     float rRatio; // f31
-    struct_image_c_89 * pImage; // r1+0xC
+    struct_image_c_92 * pImage; // r1+0xC
     @enum$2732story_c eMode; // r28
     int nFrame; // r1+0x8
     int nAlpha; // r28
@@ -1839,7 +2058,7 @@ static void storyTickKeysWhale(int iFrame /* r26 */) {
     // Local variables
     int nX; // r1+0x2C
     int nY; // r1+0x28
-    struct_image_c_89 * pImage; // r1+0x24
+    struct_image_c_92 * pImage; // r1+0x24
     int nSize; // r27
     int iRock; // r28
 
@@ -1865,7 +2084,7 @@ static void storyTickKeysWhale(int iFrame /* r26 */) {
 // Range: 0x9B4F0 -> 0x9B8B4
 static void storyTickKeys(int iFrame /* r30 */, int bSkip /* r29 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x10
+    struct_image_c_92 * pImage; // r1+0x10
 
     // References
     // -> static int gbGfxHeap;
@@ -1901,7 +2120,7 @@ static void storySetupKeys() {
     // Local variables
     int nTag; // r24
     void * pHeap; // r1+0x30
-    struct_image_c_89 * pImage; // r1+0x2C
+    struct_image_c_92 * pImage; // r1+0x2C
     int iObject; // r24
     int bFlag; // r26
     int nMode; // r25
@@ -2000,6 +2219,30 @@ static void storyTickPick(int bSkip /* r28 */) {
     // -> struct Game gTheGame;
 }
 
+// Erased
+static void storySetupPick() {
+    // Local variables
+    void * pHeap; // r1+0x10
+
+    // References
+    // -> static int giScreenStory;
+    // -> char * Pon_Image_Heap;
+    // -> static union [anonymous] gMtxView;
+    // -> static float garView[4][4];
+    // -> static float grFOV;
+    // -> static unsigned short gnNormalize;
+    // -> static union [anonymous] gMtxLook;
+    // -> static float garLook[4][4];
+    // -> static float grCameraTargetZ;
+    // -> static float grCameraTargetY;
+    // -> static float grCameraTargetX;
+    // -> static float grCameraSourceZ;
+    // -> static float grCameraSourceY;
+    // -> static float grCameraSourceX;
+    // -> static float grDistanceCamera;
+    // -> static int gnPickStory;
+}
+
 // Range: 0x9CBC0 -> 0x9CC5C
 void storyPlaySong(int iSong /* r30 */, int bFade /* r31 */) {
     // References
@@ -2065,7 +2308,7 @@ static void storyDrawImage(union_pon_gc_c_173 * * ppGfx /* r30 */, int iScreen /
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x40
     float rScale; // r1+0x3C
-    struct_image_c_89 * pImage; // r1+0x38
+    struct_image_c_92 * pImage; // r1+0x38
     int iBits; // r1+0x8
     int iBack; // r24
     int nSize; // r7

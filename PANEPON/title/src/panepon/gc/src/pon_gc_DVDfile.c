@@ -129,8 +129,63 @@ void pon_ReleaseHeap() {
     // -> char * Pon_Real_Heap;
 }
 
+// Erased
+static char * Pon_DVDRead(char * filename /* r3 */) {
+    // Local variables
+    int nResult; // r1+0xC
+    int nReadSize; // r1+0x8
+    char * segment_file; // r29
+
+    // References
+    // -> char * Pon_Image_Heap;
+    // -> char * Pon_Real_Heap;
+    // -> char * bin_file;
+}
+
+// Erased
+static char * Pon_DVDRead_SegFile_To_SameMem(char * filename /* r3 */, char * * savefilename /* r29 */) {
+    // Local variables
+    int nResult; // r1+0x10
+    int nReadSize; // r1+0x8
+    char * segment_file; // r29
+
+    // References
+    // -> char * Pon_Image_Heap;
+    // -> char * Pon_Real_Heap;
+    // -> char * bin_file;
+}
+
 // Range: 0x2F8 -> 0x338
 void Pon_Release(char * * filename /* r31 */) {}
+
+// Erased
+static void pon_Get_MenuData(unsigned long size /* r30 */) {
+    // References
+    // -> char * Pon_Real_Heap;
+}
+
+// Erased
+static void Pon_Release_MenuData() {
+    // References
+    // -> char * Pon_Real_Heap;
+}
+
+// Erased
+static void Pon_Release_GameData() {
+    // Local variables
+    int i; // r23
+
+    // References
+    // -> char * lev_2_Seg[4];
+    // -> char * lev_1_Seg[4];
+    // -> char * char_Seg[4];
+    // -> char * bg2d_2_Seg[4];
+    // -> char * bg2d_1_Seg[4];
+    // -> char * fr3d_Seg[4];
+    // -> char * fr2d_Seg[4];
+    // -> char * ending_Seg[4];
+    // -> char * gc_misc;
+}
 
 // Range: 0x338 -> 0x3DC
 void Pon_Release_All() {
@@ -140,6 +195,20 @@ void Pon_Release_All() {
     // -> char * gc_ending;
     // -> char * gc_vertex;
     // -> char * bin_file;
+}
+
+// Erased
+static char * Pon_DVDRead2(char * filename /* r3 */) {
+    // Local variables
+    char * segment_file; // r30
+    int result; // r1+0xC
+}
+
+// Erased
+static char * Pon_DVDRead_SegFile_To_SameMem2(char * filename /* r30 */, char * * savefilename /* r29 */) {
+    // Local variables
+    char * segment_file; // r30
+    int result; // r1+0x10
 }
 
 // Range: 0x3DC -> 0x83C

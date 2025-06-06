@@ -54,4 +54,7 @@ int memoryCard_bootCheck() {
     // -> unsigned short joyupd[5];
 }
 
+// Erased
+static void DVDDrive_DispError() {}
+
 

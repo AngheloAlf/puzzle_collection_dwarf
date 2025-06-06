@@ -14,6 +14,15 @@ void Set3DTile() {
     // -> union [anonymous] * glistp;
 }
 
+// Erased
+static void Set3DTile7() {
+    // Local variables
+    union_pon_gc_c_173 * _g; // r1+0x0
+
+    // References
+    // -> union [anonymous] * glistp;
+}
+
 // Range: 0x48D4C -> 0x48F48
 void Set3DExplodeTile() {
     // Local variables

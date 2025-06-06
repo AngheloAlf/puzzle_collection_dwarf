@@ -166,6 +166,18 @@ void Start2DIconSplash(struct tetWell * well /* r3 */, int x /* r1+0x4 */, int y
 
 signed char Explosion1[20][12]; // size: 0xF0, address: 0xB0250
 int gOverflow; // size: 0x4, address: 0xF4EA4
+// Erased
+static void Update2DExplode1(struct explode_t * explode /* r1+0x0 */) {
+    // Local variables
+    signed char * ptr; // r8
+    int position; // r9
+
+    // References
+    // -> int gOverflow;
+    // -> unsigned short Explosion2DTMEM[9];
+    // -> signed char Explosion1[20][12];
+}
+
 signed char Explosion2[20][16]; // size: 0x140, address: 0xB0340
 signed char Explosion3[24][24]; // size: 0x240, address: 0xB0480
 signed char Explosion4[24][32]; // size: 0x300, address: 0xB06C0
@@ -186,6 +198,17 @@ void Update2DExplode2(struct explode_t * explode /* r1+0x0 */) {
 }
 
 signed char IconSplash[40][12]; // size: 0x1E0, address: 0xB09C0
+// Erased
+static void Update2DIconSplash(struct explode_t * explode /* r1+0x0 */) {
+    // Local variables
+    signed char * ptr; // r4
+    int position; // r6
+
+    // References
+    // -> int gOverflow;
+    // -> signed char IconSplash[40][12];
+}
+
 // Range: 0x5B630 -> 0x5B804
 void Update2DExplosion(struct tetWell * well /* r3 */) {
     // Local variables

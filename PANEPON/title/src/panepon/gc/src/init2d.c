@@ -439,6 +439,22 @@ void Init2DSmallStars(int num /* r18 */) {
     // -> struct Game gTheGame;
 }
 
+// Erased
+static void pon_Init2DSmallStars4p(int num /* r19 */) {
+    // Local variables
+    int i; // r22
+    int j; // r21
+    int total; // r20
+    struct tetWell * well; // r21
+    struct_animation_c_1169 * s; // r19
+    unsigned short stars_POS[13][5]; // r1+0x28
+    unsigned char stars_DROP[10]; // r1+0x1C
+    unsigned char stars_TMEM[4][4]; // r1+0xC
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 // Range: 0x64A80 -> 0x64C1C
 void Init2DCircleStars(int num /* r18 */, int pos /* r19 */) {
     // Local variables

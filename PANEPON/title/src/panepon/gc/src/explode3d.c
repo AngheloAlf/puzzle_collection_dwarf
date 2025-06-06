@@ -191,6 +191,17 @@ void Update3DExplode2(struct explode_t * explode /* r1+0x0 */, int distance /* r
 }
 
 signed char IconSplash[40][12]; // size: 0x1E0, address: 0xB09C0
+// Erased
+static void Update3DIconSplash(struct explode_t * explode /* r1+0x0 */, int distance /* r1+0x4 */) {
+    // Local variables
+    signed char * ptr; // r5
+    int position; // r7
+    struct_animation_c_1169 * s; // r8
+
+    // References
+    // -> signed char IconSplash[40][12];
+}
+
 // Range: 0x5BD74 -> 0x5BED8
 void Update3DExplosion(struct tetWell * well /* r3 */) {
     // Local variables

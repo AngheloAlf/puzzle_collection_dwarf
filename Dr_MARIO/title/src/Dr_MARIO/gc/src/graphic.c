@@ -30,12 +30,33 @@ static void gfxproc_onRetrace() {
     // -> @enum$101main_story_c graphic_no;
 }
 
+// Erased
+static void gfxproc_onDoneSwap() {
+    // References
+    // -> unsigned long pendingGFX;
+}
+
+// Erased
+static void gfxproc_onDoneTask() {
+    // References
+    // -> @enum$101main_story_c graphic_no;
+}
+
+// Erased
+static void gfxproc_onPreNMI() {
+    // References
+    // -> unsigned long pendingGFX;
+}
+
 void (* subproc_nuGfxFunc)(); // size: 0x4, address: 0x4
 // Range: 0x26EB8 -> 0x26ECC
 void gfxCreateGraphicThread() {
     // References
     // -> void (* subproc_nuGfxFunc)();
 }
+
+// Erased
+static signed short gfxWaitMessage() {}
 
 // Range: 0x26ECC -> 0x26ED8
 void gfxTaskStartFrameCopyFunc_set(void (* frameCopyFunc)() /* r1+0x0 */) {

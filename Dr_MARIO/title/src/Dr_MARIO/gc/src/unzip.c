@@ -15,6 +15,12 @@ unsigned long expand_gzip(char * src_addr /* r1+0x8 */, char * dst_addr /* r1+0x
     // -> struct [anonymous] ifd;
 }
 
+// Erased
+static unsigned long data_read(struct_unzip_c_179 * infile /* r29 */, unsigned char * dst_addr /* r4 */, unsigned long size /* r30 */) {
+    // Local variables
+    unsigned long i; // r31
+}
+
 // Range: 0x99E8 -> 0x9AA8
 unsigned long data_write(struct_unzip_c_179 * outfile /* r1+0x0 */, unsigned char * src_addr /* r1+0x4 */, unsigned int size /* r5 */) {
     // Local variables
@@ -73,6 +79,12 @@ int fill_inbuf(int eof_ok /* r29 */) {
     // -> struct [anonymous] ifd;
     // -> long bytes_in;
     // -> unsigned int insize;
+}
+
+// Erased
+static void write_buf(struct_unzip_c_179 * fd /* r1+0x0 */, char * buf /* r4 */, unsigned int cnt /* r5 */) {
+    // Local variables
+    unsigned long n; // r7
 }
 
 unsigned char window[32768]; // size: 0x8000, address: 0xAE34

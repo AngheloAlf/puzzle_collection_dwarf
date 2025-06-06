@@ -44,7 +44,7 @@ struct SAnimeState {
     int charNo; // offset 0x2C, size 0x4
     int color[4]; // offset 0x30, size 0x10
 };
-struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
+struct_dm_game_main_c_171 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
 int attack_effect_idx; // size: 0x4, address: 0x1D304
 struct_game_etc_c_787 attack_effect[16]; // size: 0x2C0, address: 0x1D308
 int attack_sprite_idx; // size: 0x4, address: 0x1D5C8

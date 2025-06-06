@@ -616,6 +616,11 @@ typedef union /* uObjTxtr */ {
     } tlut; // offset 0x0, size 0x18
     long long force_structure_alignment; // offset 0x0, size 0x8
 } uObjTxtr;
+typedef struct /* struct_drmario_tex_func_c_36823 */ {
+    // total size: 0x8
+    void * addr; // offset 0x0, size 0x4
+    unsigned short * size; // offset 0x4, size 0x4
+} struct_drmario_tex_func_c_36823;
 typedef struct /* struct_pon_gc_MemoryCard_c_23 */ {
     // total size: 0x2C
     int status; // offset 0x0, size 0x4
@@ -970,20 +975,20 @@ typedef struct /* struct_bitmap_c_14 */ {
     int nSizeOriginalX; // offset 0x14, size 0x4
     unsigned short * aColorPalette; // offset 0x18, size 0x4
 } struct_bitmap_c_14;
-typedef struct /* struct_bitmap_c_31 */ {
+typedef struct /* struct_bitmap_c_43 */ {
     // total size: 0x10
     int iFile; // offset 0x0, size 0x4
     int nSize; // offset 0x4, size 0x4
     int nBase; // offset 0x8, size 0x4
     int nOffset; // offset 0xC, size 0x4
-} struct_bitmap_c_31;
-typedef struct /* struct_bitmap_c_320 */ {
+} struct_bitmap_c_43;
+typedef struct /* struct_bitmap_c_332 */ {
     // total size: 0x10
     int nX; // offset 0x0, size 0x4
     int nY; // offset 0x4, size 0x4
     int nSizeX; // offset 0x8, size 0x4
     int nSizeY; // offset 0xC, size 0x4
-} struct_bitmap_c_320;
+} struct_bitmap_c_332;
 typedef struct /* struct_controller_c_15 */ {
     // total size: 0x4
     unsigned short type; // offset 0x0, size 0x2
@@ -1171,12 +1176,12 @@ typedef struct /* struct_controller_c_1406 */ {
         double d; // offset 0x0, size 0x8
     } fp30; // offset 0x188, size 0x8
 } struct_controller_c_1406;
-typedef struct /* struct_editor_c_1276 */ {
+typedef struct /* struct_editor_c_1312 */ {
     // total size: 0x8
     @enum$100editor_c eMode; // offset 0x0, size 0x4
     void (* pfTick)(int, int *); // offset 0x4, size 0x4
-} struct_editor_c_1276;
-typedef struct /* struct_image_c_89 */ {
+} struct_editor_c_1312;
+typedef struct /* struct_image_c_92 */ {
     // total size: 0xA0
     int iFrame; // offset 0x0, size 0x4
     int iObject; // offset 0x4, size 0x4
@@ -1259,13 +1264,13 @@ typedef struct /* struct_image_c_89 */ {
     unsigned short nScrollY; // offset 0x92, size 0x2
     unsigned int nColor0; // offset 0x94, size 0x4
     unsigned int nColor1; // offset 0x98, size 0x4
-} struct_image_c_89;
+} struct_image_c_92;
 typedef struct /* struct_init_c_9 */ {
     // total size: 0x10
     signed short vscale[4]; // offset 0x0, size 0x8
     signed short vtrans[4]; // offset 0x8, size 0x8
 } struct_init_c_9;
-typedef union /* union_main_c_1549 */ {
+typedef union /* union_main_c_1555 */ {
     struct {
         // total size: 0x2
         signed short type; // offset 0x0, size 0x2
@@ -1274,7 +1279,7 @@ typedef union /* union_main_c_1549 */ {
         // total size: 0x2
         signed short type; // offset 0x0, size 0x2
     } done; // offset 0x0, size 0x2
-} union_main_c_1549;
+} union_main_c_1555;
 typedef struct /* struct_menu_c_1407 */ {
     // total size: 0xB8
     unsigned int iSlot; // offset 0x0, size 0x4
@@ -1294,7 +1299,7 @@ typedef struct /* struct_menu_c_1407 */ {
     unsigned int nSize0; // offset 0xB0, size 0x4
     unsigned int nCode; // offset 0xB4, size 0x4
 } struct_menu_c_1407;
-typedef struct /* struct_menu_c_1876 */ {
+typedef struct /* struct_menu_c_1974 */ {
     // total size: 0x18
     char * szName; // offset 0x0, size 0x4
     void (* pfInit)(int, @enum$105menu_c); // offset 0x4, size 0x4
@@ -1470,7 +1475,7 @@ typedef struct /* struct_menu_c_1876 */ {
     void (* pfTick)(int, int, int *); // offset 0xC, size 0x4
     @enum$105menu_c eType; // offset 0x10, size 0x4
     @enum$105menu_c eTypeNext; // offset 0x14, size 0x4
-} struct_menu_c_1876;
+} struct_menu_c_1974;
 typedef struct /* struct_model_c_289 */ {
     // total size: 0x14
     int nType; // offset 0x0, size 0x4
@@ -2380,7 +2385,7 @@ typedef struct /* struct_screen_c_446 */ {
     int aiAreaActive[4]; // offset 0x28, size 0x10
     int aiAreaActiveLast[4]; // offset 0x38, size 0x10
 } struct_screen_c_446;
-typedef struct /* struct_screen_c_2860 */ {
+typedef struct /* struct_screen_c_2863 */ {
     // total size: 0x6C
     int nTag; // offset 0x0, size 0x4
     int nX; // offset 0x4, size 0x4
@@ -2409,8 +2414,8 @@ typedef struct /* struct_screen_c_2860 */ {
     int nSizeFieldY; // offset 0x60, size 0x4
     unsigned int * anColor0; // offset 0x64, size 0x4
     unsigned int * anColor1; // offset 0x68, size 0x4
-} struct_screen_c_2860;
-typedef struct /* struct_screen_c_16999 */ {
+} struct_screen_c_2863;
+typedef struct /* struct_screen_c_17002 */ {
     // total size: 0x60
     int nX; // offset 0x0, size 0x4
     int nY; // offset 0x4, size 0x4
@@ -2519,8 +2524,8 @@ typedef struct /* struct_screen_c_16999 */ {
     int nCursorX1; // offset 0x54, size 0x4
     int nCursorY1; // offset 0x58, size 0x4
     unsigned short * anCursorList; // offset 0x5C, size 0x4
-} struct_screen_c_16999;
-typedef struct /* struct_screen_c_17844 */ {
+} struct_screen_c_17002;
+typedef struct /* struct_screen_c_17944 */ {
     // total size: 0x30
     int nX; // offset 0x0, size 0x4
     int nY; // offset 0x4, size 0x4
@@ -2617,8 +2622,8 @@ typedef struct /* struct_screen_c_17844 */ {
     unsigned int nType; // offset 0x24, size 0x4
     unsigned int nColor0; // offset 0x28, size 0x4
     unsigned int nColor1; // offset 0x2C, size 0x4
-} struct_screen_c_17844;
-typedef struct /* struct_screen_c_17942 */ {
+} struct_screen_c_17944;
+typedef struct /* struct_screen_c_18042 */ {
     // total size: 0x30
     int nTag; // offset 0x0, size 0x4
     int nX; // offset 0x4, size 0x4
@@ -2715,7 +2720,7 @@ typedef struct /* struct_screen_c_17942 */ {
     int nSizeX; // offset 0x24, size 0x4
     int nSizeY; // offset 0x28, size 0x4
     unsigned int nType; // offset 0x2C, size 0x4
-} struct_screen_c_17942;
+} struct_screen_c_18042;
 typedef struct /* struct_story_c_468 */ {
     // total size: 0x34
     int nStep; // offset 0x0, size 0x4
@@ -2732,7 +2737,7 @@ typedef struct /* struct_story_c_468 */ {
     unsigned int * anDataX; // offset 0x2C, size 0x4
     unsigned int * anDataY; // offset 0x30, size 0x4
 } struct_story_c_468;
-typedef struct /* struct_story_c_16662 */ {
+typedef struct /* struct_story_c_16749 */ {
     // total size: 0x40
     int iKey; // offset 0x0, size 0x4
     int bBack; // offset 0x4, size 0x4
@@ -2833,16 +2838,16 @@ typedef struct /* struct_story_c_16662 */ {
     @enum$96story_c eMode; // offset 0x34, size 0x4
     int iFrameWrap0; // offset 0x38, size 0x4
     int iFrameWrap1; // offset 0x3C, size 0x4
-} struct_story_c_16662;
-typedef struct /* struct_story_c_17969 */ {
+} struct_story_c_16749;
+typedef struct /* struct_story_c_18160 */ {
     // total size: 0x14
     int bBack; // offset 0x0, size 0x4
     int iFrame; // offset 0x4, size 0x4
     signed short * anData; // offset 0x8, size 0x4
     int nCountFrame; // offset 0xC, size 0x4
     @enum$96story_c eMode; // offset 0x10, size 0x4
-} struct_story_c_17969;
-typedef struct /* struct_story_c_17987 */ {
+} struct_story_c_18160;
+typedef struct /* struct_story_c_18224 */ {
     // total size: 0x18
     int nType; // offset 0x0, size 0x4
     int iFrame; // offset 0x4, size 0x4
@@ -2850,8 +2855,8 @@ typedef struct /* struct_story_c_17987 */ {
     signed short * anPosition; // offset 0xC, size 0x4
     int nDeltaX; // offset 0x10, size 0x4
     int nDeltaY; // offset 0x14, size 0x4
-} struct_story_c_17987;
-typedef struct /* struct_story_c_18049 */ {
+} struct_story_c_18224;
+typedef struct /* struct_story_c_18286 */ {
     // total size: 0x24
     int iMtx; // offset 0x0, size 0x4
     union {
@@ -2885,14 +2890,14 @@ typedef struct /* struct_story_c_18049 */ {
         long m[4][4]; // offset 0x0, size 0x40
         long long force_structure_alignment; // offset 0x0, size 0x8
     } * aMtxView; // offset 0x20, size 0x4
-} struct_story_c_18049;
-typedef struct /* struct_story_c_26721 */ {
+} struct_story_c_18286;
+typedef struct /* struct_story_c_26985 */ {
     // total size: 0x8
     signed short nDeltaX; // offset 0x0, size 0x2
     signed short nDeltaY; // offset 0x2, size 0x2
     char * szNameFile; // offset 0x4, size 0x4
-} struct_story_c_26721;
-typedef struct /* struct_story_c_28911 */ {
+} struct_story_c_26985;
+typedef struct /* struct_story_c_29229 */ {
     // total size: 0xA0C
     int nTagWink; // offset 0x0, size 0x4
     struct {
@@ -2993,7 +2998,7 @@ typedef struct /* struct_story_c_28911 */ {
         int nInitWait; // offset 0x20, size 0x4
         unsigned int nColor; // offset 0x24, size 0x4
     } aBits[64]; // offset 0xC, size 0xA00
-} struct_story_c_28911;
+} struct_story_c_29229;
 typedef struct /* struct_title_c_1973 */ {
     // total size: 0x354
     int nTick; // offset 0x0, size 0x4
@@ -4969,7 +4974,7 @@ typedef struct /* struct_title_c_1989 */ {
     int nStep; // offset 0x14, size 0x4
     int nFade; // offset 0x18, size 0x4
 } struct_title_c_1989;
-typedef struct /* struct_title_c_6091 */ {
+typedef struct /* struct_title_c_6118 */ {
     // total size: 0x18
     int nTick; // offset 0x0, size 0x4
     int nWait; // offset 0x4, size 0x4
@@ -4977,4 +4982,8 @@ typedef struct /* struct_title_c_6091 */ {
     int nY; // offset 0xC, size 0x4
     int nDeltaX; // offset 0x10, size 0x4
     int nDeltaY; // offset 0x14, size 0x4
-} struct_title_c_6091;
+} struct_title_c_6118;
+typedef union /* union_gc_c_452 */ {
+    unsigned long color; // offset 0x0, size 0x4
+    unsigned char argb[4]; // offset 0x0, size 0x4
+} union_gc_c_452;

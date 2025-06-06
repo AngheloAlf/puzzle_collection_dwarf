@@ -4,7 +4,50 @@
     Language: C++
     Code range: 0x0000B978 -> 0x0000C510
 */
+// Erased
+static long mulS32S32(long a /* r27 */, long b /* r25 */, long shift /* r22 */) {
+    // Local variables
+    long long c; // r24
+}
+
+// Erased
+static int waitEQ4(int * var /* r1+0x0 */, int data /* r1+0x4 */) {}
+
+// Erased
+static long sqrtS(unsigned long v /* r1+0x8 */) {
+    // References
+    // -> static int __float_huge[];
+    // -> static int __float_nan[];
+}
+
+// Erased
+static long sqrtL() {}
+
+// Erased
+static long get_angle(long x /* r1+0x0 */, long y /* r1+0x4 */) {
+    // Local variables
+    long nAngle; // r1+0x0
+}
+
 signed short sintable[1026]; // size: 0x804, address: 0x198
+// Erased
+static long sinL(signed short angle /* r1+0x0 */) {
+    // References
+    // -> signed short sintable[1026];
+}
+
+// Erased
+static long cosL(signed short angle /* r1+0x0 */) {
+    // References
+    // -> signed short sintable[1026];
+}
+
+// Erased
+static void lc2wc() {}
+
+// Erased
+static void wc2lc() {}
+
 // Range: 0xB978 -> 0xBF18
 void matrixMulL(long (* m)[4] /* r14 */, long (* n)[4] /* r1+0x80 */, long (* r)[4] /* r1+0x10 */) {
     // Local variables
@@ -27,6 +70,18 @@ void makeMatrix(long (* m)[4] /* r1+0x0 */, signed short xrot /* r1+0x4 */, sign
     // -> signed short sintable[1026];
 }
 
+// Erased
+static void makeXrotMatrix() {}
+
+// Erased
+static void makeYrotMatrix() {}
+
+// Erased
+static void makeZrotMatrix() {}
+
+// Erased
+static void makeXZMatrix() {}
+
 // Range: 0xC1D8 -> 0xC510
 void matrixConv(long (* m)[4] /* r1+0x8 */, union_main_story_c_778 * mtx /* r1+0xC */, long shift /* r10 */) {
     // Local variables
@@ -36,5 +91,32 @@ void matrixConv(long (* m)[4] /* r1+0x8 */, union_main_story_c_778 * mtx /* r1+0
     unsigned long * pMtxIn; // r1+0x8
     unsigned long nTmp; // r1+0x8
 }
+
+// Erased
+static void matrixCopyL() {}
+
+// Erased
+static void rotpointL() {}
+
+// Erased
+static long defangleL() {}
+
+// Erased
+static long distanceS() {}
+
+// Erased
+static long distanceL() {}
+
+// Erased
+static long sqrt_a2b2() {}
+
+// Erased
+static long sqrt_abc() {}
+
+// Erased
+static long muldiv() {}
+
+// Erased
+static void makeVect() {}
 
 

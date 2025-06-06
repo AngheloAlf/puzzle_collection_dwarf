@@ -462,6 +462,12 @@ void ChangeDeadFace(struct tetWell * well /* r3 */) {
     // -> int gMax;
 }
 
+// Erased
+static void DropRow3D(struct tetWell * well /* r1+0x8 */, struct cursor_t * cursor /* r4 */) {
+    // Local variables
+    int col; // r6
+}
+
 // Range: 0x542A4 -> 0x54608
 void WinWallUp2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     // Local variables
@@ -503,6 +509,23 @@ void WallsDown2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     // -> struct Game gTheGame;
     // -> signed char wallsdownShake[55];
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+}
+
+// Erased
+static void WinLoseSign(struct tetWell * well /* r1+0x0 */, int num /* r1+0x4 */) {
+    // Local variables
+    int diff; // r1+0x0
+    int temp; // r7
+
+    // References
+    // -> struct Game gTheGame;
+    // -> signed char wallsdownShake[55];
+}
+
+// Erased
+static void pon_RankingSign(struct tetWell * well /* r1+0x0 */, int num /* r1+0x4 */) {
+    // References
+    // -> struct Game gTheGame;
 }
 
 // Range: 0x54A68 -> 0x54C5C
@@ -548,6 +571,17 @@ int CircleStars() {
 }
 
 long last_song_handle; // size: 0x4, address: 0xF46E8
+// Erased
+static int DoGameOverPushAnyKey(int total /* r3 */) {
+    // Local variables
+    int count; // r1+0x8
+
+    // References
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+    // -> long last_song_handle;
+    // -> struct Game gTheGame;
+}
+
 char * endSegment; // size: 0x4, address: 0xF4560
 // Range: 0x550C8 -> 0x55434
 int DoGameOverTryAgain() {

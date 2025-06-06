@@ -23,6 +23,20 @@ unsigned char play_mimic_timelag[57]; // size: 0x39, address: 0xB3E70
 char * nextSegment; // size: 0x4, address: 0xF4E90
 char * Pon_Image_Heap; // size: 0x4, address: 0x184
 unsigned short gGameStatus; // size: 0x2, address: 0xF4E9C
+// Erased
+static void SetupMimic(char * * heap /* r29 */) {
+    // References
+    // -> char * nextSegment;
+    // -> char * Pon_Image_Heap;
+    // -> unsigned short gGameStatus;
+}
+
+// Erased
+static void QuitMimic() {
+    // References
+    // -> unsigned short gGameStatus;
+}
+
 struct block_t {
     // total size: 0x2C
     int state; // offset 0x0, size 0x4
@@ -414,6 +428,13 @@ struct SfxInitStruct {
     unsigned char pan_4p[4]; // offset 0xC, size 0x4
 };
 struct SfxInitStruct SFX_INIT_TABLE[527]; // size: 0x20F0, address: 0xE0D78
+// Erased
+static void LoadMimic2(int kind /* r3 */, int level /* r4 */, int number /* r5 */, int play /* r6 */) {
+    // References
+    // -> struct ai_t brainbrain[4];
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+}
+
 // Range: 0x78294 -> 0x783F0
 void MTMove(struct ai_t * brain /* r30 */, unsigned char * ptr /* r31 */) {
     // Local variables
@@ -520,6 +541,28 @@ void MimicCheckState(struct tetWell * well /* r30 */, struct cursor_t * cursor /
     // -> int gMain;
     // -> struct SfxInitStruct SFX_INIT_TABLE[527];
     // -> struct ai_t brainbrain[4];
+}
+
+// Erased
+static int ViewMimic() {
+    // References
+    // -> int gMain;
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static int PlayMimic(int * result /* r30 */) {
+    // References
+    // -> int gMain;
+    // -> struct Game gTheGame;
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+}
+
+// Erased
+static void DrawMimic(struct_pon_gc_draw_c_2466 * dynamicp /* r3 */) {
+    // References
+    // -> struct Game gTheGame;
 }
 
 union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
@@ -644,6 +687,27 @@ static int gaiCursorX[4]; // size: 0x10, address: 0xF4460
 static @enum$635mimic_c geModeMimic; // size: 0x4, address: 0xF4470
 static int gnTagTextMimic; // size: 0x4, address: 0xF4474
 static int gnTickTextMimic; // size: 0x4, address: 0xF4478
+// Erased
+static int mimicShowText(int nOffsetBase /* r1+0x8 */) {
+    // Local variables
+    int nType; // r1+0xC
+    int nTag; // r30
+
+    // References
+    // -> static int gnTagTextMimic;
+    // -> static int giScreenMimic;
+    // -> static int gnTickTextMimic;
+    // -> struct Game gTheGame;
+    // -> static int gnTickMimic;
+    // -> static @enum$635mimic_c geModeMimic;
+}
+
+// Erased
+static int mimicDoneText() {
+    // References
+    // -> static int gnTagTextMimic;
+}
+
 // Range: 0x7A5B0 -> 0x7A6DC
 static void mimicTickText(int bSkip /* r30 */) {
     // Local variables
@@ -657,6 +721,29 @@ static void mimicTickText(int bSkip /* r30 */) {
     // -> static int gnTickMimic;
     // -> struct Game gTheGame;
     // -> static @enum$635mimic_c geModeMimic;
+}
+
+// Erased
+static int mimicNextLevel() {
+    // Local variables
+    int iCursorX; // r1+0xC
+    int iCursorY; // r1+0x8
+
+    // References
+    // -> struct Game gTheGame;
+    // -> static int giScreenMimic;
+}
+
+// Erased
+static int mimicNextStage() {
+    // Local variables
+    int iCursorLast; // r1+0x8
+    int iCursorX; // r1+0xC
+    int iCursorY; // r1+0x8
+
+    // References
+    // -> struct Game gTheGame;
+    // -> static int giScreenMimic;
 }
 
 struct_pon_gc_draw_c_2466 * tut_dynamicp; // size: 0x4, address: 0x116FE8

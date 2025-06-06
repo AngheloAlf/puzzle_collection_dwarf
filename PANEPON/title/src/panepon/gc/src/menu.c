@@ -28,8 +28,8 @@ static int gnTickFade; // size: 0x4, address: 0xE836C
 static int gnMaskVoice; // size: 0x4, address: 0xE8370
 static int gnTickCountMenu; // size: 0x4, address: 0xE8374
 static unsigned int anTagBlinkLast[4]; // size: 0x10, address: 0xE8378
-static struct_image_c_89 * gpImageMark; // size: 0x4, address: 0xE8388
-static struct_image_c_89 * gpImageCheck; // size: 0x4, address: 0xE838C
+static struct_image_c_92 * gpImageMark; // size: 0x4, address: 0xE8388
+static struct_image_c_92 * gpImageCheck; // size: 0x4, address: 0xE838C
 static unsigned int gnTickMenu; // size: 0x4, address: 0xE8390
 static unsigned int gnFrameCount; // size: 0x4, address: 0xE8394
 static int gbHideResume; // size: 0x4, address: 0xE8398
@@ -393,6 +393,9 @@ static int menuWipeUserData() {
     // -> static int gnCheatMenu;
 }
 
+// Erased
+static int menuTestUserData(struct_menu_c_1407 * pData /* r1+0x0 */) {}
+
 // Range: 0x66B78 -> 0x66CAC
 static int menuInitUserData(struct_menu_c_1407 * pData /* r29 */, int bWipe /* r1+0xC */) {
     // Local variables
@@ -467,6 +470,19 @@ static int menuTickCheat(int * anButtonHold /* r26 */, int * anButtonTouch /* r2
     // -> struct Game gTheGame;
 }
 
+// Erased
+static int menuGetRoundLevel(char * pData /* r1+0x0 */, int nRound /* r1+0x4 */, int * pnLevel /* r1+0x8 */) {
+    // Local variables
+    int iLevel; // r8
+    int bFlag; // r9
+}
+
+// Erased
+static int menuRoundComplete(char * pData /* r1+0x0 */, int nRound /* r1+0x4 */) {
+    // Local variables
+    int iLevel; // r7
+}
+
 int gMain; // size: 0x4, address: 0xDF59C
 // Range: 0x674A8 -> 0x675B8
 static int menuStageClearXtra() {
@@ -525,7 +541,24 @@ static int menuTestVsCPUContinue(@enum$354menu_c eStage /* r1+0x0 */) {
     // -> static int gaiName[4];
 }
 
+// Erased
+static int menuTestVsCPUStage(@enum$354menu_c eStage /* r1+0x0 */) {
+    // References
+    // -> static int gnCheatMenu;
+    // -> int gbOpenTitle;
+}
+
 int gReset; // size: 0x4, address: 0xDF598
+// Erased
+static int menuBack() {
+    // References
+    // -> static int gnSkipFrame;
+    // -> static int gnCountMenu;
+    // -> static @enum$105menu_c gaeTypeMenu[32];
+    // -> int gReset;
+    // -> int gMain;
+}
+
 // Range: 0x6797C -> 0x679F8
 static int menuNest(@enum$105menu_c eType /* r30 */) {
     // References
@@ -544,6 +577,28 @@ static void menuUpdateName() {
     // -> static int gaiName[4];
 }
 
+// Erased
+static int menuFindNameSlot() {
+    // Local variables
+    int iName; // r1+0x0
+
+    // References
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static int menuInsertName() {
+    // Local variables
+    int iName; // r31
+
+    // References
+    // -> struct Game gTheGame;
+    // -> static signed short ganName[7];
+}
+
+// Erased
+static int menuDeleteName(int iNameWipe /* r3 */) {}
+
 // Range: 0x67C34 -> 0x67F90
 int menuDeleteNameMain(int iNameWipe /* r30 */, int saveflag /* r31 */) {
     // Local variables
@@ -557,6 +612,23 @@ int menuDeleteNameMain(int iNameWipe /* r30 */, int saveflag /* r31 */) {
     // -> struct Game gTheGame;
 }
 
+// Erased
+static int menuTestName(signed short * anName /* r3 */) {
+    // Local variables
+    int iText; // r1+0x0
+    int bFlag; // r5
+}
+
+// Erased
+static int menuFindName(signed short * anName /* r3 */) {
+    // Local variables
+    int iText; // r1+0x0
+    int iName; // r9
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 // Range: 0x67F90 -> 0x67FE0
 static void menuShowDialog(int nTagDialog /* r3 */, int iPlayer /* r1+0xC */) {
     // References
@@ -564,6 +636,14 @@ static void menuShowDialog(int nTagDialog /* r3 */, int iPlayer /* r1+0xC */) {
     // -> static int giScreenMenu;
     // -> static int giPlayerDialog;
     // -> static int gnTagDialog;
+}
+
+// Erased
+static void menuHideDialog() {
+    // References
+    // -> static int gnTickCountDialog;
+    // -> static int gnTagDialog;
+    // -> static int giScreenMenu;
 }
 
 // Range: 0x67FE0 -> 0x683CC
@@ -597,7 +677,7 @@ static int menuSetScreen(@enum$105menu_c eType /* r28 */, int bBack /* r25 */) {
     // Local variables
     int bFlag; // r1+0x8
     @enum$105menu_c eTypeLast; // r30
-    struct_menu_c_1876 * pMenuData; // r1+0x14
+    struct_menu_c_1974 * pMenuData; // r1+0x14
     int nPlayerCount; // r29
     int iScreen; // r3
     int iScreenMenu; // r1+0x10
@@ -619,7 +699,7 @@ static unsigned char aiFrameEye[5]; // size: 0x5, address: 0xB11A8
 int menuWinkFace(int nTagImage /* r28 */, int iScreen /* r29 */, int iPlayer /* r1+0x10 */) {
     // Local variables
     int bLast; // r30
-    struct_image_c_89 * pImage; // r1+0x18
+    struct_image_c_92 * pImage; // r1+0x18
     int nTick; // r30
     int iFrame; // r1+0x14
     int nTagLast; // r27
@@ -700,7 +780,7 @@ static void menuSave1PStandard(int iName /* r29 */, @enum$106menu_c eGame /* r30
 // Range: 0x69428 -> 0x695E0
 static void menuTickCharacterSelect1P(int iPlayer /* r28 */, int * anCommand /* r27 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x1C
+    struct_image_c_92 * pImage; // r1+0x1C
     int iCharacter; // r28
     int nTag; // r27
     int nTagWink; // r29
@@ -812,7 +892,7 @@ static void menuInitCharacterSelect2P(int iScreen /* r28 */) {
 // Range: 0x6A24C -> 0x6A58C
 static void menuTickCharacterSelect2P(int iPlayer /* r21 */, int * anCommand /* r22 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x28
+    struct_image_c_92 * pImage; // r1+0x28
     int nStage; // r28
     int nTag; // r22
     @enum$106menu_c eGame; // r27
@@ -897,7 +977,7 @@ union_pon_gc_tex_c_1219 tex_vtx[4][4]; // size: 0x100, address: 0xDD0
 // Range: 0x6AA58 -> 0x6B004
 static void pon_menuTickCharacterSelect4P(int iPlayer /* r29 */, int * anCommand /* r24 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x30
+    struct_image_c_92 * pImage; // r1+0x30
     int nStage; // r31
     int nTag; // r18
     @enum$106menu_c eGame; // r30
@@ -920,6 +1000,30 @@ static void pon_menuTickCharacterSelect4P(int iPlayer /* r29 */, int * anCommand
     // -> unsigned long nBaseColorArray[16][4];
     // -> union [anonymous] tex_vtx[4][4];
     // -> int gaMultiEntryFlag[4];
+}
+
+// Erased
+static void menuLoad1PVS(int iName /* r1+0x8 */) {
+    // Local variables
+    int iScreen; // r1+0xC
+    unsigned int nData; // r31
+    int iCursorX; // r5
+    int iCursorY; // r6
+
+    // References
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static void menuSave1PVS(int iName /* r30 */) {
+    // Local variables
+    int iScreen; // r1+0x14
+    unsigned int nData; // r31
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> struct Game gTheGame;
 }
 
 static @enum$354menu_c eStageLast$1434; // size: 0x4, address: 0xF0408
@@ -1005,6 +1109,32 @@ static void menuDrawRound(union_pon_gc_c_173 * * ppGfx /* r27 */, int nTag /* r2
     // -> static @enum$105menu_c gaeTypeMenu[32];
 }
 
+// Erased
+static void menuLoad1PPuzzle(int iName /* r1+0x8 */) {
+    // Local variables
+    unsigned int nData; // r31
+    int iScreen; // r1+0xC
+    int nTagArea; // r4
+    int iCursorX; // r5
+    int iCursorY; // r6
+
+    // References
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static void menuSave1PPuzzle(int iName /* r30 */) {
+    // Local variables
+    int iScreen; // r1+0x18
+    int nTagArea; // r1+0x14
+    unsigned int nData; // r31
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 // Range: 0x6BDF0 -> 0x6C280
 static void menuInit1PPuzzle(int iScreen /* r31 */) {
     // Local variables
@@ -1029,6 +1159,29 @@ static void menuTick1PPuzzle(int nFrame /* r28 */, int iPlayer /* r30 */, int * 
     // -> static int giScreenMenu;
 }
 
+// Erased
+static void menuLoad1PClear(int iName /* r1+0x8 */) {
+    // Local variables
+    int iScreen; // r1+0xC
+    unsigned int nData; // r31
+    int iCursorX; // r5
+
+    // References
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static void menuSave1PClear(int iName /* r30 */) {
+    // Local variables
+    int iScreen; // r1+0x14
+    unsigned int nData; // r31
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 static int iCursorLastX$1759; // size: 0x4, address: 0xF040C
 // Range: 0x6C540 -> 0x6C888
 static void menuTick1P2D3D_Resume(int iScreen /* r30 */, int bFlag /* r7 */) {
@@ -1050,7 +1203,7 @@ static void menuTick1P2D3D_Resume(int iScreen /* r30 */, int bFlag /* r7 */) {
 static void menuTick1P2D3D(int nFrame /* r28 */, int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x2C
-    struct_image_c_89 * pImage; // r1+0x28
+    struct_image_c_92 * pImage; // r1+0x28
     int iCursorX; // r1+0x24
     int iCursorY; // r1+0x20
 
@@ -1162,7 +1315,7 @@ static void menuDraw1PStandard(union_pon_gc_c_173 * * ppGfx /* r29 */, int iScre
 static void menuTick1PStandard(int nFrame /* r28 */, int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x20
-    struct_image_c_89 * pImage; // r1+0x1C
+    struct_image_c_92 * pImage; // r1+0x1C
     int iCursorX; // r1+0x18
     int iCursorY; // r1+0x14
 
@@ -1238,6 +1391,30 @@ static void pon_menuTick4PLevel(int iPlayer /* r24 */, int * anCommand /* r25 */
     // -> int gValidCont_4pMenu;
 }
 
+// Erased
+static void menuLoad1PSE(int iName /* r1+0x8 */) {
+    // Local variables
+    int iScreen; // r1+0xC
+    unsigned int nData; // r31
+    int iCursorX; // r5
+    int iCursorY; // r1+0x8
+
+    // References
+    // -> struct Game gTheGame;
+}
+
+// Erased
+static void menuSave1PSE(int iName /* r30 */) {
+    // Local variables
+    int iScreen; // r1+0x14
+    unsigned int nData; // r31
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 // Range: 0x6DE7C -> 0x6DEFC
 static void menuInitSE2D3D() {
     // References
@@ -1249,7 +1426,7 @@ static void menuInitSE2D3D() {
 static void menuTickSE2D3D(int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // Local variables
     int nTag; // r1+0x2C
-    struct_image_c_89 * pImage; // r1+0x28
+    struct_image_c_92 * pImage; // r1+0x28
     int iCursorX; // r1+0x24
     int iCursorY; // r1+0x20
 
@@ -1257,6 +1434,19 @@ static void menuTickSE2D3D(int iPlayer /* r29 */, int * anCommand /* r30 */) {
     // -> struct Game gTheGame;
     // -> static int gaiName[4];
     // -> static int giScreenMenu;
+}
+
+// Erased
+static int menuSameName() {
+    // Local variables
+    int iCursorX1; // r1+0x14
+    int iCursorY1; // r1+0x10
+    int iCursorX2; // r1+0xC
+    int iCursorY2; // r1+0x8
+
+    // References
+    // -> static int giScreenMenu;
+    // -> static int gnPlayerCount;
 }
 
 // Range: 0x6E074 -> 0x6E0CC
@@ -1302,6 +1492,16 @@ static void menuTickNamePick(int iPlayer /* r27 */, int * anCommand /* r24 */) {
     // -> static int gnPlayerCount;
 }
 
+// Erased
+static int menuNameBack() {
+    // References
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
+    // -> static signed short ganName[7];
+    // -> static int giScreenMenu;
+    // -> static int gnSkipFrame;
+    // -> static int giName;
+}
+
 // Range: 0x6E5AC -> 0x6E888
 static void menuNameAdd(int nLanguage /* r26 */, int iCursorX /* r29 */, int iCursorY /* r27 */) {
     // Local variables
@@ -1320,6 +1520,17 @@ static void menuNameAdd(int nLanguage /* r26 */, int iCursorX /* r29 */, int iCu
 static int menuDeadSpot(int nLanguage /* r1+0x0 */, int iCursorX /* r1+0x4 */, int iCursorY /* r1+0x8 */) {
     // References
     // -> static @enum$104menu_c geLanguageMenu;
+}
+
+// Erased
+static void menuPanNameEntry(long hWave /* r30 */) {
+    // Local variables
+    int nTag; // r1+0x14
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> static int giScreenMenu;
 }
 
 // Range: 0x6E9D0 -> 0x6EDDC
@@ -1371,6 +1582,9 @@ static void menuTickNameEntry(int nFrame /* r27 */, int iPlayer /* r26 */, int *
     // -> static int gnTagDialog;
     // -> static int nLanguageLast$2431;
 }
+
+// Erased
+static int menuGetGameType(int nMode /* r1+0x0 */) {}
 
 // Range: 0x6F650 -> 0x7040C
 static void menuShowRecords(int iScreen /* r28 */) {
@@ -1446,7 +1660,7 @@ static int iCursorLastY$2927; // size: 0x4, address: 0xB141C
 static void menuTickRecords(int nFrame /* r27 */, int iPlayer /* r28 */, int * anCommand /* r29 */) {
     // Local variables
     int iName; // r5
-    struct_image_c_89 * pImage; // r1+0x20
+    struct_image_c_92 * pImage; // r1+0x20
     int nTag; // r1+0x1C
     int iCursorX; // r1+0x18
     int iCursorY; // r1+0x14
@@ -1611,9 +1825,9 @@ static void menuTickPlay(int * anCommand /* r1+0x10 */) {
     // -> static int giScreenMenuLast;
 }
 
-static struct_menu_c_1876 gaMenuData[62]; // size: 0x5D0, address: 0xB1640
+static struct_menu_c_1974 gaMenuData[62]; // size: 0x5D0, address: 0xB1640
 // Range: 0x738F8 -> 0x73948
-static int menuFind(struct_menu_c_1876 * * ppData /* r1+0x0 */, @enum$105menu_c eType /* r1+0x4 */) {
+static int menuFind(struct_menu_c_1974 * * ppData /* r1+0x0 */, @enum$105menu_c eType /* r1+0x4 */) {
     // Local variables
     int iMenu; // r6
 
@@ -1759,10 +1973,22 @@ int menuInitUser(int iUser /* r1+0x8 */) {
     // -> struct Game gTheGame;
 }
 
+// Erased
+static int menuDownOK(int iPlayer /* r30 */) {
+    // Local variables
+    int nTagArea; // r1+0x14
+    int iCursorX; // r1+0x10
+    int iCursorY; // r1+0xC
+
+    // References
+    // -> static int giScreenMenu;
+    // -> @enum$105menu_c geTypeMenu;
+}
+
 unsigned int ganColorCharacter[68]; // size: 0x110, address: 0xB1DC0
 char * * gaSegmentCharacter[17]; // size: 0x44, address: 0xB1ED0
 static int giImageFairy; // size: 0x4, address: 0xF4420
-static struct_image_c_89 * gapImageFairy[2]; // size: 0x8, address: 0xF4424
+static struct_image_c_92 * gapImageFairy[2]; // size: 0x8, address: 0xF4424
 char * Pon_Image_Heap; // size: 0x4, address: 0x184
 // Range: 0x75A44 -> 0x75B6C
 void menuInitProfile(int iScreen /* r29 */, int iCharacter /* r30 */) {
@@ -1782,7 +2008,7 @@ void menuInitProfile(int iScreen /* r29 */, int iCharacter /* r30 */) {
 void menuTickProfile(int iScreen /* r26 */, int iCharacter /* r4 */) {
     // Local variables
     int nTagText; // r27
-    struct_image_c_89 * pImage; // r1+0x10
+    struct_image_c_92 * pImage; // r1+0x10
 
     // References
     // -> unsigned int ganColorCharacter[68];
@@ -1822,7 +2048,7 @@ void menuInitFairy(@enum$95menu_c ePosition /* r1+0x0 */) {
 // Range: 0x75E4C -> 0x762EC
 void menuTickFairy(int iScreen /* r25 */, int nFrame /* r28 */, int nTagText /* r1+0x10 */, int nOffsetText /* r26 */, int nOffsetBox /* r29 */, @enum$95menu_c ePosition /* r1+0x1C */, int bArrow /* r27 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x28
+    struct_image_c_92 * pImage; // r1+0x28
     int nOffset; // r24
     int iFrame; // r1+0x24
     float rOffset; // f4
@@ -1842,6 +2068,19 @@ void menuTickFairy(int iScreen /* r25 */, int nFrame /* r28 */, int nTagText /* 
     // -> static int gnSkipFrame;
 }
 
+// Erased
+static int menuMatchName(int iPlayer /* r1+0x0 */, char * szText /* r1+0x4 */, int bCase /* r1+0x8 */) {
+    // Local variables
+    int bSame; // r8
+    int iName; // r1+0x0
+    int iText; // r9
+    int nCode; // r10
+
+    // References
+    // -> struct Game gTheGame;
+    // -> static int gaiName[4];
+}
+
 // Range: 0x762EC -> 0x76410
 void menuFindCharacterMax(int * piCharacter /* r1+0x0 */) {
     // Local variables
@@ -1858,7 +2097,7 @@ union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
 // Range: 0x76410 -> 0x76588
 void DrawMenu(struct_pon_gc_draw_c_2466 * pData /* r1+0x8 */) {
     // Local variables
-    struct_menu_c_1876 * pMenuData; // r29
+    struct_menu_c_1974 * pMenuData; // r29
 
     // References
     // -> union [anonymous] * glistp;
@@ -1877,7 +2116,7 @@ void DoMenu() {
     int iPlayer; // r18
     int nTagArea; // r1+0x6C
     int nTypeArea; // r17
-    struct_menu_c_1876 * pMenuData; // r31
+    struct_menu_c_1974 * pMenuData; // r31
     int anButtonHold[4]; // r1+0x5C
     int anButtonTouch[4]; // r1+0x4C
     int anCommand[4]; // r1+0x3C
@@ -1910,7 +2149,7 @@ void pon_DoMenu4p() {
     int iPlayer; // r6
     int nTagArea; // r1+0x6C
     int nTypeArea; // r24
-    struct_menu_c_1876 * pMenuData; // r17
+    struct_menu_c_1974 * pMenuData; // r17
     int anButtonHold[4]; // r1+0x5C
     int anButtonTouch[4]; // r1+0x4C
     int anCommand[4]; // r1+0x3C

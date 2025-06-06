@@ -4,11 +4,21 @@
     Language: C++
     Code range: 0x0005F330 -> 0x00062F68
 */
+// Erased
+static void imageTestHeap() {}
+
 // Range: 0x5F330 -> 0x5F470
-static void imageMake(struct_image_c_89 * * ppImage /* r1+0x0 */, void * ppHeap /* r1+0x4 */, int nCount /* r1+0x8 */) {}
+static void imageMake(struct_image_c_92 * * ppImage /* r1+0x0 */, void * ppHeap /* r1+0x4 */, int nCount /* r1+0x8 */) {}
+
+// Erased
+static void imageMakeDMABuffers(struct_image_c_92 * pImage /* r1+0x0 */, void * ppHeap /* r1+0x4 */) {
+    // Local variables
+    int nSize; // r8
+    int iBitmap; // r1+0x0
+}
 
 // Range: 0x5F470 -> 0x5FB2C
-static void imageDrawScan(struct_image_c_89 * pImage /* r1+0x8 */, union_pon_gc_c_173 * * ppGfx /* r1+0xC */, uObjBg * pObject /* r1+0x10 */) {
+static void imageDrawScan(struct_image_c_92 * pImage /* r1+0x8 */, union_pon_gc_c_173 * * ppGfx /* r1+0xC */, uObjBg * pObject /* r1+0x10 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r6
     int nScan; // r29
@@ -61,9 +71,9 @@ static void imageDrawScan(struct_image_c_89 * pImage /* r1+0x8 */, union_pon_gc_
 }
 
 // Range: 0x5FB2C -> 0x5FF74
-int imageLoad(struct_image_c_89 * * ppImage /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */) {
+int imageLoad(struct_image_c_92 * * ppImage /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */) {
     // Local variables
-    struct_bitmap_c_31 file; // r1+0x28
+    struct_bitmap_c_43 file; // r1+0x28
     int iBitmap; // r26
     int bFlip; // r29
     int nSize; // r1+0x24
@@ -77,19 +87,19 @@ int imageLoad(struct_image_c_89 * * ppImage /* r31 */, void * pNameOrFile /* r28
 }
 
 // Range: 0x5FF74 -> 0x5FFF0
-int imageLoadROM(struct_image_c_89 * * ppImage /* r30 */, void * pROMData /* r4 */, void * pROMCLUT /* r5 */, int nType /* r6 */, int nSizeX /* r7 */, int nSizeY /* r8 */, void * ppHeap /* r31 */) {
+int imageLoadROM(struct_image_c_92 * * ppImage /* r30 */, void * pROMData /* r4 */, void * pROMCLUT /* r5 */, int nType /* r6 */, int nSizeX /* r7 */, int nSizeY /* r8 */, void * ppHeap /* r31 */) {
     // Local variables
     struct_bitmap_c_14 * pBitmap; // r1+0x24
 }
 
 // Range: 0x5FFF0 -> 0x60188
-int imageCopy(struct_image_c_89 * * ppImage /* r29 */, struct_image_c_89 * pImage /* r30 */, void * ppHeap /* r31 */) {
+int imageCopy(struct_image_c_92 * * ppImage /* r29 */, struct_image_c_92 * pImage /* r30 */, void * ppHeap /* r31 */) {
     // Local variables
     int iBitmap; // r4
 }
 
 // Range: 0x60188 -> 0x60440
-int imageMakeScan(struct_image_c_89 * pImage /* r1+0x8 */, void * ppHeap /* r1+0xC */) {
+int imageMakeScan(struct_image_c_92 * pImage /* r1+0x8 */, void * ppHeap /* r1+0xC */) {
     // Local variables
     int iScan; // r14
     int nSize; // r7
@@ -97,7 +107,7 @@ int imageMakeScan(struct_image_c_89 * pImage /* r1+0x8 */, void * ppHeap /* r1+0
 }
 
 // Range: 0x60440 -> 0x60530
-int imageMakeScanBurn(struct_image_c_89 * pImage /* r1+0x0 */, int nOffset /* r4 */) {
+int imageMakeScanBurn(struct_image_c_92 * pImage /* r1+0x0 */, int nOffset /* r4 */) {
     // Local variables
     int bDone; // r8
     int iScan; // r8
@@ -107,7 +117,7 @@ static int gnSizeWaveLast; // size: 0x4, address: 0x50E00
 static int ganDeltaWave[64]; // size: 0x100, address: 0x50E04
 static float fganDeltaWave[64]; // size: 0x100, address: 0xB0C08
 // Range: 0x60530 -> 0x60964
-int imageMakeScanWave(struct_image_c_89 * pImage /* r1+0x8 */, int nSize /* r1+0xC */, int nFlag /* r1+0x10 */, int nOffset /* r6 */) {
+int imageMakeScanWave(struct_image_c_92 * pImage /* r1+0x8 */, int nSize /* r1+0xC */, int nFlag /* r1+0x10 */, int nOffset /* r6 */) {
     // Local variables
     int nOffset0; // r11
     int nOffset1; // r12
@@ -125,17 +135,17 @@ int imageMakeScanWave(struct_image_c_89 * pImage /* r1+0x8 */, int nSize /* r1+0
 }
 
 // Range: 0x60964 -> 0x609E4
-int imageSetScale(struct_image_c_89 * pImage /* r1+0x8 */, float rScaleX /* r1+0xC */, float rScaleY /* r1+0x10 */) {}
+int imageSetScale(struct_image_c_92 * pImage /* r1+0x8 */, float rScaleX /* r1+0xC */, float rScaleY /* r1+0x10 */) {}
 
 // Range: 0x609E4 -> 0x60AF8
-int imageSetFrame(struct_image_c_89 * pImage /* r1+0x0 */, int iFrame /* r4 */) {
+int imageSetFrame(struct_image_c_92 * pImage /* r1+0x0 */, int iFrame /* r4 */) {
     // Local variables
     int nTick; // r9
     int iBitmap; // r7
 }
 
 // Range: 0x60AF8 -> 0x60B84
-int imageGetFrame(struct_image_c_89 * pImage /* r1+0x0 */, int * piFrame /* r1+0x4 */) {
+int imageGetFrame(struct_image_c_92 * pImage /* r1+0x0 */, int * piFrame /* r1+0x4 */) {
     // Local variables
     int iBitmap; // r8
     int nTick0; // r9
@@ -143,14 +153,14 @@ int imageGetFrame(struct_image_c_89 * pImage /* r1+0x0 */, int * piFrame /* r1+0
 }
 
 // Range: 0x60B84 -> 0x60E4C
-int imageTick(struct_image_c_89 * pImage /* r1+0x0 */, int nTick /* r1+0x4 */) {
+int imageTick(struct_image_c_92 * pImage /* r1+0x0 */, int nTick /* r1+0x4 */) {
     // Local variables
     int iBitmap; // r10
     int nTickCount; // r5
 }
 
 // Range: 0x60E4C -> 0x61578
-static int imageDrawRGBA32(struct_image_c_89 * pImage /* r29 */, union_pon_gc_c_173 * * ppGfx /* r21 */, int nX /* r22 */, int nY /* r30 */) {
+static int imageDrawRGBA32(struct_image_c_92 * pImage /* r29 */, union_pon_gc_c_173 * * ppGfx /* r21 */, int nX /* r22 */, int nY /* r30 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x1C
     int iBitmap; // r1+0x18
@@ -501,7 +511,7 @@ struct Game {
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 // Range: 0x61578 -> 0x62268
-int imageDraw(struct_image_c_89 * pImage /* r30 */, union_pon_gc_c_173 * * ppGfx /* r31 */, int nX /* r25 */, int nY /* r26 */, struct_bitmap_c_320 * pTile /* r27 */) {
+int imageDraw(struct_image_c_92 * pImage /* r30 */, union_pon_gc_c_173 * * ppGfx /* r31 */, int nX /* r25 */, int nY /* r26 */, struct_bitmap_c_332 * pTile /* r27 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x20
     uObjBg * pObject; // r29
@@ -572,7 +582,7 @@ void imageSetup() {
 
 struct_pon_gc_draw_c_2466 * gpDynamicForMenu; // size: 0x4, address: 0xF4454
 // Range: 0x62278 -> 0x62F68
-int pon_imageDraw_4pSelectStageCursor(struct_image_c_89 * pImage /* r27 */, union_pon_gc_c_173 * * ppGfx /* r28 */, int nX /* r24 */, int nY /* r25 */, struct_bitmap_c_320 * pTile /* r26 */, int iArea /* r29 */) {
+int pon_imageDraw_4pSelectStageCursor(struct_image_c_92 * pImage /* r27 */, union_pon_gc_c_173 * * ppGfx /* r28 */, int nX /* r24 */, int nY /* r25 */, struct_bitmap_c_332 * pTile /* r26 */, int iArea /* r29 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x24
     uObjBg * pObject; // r31

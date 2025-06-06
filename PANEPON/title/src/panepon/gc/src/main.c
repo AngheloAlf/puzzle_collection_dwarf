@@ -5,6 +5,12 @@
     Code range: 0x00065D60 -> 0x000669AC
 */
 union_pon_gc_c_173 * glistp; // size: 0x4, address: 0x50F48
+// Erased
+static void mainTestReset() {}
+
+// Erased
+static void initGame() {}
+
 int gDemo; // size: 0x4, address: 0xF4EAC
 int gMain; // size: 0x4, address: 0xDF59C
 int gReset; // size: 0x4, address: 0xDF598
@@ -354,7 +360,7 @@ struct OSMesgQueue_s {
     void * msg; // offset 0x14, size 0x4
 };
 struct OSMesgQueue_s gfxFrameMsgQ; // size: 0x18, address: 0x50F4C
-union_main_c_1549 g_msg; // size: 0x2, address: 0x50F64
+union_main_c_1555 g_msg; // size: 0x2, address: 0x50F64
 struct_pon_gc_c_674 gInfo[2]; // size: 0x63720, address: 0x50F68
 int gCounter; // size: 0x4, address: 0xF4E80
 struct OSMesgQueue_s gSerialMsgQ; // size: 0x18, address: 0x4CFD0
@@ -367,7 +373,7 @@ static unsigned long doMenuLoop(unsigned long drawbuffer /* r24 */) {
     int loop; // r25
     int frame_count; // r1+0x10
     int currState; // r1+0x8
-    union_main_c_1549 * msg; // r1+0xC
+    union_main_c_1555 * msg; // r1+0xC
 
     // References
     // -> int gMain;
@@ -389,7 +395,7 @@ static unsigned long doGameLoop(unsigned long drawbuffer /* r27 */) {
     // Local variables
     int loop; // r28
     int frame_count; // r1+0x10
-    union_main_c_1549 * msg; // r1+0xC
+    union_main_c_1555 * msg; // r1+0xC
 
     // References
     // -> int gCounter;

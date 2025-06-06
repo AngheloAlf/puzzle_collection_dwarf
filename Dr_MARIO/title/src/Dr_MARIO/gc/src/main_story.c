@@ -266,6 +266,18 @@ void curtain_proc_org(union_drmario_gc_c_202 * * glp /* r1+0x8 */, int count /* 
     // -> union [anonymous] alpha_texture_init_dl[];
 }
 
+// Erased
+static void waku_disp(union_drmario_gc_c_202 * * glp /* r31 */, unsigned long dataAddr /* r1+0xC */) {
+    // Local variables
+    union_drmario_gc_c_202 * pgfx; // r1+0x14
+    unsigned char * texAddr; // r7
+    unsigned char * lutAddr; // r6
+    union_drmario_gc_c_202 * _g; // r1+0x8
+
+    // References
+    // -> union [anonymous] normal_texture_init_dl[];
+}
+
 unsigned char * bgRomData[][2]; // size: 0x0, address: 0x1DA98
 unsigned char * storyRomData[][2]; // size: 0x0, address: 0x1DA60
 // Range: 0xE10 -> 0xE94
@@ -298,6 +310,49 @@ void story_bg_proc(union_drmario_gc_c_202 * * glp /* r31 */) {
     // -> static unsigned long bgGraphic;
 }
 
+// Erased
+static void story_st_start() {
+    // References
+    // -> static int title_time;
+    // -> static int story_curtain;
+    // -> static int story_message_on;
+    // -> static int story_message_start;
+    // -> static int story_time_cnt;
+    // -> int story_seq_step;
+}
+
+// Erased
+static void story_st_end() {
+    // References
+    // -> static int story_doing;
+    // -> static int story_zoom;
+}
+
+// Erased
+static void story_st_clear() {
+    // References
+    // -> static int story_message_start;
+    // -> static int story_time_cnt;
+    // -> static int title_time;
+    // -> int story_seq_step;
+    // -> static int story_kay_wait;
+    // -> static struct [anonymous] mess_st;
+}
+
+// Erased
+static int story_st_meswait() {
+    // Local variables
+    int r; // r30
+
+    // References
+    // -> static int story_message_start;
+    // -> static int story_time_cnt;
+    // -> static int title_time;
+    // -> int story_seq_step;
+    // -> static int story_kay_wait;
+    // -> static struct [anonymous] mess_st;
+}
+
 // Range: 0x10D4 -> 0x13F0
 static void story_spot(union_drmario_gc_c_202 * * glp /* r31 */, int x /* r1+0xC */, int y /* r1+0x10 */, int count /* r6 */, unsigned char * texAddr /* r7 */) {
     // Local variables
@@ -325,6 +380,12 @@ static void story_spot(union_drmario_gc_c_202 * * glp /* r31 */, int x /* r1+0xC
 
     // References
     // -> union [anonymous] normal_texture_init_dl[];
+}
+
+// Erased
+static void star_spot(union_drmario_gc_c_202 * * glp /* r3 */, int x /* r4 */, int y /* r5 */, int count /* r6 */) {
+    // References
+    // -> unsigned char changestar_tex[2048];
 }
 
 // Range: 0x13F0 -> 0x1454
@@ -480,6 +541,9 @@ int demo_title(union_drmario_gc_c_202 * * glp /* r30 */, int flg21 /* r26 */) {
     // -> static union [anonymous] story_viewMtx;
 }
 
+// Erased
+static void main_open() {}
+
 unsigned long framecont; // size: 0x4, address: 0x8
 unsigned short joynew[5]; // size: 0xA, address: 0x1CD88
 static int fin_frame$440; // size: 0x4, address: 0x8DE0
@@ -492,6 +556,20 @@ static int fin_demo$624; // size: 0x4, address: 0x8DF8
 static int fin_frame$667; // size: 0x4, address: 0x8DFC
 static int fin_frame$737; // size: 0x4, address: 0x8E00
 static int fin_frame$768; // size: 0x4, address: 0x8E04
+// Erased
+static void read_graphic_data() {
+    // Local variables
+    unsigned long addr; // r4
+
+    // References
+    // -> static unsigned long messageData;
+    // -> unsigned char * storyRomData[][2];
+    // -> static unsigned long bgGraphic;
+    // -> static unsigned long wakuGraphic;
+    // -> static unsigned long story_buffer;
+    // -> static unsigned long storyGraphic;
+}
+
 static int snd_tbl$838[24]; // size: 0x60, address: 0x4070
 @enum$101main_story_c;
 @enum$101main_story_c graphic_no; // size: 0x4, address: 0x1E994
@@ -603,5 +681,8 @@ void graphic_story() {
     // -> static union [anonymous] story_objectMtx[2][240];
     // -> union [anonymous] * pObjectMtx;
 }
+
+// Erased
+static void draw_ending_mess_bg(union_drmario_gc_c_202 * * glp /* r3 */) {}
 
 

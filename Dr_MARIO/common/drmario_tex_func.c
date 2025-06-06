@@ -15,6 +15,19 @@ void gfxSetScissor(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int flags /* r1+
     // -> static int _modes$96[4];
 }
 
+// Erased
+static void FillRectRGB(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int x /* r4 */, int y /* r5 */, int w /* r1+0x14 */, int h /* r1+0x18 */, int r /* r1+0x1C */, int g /* r1+0x20 */, int b /* r1+0x24 */) {
+    // Local variables
+    union_drmario_gc_c_202 * gp; // r11
+    int color; // r8
+    union_drmario_gc_c_202 * _g; // r11
+    union_drmario_gc_c_202 * _g; // r12
+    union_drmario_gc_c_202 * _g; // r9
+
+    // References
+    // -> static union [anonymous] init_dl$139[4];
+}
+
 // Range: 0x58A0 -> 0x596C
 void FillRectRGBA(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int x /* r4 */, int y /* r5 */, int w /* r1+0x14 */, int h /* r1+0x18 */, int r /* r1+0x1C */, int g /* r1+0x20 */, int b /* r1+0x24 */, int a /* r30 */) {
     // Local variables
@@ -256,6 +269,24 @@ void StretchTexBlock4i(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int texW /* 
     struct SStretchTexBlock st[1]; // r1+0x28
 }
 
+// Erased
+static void StretchTexBlock8i_LoadTex(struct SStretchTexBlock * st /* r1+0x0 */) {
+    // Local variables
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+    union_drmario_gc_c_202 * _g; // r1+0x0
+}
+
+// Erased
+static void StretchTexBlock8i(union_drmario_gc_c_202 * * gpp /* r1+0x8 */, int texW /* r1+0xC */, int texH /* r1+0x10 */, void * tex /* r1+0x14 */, float x /* r1+0x18 */, float y /* r1+0x1C */, float w /* r1+0x20 */, float h /* r1+0x24 */) {
+    // Local variables
+    struct SStretchTexBlock st[1]; // r1+0x28
+}
+
 // Range: 0x7968 -> 0x7C5C
 static void StretchTexTile(struct SStretchTexTile * st /* r23 */) {
     // Local variables
@@ -471,6 +502,13 @@ void tiStretchAlphaTexItem(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_f
     // Local variables
     int width; // r12
     int height; // r6
+}
+
+// Erased
+static void tiStretchAlphaTexItem2(union_drmario_gc_c_202 * * gpp /* r3 */, struct_tex_func_c_1287 * tiC /* r1+0x1C */, struct_tex_func_c_1287 * tiA /* r1+0x20 */, int cached /* r1+0x24 */, int count /* r1+0x28 */, int index /* r1+0x2C */, float x /* f1 */, float y /* f2 */, float w /* f3 */, float h /* f4 */) {
+    // Local variables
+    int width; // r1+0x18
+    int height; // r30
 }
 
 

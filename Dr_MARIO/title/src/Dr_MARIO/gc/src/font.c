@@ -34,6 +34,12 @@ int fontStr_charSize(const unsigned char * str /* r1+0x8 */, int type /* r4 */) 
     int c; // r3
 }
 
+// Erased
+static int index2font(unsigned char code /* r1+0x0 */) {
+    // References
+    // -> static unsigned short code2kanji_tbl[240];
+}
+
 // Range: 0x2739C -> 0x27400
 int font2index(unsigned char * charcode /* r1+0x0 */) {
     // Local variables

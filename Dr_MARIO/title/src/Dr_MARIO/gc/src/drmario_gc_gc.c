@@ -93,5 +93,21 @@ void soundSubQuit() {}
 
 void * songTbl[24]; // size: 0x60, address: 0xF4
 int Sum; // size: 0x4, address: 0x24
+// Erased
+static void Func() {
+    // Local variables
+    unsigned long long n; // r8
+
+    // References
+    // -> int Sum;
+}
+
 unsigned char Stack[4096]; // size: 0x1000, address: 0x28
+// Erased
+static void idle_test_main() {
+    // References
+    // -> int Sum;
+    // -> unsigned char Stack[4096];
+}
+
 

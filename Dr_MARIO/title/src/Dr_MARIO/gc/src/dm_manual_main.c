@@ -13,6 +13,18 @@ struct STutolWnd {
     float alphaStep; // offset 0xC, size 0x4
     struct_main_story_c_451 msgWnd[1]; // offset 0x10, size 0x80
 };
+// Erased
+static void tutolWnd_setPos(struct STutolWnd * wnd /* r1+0x0 */, int x /* r1+0x4 */, int y /* r1+0x8 */) {}
+
+// Erased
+static void tutolWnd_setAlpha() {}
+
+// Erased
+static void tutolWnd_init(struct STutolWnd * wnd /* r31 */, void * heap /* r4 */) {}
+
+// Erased
+static void tutolWnd_update(struct STutolWnd * wnd /* r3 */) {}
+
 union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x57228 -> 0x573F4
 static void tutolWnd_draw(struct STutolWnd * wnd /* r29 */, union_drmario_gc_c_202 * * gpp /* r30 */) {
@@ -30,15 +42,36 @@ static void tutolWnd_draw(struct STutolWnd * wnd /* r29 */, union_drmario_gc_c_2
     // -> union [anonymous] normal_texture_init_dl[];
 }
 
+// Erased
+static void tutolWnd_clear(struct STutolWnd * wnd /* r3 */) {}
+
+// Erased
+static void tutolWnd_addStr(struct STutolWnd * wnd /* r3 */, const char * str /* r4 */) {}
+
+// Erased
+static void tutolWnd_fadeIn(struct STutolWnd * wnd /* r1+0x0 */) {}
+
+// Erased
+static void tutolWnd_fadeOut(struct STutolWnd * wnd /* r1+0x0 */) {}
+
+// Erased
+static int tutolWnd_isEnd(struct STutolWnd * wnd /* r3 */) {}
+
+// Erased
+static int tutolWnd_isSpeaking(struct STutolWnd * wnd /* r3 */) {}
+
 static int _posLvMsgWnd[2]; // size: 0x8, address: 0x3C90
 static int _posP2MsgWnd[2]; // size: 0x8, address: 0x3C98
 static int _posP4MsgWnd[2][2]; // size: 0x10, address: 0x3CA0
 static int _posLvMario[2]; // size: 0x8, address: 0x3CB0
 static int _posP2Mario[2]; // size: 0x8, address: 0x3CB8
 static int _posP4Mario[2][2]; // size: 0x10, address: 0x3CC0
+// Erased
+static void dm_manual_set_attack_capsel(struct_dm_manual_main_c_1302 * cap /* r1+0x0 */, int pos_x /* r1+0x4 */, int color /* r1+0x8 */) {}
+
 @enum$165dm_manual_main_c;
-struct_dm_manual_main_c_1294 * watchManual; // size: 0x4, address: 0x583A8
-struct_dm_game_main_c_487 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
+struct_dm_manual_main_c_1333 * watchManual; // size: 0x4, address: 0x583A8
+struct_dm_game_main_c_781 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
 // Range: 0x573F4 -> 0x5754C
 void dm_manual_attack_capsel_down() {
     // Local variables
@@ -127,20 +160,23 @@ struct SAnimeState {
     int charNo; // offset 0x2C, size 0x4
     int color[4]; // offset 0x30, size 0x10
 };
+// Erased
+static void dm_manual_effect_cnt(struct_dm_game_main_c_171 * state /* r3 */, struct_dm_game_main_c_781 * map /* r4 */) {}
+
 // Range: 0x5754C -> 0x575AC
-static void dm_manual_update_virus_anime(struct_dm_game_main_c_176 * state /* r30 */) {
+static void dm_manual_update_virus_anime(struct_dm_game_main_c_171 * state /* r30 */) {
     // Local variables
     int i; // r31
 }
 
 signed char evs_manual_no; // size: 0x1, address: 0x18F95
 unsigned char evs_seqnumb; // size: 0x1, address: 0x18F90
-struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
+struct_dm_game_main_c_171 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
 @enum$100dm_game_main_c;
 // Range: 0x575AC -> 0x57AFC
-@enum$100dm_game_main_c dm_manual_main_cnt(struct_dm_game_main_c_176 * state /* r29 */, struct_dm_game_main_c_487 * map /* r30 */, unsigned char player_no /* r1+0x10 */) {
+@enum$100dm_game_main_c dm_manual_main_cnt(struct_dm_game_main_c_171 * state /* r29 */, struct_dm_game_main_c_781 * map /* r30 */, unsigned char player_no /* r1+0x10 */) {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r31
+    struct_dm_manual_main_c_1333 * st; // r31
     int i; // r28
     int out; // r28
 
@@ -155,10 +191,10 @@ unsigned short joygam[4]; // size: 0x8, address: 0x1CE40
 unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 unsigned char FallSpeed[]; // size: 0x0, address: 0x48A0
 // Range: 0x57AFC -> 0x57C40
-static void dm_manual_make_key(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_487 * map /* r28 */) {
+static void dm_manual_make_key(struct_dm_game_main_c_171 * state /* r27 */, struct_dm_game_main_c_781 * map /* r28 */) {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r30
-    struct_dm_game_main_c_690 * cap; // r29
+    struct_dm_manual_main_c_1333 * st; // r30
+    struct_dm_game_main_c_984 * cap; // r29
     unsigned long key; // r1+0x8
     int i; // r1+0x8
 
@@ -171,7 +207,7 @@ static void dm_manual_make_key(struct_dm_game_main_c_176 * state /* r27 */, stru
 
 unsigned char CapsMagazine[]; // size: 0x0, address: 0x18F9C
 unsigned char virus_anime_table[][4]; // size: 0x0, address: 0x48F0
-struct_dm_game_main_c_1653 virus_map_data[4][128]; // size: 0x600, address: 0x1C608
+struct_dm_game_main_c_2109 virus_map_data[4][128]; // size: 0x600, address: 0x1C608
 unsigned char virus_map_disp_order[4][96]; // size: 0x180, address: 0x1CC08
 @enum$107dm_title_main_c;
 @enum$107dm_title_main_c evs_gamemode; // size: 0x4, address: 0x190B4
@@ -179,10 +215,10 @@ unsigned char virus_map_disp_order[4][96]; // size: 0x180, address: 0x1CC08
 // Range: 0x57C40 -> 0x58588
 static @enum$110dm_title_main_c dm_manual_1_main() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r1+0x8
-    struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_487 * map; // r28
-    struct_dm_game_main_c_690 * cap; // r27
+    struct_dm_manual_main_c_1333 * st; // r1+0x8
+    struct_dm_game_main_c_171 * state; // r29
+    struct_dm_game_main_c_781 * map; // r28
+    struct_dm_game_main_c_984 * cap; // r27
     @enum$100dm_game_main_c ret; // r26
     int i; // r1+0x8
     @enum$110dm_title_main_c res; // r31
@@ -215,11 +251,11 @@ static @enum$110dm_title_main_c dm_manual_1_main() {
 // Range: 0x58588 -> 0x58C6C
 static @enum$110dm_title_main_c dm_manual_2_main() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r1+0x8
+    struct_dm_manual_main_c_1333 * st; // r1+0x8
     int i; // r25
     @enum$110dm_title_main_c res; // r30
-    struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_487 * map; // r28
+    struct_dm_game_main_c_171 * state; // r29
+    struct_dm_game_main_c_781 * map; // r28
 
     // References
     // -> static unsigned char position_2_1[10][4];
@@ -246,11 +282,11 @@ static @enum$110dm_title_main_c dm_manual_2_main() {
 // Range: 0x58C6C -> 0x59660
 static @enum$110dm_title_main_c dm_manual_3_main() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r1+0x8
+    struct_dm_manual_main_c_1333 * st; // r1+0x8
     int i; // r25
     @enum$110dm_title_main_c res; // r31
-    struct_dm_game_main_c_176 * state; // r29
-    struct_dm_game_main_c_487 * map; // r28
+    struct_dm_game_main_c_171 * state; // r29
+    struct_dm_game_main_c_781 * map; // r28
 
     // References
     // -> static int _posP4Mario[2][2];
@@ -283,9 +319,9 @@ static @enum$110dm_title_main_c dm_manual_3_main() {
 // Range: 0x59660 -> 0x59D20
 static @enum$110dm_title_main_c dm_manual_4_main() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r1+0x8
-    struct_dm_game_main_c_176 * state; // r30
-    struct_dm_game_main_c_487 * map; // r29
+    struct_dm_manual_main_c_1333 * st; // r1+0x8
+    struct_dm_game_main_c_171 * state; // r30
+    struct_dm_game_main_c_781 * map; // r29
     int i; // r1+0x8
     int j; // r1+0x8
     @enum$110dm_title_main_c res; // r28
@@ -336,6 +372,13 @@ static void draw_AB_guide(int x_pos /* r24 */, int y_pos /* r25 */) {
     // -> union [anonymous] alpha_texture_init_dl[];
 }
 
+// Erased
+static void dm_manual_at_cap_draw(struct_dm_game_main_c_171 * state /* r26 */, struct_dm_manual_main_c_1302 * cap /* r27 */, int size_flg /* r28 */) {
+    // Local variables
+    int i; // r30
+    int j; // r29
+}
+
 static int _posContPanel[2]; // size: 0x8, address: 0x49E0
 static int _posCircle$924[4][2]; // size: 0x20, address: 0x49E8
 static int _posFinger$925[4][2]; // size: 0x20, address: 0x4A08
@@ -370,7 +413,7 @@ static void disp_cont() {
 // Range: 0x5A1FC -> 0x5A698
 static void dm_manual_draw_fg(union_main_story_c_778 * * mpp /* r30 */, union_tex_func_c_1051 * * vpp /* r29 */) {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r31
+    struct_dm_manual_main_c_1333 * st; // r31
     struct_tex_func_c_1287 * texC; // r4
     int i; // r22
     union_drmario_gc_c_202 * _g; // r1+0x8
@@ -401,14 +444,14 @@ unsigned char GameSpeed[]; // size: 0x0, address: 0x489C
 // Range: 0x5A698 -> 0x5AC40
 void dm_manual_all_init() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r23
+    struct_dm_manual_main_c_1333 * st; // r23
     int i; // r1+0x8
     int j; // r22
     int k; // r21
     void * heap; // r20
     void * (* tbl)[2]; // r1+0x8
-    struct_dm_game_main_c_176 * state; // r1+0x8
-    struct_dm_manual_main_c_5274 * acap; // r8
+    struct_dm_game_main_c_171 * state; // r1+0x8
+    struct_dm_manual_main_c_1302 * acap; // r8
 
     // References
     // -> signed char evs_manual_no;
@@ -438,7 +481,7 @@ int drmario_exit_flag; // size: 0x4, address: 0x18E68
 // Range: 0x5AC40 -> 0x5AF68
 int dm_manual_main() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r21
+    struct_dm_manual_main_c_1333 * st; // r21
     int i; // r22
     int key; // r4
     @enum$110dm_title_main_c loop_flg; // r18
@@ -463,7 +506,7 @@ unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 // Range: 0x5AF68 -> 0x5B184
 void dm_manual_graphic() {
     // Local variables
-    struct_dm_manual_main_c_1294 * st; // r31
+    struct_dm_manual_main_c_1333 * st; // r31
     union_main_story_c_778 * mp; // r1+0x14
     union_tex_func_c_1051 * vp; // r1+0x10
     union_drmario_gc_c_202 * _g; // r1+0x10

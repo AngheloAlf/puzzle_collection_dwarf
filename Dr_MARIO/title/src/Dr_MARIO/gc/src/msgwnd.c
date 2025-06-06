@@ -7,6 +7,16 @@
 unsigned char _msgColorTbl[8][3]; // size: 0x18, address: 0x1260
 unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 unsigned short joyupd[5]; // size: 0xA, address: 0x1CDA0
+// Erased
+static int _checkKeyTrg(int contFlags /* r1+0x0 */, int keyFlags /* r1+0x4 */) {
+    // Local variables
+    int i; // r9
+
+    // References
+    // -> unsigned short joyupd[5];
+    // -> unsigned char main_joy[4];
+}
+
 // Range: 0x28714 -> 0x28770
 void msgWnd_init(struct_main_story_c_451 * st /* r3 */, void * heap /* r4 */, int cols /* r6 */, int rows /* r12 */, int x /* r11 */, int y /* r9 */) {
     // Local variables
@@ -43,6 +53,9 @@ void msgWnd_addStr(struct_main_story_c_451 * st /* r29 */, const unsigned char *
     int strLen; // r31
     int bufLen; // r30
 }
+
+// Erased
+static void msgWnd_shiftUp(struct_main_story_c_451 * st /* r3 */) {}
 
 // Range: 0x28B94 -> 0x290C4
 void msgWnd_update(struct_main_story_c_451 * st /* r26 */) {

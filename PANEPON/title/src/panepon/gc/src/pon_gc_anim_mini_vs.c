@@ -368,6 +368,9 @@ void pon_InitLevel(int who /* r23 */, int player /* r20 */, int count /* r21 */,
     // -> long Init_position_normal_posY_2p[17];
 }
 
+// Erased
+static void pon_UpdateLevel() {}
+
 // Range: 0x10FE0 -> 0x11C54
 void pon_SetSpecialAttack(int attacker /* r1+0x8 */, int victim /* r1+0xC */, int count /* r1+0x10 */) {
     // Local variables

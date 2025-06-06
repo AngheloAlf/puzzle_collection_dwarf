@@ -9,9 +9,9 @@ int modelLoad(struct_model_c_289 * * ppModel /* r1+0x154 */, char * szName /* r1
     // Local variables
     union_pon_gc_tex_c_1219 * pVtx; // r31
     union_pon_gc_c_173 * pGfx; // r31
-    struct_bitmap_c_31 file; // r1+0x144
+    struct_bitmap_c_43 file; // r1+0x144
     struct_model_c_674 * pMesh; // r1+0x8
-    struct_image_c_89 * pImage; // r4
+    struct_image_c_92 * pImage; // r4
     int nTag; // r1+0x140
     int nType; // r24
     struct_bitmap_c_14 * pBitmap; // r3
@@ -107,6 +107,9 @@ int modelLoad(struct_model_c_289 * * ppModel /* r1+0x154 */, char * szName /* r1
     union_pon_gc_c_173 * _g; // r4
     union_pon_gc_c_173 * _g; // r3
 }
+
+// Erased
+static int modelTick(struct_model_c_289 * pModel /* r1+0x0 */) {}
 
 // Range: 0x7CBB4 -> 0x7CCE4
 int modelDrawMesh(struct_model_c_289 * pModel /* r1+0x0 */, int iMesh /* r1+0x4 */, union_pon_gc_c_173 * * ppGfx /* r1+0x8 */) {

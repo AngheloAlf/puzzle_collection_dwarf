@@ -4,6 +4,18 @@
     Language: C89
     Code range: 0x00002BA0 -> 0x00004990
 */
+// Erased
+static void st_message_proc() {
+    // References
+    // -> static int st_message_count;
+    // -> static struct [anonymous] mess_st;
+    // -> unsigned char main_joy[4];
+    // -> unsigned short joynew[5];
+    // -> static int title_time;
+    // -> static struct [anonymous] * st_mes_ptr;
+    // -> unsigned long framecont;
+}
+
 // Range: 0x2BA0 -> 0x3594
 void story_st_new_op(union_drmario_gc_c_202 * * glp /* r31 */, int flg /* r28 */) {
     // Local variables

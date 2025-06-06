@@ -14,6 +14,15 @@ static @enum$105title_c geDemoTitle; // size: 0x4, address: 0x116FD4
 static int gnLogoEndOKFlag; // size: 0x4, address: 0x116FD8
 static int gnThreadOKFlag; // size: 0x4, address: 0x116FDC
 static int Logo_PadReset; // size: 0x4, address: 0x116FE0
+// Erased
+static void titleStopRing(struct_title_c_1989 * aRing /* r1+0x0 */) {}
+
+// Erased
+static void titleMakeRing(struct_title_c_1989 * aRing /* r1+0x0 */, int nX /* r1+0x4 */, int nY /* r1+0x8 */, int nStep /* r1+0xC */) {
+    // Local variables
+    int iRing; // r7
+}
+
 // Range: 0xA4B70 -> 0xA4C98
 static void titleTickRing(struct_title_c_1989 * aRing /* r3 */) {
     // Local variables
@@ -58,15 +67,27 @@ static void titleDrawRing(struct_title_c_1989 * aRing /* r1+0x8 */, union_pon_gc
     // -> static struct [anonymous] * gpData;
 }
 
+// Erased
+static void titleStopDust(struct_title_c_6118 * aDust /* r3 */, int nCount /* r1+0x4 */) {
+    // Local variables
+    int iDust; // r6
+}
+
 // Range: 0xA5124 -> 0xA532C
-static void titleMakeDust(struct_title_c_6091 * aDust /* r27 */, int nCount /* r26 */, int nX /* r29 */, int nY /* r30 */, int nSizeX /* r31 */, int nSizeY /* r25 */) {
+static void titleMakeDust(struct_title_c_6118 * aDust /* r27 */, int nCount /* r26 */, int nX /* r29 */, int nY /* r30 */, int nSizeX /* r31 */, int nSizeY /* r25 */) {
     // Local variables
     int iDust; // r6
     int nSeed; // r10
 }
 
+// Erased
+static void titleTickDust(struct_title_c_6118 * aDust /* r3 */, int nCount /* r4 */) {
+    // Local variables
+    int iDust; // r1+0x0
+}
+
 // Range: 0xA532C -> 0xA5760
-static void titleDrawDust(struct_title_c_6091 * aDust /* r1+0x8 */, int nCount /* r1+0xC */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */) {
+static void titleDrawDust(struct_title_c_6118 * aDust /* r1+0x8 */, int nCount /* r1+0xC */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */) {
     // Local variables
     int nX; // r10
     int nY; // r1+0x8
@@ -448,6 +469,15 @@ struct Game {
     char kPLAYER4VTL_2D4th[4]; // offset 0x21C04, size 0x4
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
+// Erased
+static int CheckTitleInput() {
+    // Local variables
+    int iController; // r1+0x0
+
+    // References
+    // -> struct Game gTheGame;
+}
+
 int gDemo; // size: 0x4, address: 0xF4EAC
 int gReset; // size: 0x4, address: 0xDF598
 unsigned short gGameStatus; // size: 0x2, address: 0xF4E9C
@@ -520,7 +550,7 @@ void DoTitle() {
     int nType; // r1+0x5C
     int iBuffer; // r24
     int nTagText; // r24
-    struct_image_c_89 * pImage; // r1+0x58
+    struct_image_c_92 * pImage; // r1+0x58
     int iCharacter; // r1+0x54
     int nMode; // r30
     int nTick; // r29
@@ -560,7 +590,7 @@ char * Pon_Image_Heap; // size: 0x4, address: 0x184
 void InitTitle() {
     // Local variables
     void * pHeap; // r1+0x28
-    struct_image_c_89 * pImage; // r1+0x24
+    struct_image_c_92 * pImage; // r1+0x24
     @enum$94peel_c ePeel; // r1+0x8
 
     // References

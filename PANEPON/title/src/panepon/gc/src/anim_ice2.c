@@ -314,6 +314,23 @@ struct Game {
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 int anim_sp; // size: 0x4, address: 0x1764
+// Erased
+static void InitIce2(int flag /* r29 */, int anim /* r28 */) {
+    // Local variables
+    int base; // r6
+    int temp; // r6
+    char * currSegment; // r3
+
+    // References
+    // -> int anim_sp;
+    // -> struct Game gTheGame;
+    // -> static int anim_bg;
+    // -> static unsigned char alphaB[4];
+    // -> static unsigned char alphaG[4];
+    // -> static unsigned char alphaR[4];
+    // -> static char * gc_levice2;
+}
+
 int gCounter; // size: 0x4, address: 0xF4E80
 // Range: 0x32478 -> 0x325B8
 void UpdateIce2() {

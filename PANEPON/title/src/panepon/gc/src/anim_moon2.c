@@ -312,6 +312,24 @@ struct Game {
     char kPLAYER4VTL_2D3rd[4]; // offset 0x21C00, size 0x4
     char kPLAYER4VTL_2D4th[4]; // offset 0x21C04, size 0x4
 };
+// Erased
+static void InitMoon2(int flag /* r30 */, int anim /* r31 */) {
+    // Local variables
+    int base; // r6
+    int temp; // r6
+    char * currSegment; // r3
+
+    // References
+    // -> static struct Game gTheGame;
+    // -> static int anim_sp;
+    // -> static int anim_bg;
+    // -> static union [anonymous] mini_shadow[4];
+    // -> static unsigned char alphaB[4];
+    // -> static unsigned char alphaG[4];
+    // -> static unsigned char alphaR[4];
+    // -> static char * gc_levmoon2;
+}
+
 // Range: 0x32738 -> 0x3273C
 void UpdateMoon2() {}
 

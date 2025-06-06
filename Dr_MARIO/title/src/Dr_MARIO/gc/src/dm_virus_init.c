@@ -6,30 +6,42 @@
 */
 static unsigned char limit_table[25]; // size: 0x19, address: 0x1100
 // Range: 0x22A38 -> 0x22B50
-void init_map_all(struct_dm_game_main_c_487 * map /* r31 */) {
+void init_map_all(struct_dm_game_main_c_781 * map /* r31 */) {
     // Local variables
     int i; // r3
     int p; // r6
 }
 
 // Range: 0x22B50 -> 0x22B8C
-void clear_map(struct_dm_game_main_c_487 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */) {
+void clear_map(struct_dm_game_main_c_781 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */) {
     // Local variables
     int j; // r1+0x0
 }
 
 // Range: 0x22B8C -> 0x22C84
-void clear_map_all(struct_dm_game_main_c_487 * map /* r1+0x0 */) {
+void clear_map_all(struct_dm_game_main_c_781 * map /* r1+0x0 */) {
     // Local variables
     int i; // r8
     int j; // r9
 }
 
 // Range: 0x22C84 -> 0x22CB4
-int get_map_info(struct_dm_game_main_c_487 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */) {}
+int get_map_info(struct_dm_game_main_c_781 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */) {}
+
+// Erased
+static int get_map_top_color(struct_dm_game_main_c_781 * map /* r4 */, int x /* r1+0x4 */) {
+    // Local variables
+    int y; // r3
+}
+
+// Erased
+static void get_map_top_colors(struct_dm_game_main_c_781 * map /* r1+0x0 */, int * colors /* r4 */) {
+    // Local variables
+    int x; // r8
+}
 
 // Range: 0x22CB4 -> 0x22D64
-int get_virus_color_count(struct_dm_game_main_c_487 * map /* r1+0x8 */, unsigned char * red /* r1+0xC */, unsigned char * yellow /* r1+0x10 */, unsigned char * blue /* r1+0x14 */) {
+int get_virus_color_count(struct_dm_game_main_c_781 * map /* r1+0x8 */, unsigned char * red /* r1+0xC */, unsigned char * yellow /* r1+0x10 */, unsigned char * blue /* r1+0x14 */) {
     // Local variables
     int i; // r1+0x8
     int ret; // r11
@@ -37,37 +49,48 @@ int get_virus_color_count(struct_dm_game_main_c_487 * map /* r1+0x8 */, unsigned
 }
 
 // Range: 0x22D64 -> 0x22D90
-int get_virus_count(struct_dm_game_main_c_487 * map /* r3 */) {
+int get_virus_count(struct_dm_game_main_c_781 * map /* r3 */) {
     // Local variables
     unsigned char ryb[3]; // r1+0xC
 }
 
 // Range: 0x22D90 -> 0x22DEC
-void set_map(struct_dm_game_main_c_487 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */, int item /* r1+0xC */, int pal /* r7 */) {
+void set_map(struct_dm_game_main_c_781 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */, int item /* r1+0xC */, int pal /* r7 */) {
     // Local variables
     int pal_save; // r8
 }
 
 // Range: 0x22DEC -> 0x22E44
-void set_virus(struct_dm_game_main_c_487 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */, int virus /* r6 */, int virus_anime_no /* r1+0x10 */) {
+void set_virus(struct_dm_game_main_c_781 * map /* r1+0x0 */, int x_pos /* r1+0x4 */, int y_pos /* r1+0x8 */, int virus /* r6 */, int virus_anime_no /* r1+0x10 */) {
     // Local variables
     int pal_save; // r8
 }
 
+// Erased
+static unsigned short y_point_set() {
+    // Local variables
+    unsigned short rnd_weight; // r1+0x8
+    unsigned short rnd_cnt; // r3
+    unsigned short idx; // r1+0x8
+}
+
+// Erased
+static unsigned char dm_virus_check(struct_dm_game_main_c_2109 * v_map /* r1+0x0 */, unsigned short x_pos /* r1+0x4 */, unsigned short y_pos /* r1+0x6 */) {}
+
 // Range: 0x22E44 -> 0x23038
-unsigned char dm_check_color(struct_dm_game_main_c_1653 * v_map /* r1+0x0 */, unsigned short x_pos /* r1+0x4 */, unsigned short y_pos /* r1+0x6 */, unsigned char check_color /* r1+0x8 */) {
+unsigned char dm_check_color(struct_dm_game_main_c_2109 * v_map /* r1+0x0 */, unsigned short x_pos /* r1+0x4 */, unsigned short y_pos /* r1+0x6 */, unsigned char check_color /* r1+0x8 */) {
     // Local variables
     unsigned char p; // r11
 }
 
 // Range: 0x23038 -> 0x23130
-unsigned char dm_check_color_2(struct_dm_game_main_c_1653 * v_map /* r1+0x0 */, unsigned short x_pos /* r1+0x4 */, unsigned short y_pos /* r1+0x6 */, unsigned char check_color /* r1+0x8 */) {
+unsigned char dm_check_color_2(struct_dm_game_main_c_2109 * v_map /* r1+0x0 */, unsigned short x_pos /* r1+0x4 */, unsigned short y_pos /* r1+0x6 */, unsigned char check_color /* r1+0x8 */) {
     // Local variables
     unsigned char p; // r10
 }
 
 // Range: 0x23130 -> 0x233AC
-void dm_virus_map_copy(struct_dm_game_main_c_1653 * v_map_a /* r3 */, struct_dm_game_main_c_1653 * v_map_b /* r4 */, unsigned char * order_a /* r1+0x8 */, unsigned char * order_b /* r1+0xC */) {
+void dm_virus_map_copy(struct_dm_game_main_c_2109 * v_map_a /* r3 */, struct_dm_game_main_c_2109 * v_map_b /* r4 */, unsigned char * order_a /* r1+0x8 */, unsigned char * order_b /* r1+0xC */) {
     // Local variables
     int i; // r1+0x0
 }
@@ -95,7 +118,7 @@ struct SAnimeState {
     int color[4]; // offset 0x30, size 0x10
 };
 // Range: 0x233AC -> 0x2340C
-int dm_get_first_virus_count(@enum$107dm_title_main_c mode /* r1+0x8 */, struct_dm_game_main_c_176 * state /* r1+0xC */) {
+int dm_get_first_virus_count(@enum$107dm_title_main_c mode /* r1+0x8 */, struct_dm_game_main_c_171 * state /* r1+0xC */) {
     // Local variables
     int count; // r3
 }
@@ -109,7 +132,7 @@ int dm_get_first_virus_count_in_new_mode(int level /* r1+0x0 */) {
 
 static unsigned char _l$359[3]; // size: 0x3, address: 0x112C
 // Range: 0x23420 -> 0x2396C
-void _dm_virus_init(@enum$107dm_title_main_c mode /* r14 */, struct_dm_game_main_c_176 * state /* r1+0x4C */, struct_dm_game_main_c_1653 * v_map /* r29 */, unsigned char * order /* r19 */, int special /* r1+0x50 */) {
+void _dm_virus_init(@enum$107dm_title_main_c mode /* r14 */, struct_dm_game_main_c_171 * state /* r1+0x4C */, struct_dm_game_main_c_2109 * v_map /* r29 */, unsigned char * order /* r19 */, int special /* r1+0x50 */) {
     // Local variables
     signed short i; // r4
     signed short j; // r18
@@ -134,10 +157,13 @@ void _dm_virus_init(@enum$107dm_title_main_c mode /* r14 */, struct_dm_game_main
 }
 
 // Range: 0x2396C -> 0x23990
-void dm_virus_init(@enum$107dm_title_main_c mode /* r3 */, struct_dm_game_main_c_176 * state /* r4 */, struct_dm_game_main_c_1653 * v_map /* r5 */, unsigned char * order /* r6 */) {}
+void dm_virus_init(@enum$107dm_title_main_c mode /* r3 */, struct_dm_game_main_c_171 * state /* r4 */, struct_dm_game_main_c_2109 * v_map /* r5 */, unsigned char * order /* r6 */) {}
+
+// Erased
+static void _makeFlash_init(struct_dm_virus_init_c_710 * st /* r28 */, struct_dm_game_main_c_2109 * vmap /* r29 */, unsigned char * order /* r30 */, int virusCnt /* r31 */) {}
 
 // Range: 0x23990 -> 0x23B38
-static void _makeFlash_checkOrdre(struct_dm_virus_init_c_668 * st /* r1+0x0 */) {
+static void _makeFlash_checkOrdre(struct_dm_virus_init_c_710 * st /* r1+0x0 */) {
     // Local variables
     int i; // r7
     int c; // r6
@@ -147,12 +173,20 @@ static void _makeFlash_checkOrdre(struct_dm_virus_init_c_668 * st /* r1+0x0 */) 
     int under2; // r7
 }
 
+// Erased
+static int _makeFlash_decide(struct_dm_virus_init_c_710 * st /* r1+0x0 */, unsigned char (* buf)[32] /* r1+0x4 */, int * cnt /* r1+0x8 */, int color /* r1+0xC */) {
+    // Local variables
+    unsigned char * order; // r6
+    int i; // r9
+    int count; // r1+0x0
+}
+
 static int _n$564[3][5]; // size: 0x3C, address: 0x1130
 // Range: 0x23B38 -> 0x23E48
-int make_flash_virus_pos(struct_dm_game_main_c_176 * state /* r27 */, struct_dm_game_main_c_1653 * vmap /* r25 */, unsigned char * order /* r24 */) {
+int make_flash_virus_pos(struct_dm_game_main_c_171 * state /* r27 */, struct_dm_game_main_c_2109 * vmap /* r25 */, unsigned char * order /* r24 */) {
     // Local variables
-    struct_dm_virus_init_c_668 watchMakeFlash[1]; // r1+0x2C
-    struct_dm_virus_init_c_668 * st; // r31
+    struct_dm_virus_init_c_710 watchMakeFlash[1]; // r1+0x2C
+    struct_dm_virus_init_c_710 * st; // r31
     int i; // r8
     int j; // r9
     int pos; // r6

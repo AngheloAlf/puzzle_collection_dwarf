@@ -356,6 +356,15 @@ int RandomBlock(struct tetWell * well /* r1+0x8 */) {
     // -> struct Game gTheGame;
 }
 
+// Erased
+static void ReturnSecond(int * second /* r28 */) {
+    // Local variables
+    unsigned long long current; // r1+0x8
+
+    // References
+    // -> unsigned long long gTime;
+}
+
 char clearpanel_data[20][6]; // size: 0x78, address: 0xB6F4C
 char panel_data[14][6]; // size: 0x54, address: 0xB6EF8
 // Range: 0x9F378 -> 0x9F490

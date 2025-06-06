@@ -364,6 +364,23 @@ void Draw2DGameFade() {
     // -> union [anonymous] * glistp;
 }
 
+// Erased
+static void Draw3DGameFade() {
+    // Local variables
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+    union_pon_gc_c_173 * _g; // r1+0x0
+
+    // References
+    // -> signed short gBlock_Level;
+    // -> union [anonymous] * glistp;
+}
+
 // Range: 0x5C1C0 -> 0x5C1DC
 void StartFlash(int frame /* r1+0x0 */) {
     // References

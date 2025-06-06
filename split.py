@@ -6,9 +6,13 @@
 import argparse
 from pathlib import Path
 
-# "union_pon_gc_c_222": "uObjSprite",
-# "union_pon_gc_tex_c_7332": "uObjTxtr",
-# "union_pon_gc_tex_c_7116": "uObjBg",
+KNOWN_ANONYMOUS_STRUCTS: dict[str, str] = {
+    "union_pon_gc_c_222": "uObjSprite",
+    "union_pon_gc_tex_c_7332": "uObjTxtr",
+    "union_pon_gc_tex_c_7116": "uObjBg",
+}
+KNOWN_ANONYMOUS_ENUMS: dict[str, str] = {
+}
 
 def write_buffer(current_name: str|None, buffer: list[str], directory: Path):
     if current_name is not None:
@@ -45,7 +49,9 @@ def parse_anonymous_enums(contents: list[str]) -> dict[str, str]:
             if "}" in line:
                 body = "".join(current_enum_contents)
                 if body not in enums_by_contents:
-                    enums_by_contents[body] = current_enum_name
+                    name = current_enum_name
+                    name = KNOWN_ANONYMOUS_ENUMS.get(name, name)
+                    enums_by_contents[body] = name
                 current_enum_name = None
                 current_enum_contents.clear()
                 continue
@@ -114,7 +120,9 @@ def parse_anonymous_structs_and_unions(contents: list[str]) -> dict[str, tuple[s
             else:
                 body = "".join(current_struct_contents)
                 if body not in structs_by_contents:
-                    structs_by_contents[body] = (f"{kind}_{current_unit.replace('.', '_')}_{struct_index}", kind)
+                    name = f"{kind}_{current_unit.replace('.', '_')}_{struct_index}"
+                    name = KNOWN_ANONYMOUS_STRUCTS.get(name, name)
+                    structs_by_contents[body] = (name, kind)
                 current_struct_contents.clear()
 
         if braces_count == 0 and (line.endswith("struct {\n") or line.endswith("union {\n")):

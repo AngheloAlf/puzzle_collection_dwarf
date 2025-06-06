@@ -668,6 +668,36 @@ void AddAnimation3D2(int left /* r24 */, int right /* r25 */) {
 }
 
 union_pon_gc_c_173 init2D_dl[]; // size: 0x0, address: 0xB0E68
+// Erased
+static void StartAnimation2D(int empty /* r1+0x8 */) {
+    // Local variables
+    int count; // r1+0x8
+    int diff; // r22
+    int lut; // r1+0x8
+    int bg; // r4
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+    union_pon_gc_c_173 * _g; // r1+0x8
+
+    // References
+    // -> struct Game gTheGame;
+    // -> union [anonymous] * glistp;
+    // -> unsigned int FlicTable[340];
+    // -> union [anonymous] init2D_dl[];
+    // -> union [anonymous] initRDP_dl[];
+    // -> int gWorld;
+    // -> union [anonymous] mini_shadow[4];
+}
+
 int gEmptyFlicList[4]; // size: 0x10, address: 0x50884
 int gFlicTableNo[4]; // size: 0x10, address: 0x17C8
 // Range: 0x272F0 -> 0x277AC

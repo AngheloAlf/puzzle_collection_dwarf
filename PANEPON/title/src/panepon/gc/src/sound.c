@@ -12,6 +12,9 @@ int g_fadetime; // size: 0x4, address: 0xB6EE4
 int g_fadevol; // size: 0x4, address: 0xB6EE8
 float SongRetio; // size: 0x4, address: 0xB6EEC
 float SFXRetio; // size: 0x4, address: 0xB6EF0
+// Erased
+static void DmaRomToRam() {}
+
 // Range: 0x8EFC4 -> 0x8EFE8
 signed short LoadSong(long bgmNum /* r3 */, signed short bufferIndex /* r4 */) {}
 
@@ -24,12 +27,33 @@ signed short GetSafeTuneBuffer() {}
 // Range: 0x8EFF8 -> 0x8F000
 signed short IsTuneBufferFree() {}
 
+// Erased
+static void SetTuneBufferPointer() {}
+
 int SFXBuf[5]; // size: 0x14, address: 0xF46F4
 // Range: 0x8F000 -> 0x8F020
 void * LoadSFXBank(unsigned short bankNum /* r1+0x0 */, unsigned short bankIndex /* r1+0x2 */) {
     // References
     // -> int SFXBuf[5];
 }
+
+// Erased
+static void SetSFX_Bank() {}
+
+// Erased
+static signed short GetSafeSeqSFXBuffer() {}
+
+// Erased
+static signed short LoadSeqSFX() {}
+
+// Erased
+static void SetSeqSFXBank() {}
+
+// Erased
+static long PlaySeqSFX() {}
+
+// Erased
+static void FadeOutSeqSFX() {}
 
 // Range: 0x8F020 -> 0x8F024
 void InitAudio() {}
@@ -64,6 +88,9 @@ int CheckLastFade() {
     // -> long old_sng_id;
 }
 
+// Erased
+static void StopSong() {}
+
 // Range: 0x8F208 -> 0x8F238
 void FadeOutTuneBuffer(int frames /* r1+0xC */) {
     // Local variables
@@ -75,6 +102,15 @@ void FadeOutSong(long song /* r3 */, long fade_time /* r1+0xC */) {
     // Local variables
     int gc_fade_time; // r1+0x8
 }
+
+// Erased
+static signed short GetCurrentVoices() {}
+
+// Erased
+static signed short GetTotalSongChannels() {}
+
+// Erased
+static signed short GetTotalSFXChannels() {}
 
 // Range: 0x8F260 -> 0x8F280
 void StopAllSongs() {}
@@ -162,6 +198,9 @@ void FadeSong(long song /* r3 */, signed short volumeDest /* r1+0xC */, signed s
 // Range: 0x8F5D4 -> 0x8F5D8
 void FadeTuneBuffer() {}
 
+// Erased
+static long CrossFadeCallback() {}
+
 // Range: 0x8F5D8 -> 0x8F6B4
 long PlaySFX(long sfxIndex /* r29 */, long effect_vol /* r30 */, long effect_pan /* r31 */) {
     // References
@@ -169,8 +208,20 @@ long PlaySFX(long sfxIndex /* r29 */, long effect_vol /* r30 */, long effect_pan
     // -> float SFXRetio;
 }
 
+// Erased
+static void StopSFX() {}
+
+// Erased
+static void FadeOutSFX() {}
+
 // Range: 0x8F6B4 -> 0x8F700
 void SetFrequencySFX(long sfxIndex /* r3 */, float freq_offset /* r1+0xC */) {}
+
+// Erased
+static void SetNoteSFX() {}
+
+// Erased
+static void SetVolumeSFX() {}
 
 // Range: 0x8F700 -> 0x8F724
 void SetPanSFX(long sfxIndex /* r3 */, long pan /* r4 */) {
@@ -178,8 +229,32 @@ void SetPanSFX(long sfxIndex /* r3 */, long pan /* r4 */) {
     int gc_pan; // r1+0x8
 }
 
+// Erased
+static long GetVolumeFromDistance() {}
+
+// Erased
+static long GetPanFromAngle() {}
+
+// Erased
+static long Start3DSFX() {}
+
+// Erased
+static signed short IsSFXDone() {}
+
+// Erased
+static signed short PlaySFX_Channel() {}
+
+// Erased
+static void SetSFX_ChannelVolume_Pan() {}
+
+// Erased
+static long GetSfxHandleFromChannel() {}
+
 // Range: 0x8F724 -> 0x8F728
 void AudioUpdate() {}
+
+// Erased
+static void ForceLoadMusicBank() {}
 
 // Range: 0x8F728 -> 0x8F774
 void ForceLoadSong(long songReference /* r3 */, signed short bufferIndex /* r31 */) {

@@ -204,6 +204,24 @@ void InitAI(struct tetWell * well /* r28 */, struct cursor_t * cursor /* r29 */,
     // -> int gSelection;
 }
 
+// Erased
+static void AISetEasy(struct ai_t * brain /* r30 */, int stage /* r31 */) {
+    // Local variables
+    unsigned char characteristic[9]; // r1+0x10
+}
+
+// Erased
+static void AISetNormal(struct ai_t * brain /* r30 */, int stage /* r31 */) {
+    // Local variables
+    unsigned char characteristic[13]; // r1+0x10
+}
+
+// Erased
+static void AISetHard(struct ai_t * brain /* r31 */, int stage /* r30 */) {
+    // Local variables
+    unsigned char characteristic[15]; // r1+0x10
+}
+
 // Range: 0x11E18 -> 0x11F20
 void AISetSHard(struct ai_t * brain /* r30 */, int stage /* r31 */) {
     // Local variables
@@ -242,6 +260,9 @@ void AIAddCommand(struct ai_t * brain /* r28 */, int func /* r29 */, int para1 /
     // Local variables
     struct command_t * command; // r3
 }
+
+// Erased
+static void AIDelCommand(struct ai_t * brain /* r30 */, int total /* r31 */) {}
 
 // Range: 0x12524 -> 0x125A0
 void AISetMove(struct ai_t * brain /* r30 */, int move /* r31 */) {}
@@ -452,6 +473,13 @@ int AIHoriMoveCheckCheck(struct tetWell * well /* r29 */, struct ai_t * brain /*
     int type; // r1+0x8
 }
 
+// Erased
+static int AISearchClose(struct ai_t * brain /* r29 */, int pos1 /* r30 */, int pos2 /* r31 */) {
+    // Local variables
+    int left; // r1+0x8
+    int right; // r1+0x8
+}
+
 // Range: 0x13214 -> 0x13398
 int AIMoveAcross(struct tetWell * well /* r29 */, int row /* r27 */, int from /* r28 */, int to /* r30 */) {
     // Local variables
@@ -480,6 +508,13 @@ void AISortRows(int row /* r28 */, int total /* r29 */, int * array /* r30 */) {
     int j; // r8
 }
 
+// Erased
+static int AIDistance(struct ai_t * brain /* r28 */, int row /* r29 */, int col /* r30 */) {
+    // Local variables
+    int distance; // r1+0x8
+    int hori; // r31
+}
+
 int AItotCheck[7]; // size: 0x1C, address: 0x15F8
 // Range: 0x136F8 -> 0x13BF4
 int AILowerRow(struct tetWell * well /* r24 */, struct ai_t * brain /* r25 */, int row /* r26 */, int col /* r27 */) {
@@ -494,6 +529,15 @@ int AILowerRow(struct tetWell * well /* r24 */, struct ai_t * brain /* r25 */, i
 int AIrowCheck[7][5]; // size: 0x8C, address: 0x1614
 int AIcolCheck[7][5]; // size: 0x8C, address: 0x16A0
 int AIdistance[8]; // size: 0x20, address: 0x172C
+// Erased
+static void AIVisionCheck(struct tetWell * well /* r28 */, struct ai_t * brain /* r29 */) {
+    // References
+    // -> int AIdistance[8];
+    // -> int AItotCheck[7];
+    // -> int AIcolCheck[7][5];
+    // -> int AIrowCheck[7][5];
+}
+
 // Range: 0x13BF4 -> 0x13DE4
 void AIBoundaryCheck(struct tetWell * well /* r29 */, struct ai_t * brain /* r30 */) {
     // Local variables
@@ -661,6 +705,12 @@ int AIVolumeCheck(struct tetWell * well /* r25 */, struct cursor_t * cursor /* r
 }
 
 int chain_check[4]; // size: 0x10, address: 0x1750
+// Erased
+static void AIChainFrequency(struct tetWell * well /* r28 */, struct ai_t * brain /* r29 */, int num /* r30 */) {
+    // References
+    // -> int chain_check[4];
+}
+
 // Range: 0x168E0 -> 0x16F2C
 int AIChainVert1(struct tetWell * well /* r26 */, struct ai_t * brain /* r31 */) {
     // Local variables

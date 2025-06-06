@@ -10,7 +10,7 @@ static int gnOffsetBuffer; // size: 0x4, address: 0x5085C
 static unsigned int gnFileCount; // size: 0x4, address: 0x50860
 char * bin_file; // size: 0x4, address: 0x0
 // Range: 0x5C2E8 -> 0x5C424
-static int fileBuffer(struct_bitmap_c_31 * pFile /* r1+0x8 */, int nBytes /* r30 */) {
+static int fileBuffer(struct_bitmap_c_43 * pFile /* r1+0x8 */, int nBytes /* r30 */) {
     // Local variables
     long nSize; // r29
 
@@ -23,7 +23,7 @@ static int fileBuffer(struct_bitmap_c_31 * pFile /* r1+0x8 */, int nBytes /* r30
 }
 
 // Range: 0x5C424 -> 0x5C590
-static int fileFind(struct_bitmap_c_31 * pFile /* r29 */, char * szName /* r1+0xC */) {
+static int fileFind(struct_bitmap_c_43 * pFile /* r29 */, char * szName /* r1+0xC */) {
     // Local variables
     int iName; // r30
     int iEntry; // r1+0x8
@@ -40,10 +40,10 @@ static int fileFind(struct_bitmap_c_31 * pFile /* r29 */, char * szName /* r1+0x
 }
 
 // Range: 0x5C590 -> 0x5C5BC
-int fileGetAddress(struct_bitmap_c_31 * pFile /* r1+0x0 */, int * pnROM /* r1+0x4 */) {}
+int fileGetAddress(struct_bitmap_c_43 * pFile /* r1+0x0 */, int * pnROM /* r1+0x4 */) {}
 
 // Range: 0x5C5BC -> 0x5C61C
-int fileOpen(struct_bitmap_c_31 * pFile /* r31 */, char * szName /* r4 */) {}
+int fileOpen(struct_bitmap_c_43 * pFile /* r31 */, char * szName /* r4 */) {}
 
 // Range: 0x5C61C -> 0x5C624
 int fileClose() {}
@@ -52,7 +52,7 @@ int fileClose() {}
 int fileTest(void * pFile /* r1+0x0 */) {}
 
 // Range: 0x5C648 -> 0x5CD0C
-int fileGet(struct_bitmap_c_31 * pFile /* r26 */, void * pBuffer /* r27 */, int nByteCount /* r28 */) {
+int fileGet(struct_bitmap_c_43 * pFile /* r26 */, void * pBuffer /* r27 */, int nByteCount /* r28 */) {
     // Local variables
     void * pSource; // r3
     int nData; // r4
@@ -64,7 +64,7 @@ int fileGet(struct_bitmap_c_31 * pFile /* r26 */, void * pBuffer /* r27 */, int 
 }
 
 // Range: 0x5CD0C -> 0x5CDA8
-int fileSeek(struct_bitmap_c_31 * pFile /* r3 */, int nMode /* r1+0x4 */, int nOffset /* r5 */) {}
+int fileSeek(struct_bitmap_c_43 * pFile /* r3 */, int nMode /* r1+0x4 */, int nOffset /* r5 */) {}
 
 // Range: 0x5CDA8 -> 0x5CDFC
 int fileSetup() {

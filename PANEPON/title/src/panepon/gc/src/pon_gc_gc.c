@@ -209,4 +209,25 @@ int Pon_DVDRead_boot_thread_wait16() {
     // -> static struct OSThread thread;
 }
 
+// Erased
+static void * Pon_DVDRead_thread(void * pparam /* r31 */) {
+    // Local variables
+    int result; // r1+0x8
+    char * filename; // r3
+    char * pfile; // r1+0xC
+}
+
+// Erased
+static int Pon_DVDRead_thread_start16(int nparam /* r1+0x8 */) {
+    // References
+    // -> static struct OSThread thread;
+    // -> static unsigned char threadStack[4096];
+}
+
+// Erased
+static int Pon_DVDRead_thread_wait16() {
+    // References
+    // -> static struct OSThread thread;
+}
+
 

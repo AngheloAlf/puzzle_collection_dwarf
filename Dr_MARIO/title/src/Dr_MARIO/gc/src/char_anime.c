@@ -17,6 +17,9 @@ struct SAnimeSeq {
 // Range: 0x29B68 -> 0x29BA8
 void animeSeq_init(struct SAnimeSeq * st /* r3 */, unsigned char * * seqArray /* r1+0xC */, int animeNo /* r1+0x10 */) {}
 
+// Erased
+static void animeSeq_set(struct SAnimeSeq * st /* r3 */, int animeNo /* r1+0xC */) {}
+
 // Range: 0x29BA8 -> 0x29D48
 void animeSeq_update(struct SAnimeSeq * st /* r28 */, int step /* r29 */) {
     // Local variables
@@ -65,6 +68,9 @@ void animeState_set(struct SAnimeState * st /* r3 */, int animeNo /* r1+0xC */) 
 
 // Range: 0x29EEC -> 0x29F2C
 void animeState_update(struct SAnimeState * st /* r31 */) {}
+
+// Erased
+static int animeState_isEnd(struct SAnimeState * st /* r1+0x0 */) {}
 
 union_drmario_gc_c_202 normal_texture_init_dl[]; // size: 0x0, address: 0x4208
 // Range: 0x29F2C -> 0x29FC4
@@ -117,6 +123,13 @@ void animeState_draw(struct SAnimeState * st /* r1+0x10 */, union_drmario_gc_c_2
     struct_tex_func_c_1287 * pal; // r1+0x10
 }
 
+// Erased
+static void animeState_drawI(struct SAnimeState * st /* r1+0x8 */, union_drmario_gc_c_202 * * gpp /* r31 */, float x /* f1 */, float y /* f2 */, float sx /* f3 */, float sy /* f4 */) {
+    // Local variables
+    union_drmario_gc_c_202 * gp; // r1+0x20
+    struct_tex_func_c_1287 * texC; // r4
+}
+
 struct SAnimeSmog {
     // total size: 0x124
     struct SAnimeState animeState[4]; // offset 0x0, size 0x100
@@ -162,6 +175,12 @@ void animeSmog_draw(struct SAnimeSmog * st /* r3 */, union_drmario_gc_c_202 * * 
     union_drmario_gc_c_202 * gp; // r1+0x24
     struct SAnimeState * state; // r3
     int i; // r27
+}
+
+// Erased
+static void mappingAnimeSeq(unsigned char * * seqArray /* r3 */, int count /* r1+0x4 */, unsigned long segGap /* r1+0x8 */) {
+    // Local variables
+    int i; // r7
 }
 
 // Range: 0x2A9AC -> 0x2AB38

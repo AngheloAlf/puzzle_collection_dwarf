@@ -15,12 +15,30 @@ int dbits; // size: 0x4, address: 0x481C
 static char gzip_mem_buff[16384]; // size: 0x4000, address: 0x14E38
 static char * gzip_malloc_addr; // size: 0x4, address: 0x4820
 static long gzip_malloc_tmp; // size: 0x4, address: 0x18E38
+// Erased
+static char * gzip_malloc(long size /* r1+0x0 */) {
+    // Local variables
+    char * ret; // r4
+
+    // References
+    // -> static char * gzip_malloc_addr;
+    // -> static long gzip_malloc_tmp;
+}
+
+// Erased
+static void gzip_free() {
+    // References
+    // -> static char gzip_mem_buff[16384];
+    // -> static char * gzip_malloc_addr;
+    // -> static long gzip_malloc_tmp;
+}
+
 unsigned int hufts; // size: 0x4, address: 0x18E3C
 struct huft {
     // total size: 0x8
     unsigned char e; // offset 0x0, size 0x1
     unsigned char b; // offset 0x1, size 0x1
-    union_inflate_c_24 v; // offset 0x4, size 0x4
+    union_inflate_c_42 v; // offset 0x4, size 0x4
 };
 // Range: 0x9E04 -> 0xA41C
 int huft_build(unsigned int * b /* r3 */, unsigned int n /* r4 */, unsigned int s /* r1+0x10 */, unsigned short * d /* r1+0x14 */, unsigned short * e /* r1+0x18 */, struct huft * * t /* r8 */, int * m /* r1+0x20 */) {

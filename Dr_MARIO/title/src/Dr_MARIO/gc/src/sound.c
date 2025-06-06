@@ -82,6 +82,9 @@ void _dm_seq_set_volume(int bufNo /* r1+0x8 */, int vol /* r4 */) {
     // -> static unsigned int sound_song_id[2];
 }
 
+// Erased
+static int dm_seq_is_stopped() {}
+
 // Range: 0x2273C -> 0x22788
 int _dm_seq_is_stopped(int bufNo /* r1+0x8 */) {
     // References

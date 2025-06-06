@@ -148,19 +148,97 @@ void gc_songStop() {
     // -> static unsigned long lastsong_id;
 }
 
+// Erased
+static void _gc_songSpeed(int sid /* r3 */, unsigned short speed /* r4 */) {}
+
+// Erased
+static void gc_songSpeed(unsigned short speed /* r4 */) {
+    // References
+    // -> static unsigned long lastsong_id;
+}
+
+// Erased
+static void _gc_songPause(int sid /* r3 */) {}
+
+// Erased
+static void gc_songPause() {
+    // References
+    // -> static unsigned long lastsong_id;
+}
+
+// Erased
+static void _gc_songContinue(int sid /* r3 */) {}
+
+// Erased
+static void gc_songContinue() {
+    // References
+    // -> static unsigned long lastsong_id;
+}
+
 // Range: 0x5BA0C -> 0x5BA40
 int _gc_songGetValid(int sid /* r3 */) {}
 
+// Erased
+static int gc_songGetValid() {
+    // References
+    // -> static unsigned long lastsong_id;
+}
+
 static int new_seq_id; // size: 0x4, address: 0x2086B0
 static int out_seq_id; // size: 0x4, address: 0x2086B4
+// Erased
+static int gc_songCrossFade(int sid1 /* r27 */, int seq2 /* r28 */, int vol2 /* r29 */, int time /* r30 */) {
+    // References
+    // -> static unsigned long lastsong_id;
+    // -> void * songTbl[];
+    // -> static int songgroup;
+    // -> static int out_seq_id;
+}
+
+// Erased
+static int gc_songCrossFadeDone() {
+    // References
+    // -> static int new_seq_id;
+}
+
+// Erased
+static int gc_songCrossFadeGet_sid() {
+    // References
+    // -> static int new_seq_id;
+}
+
 // Range: 0x5BA40 -> 0x5BA68
 int _gc_sePlay(int sndNo /* r3 */, unsigned char vol /* r4 */, unsigned char pan /* r5 */) {}
+
+// Erased
+static int gc_seStop(int vid /* r3 */) {}
+
+// Erased
+static int gc_sePanning(int vid /* r3 */, unsigned char pan /* r4 */) {}
+
+// Erased
+static int gc_sePitch(int vid /* r3 */, unsigned short pb /* r4 */) {}
+
+// Erased
+static void gc_soundSetVolume(unsigned char voiume /* r3 */, unsigned short time /* r4 */, unsigned char volGroup /* r1+0xC */) {}
+
+// Erased
+static void _gc_songFadeOut(int sid /* r3 */, unsigned short time /* r4 */) {}
 
 // Range: 0x5BA68 -> 0x5BAC8
 void _gc_songFadeSong(int sid /* r6 */, unsigned char vol /* r4 */, unsigned short time /* r5 */) {}
 
 // Range: 0x5BAC8 -> 0x5BB68
 void gc_soundSetOutputMode(unsigned char mode /* r1+0x8 */) {}
+
+// Erased
+static void gc_soundSetOutputMode_IPL() {}
+
+// Erased
+static void gc_soundSetOutputMode_first() {
+    // Local variables
+    int brk; // r31
+}
 
 // Range: 0x5BB68 -> 0x5BB88
 void gc_soundAllStop() {}
@@ -248,6 +326,20 @@ static void * DVD_Error_Disp_thread() {
     // -> static int flag$238;
 }
 
+// Erased
+static void DVDErrorThread_Start() {
+    // References
+    // -> static struct OSThread DVD_Error_Thread;
+    // -> static unsigned char DVD_Error_ThreadStack[4096];
+    // -> void (* DVDError_DispFunction)();
+}
+
+// Erased
+static void DVDErrorThread_End() {
+    // References
+    // -> static struct OSThread DVD_Error_Thread;
+}
+
 // Range: 0x5BC18 -> 0x5BC40
 void SetDVDError_DispFunction(void (* func)() /* r1+0x0 */) {
     // References
@@ -286,6 +378,19 @@ struct DVDFileInfo {
     unsigned long length; // offset 0x34, size 0x4
     void (* callback)(long, struct DVDFileInfo *); // offset 0x38, size 0x4
 };
+// Erased
+static int gc_DVDGet_fileLength(char * filename /* r3 */) {
+    // Local variables
+    struct DVDFileInfo handle; // r1+0xC
+    unsigned long length; // r31
+}
+
+// Erased
+static int gc_DVDGet_lastReadLength() {
+    // References
+    // -> static int dvd_lastReadLength;
+}
+
 // Range: 0x5BC40 -> 0x5BE0C
 void * _gc_DVDRead(char * filename /* r25 */, int * buffer /* r27 */, int offset /* r28 */, int size /* r26 */, int * result /* r29 */) {
     // Local variables
@@ -305,6 +410,12 @@ void * _gc_DVDRead(char * filename /* r25 */, int * buffer /* r27 */, int offset
 
 // Range: 0x5BE0C -> 0x5BE7C
 int gc_GetDVDDrive() {}
+
+// Erased
+static void gc_gcInit() {}
+
+// Erased
+static void gc_DCFlashRange(void * startAddr /* r3 */, unsigned long nByte /* r4 */) {}
 
 // Range: 0x5BE7C -> 0x5BE9C
 long long gc_OSGetTime() {}
@@ -337,8 +448,20 @@ void * gc_getEFB_RGBA16() {
     // Local variables
     int x; // r31
     int y; // r30
-    union_gc_c_341 un; // r1+0x8
+    union_gc_c_452 un; // r1+0x8
     unsigned short * p; // r29
+
+    // References
+    // -> static void * EFB_bufferp;
+}
+
+// Erased
+static void * gc_getEFB_RGBA32() {
+    // Local variables
+    int x; // r31
+    int y; // r30
+    union_gc_c_452 un; // r1+0x8
+    unsigned char * p; // r29
 
     // References
     // -> static void * EFB_bufferp;
@@ -382,10 +505,78 @@ static int gc_memoryCard_mountAsync(int slot /* r29 */, void (* callBack)() /* r
     // -> static unsigned char gc_card_workarea[2][40960];
 }
 
+// Erased
+static int gc_memoryCard_mount(int slot /* r3 */) {}
+
+// Erased
+static int gc_memoryCard_unMount() {
+    // Local variables
+    int brk; // r3
+
+    // References
+    // -> static int gc_memoryCard_exi;
+}
+
 // Range: 0x5C3A0 -> 0x5C3C0
 int gc_memoryCard_sizeAdjust(int size /* r3 */) {
     // Local variables
     int a; // r1+0x0
+}
+
+// Erased
+static int gc_memoryCardCheck_probe() {
+    // Local variables
+    long memSize; // r1+0x8
+    int brk; // r3
+
+    // References
+    // -> static long gc_sectorSize;
+    // -> static int gc_memoryCard_exi;
+}
+
+// Erased
+static void gc_memoryCardChange_slot(int slot /* r1+0x0 */) {
+    // References
+    // -> static int gc_memoryCard_exi;
+}
+
+// Erased
+static int gc_memoryCardOpen(char * fileName /* r28 */, struct CARDFileInfo * fileInfo /* r29 */) {
+    // Local variables
+    int brk; // r3
+
+    // References
+    // -> static int gc_memoryCard_exi;
+    // -> static int gc_memoryCard_pullFlag;
+}
+
+// Erased
+static int gc_memoryCardClose(struct CARDFileInfo * fileInfo /* r30 */) {
+    // Local variables
+    int brk; // r3
+}
+
+// Erased
+static int gc_memoryCardFormatAsync(int slot /* r27 */, void (* callBack)() /* r28 */) {
+    // Local variables
+    int brk; // r3
+
+    // References
+    // -> static int gc_AsyncResult;
+    // -> static int gc_AsyncEndFlag;
+}
+
+// Erased
+static int gc_memoryCardFormat(int slot /* r3 */) {}
+
+// Erased
+static int gc_memoryCardFree_blocks(int reserveFile /* r27 */, long * byteNotUsed /* r28 */, long * fileNotUsed /* r29 */) {
+    // Local variables
+    int brk; // r3
+
+    // References
+    // -> static int gc_memoryCard_exi;
+    // -> static int gc_memoryCard_pullFlag;
 }
 
 struct CARDFileInfo {
@@ -410,6 +601,9 @@ static int _gc_memoryCardReadAsync(char * fileName /* r26 */, char * buffer /* r
     // -> static int gc_memoryCard_pullFlag;
 }
 
+// Erased
+static int _gc_memoryCardRead(char * fileName /* r3 */, char * buffer /* r4 */, int size /* r5 */) {}
+
 // Range: 0x5C528 -> 0x5C608
 static int gc_memoryCardCreateAsync(char * fileName /* r25 */, int size /* r26 */, struct CARDFileInfo * fileInfo /* r27 */, void (* callBack)() /* r28 */) {
     // Local variables
@@ -421,6 +615,9 @@ static int gc_memoryCardCreateAsync(char * fileName /* r25 */, int size /* r26 *
     // -> static int gc_AsyncEndFlag;
     // -> static int gc_memoryCard_pullFlag;
 }
+
+// Erased
+static int gc_memoryCardCreate(char * fileName /* r3 */, int size /* r4 */, struct CARDFileInfo * fileInfo /* r5 */) {}
 
 // Range: 0x5C608 -> 0x5C6D8
 static int gc_memoryCardDeleteAsync(char * fileName /* r27 */, void (* callBack)() /* r28 */) {
@@ -434,6 +631,9 @@ static int gc_memoryCardDeleteAsync(char * fileName /* r27 */, void (* callBack)
     // -> static int gc_memoryCard_pullFlag;
 }
 
+// Erased
+static int gc_memoryCardDelete(char * fileName /* r3 */) {}
+
 // Range: 0x5C6D8 -> 0x5C7B0
 static int gc_memoryCardRenameAsync(char * oldName /* r26 */, char * newName /* r27 */, void (* callBack)() /* r28 */) {
     // Local variables
@@ -445,6 +645,12 @@ static int gc_memoryCardRenameAsync(char * oldName /* r26 */, char * newName /* 
     // -> static int gc_AsyncEndFlag;
     // -> static int gc_memoryCard_pullFlag;
 }
+
+// Erased
+static int gc_memoryCardRename(char * oldName /* r3 */, char * newName /* r4 */) {}
+
+// Erased
+static int gc_memoryCard_memcpy(void * to /* r3 */, void * from /* r4 */, int size /* r31 */) {}
 
 unsigned char TEX_banner[3072]; // size: 0xC00, address: 0x0
 unsigned char TLU_banner[512]; // size: 0x200, address: 0x0
@@ -466,6 +672,15 @@ static int gc_memoryCardStatus_set(struct CARDStat * stat /* r31 */) {
     // -> unsigned char TLU_banner[512];
     // -> unsigned char TEX_banner[3072];
     // -> static unsigned char memoryCard_comment[65];
+}
+
+// Erased
+static int gc_memoryCardGet_status(int fileNo /* r28 */, struct CARDStat * cardStat /* r29 */) {
+    // Local variables
+    int brk; // r3
+
+    // References
+    // -> static int gc_memoryCard_exi;
 }
 
 struct CARDStat {
@@ -502,6 +717,19 @@ static int _gc_memoryCardWriteAsync(char * fileName /* r25 */, char * buffer /* 
     // -> static int gc_memoryCard_pullFlag;
 }
 
+// Erased
+static int _gc_memoryCardWrite(char * fileName /* r3 */, char * buffer /* r4 */, int size /* r5 */) {}
+
+// Erased
+static int gc_memoryCardWriteAsync(char * fileName /* r26 */, char * tempName /* r27 */, char * buffer /* r28 */, int size /* r29 */, void (* callBack)() /* r31 */) {
+    // Local variables
+    int ret1; // r3
+
+    // References
+    // -> static int gc_memoryCard_exi;
+    // -> static int gc_memoryCard_pullFlag;
+}
+
 // Range: 0x5CC5C -> 0x5CD6C
 static int _gc_memoryCardLoadAsync(void (* callBack)() /* r28 */) {
     // Local variables
@@ -509,6 +737,18 @@ static int _gc_memoryCardLoadAsync(void (* callBack)() /* r28 */) {
 
     // References
     // -> static int gc_memoryCard_exi;
+    // -> static unsigned char memoryCard_data[40959];
+    // -> static int gc_memoryCard_pullFlag;
+}
+
+// Erased
+static int gc_memoryCardLoadAsync(int gameNo /* r1+0x8 */, char * buffer /* r29 */, void (* callBack)() /* r5 */) {
+    // Local variables
+    int offset; // r31
+    int size; // r30
+    int res; // r31
+
+    // References
     // -> static unsigned char memoryCard_data[40959];
     // -> static int gc_memoryCard_pullFlag;
 }
@@ -537,6 +777,23 @@ int gc_memoryCardSaveAsync(int gameNo /* r1+0x8 */, char * buffer /* r26 */, voi
 int gc_memoryCardSave(int gameNo /* r3 */, char * buffer /* r4 */) {}
 
 static int memoryCard_slotStatus[2]; // size: 0x8, address: 0x227A08
+// Erased
+static void gc_memoryCardSelect_checkInit() {
+    // References
+    // -> static int memoryCard_slotStatus[2];
+}
+
+// Erased
+static int gc_memoryCardGet_dateTime(char * fileName /* r28 */, struct CARDStat * cardStat /* r27 */) {
+    // Local variables
+    int fileNo; // r28
+    struct CARDFileInfo fileInfo; // r1+0x18
+
+    // References
+    // -> static int gc_memoryCard_exi;
+    // -> static int gc_memoryCard_pullFlag;
+}
+
 struct OSCalendarTime {
     // total size: 0x28
     int sec; // offset 0x0, size 0x4
@@ -550,8 +807,30 @@ struct OSCalendarTime {
     int msec; // offset 0x20, size 0x4
     int usec; // offset 0x24, size 0x4
 };
+// Erased
+static void gc_memoryCardSelect_checkSub(int slot /* r24 */, struct_gc_c_828 * slotStatus /* r29 */) {
+    // Local variables
+    struct CARDStat cardStat; // r1+0x9C
+    long long tempTm; // r0
+    long long fileTm; // r0
+    long long time; // r0
+    struct OSCalendarTime td; // r1+0x6C
+
+    // References
+    // -> static int gc_memoryCard_exi;
+    // -> static int gc_memoryCard_pullFlag;
+    // -> static int memoryCard_slotStatus[2];
+    // -> static long gc_sectorSize;
+}
+
+// Erased
+static void gc_memoryCardSelect_check(struct_gc_c_828 * slotA /* r3 */, struct_gc_c_828 * slotB /* r31 */) {}
+
 // Range: 0x5CFB0 -> 0x5CFDC
 void gc_resetSystem() {}
+
+// Erased
+static void gc_resetHotreset(int flag /* r3 */) {}
 
 static unsigned char threadStack[4096]; // size: 0x1000, address: 0x227A10
 static struct OSThread thread; // size: 0x318, address: 0x228A10
@@ -562,6 +841,19 @@ static int threadResult; // size: 0x4, address: 0x228D34
 static int threadFirstFlag; // size: 0x4, address: 0x228D38
 static int threadOffset; // size: 0x4, address: 0x228D3C
 static int threadSize; // size: 0x4, address: 0x228D40
+// Erased
+static int debug_gc_thread_useCheck() {
+    // References
+    // -> static struct OSThread thread;
+}
+
+// Erased
+static void gc_thread_cancel() {
+    // References
+    // -> static int threadResult;
+    // -> static struct OSThread thread;
+}
+
 // Range: 0x5CFDC -> 0x5D020
 int gc_thread_getResultCode() {
     // References
@@ -579,6 +871,25 @@ static void _gc_thread_memoryCardSave() {
 
 // Range: 0x5D064 -> 0x5D138
 int gc_thread_memoryCardSave(int gameNo /* r29 */, char * buffer /* r30 */) {
+    // References
+    // -> static int threadFirstFlag;
+    // -> static struct OSThread thread;
+    // -> static unsigned char threadStack[4096];
+    // -> static void * threadBuffer;
+    // -> static int threadGameNo;
+    // -> static int threadResult;
+}
+
+// Erased
+static void _gc_thread_memoryCardLoad() {
+    // References
+    // -> static int threadResult;
+    // -> static int threadGameNo;
+    // -> static void * threadBuffer;
+}
+
+// Erased
+static int gc_thread_memoryCardLoad(int gameNo /* r29 */, char * buffer /* r30 */) {
     // References
     // -> static int threadFirstFlag;
     // -> static struct OSThread thread;
@@ -614,10 +925,34 @@ int _gc_thread_DVDRead(char * filename /* r27 */, void * buffer /* r28 */, int o
     // -> static int threadResult;
 }
 
+// Erased
+static void * gc_thread_DVDRead_alloc_getBuffer() {
+    // References
+    // -> static void * threadBuffer;
+}
+
+// Erased
+static void gc_dispString_start() {}
+
+// Erased
+static void gc_dispString_disp(int x /* r3 */, int y /* r4 */, char * s /* r5 */) {}
+
+// Erased
+static void gc_dispString_end() {}
+
+// Erased
+static void gc_dispString_andStop(int x /* r29 */, int y /* r30 */, char * s /* r31 */) {}
+
 static unsigned char assert_string[512]; // size: 0x200, address: 0x228D44
 // Range: 0x5D260 -> 0x5D44C
 void gc_assert(int data_n /* r25 */, void * file /* r26 */, int line /* r27 */, char * s /* r28 */, int data1 /* r29 */, int data2 /* r30 */, int data3 /* r31 */) {
     // References
     // -> static unsigned char assert_string[512];
+}
+
+// Erased
+static void gc_dumpDsip(int size /* r1+0x4 */) {
+    // Local variables
+    int i; // r5
 }
 

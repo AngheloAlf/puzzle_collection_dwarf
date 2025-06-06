@@ -15,6 +15,18 @@ static int title_fade_step; // size: 0x4, address: 0x18E60
 @enum$98dm_title_main_c main_old; // size: 0x4, address: 0x18F88
 unsigned char evs_seqence; // size: 0x1, address: 0x4879
 unsigned char * Gzip_bufferp; // size: 0x4, address: 0x10
+// Erased
+static void dm_title_init() {
+    // References
+    // -> unsigned char * Gzip_bufferp;
+    // -> unsigned char evs_seqence;
+    // -> static int title_fade_step;
+    // -> static int title_fade_count;
+    // -> @enum$98dm_title_main_c main_old;
+    // -> static int title_mode_type;
+    // -> static int title_exit_flag;
+}
+
 static unsigned char _stageTbl[18]; // size: 0x12, address: 0x9A0
 unsigned char evs_playmax; // size: 0x1, address: 0x190BC
 @enum$101main_story_c;
@@ -89,7 +101,7 @@ unsigned char main_joy[4]; // size: 0x4, address: 0x1CE68
 // Range: 0xCAAC -> 0xCC74
 int main_boot_error() {
     // Local variables
-    struct_dm_title_main_c_1477 * st; // r31
+    struct_dm_title_main_c_1489 * st; // r31
     void * heap; // r1+0x8
     @enum$110dm_title_main_c loop; // r30
 
@@ -108,7 +120,7 @@ unsigned long gfx_gtask_no; // size: 0x4, address: 0x1E9A0
 // Range: 0xCC74 -> 0xCD58
 void graphic_boot_error() {
     // Local variables
-    struct_dm_title_main_c_1477 * st; // r27
+    struct_dm_title_main_c_1489 * st; // r27
     union_drmario_gc_c_202 * _g; // r1+0x8
     union_drmario_gc_c_202 * _g; // r1+0x8
 

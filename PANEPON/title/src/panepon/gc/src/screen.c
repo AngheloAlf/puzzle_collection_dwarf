@@ -13,7 +13,7 @@ static int gnMaskRate; // size: 0x4, address: 0xF457C
 static int gnMaskRateDefault; // size: 0x4, address: 0xF4580
 static int gnFrameSkip; // size: 0x4, address: 0xF4584
 static int gnImageCount; // size: 0x4, address: 0xF4588
-static struct_image_c_89 * * gapImage; // size: 0x4, address: 0xF458C
+static struct_image_c_92 * * gapImage; // size: 0x4, address: 0xF458C
 static char * * gapNameImage; // size: 0x4, address: 0xF4590
 static int gnScreenCount; // size: 0x4, address: 0xF4594
 static struct_screen_c_446 * gaScreen; // size: 0x4, address: 0xF4598
@@ -31,55 +31,58 @@ static @enum$94peel_c geTypePeel; // size: 0x4, address: 0xF45BC
 static unsigned int gnFrameCount; // size: 0x4, address: 0xF45C0
 static int gnTagTextBase; // size: 0x4, address: 0xF45C4
 static int gnCountTextTag; // size: 0x4, address: 0xF45C8
-static struct_image_c_89 * gpImageOval; // size: 0x4, address: 0xF45CC
-static struct_image_c_89 * gpImageAlign; // size: 0x4, address: 0xF45D0
+static struct_image_c_92 * gpImageOval; // size: 0x4, address: 0xF45CC
+static struct_image_c_92 * gpImageAlign; // size: 0x4, address: 0xF45D0
 static int gnTickText; // size: 0x4, address: 0xF45D4
 static int gnTickWrap; // size: 0x4, address: 0xF45D8
 static int gnCountLayers; // size: 0x4, address: 0xF45DC
 @enum$94screen_c;
 static @enum$94screen_c geTypeBack; // size: 0x4, address: 0xF45E0
-static struct_image_c_89 * gpImagePageBack; // size: 0x4, address: 0xF45E4
-static struct_image_c_89 * gpImagePageFront; // size: 0x4, address: 0xF45E8
-static struct_image_c_89 * gpImageNo; // size: 0x4, address: 0xF45EC
-static struct_image_c_89 * gpImageYes; // size: 0x4, address: 0xF45F0
-static struct_image_c_89 * gpImageBack; // size: 0x4, address: 0xF45F4
+static struct_image_c_92 * gpImagePageBack; // size: 0x4, address: 0xF45E4
+static struct_image_c_92 * gpImagePageFront; // size: 0x4, address: 0xF45E8
+static struct_image_c_92 * gpImageNo; // size: 0x4, address: 0xF45EC
+static struct_image_c_92 * gpImageYes; // size: 0x4, address: 0xF45F0
+static struct_image_c_92 * gpImageBack; // size: 0x4, address: 0xF45F4
 static unsigned int gnColorBack0; // size: 0x4, address: 0xF45F8
 static unsigned int gnColorBack1; // size: 0x4, address: 0xF45FC
 static unsigned int gnColorBack2; // size: 0x4, address: 0xF4600
 static unsigned int gnColorBack3; // size: 0x4, address: 0xF4604
 static unsigned int gnColorBack4; // size: 0x4, address: 0xF4608
 static unsigned int gnColorBack5; // size: 0x4, address: 0xF460C
-static struct_image_c_89 * gpImageKanji; // size: 0x4, address: 0xF4610
-static struct_image_c_89 * gpImageKatakana; // size: 0x4, address: 0xF4614
-static struct_image_c_89 * gpImageHiragana; // size: 0x4, address: 0xF4618
-static struct_image_c_89 * gpImageEnglish; // size: 0x4, address: 0xF461C
-static struct_image_c_89 * gpImageDialogKanji; // size: 0x4, address: 0xF4620
-static struct_image_c_89 * gpImageDialogKatakana; // size: 0x4, address: 0xF4624
-static struct_image_c_89 * gpImageDialogHiragana; // size: 0x4, address: 0xF4628
-static struct_image_c_89 * gpImageDialogEnglish; // size: 0x4, address: 0xF462C
-static struct_image_c_89 * gpImageDigitsPink; // size: 0x4, address: 0xF4630
-static struct_image_c_89 * gpImageDigitsBlue; // size: 0x4, address: 0xF4634
-static struct_image_c_89 * gpImageDigitsNormPink; // size: 0x4, address: 0xF4638
-static struct_image_c_89 * gpImageDigitsNormBlue; // size: 0x4, address: 0xF463C
-static struct_image_c_89 * gpImageDigitsTinyPink; // size: 0x4, address: 0xF4640
-static struct_image_c_89 * gpImageDigitsTinyBlue; // size: 0x4, address: 0xF4644
-static struct_image_c_89 * gpImageDigitsItsyBitsy; // size: 0x4, address: 0xF4648
-static struct_image_c_89 * gpImageDigitsXtraPink; // size: 0x4, address: 0xF464C
-static struct_image_c_89 * gpImageDigitsXtraBlue; // size: 0x4, address: 0xF4650
-static struct_image_c_89 * gpImageLabel; // size: 0x4, address: 0xF4654
-static struct_image_c_89 * gpImageRecordKatakana; // size: 0x4, address: 0xF4658
-static struct_image_c_89 * gpImageRecordHiragana; // size: 0x4, address: 0xF465C
-static struct_image_c_89 * gpImageRecordEnglish; // size: 0x4, address: 0xF4660
+static struct_image_c_92 * gpImageKanji; // size: 0x4, address: 0xF4610
+static struct_image_c_92 * gpImageKatakana; // size: 0x4, address: 0xF4614
+static struct_image_c_92 * gpImageHiragana; // size: 0x4, address: 0xF4618
+static struct_image_c_92 * gpImageEnglish; // size: 0x4, address: 0xF461C
+static struct_image_c_92 * gpImageDialogKanji; // size: 0x4, address: 0xF4620
+static struct_image_c_92 * gpImageDialogKatakana; // size: 0x4, address: 0xF4624
+static struct_image_c_92 * gpImageDialogHiragana; // size: 0x4, address: 0xF4628
+static struct_image_c_92 * gpImageDialogEnglish; // size: 0x4, address: 0xF462C
+static struct_image_c_92 * gpImageDigitsPink; // size: 0x4, address: 0xF4630
+static struct_image_c_92 * gpImageDigitsBlue; // size: 0x4, address: 0xF4634
+static struct_image_c_92 * gpImageDigitsNormPink; // size: 0x4, address: 0xF4638
+static struct_image_c_92 * gpImageDigitsNormBlue; // size: 0x4, address: 0xF463C
+static struct_image_c_92 * gpImageDigitsTinyPink; // size: 0x4, address: 0xF4640
+static struct_image_c_92 * gpImageDigitsTinyBlue; // size: 0x4, address: 0xF4644
+static struct_image_c_92 * gpImageDigitsItsyBitsy; // size: 0x4, address: 0xF4648
+static struct_image_c_92 * gpImageDigitsXtraPink; // size: 0x4, address: 0xF464C
+static struct_image_c_92 * gpImageDigitsXtraBlue; // size: 0x4, address: 0xF4650
+static struct_image_c_92 * gpImageLabel; // size: 0x4, address: 0xF4654
+static struct_image_c_92 * gpImageRecordKatakana; // size: 0x4, address: 0xF4658
+static struct_image_c_92 * gpImageRecordHiragana; // size: 0x4, address: 0xF465C
+static struct_image_c_92 * gpImageRecordEnglish; // size: 0x4, address: 0xF4660
 static unsigned int ganTileDigits[10]; // size: 0x28, address: 0xB6A78
 static unsigned int ganTileNormal[10]; // size: 0x28, address: 0xB6AA0
 static signed short ganWave[16]; // size: 0x20, address: 0xF4664
 static float garSlopePage[12]; // size: 0x30, address: 0xF4684
 static float garOffsetPage[12]; // size: 0x30, address: 0xF46B4
 static float garClipPage[48]; // size: 0xC0, address: 0xB6AC8
+// Erased
+static void screenTestHeap() {}
+
 // Range: 0x8373C -> 0x8459C
-static int screenGetTextData(struct_screen_c_2860 * pText /* r20 */, int iText /* r1+0xC */, struct_bitmap_c_320 * pTile /* r21 */, struct_image_c_89 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
+static int screenGetTextData(struct_screen_c_2863 * pText /* r20 */, int iText /* r1+0xC */, struct_bitmap_c_332 * pTile /* r21 */, struct_image_c_92 * * ppImage /* r22 */, int * pnSpace /* r23 */, int bLoad /* r1+0x1C */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x8
+    struct_image_c_92 * pImage; // r1+0x8
     int nSpace; // r29
     int nCode; // r28
     int nSizeX; // r27
@@ -116,10 +119,10 @@ static int screenGetTextData(struct_screen_c_2860 * pText /* r20 */, int iText /
 }
 
 // Range: 0x8459C -> 0x84674
-static int screenGetTextWidth(struct_screen_c_2860 * pText /* r25 */, int * pnWidth /* r26 */) {
+static int screenGetTextWidth(struct_screen_c_2863 * pText /* r25 */, int * pnWidth /* r26 */) {
     // Local variables
-    struct_image_c_89 * pImage; // r1+0x24
-    struct_bitmap_c_320 tile; // r1+0x14
+    struct_image_c_92 * pImage; // r1+0x24
+    struct_bitmap_c_332 tile; // r1+0x14
     int nSize; // r30
     int nSizeBreak; // r29
     int iText; // r28
@@ -129,12 +132,12 @@ static int screenGetTextWidth(struct_screen_c_2860 * pText /* r25 */, int * pnWi
 }
 
 // Range: 0x84674 -> 0x848A8
-static int screenCenterText(struct_screen_c_2860 * pText /* r23 */) {
+static int screenCenterText(struct_screen_c_2863 * pText /* r23 */) {
     // Local variables
     int bReturn; // r1+0x8
     int nHeight; // r31
-    struct_image_c_89 * pImage; // r1+0x20
-    struct_bitmap_c_320 tile; // r1+0x10
+    struct_image_c_92 * pImage; // r1+0x20
+    struct_bitmap_c_332 tile; // r1+0x10
     int iText; // r30
     int iTextBreak; // r29
     int nSize; // r28
@@ -147,7 +150,7 @@ static int screenCenterText(struct_screen_c_2860 * pText /* r23 */) {
 }
 
 // Range: 0x848A8 -> 0x84EBC
-static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned int nRGBA /* r26 */, union_pon_gc_c_173 * * ppGfx /* r29 */) {
+static void screenDrawTextOval(struct_screen_c_2863 * pText /* r3 */, unsigned int nRGBA /* r26 */, union_pon_gc_c_173 * * ppGfx /* r29 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r31
     struct_bitmap_c_14 * pBitmap; // r1+0x8
@@ -188,16 +191,16 @@ static void screenDrawTextOval(struct_screen_c_2860 * pText /* r3 */, unsigned i
 }
 
 // Range: 0x84EBC -> 0x86014
-static void screenDrawText(struct_screen_c_2860 * pText /* r31 */, union_pon_gc_c_173 * * ppGfx /* r1+0x38 */, int iClip /* r1+0x3C */) {
+static void screenDrawText(struct_screen_c_2863 * pText /* r31 */, union_pon_gc_c_173 * * ppGfx /* r1+0x38 */, int iClip /* r1+0x3C */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r1+0x34
     int bLoad; // r1+0x40
-    struct_image_c_89 * pImage; // r1+0x30
+    struct_image_c_92 * pImage; // r1+0x30
     int nType; // r21
     int iSet; // r1+0x8
     int nCode; // r1+0x8
     int nFont; // r1+0x8
-    struct_bitmap_c_320 tile; // r1+0x20
+    struct_bitmap_c_332 tile; // r1+0x20
     int nLine; // r5
     int iText0; // r9
     int nClipX; // r3
@@ -271,10 +274,10 @@ static void screenDrawText(struct_screen_c_2860 * pText /* r31 */, union_pon_gc_
 }
 
 // Range: 0x86014 -> 0x86780
-static void screenUpdateArea(struct_screen_c_16999 * pArea /* r25 */) {
+static void screenUpdateArea(struct_screen_c_17002 * pArea /* r25 */) {
     // Local variables
     float rStep; // f2
-    struct_screen_c_2860 * pText; // r28
+    struct_screen_c_2863 * pText; // r28
     int iText; // r27
     int iList; // r26
 
@@ -323,6 +326,20 @@ static int screenWipeImages() {
     // -> static struct [anonymous] * * gapImage;
 }
 
+// Erased
+static int screenLoadImage(struct_image_c_92 * * ppImage /* r29 */, int iImage /* r1+0xC */, void * ppHeap /* r5 */) {
+    // Local variables
+    @enum$94screen_c eType; // r3
+
+    // References
+    // -> static struct [anonymous] * * gapImage;
+    // -> static char * * gapNameImage;
+    // -> static @enum$94screen_c geTypeBack;
+}
+
+// Erased
+static void GetaText() {}
+
 struct OSThread_s {
     // total size: 0x1B0
     struct OSThread_s * next; // offset 0x0, size 0x4
@@ -361,10 +378,10 @@ static void screenChange(int iScreen /* r29 */) {
     int nArea1; // r8
     int nArea2; // r9
     int nArea3; // r10
-    struct_screen_c_16999 * pArea; // r1+0x8
+    struct_screen_c_17002 * pArea; // r1+0x8
     int iText; // r8
-    struct_screen_c_17844 * pImage; // r25
-    struct_screen_c_17942 * pDialog; // r25
+    struct_screen_c_17944 * pImage; // r25
+    struct_screen_c_18042 * pDialog; // r25
     int iArea; // r11
     int iImage; // r26
     int iDialog; // r26
@@ -511,7 +528,7 @@ static void screenDrawPageText(union_pon_gc_c_173 * * ppGfx /* r29 */) {
     int nX; // r5
     int nY; // r6
     struct_screen_c_446 * pScreen; // r30
-    struct_screen_c_2860 * pText; // r3
+    struct_screen_c_2863 * pText; // r3
 
     // References
     // -> static int giFramePage;
@@ -523,7 +540,7 @@ static void screenDrawPageText(union_pon_gc_c_173 * * ppGfx /* r29 */) {
 }
 
 // Range: 0x886B8 -> 0x88A64
-static void screenDrawDialog(struct_screen_c_17942 * pDialog /* r1+0x0 */, union_pon_gc_c_173 * * ppGfx /* r1+0x4 */) {
+static void screenDrawDialog(struct_screen_c_18042 * pDialog /* r1+0x0 */, union_pon_gc_c_173 * * ppGfx /* r1+0x4 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r5
     int nColorR; // r9
@@ -544,7 +561,7 @@ static void screenDrawDialog(struct_screen_c_17942 * pDialog /* r1+0x0 */, union
 // Range: 0x88A64 -> 0x88C68
 static void screenTickTextData() {
     // Local variables
-    struct_screen_c_16999 * pArea; // r1+0x8
+    struct_screen_c_17002 * pArea; // r1+0x8
     int iArea; // r1+0x8
     int iText; // r1+0x8
     int iTextNext; // r9
@@ -559,6 +576,13 @@ static void screenTickTextData() {
     // -> static struct [anonymous] * gaScreen;
     // -> static void (* gpfDraw)();
     // -> static int gnTagTextBase;
+}
+
+// Erased
+static int screenDark() {
+    // References
+    // -> static int gnTickWait;
+    // -> static @enum$95screen_c geModeFade;
 }
 
 // Range: 0x88C68 -> 0x88C88
@@ -588,10 +612,10 @@ void screenDraw(union_pon_gc_c_173 * * ppGfx /* r26 */, void (* pfDraw)() /* r27
     int nY; // r6
     int iFrame; // r1+0x8
     struct_screen_c_446 * pScreen; // r29
-    struct_screen_c_16999 * pArea; // r1+0x8
-    struct_screen_c_2860 * pText; // r20
-    struct_screen_c_17844 * pImage; // r28
-    struct_screen_c_17942 * pDialog; // r23
+    struct_screen_c_17002 * pArea; // r1+0x8
+    struct_screen_c_2863 * pText; // r20
+    struct_screen_c_17944 * pImage; // r28
+    struct_screen_c_18042 * pDialog; // r23
     int bFlag; // r25
     int iArea; // r22
     int iText; // r22
@@ -637,8 +661,28 @@ void screenDraw(union_pon_gc_c_173 * * ppGfx /* r26 */, void (* pfDraw)() /* r27
     // -> static int gnFrameSkip;
 }
 
+// Erased
+static int screenFindArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, struct_screen_c_17002 * * ppArea /* r1+0x8 */) {
+    // Local variables
+    int iArea; // r10
+
+    // References
+    // -> static struct [anonymous] * gaScreen;
+    // -> static int gnScreenCount;
+}
+
+// Erased
+static int screenFindText(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, struct_screen_c_2863 * * ppText /* r1+0x8 */) {
+    // Local variables
+    int iText; // r10
+
+    // References
+    // -> static struct [anonymous] * gaScreen;
+    // -> static int gnScreenCount;
+}
+
 // Range: 0x89764 -> 0x897F0
-static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_screen_c_17844 * * ppImage /* r1+0x8 */) {
+static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_screen_c_17944 * * ppImage /* r1+0x8 */) {
     // Local variables
     int iImage; // r10
 
@@ -647,8 +691,18 @@ static int screenFindImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */,
     // -> static int gnScreenCount;
 }
 
+// Erased
+static int screenFindDialog(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */, struct_screen_c_18042 * * ppDialog /* r1+0x8 */) {
+    // Local variables
+    int iDialog; // r10
+
+    // References
+    // -> static struct [anonymous] * gaScreen;
+    // -> static int gnScreenCount;
+}
+
 // Range: 0x897F0 -> 0x899F0
-static int screenWrapCursor(struct_screen_c_16999 * pArea /* r1+0x8 */, int iCursorX /* r4 */, int iCursorY /* r5 */, int nMove /* r1+0x14 */) {
+static int screenWrapCursor(struct_screen_c_17002 * pArea /* r1+0x8 */, int iCursorX /* r4 */, int iCursorY /* r5 */, int nMove /* r1+0x14 */) {
     // Local variables
     int iSlot; // r12
     int nCount; // r31
@@ -656,7 +710,7 @@ static int screenWrapCursor(struct_screen_c_16999 * pArea /* r1+0x8 */, int iCur
 
 @enum$96screen_c;
 // Range: 0x899F0 -> 0x89E5C
-static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct_screen_c_16999 * pArea /* r4 */, @enum$96screen_c eFind /* r31 */, int iPlayer /* r28 */) {
+static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct_screen_c_17002 * pArea /* r4 */, @enum$96screen_c eFind /* r31 */, int iPlayer /* r28 */) {
     // Local variables
     int nMaskPlayer; // r6
     int iArea; // r7
@@ -664,7 +718,31 @@ static int screenFindAreaNear(struct_screen_c_446 * pScreen /* r30 */, struct_sc
     int nDeltaX; // r8
     int nDeltaY; // r9
     int nDeltaBest; // r10
-    struct_screen_c_16999 * pAreaBest; // r26
+    struct_screen_c_17002 * pAreaBest; // r26
+}
+
+// Erased
+static int screenDecrementCursorY(struct_screen_c_17002 * pArea /* r3 */) {
+    // Local variables
+    int iSlot; // r5
+}
+
+// Erased
+static int screenIncrementCursorY(struct_screen_c_17002 * pArea /* r3 */) {
+    // Local variables
+    int iSlot; // r5
+}
+
+// Erased
+static int screenDecrementCursorX(struct_screen_c_17002 * pArea /* r3 */) {
+    // Local variables
+    int iSlot; // r5
+}
+
+// Erased
+static int screenIncrementCursorX(struct_screen_c_17002 * pArea /* r3 */) {
+    // Local variables
+    int iSlot; // r5
 }
 
 struct SfxInitStruct {
@@ -685,8 +763,8 @@ static void screenTickText(struct_screen_c_446 * pScreen /* r26 */) {
     int bWink; // r7
     int nTag; // r6
     int nCount; // r4
-    struct_screen_c_2860 * pText; // r1+0x8
-    struct_screen_c_17844 * pImage; // r1+0x8
+    struct_screen_c_2863 * pText; // r1+0x8
+    struct_screen_c_17944 * pImage; // r1+0x8
     int nLine; // r10
     int iSet; // r1+0x8
     unsigned short nFont; // r3
@@ -1017,10 +1095,10 @@ struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 void screenTick(int * anCommand /* r22 */) {
     // Local variables
     struct_screen_c_446 * pScreen; // r30
-    struct_screen_c_2860 * pText; // r1+0x8
-    struct_screen_c_16999 * pArea; // r31
+    struct_screen_c_2863 * pText; // r1+0x8
+    struct_screen_c_17002 * pArea; // r31
     @enum$95screen_c eMode; // r21
-    struct_screen_c_17942 * pDialog; // r1+0x8
+    struct_screen_c_18042 * pDialog; // r1+0x8
     int iData; // r10
     int nResult; // r26
     int bFlag; // r6
@@ -1099,6 +1177,14 @@ void screenSetBackLayers(int nCount /* r3 */) {
     // -> static int gnCountLayers;
 }
 
+// Erased
+static int screenMatchName(char * szName1 /* r1+0x0 */, char * szName2 /* r1+0x4 */) {
+    // Local variables
+    int iName; // r7
+    int nName1; // r6
+    int nName2; // r8
+}
+
 // Range: 0x8B950 -> 0x8BA10
 int screenSetArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iPlayer /* r1+0x8 */) {
     // Local variables
@@ -1123,7 +1209,7 @@ int screenGetArea(int iScreen /* r1+0x0 */, int * pnTagArea /* r1+0x4 */, int iP
 // Range: 0x8BA98 -> 0x8BB40
 int screenHideArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1133,7 +1219,7 @@ int screenHideArea(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */) {
 // Range: 0x8BB40 -> 0x8BC04
 int screenShowArea(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r3
+    struct_screen_c_17002 * pArea; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1143,7 +1229,7 @@ int screenShowArea(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */) {
 // Range: 0x8BC04 -> 0x8BCA0
 int screenGetAreaType(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1153,7 +1239,7 @@ int screenGetAreaType(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */) {
 // Range: 0x8BCA0 -> 0x8BD4C
 int screenGetAreaExtents(int iScreen /* r1+0x0 */, int nTag /* r1+0x4 */, int * pnRows /* r1+0x8 */, int * pnColumns /* r1+0xC */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1175,7 +1261,7 @@ int screenFastText() {
 // Range: 0x8BDAC -> 0x8BEB8
 int screenTextDone(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r10
+    struct_screen_c_2863 * pText; // r10
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1185,7 +1271,7 @@ int screenTextDone(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
 // Range: 0x8BEB8 -> 0x8BFC0
 int screenTextDonePage(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r10
+    struct_screen_c_2863 * pText; // r10
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1199,7 +1285,7 @@ int screenHideText(int iScreen /* r28 */, int nTagText /* r4 */) {
     int bFlag; // r3
     int nTag0; // r30
     int nTag1; // r29
-    struct_screen_c_2860 * pText; // r1+0x8
+    struct_screen_c_2863 * pText; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1213,7 +1299,7 @@ int screenShowText(int iScreen /* r25 */, int nTagText /* r4 */) {
     int bFlag; // r3
     int nTag0; // r27
     int nTag1; // r26
-    struct_screen_c_2860 * pText; // r1+0x8
+    struct_screen_c_2863 * pText; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1235,7 +1321,7 @@ int screenGetTextWait() {
 // Range: 0x8C208 -> 0x8C410
 int screenShowTextFull(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r3
+    struct_screen_c_2863 * pText; // r3
     int bFlag; // r10
     int nSizeText; // r5
     int iSet; // r1+0x0
@@ -1260,7 +1346,7 @@ int screenHideImage(int iScreen /* r29 */, int nTagImage /* r4 */) {
     int nTag; // r4
     int nTag0; // r31
     int nTag1; // r30
-    struct_screen_c_17844 * pImage; // r1+0x8
+    struct_screen_c_17944 * pImage; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1275,7 +1361,7 @@ int screenShowImage(int iScreen /* r27 */, int nTagImage /* r4 */) {
     int nTag; // r4
     int nTag0; // r29
     int nTag1; // r28
-    struct_screen_c_17844 * pImage; // r1+0x8
+    struct_screen_c_17944 * pImage; // r1+0x8
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1283,9 +1369,9 @@ int screenShowImage(int iScreen /* r27 */, int nTagImage /* r4 */) {
 }
 
 // Range: 0x8C630 -> 0x8C6E4
-int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_image_c_89 * * ppImage /* r1+0x8 */) {
+int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_image_c_92 * * ppImage /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1295,7 +1381,7 @@ int screenGetImage(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, struct_
 // Range: 0x8C6E4 -> 0x8C828
 int screenSetImageScale(int iScreen /* r31 */, int nTagImage /* r1+0xC */, float rScale /* f31 */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1305,7 +1391,7 @@ int screenSetImageScale(int iScreen /* r31 */, int nTagImage /* r1+0xC */, float
 // Range: 0x8C828 -> 0x8C990
 int screenSetImagePosition(int iScreen /* r29 */, int nTagImage /* r1+0xC */, int nX /* r30 */, int nY /* r31 */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1315,7 +1401,7 @@ int screenSetImagePosition(int iScreen /* r29 */, int nTagImage /* r1+0xC */, in
 // Range: 0x8C990 -> 0x8CA3C
 int screenGetImagePosition(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * pnX /* r1+0x8 */, int * pnY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1326,7 +1412,7 @@ int screenGetImagePosition(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */,
 int screenHideSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r1+0x0
-    struct_screen_c_16999 * pArea; // r12
+    struct_screen_c_17002 * pArea; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1337,7 +1423,7 @@ int screenHideSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 int screenShowSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r1+0x0
-    struct_screen_c_16999 * pArea; // r12
+    struct_screen_c_17002 * pArea; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1348,7 +1434,7 @@ int screenShowSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 int screenTestSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCursorX /* r1+0x8 */, int iCursorY /* r1+0xC */) {
     // Local variables
     int iSlot; // r4
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1358,7 +1444,7 @@ int screenTestSlot(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int iCur
 // Range: 0x8CCC0 -> 0x8CD54
 void screenSetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int iFrame /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1368,7 +1454,7 @@ void screenSetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int iF
 // Range: 0x8CD54 -> 0x8CDEC
 void screenGetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * piFrame /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_17844 * pImage; // r4
+    struct_screen_c_17944 * pImage; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1378,7 +1464,7 @@ void screenGetFrame(int iScreen /* r1+0x0 */, int nTagImage /* r1+0x4 */, int * 
 // Range: 0x8CDEC -> 0x8CF9C
 void screenSetText(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, unsigned short * anText /* r1+0x10 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r3
+    struct_screen_c_2863 * pText; // r3
     int iSource; // r9
     int iTarget; // r10
 
@@ -1392,7 +1478,7 @@ void screenSetText(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, unsigned
 void screenGetText(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned short * anText /* r5 */, int nSizeText /* r1+0xC */) {
     // Local variables
     int iText; // r8
-    struct_screen_c_2860 * pText; // r12
+    struct_screen_c_2863 * pText; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1402,7 +1488,7 @@ void screenGetText(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned
 // Range: 0x8D070 -> 0x8D118
 int screenSetTextColor(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsigned int nColor0 /* r1+0x8 */, unsigned int nColor1 /* r1+0xC */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r12
+    struct_screen_c_2863 * pText; // r12
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1412,7 +1498,7 @@ int screenSetTextColor(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, unsi
 // Range: 0x8D118 -> 0x8D1B8
 int screenGetTextType(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnType /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r4
+    struct_screen_c_2863 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1422,7 +1508,7 @@ int screenGetTextType(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int *
 // Range: 0x8D1B8 -> 0x8D258
 int screenGetTextSize(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnSize /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r4
+    struct_screen_c_2863 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1435,7 +1521,7 @@ void screenSetTextField(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, uns
     int iText; // r6
     int iData; // r8
     struct_screen_c_446 * pScreen; // r1+0x8
-    struct_screen_c_2860 * pText; // r3
+    struct_screen_c_2863 * pText; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1443,10 +1529,20 @@ void screenSetTextField(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, uns
     // -> static int giScreen;
 }
 
+// Erased
+static int screenSetTextFlag(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int nFlag /* r1+0x8 */) {
+    // Local variables
+    struct_screen_c_2863 * pText; // r4
+
+    // References
+    // -> static struct [anonymous] * gaScreen;
+    // -> static int gnScreenCount;
+}
+
 // Range: 0x8D3BC -> 0x8D45C
 int screenGetTextFlag(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int * pnFlag /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r4
+    struct_screen_c_2863 * pText; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1456,7 +1552,7 @@ int screenGetTextFlag(int iScreen /* r1+0x0 */, int nTagText /* r1+0x4 */, int *
 // Range: 0x8D45C -> 0x8D56C
 int screenSetTextPosition(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nX /* r1+0x10 */, int nY /* r1+0x14 */) {
     // Local variables
-    struct_screen_c_2860 * pText; // r3
+    struct_screen_c_2863 * pText; // r3
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1468,7 +1564,7 @@ int screenSetTextPosition(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, i
 void screenHideDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
     // Local variables
     struct_screen_c_446 * pScreen; // r1+0x8
-    struct_screen_c_17942 * pDialog; // r29
+    struct_screen_c_18042 * pDialog; // r29
     int iArea; // r28
     int iText; // r6
     int iDialog; // r7
@@ -1482,7 +1578,7 @@ void screenHideDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
 void screenShowDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
     // Local variables
     struct_screen_c_446 * pScreen; // r1+0x8
-    struct_screen_c_17942 * pDialog; // r29
+    struct_screen_c_18042 * pDialog; // r29
     int iArea; // r28
     int iText; // r6
     int iDialog; // r7
@@ -1496,7 +1592,7 @@ void screenShowDialog(int iScreen /* r1+0x8 */, int nTagDialog /* r1+0xC */) {
 void screenSetNumber(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nNumber /* r5 */, int bZeroFill /* r30 */) {
     // Local variables
     char acText[64]; // r1+0x18
-    struct_screen_c_2860 * pText; // r31
+    struct_screen_c_2863 * pText; // r31
     int iText; // r7
     int nSize; // r8
     int nCode; // r1+0x8
@@ -1510,7 +1606,7 @@ void screenSetNumber(int iScreen /* r1+0x8 */, int nTagText /* r1+0xC */, int nN
 // Range: 0x8DA30 -> 0x8DB18
 void screenSetCursor(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */, int iCursorX /* r5 */, int iCursorY /* r6 */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r31
+    struct_screen_c_17002 * pArea; // r31
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1520,7 +1616,7 @@ void screenSetCursor(int iScreen /* r1+0x8 */, int nTagArea /* r1+0xC */, int iC
 // Range: 0x8DB18 -> 0x8DBB8
 void screenGetCursor(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * piCursorX /* r1+0x8 */, int * piCursorY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1530,7 +1626,7 @@ void screenGetCursor(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * 
 // Range: 0x8DBB8 -> 0x8DC58
 void screenGetCursorPosition(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */, int * pnCursorX /* r1+0x8 */, int * pnCursorY /* r1+0xC */) {
     // Local variables
-    struct_screen_c_16999 * pArea; // r4
+    struct_screen_c_17002 * pArea; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1541,7 +1637,7 @@ void screenGetCursorPosition(int iScreen /* r1+0x0 */, int nTagArea /* r1+0x4 */
 int screenGetAreaText(int iScreen /* r1+0x0 */, int * pnTagText /* r1+0x4 */) {
     // Local variables
     int iArea; // r1+0x0
-    struct_screen_c_16999 * pArea; // r1+0x0
+    struct_screen_c_17002 * pArea; // r1+0x0
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1551,7 +1647,7 @@ int screenGetAreaText(int iScreen /* r1+0x0 */, int * pnTagText /* r1+0x4 */) {
 // Range: 0x8DCC4 -> 0x8DD60
 int screenSetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */, int nButton /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_17942 * pDialog; // r4
+    struct_screen_c_18042 * pDialog; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1561,7 +1657,7 @@ int screenSetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */,
 // Range: 0x8DD60 -> 0x8DE08
 int screenGetDialogButton(int iScreen /* r1+0x0 */, int nTagDialog /* r1+0x4 */, int * pnButton /* r1+0x8 */) {
     // Local variables
-    struct_screen_c_17942 * pDialog; // r4
+    struct_screen_c_18042 * pDialog; // r4
 
     // References
     // -> static struct [anonymous] * gaScreen;
@@ -1581,14 +1677,14 @@ int screenFind(int * piScreen /* r1+0x0 */, char * szName /* r1+0x4 */) {
 // Range: 0x8DED4 -> 0x8EBE0
 int screenLoad(char * szNameFile /* r3 */, void * ppHeap /* r28 */) {
     // Local variables
-    struct_bitmap_c_31 file; // r1+0x28
+    struct_bitmap_c_43 file; // r1+0x28
     struct_screen_c_446 * pScreen; // r31
     int nScreenCount; // r1+0x24
     int nFlag; // r30
-    struct_screen_c_16999 * pArea; // r20
-    struct_screen_c_2860 * pText; // r20
-    struct_screen_c_17844 * pImage; // r19
-    struct_screen_c_17942 * pDialog; // r19
+    struct_screen_c_17002 * pArea; // r20
+    struct_screen_c_2863 * pText; // r20
+    struct_screen_c_17944 * pImage; // r19
+    struct_screen_c_18042 * pDialog; // r19
     unsigned int nHeader; // r1+0x1C
     int nSize; // r1+0x18
     int iData; // r3
@@ -1644,6 +1740,12 @@ void screenSetup() {
     // -> static int gnImageCount;
     // -> static int gnFrameSkip;
     // -> static int gbKillPeel;
+}
+
+// Erased
+static void pon_Init_geModeFade() {
+    // References
+    // -> static @enum$95screen_c geModeFade;
 }
 
 // Range: 0x8EF60 -> 0x8EFC4

@@ -314,6 +314,24 @@ struct Game {
 };
 struct Game gTheGame; // size: 0x21C08, address: 0xF4EC8
 int anim_bg; // size: 0x4, address: 0x1760
+// Erased
+static void InitGoddess2(int flag /* r31 */, int anim /* r30 */) {
+    // Local variables
+    int base; // r6
+    int temp; // r5
+    char * currSegment; // r3
+
+    // References
+    // -> struct Game gTheGame;
+    // -> int anim_bg;
+    // -> static int anim_sp;
+    // -> static union [anonymous] mini_shadow[4];
+    // -> static unsigned char alphaB[4];
+    // -> static unsigned char alphaG[4];
+    // -> static unsigned char alphaR[4];
+    // -> static char * gc_levgoddess2;
+}
+
 // Range: 0x322F4 -> 0x32384
 void UpdateGoddess2() {
     // Local variables

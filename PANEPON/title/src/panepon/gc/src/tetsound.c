@@ -18,6 +18,23 @@ static signed short ts_song_index; // size: 0x2, address: 0x116FA8
 static signed short ts_song_buffer; // size: 0x2, address: 0x116FAA
 unsigned char TenSecond; // size: 0x1, address: 0x116FAC
 unsigned char DolbyEnabled; // size: 0x1, address: 0x116FAD
+// Erased
+static void InitTetSoundVars() {
+    // References
+    // -> static signed short ts_old_alert;
+    // -> static signed short ts_current_alert;
+    // -> signed short ts_timer_counter;
+    // -> static signed short ts_ok_start_timer;
+    // -> static char initgameBool;
+    // -> static char crossfadeBool;
+    // -> static signed short DangerMusicBgmIndex_ScoreAttack;
+    // -> static signed short NormalMusicBgmIndex_ScoreAttack;
+    // -> static signed short NormalMusicBgmIndex;
+    // -> static signed short DangerMusicBgmIndex;
+    // -> unsigned char DolbyEnabled;
+    // -> unsigned char TenSecond;
+}
+
 // Range: 0xA0B40 -> 0xA0BD4
 void InitGameAudioSystem() {
     // References
@@ -284,6 +301,12 @@ long PlayGameSfxTest(long sfx_index /* r29 */) {
     // -> static int sfxtest_bankIndex$308;
     // -> static int sfxtest_bankArray$307;
     // -> static signed short sfxtest_sfxArray$309[200];
+}
+
+// Erased
+static long PlayObabaSong() {
+    // References
+    // -> struct SfxInitStruct SFX_INIT_TABLE[527];
 }
 
 unsigned char GameEndBool; // size: 0x1, address: 0x116FC0

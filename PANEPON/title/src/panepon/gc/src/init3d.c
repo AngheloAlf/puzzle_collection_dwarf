@@ -411,6 +411,13 @@ void Init3DGameOverSmoke(struct tetWell * well /* r3 */, int num /* r1+0xC */) {
 
 union_pon_gc_tex_c_1219 * gAllVertex; // size: 0x4, address: 0xF4EA8
 char * gc_vertex; // size: 0x4, address: 0x4
+// Erased
+static void Init3DVertex() {
+    // References
+    // -> char * gc_vertex;
+    // -> union [anonymous] * gAllVertex;
+}
+
 union_pon_gc_MemoryCard_c_1396 gIdent; // size: 0x40, address: 0x50F08
 // Range: 0x65C10 -> 0x65C50
 void Init3DMatrixBlocks() {

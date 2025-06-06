@@ -5,8 +5,11 @@
     Code range: 0x0003AB70 -> 0x0003BD70
 */
 static struct_bitmap_c_14 * gpBitmapLast; // size: 0x4, address: 0x1810
+// Erased
+static void bitmapMake(struct_bitmap_c_14 * * ppBitmap /* r1+0x0 */, void * ppHeap /* r1+0x4 */, int nPixel /* r1+0x8 */, int nColor /* r1+0xC */, int bDMA /* r1+0x10 */) {}
+
 // Range: 0x3AB70 -> 0x3ACFC
-static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct_bitmap_c_31 * pFile /* r27 */) {
+static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct_bitmap_c_43 * pFile /* r27 */) {
     // Local variables
     int nSize; // r31
     int iTarget; // r30
@@ -25,7 +28,7 @@ static int bitmapLoadRLE(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, struct_bitma
 // Range: 0x3ACFC -> 0x3B31C
 int bitmapLoad(struct_bitmap_c_14 * * ppBitmap /* r31 */, void * pNameOrFile /* r28 */, void * ppHeap /* r30 */, int bDMA /* r27 */) {
     // Local variables
-    struct_bitmap_c_31 file; // r1+0x38
+    struct_bitmap_c_43 file; // r1+0x38
     int nSizeOriginalX; // r26
     unsigned int * anColor; // r26
     int nColorCount; // r1+0x34
@@ -70,7 +73,7 @@ int bitmapFlip(struct_bitmap_c_14 * pBitmap /* r26 */) {
 int bitmapLoadData(struct_bitmap_c_14 * pBitmap /* r3 */, void * pPixel /* r4 */) {}
 
 // Range: 0x3B5EC -> 0x3BD6C
-int bitmapLoadTile(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */, struct_bitmap_c_320 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
+int bitmapLoadTile(struct_bitmap_c_14 * pBitmap /* r1+0x8 */, int bLoad /* r4 */, union_pon_gc_c_173 * * ppGfx /* r1+0x10 */, struct_bitmap_c_332 * pTile /* r1+0x14 */, int * pnPixels /* r1+0x18 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r4
     int nSizeX; // r8

@@ -25,7 +25,7 @@ struct SAnimeState {
     int charNo; // offset 0x2C, size 0x4
     int color[4]; // offset 0x30, size 0x10
 };
-static struct_dm_game_main_c_176 * pGameState; // size: 0x4, address: 0x55378
+static struct_dm_game_main_c_171 * pGameState; // size: 0x4, address: 0x55378
 static int delpos_tbl[100]; // size: 0x190, address: 0x5537C
 static int delpos_cnt; // size: 0x4, address: 0x5550C
 static int OnVirusP_org; // size: 0x4, address: 0x55510
@@ -36,12 +36,18 @@ unsigned char aiDownSpeed[8][3]; // size: 0x18, address: 0x23538
 unsigned char aiSlideFSpeed[8][3]; // size: 0x18, address: 0x23550
 unsigned char aiSlideSpeed[8][3]; // size: 0x18, address: 0x23568
 signed char aiDebugP1; // size: 0x1, address: 0x23580
-struct_dm_game_main_c_176 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
+struct_dm_game_main_c_171 game_state_data[4]; // size: 0xF10, address: 0x1A1B8
+// Erased
+static void aifMakeWork(struct_dm_game_main_c_171 * uupw /* r1+0x0 */) {
+    // References
+    // -> struct [anonymous] game_state_data[4];
+}
+
 static unsigned char capsGCnv$122[22]; // size: 0x16, address: 0x23584
 static unsigned char capsCCnv$123[6]; // size: 0x6, address: 0x2359C
-struct_dm_game_main_c_487 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
+struct_dm_game_main_c_781 game_map_data[4][136]; // size: 0x1540, address: 0x1B0C8
 // Range: 0x4D71C -> 0x4D950
-void aifMakeBlkWork(struct_dm_game_main_c_176 * uupw /* r1+0x8 */) {
+void aifMakeBlkWork(struct_dm_game_main_c_171 * uupw /* r1+0x8 */) {
     // Local variables
     int x; // r7
     int y; // r8
@@ -53,7 +59,7 @@ void aifMakeBlkWork(struct_dm_game_main_c_176 * uupw /* r1+0x8 */) {
 }
 
 // Range: 0x4D950 -> 0x4D96C
-void aifMakeFlagSet(struct_dm_game_main_c_176 * uupw /* r1+0x0 */) {}
+void aifMakeFlagSet(struct_dm_game_main_c_171 * uupw /* r1+0x0 */) {}
 
 int fool_mode; // size: 0x4, address: 0x55518
 int s_hard_mode; // size: 0x4, address: 0x5551C
@@ -73,10 +79,10 @@ void aifGameInit() {
     // -> int fool_mode;
 }
 
-struct_aiset_c_671 ai_param[6][8]; // size: 0xA80, address: 0x57920
-struct_aiset_c_671 ai_param_org[6][8]; // size: 0xA80, address: 0x23728
-struct_aiset_c_713 ai_char_data_org[16]; // size: 0x6C0, address: 0x241A8
-struct_aiset_c_713 ai_char_data[16]; // size: 0x6C0, address: 0x57260
+struct_aiset_c_816 ai_param[6][8]; // size: 0xA80, address: 0x57920
+struct_aiset_c_816 ai_param_org[6][8]; // size: 0xA80, address: 0x23728
+struct_aiset_c_858 ai_char_data_org[16]; // size: 0x6C0, address: 0x241A8
+struct_aiset_c_858 ai_char_data[16]; // size: 0x6C0, address: 0x57260
 // Range: 0x4DA44 -> 0x4DEB8
 void aifFirstInit() {
     // Local variables
@@ -98,7 +104,7 @@ unsigned char aiMoveSF; // size: 0x1, address: 0x5552E
 @enum$107dm_title_main_c;
 @enum$107dm_title_main_c evs_gamemode; // size: 0x4, address: 0x190B4
 // Range: 0x4DEB8 -> 0x4E0BC
-void aifMake(struct_dm_game_main_c_176 * uupw /* r30 */) {
+void aifMake(struct_dm_game_main_c_171 * uupw /* r30 */) {
     // Local variables
     int i; // r6
 
@@ -117,11 +123,11 @@ void aifMake(struct_dm_game_main_c_176 * uupw /* r30 */) {
     // -> struct [anonymous] game_state_data[4];
 }
 
-struct_aiset_c_921 aiFlag[100]; // size: 0x1900, address: 0x55530
+struct_aiset_c_1066 aiFlag[100]; // size: 0x1900, address: 0x55530
 unsigned char aiFlagCnt; // size: 0x1, address: 0x56E30
 unsigned char decide; // size: 0x1, address: 0x56E31
 // Range: 0x4E0BC -> 0x4E298
-int aifMake2(struct_dm_game_main_c_176 * uupw /* r26 */, int x /* r27 */, int y /* r28 */, int tateFlag /* r29 */, int revFlag /* r30 */) {
+int aifMake2(struct_dm_game_main_c_171 * uupw /* r26 */, int x /* r27 */, int y /* r28 */, int tateFlag /* r29 */, int revFlag /* r30 */) {
     // References
     // -> unsigned char decide;
     // -> unsigned char aiFlagCnt;
@@ -139,9 +145,9 @@ int aifMake2(struct_dm_game_main_c_176 * uupw /* r26 */, int x /* r27 */, int y 
 }
 
 unsigned char aiLinePri[8]; // size: 0x8, address: 0x235A4
-struct_aiset_c_1086 aiNext; // size: 0x2, address: 0x56E34
+struct_aiset_c_1231 aiNext; // size: 0x2, address: 0x56E34
 // Range: 0x4E298 -> 0x4E82C
-void aiHiruSideLineEraser(struct_dm_game_main_c_176 * xpw /* r3 */) {
+void aiHiruSideLineEraser(struct_dm_game_main_c_171 * xpw /* r3 */) {
     // Local variables
     int x; // r4
     int y; // r23
@@ -177,7 +183,18 @@ void aiHiruSideLineEraser(struct_dm_game_main_c_176 * xpw /* r3 */) {
 }
 
 static signed char srh$466[4][2]; // size: 0x8, address: 0x235AC
-struct_aiset_c_1267 aif_field[17][8]; // size: 0x110, address: 0x56E38
+struct_aiset_c_1412 aif_field[17][8]; // size: 0x110, address: 0x56E38
+// Erased
+static void aif_MiniChangeBall(unsigned char y /* r1+0x0 */, unsigned char x /* r1+0x1 */) {
+    // Local variables
+    signed char yy; // r5
+    signed char xx; // r3
+
+    // References
+    // -> struct [anonymous] aif_field[17][8];
+    // -> static signed char srh$466[4][2];
+}
+
 unsigned char hei_data[10]; // size: 0xA, address: 0x56F48
 unsigned char wid_data[10]; // size: 0xA, address: 0x56F54
 // Range: 0x4E82C -> 0x4ED8C
@@ -216,7 +233,7 @@ unsigned char BadLineRate[4][8]; // size: 0x20, address: 0x2364C
 signed short WallRate[4][8]; // size: 0x40, address: 0x2366C
 signed short aiHiEraseCtr; // size: 0x2, address: 0x56F66
 // Range: 0x4ED8C -> 0x4F698
-int aifRensaCheckCore(struct_dm_game_main_c_176 * uupw /* r3 */, unsigned char mx /* r1+0x10 */, unsigned char my /* r1+0x11 */, unsigned char mco /* r1+0x12 */, unsigned char mst /* r1+0x13 */, unsigned char sx /* r1+0x14 */, unsigned char sy /* r1+0x15 */, unsigned char sco /* r24 */, unsigned char sst /* r25 */) {
+int aifRensaCheckCore(struct_dm_game_main_c_171 * uupw /* r3 */, unsigned char mx /* r1+0x10 */, unsigned char my /* r1+0x11 */, unsigned char mco /* r1+0x12 */, unsigned char mst /* r1+0x13 */, unsigned char sx /* r1+0x14 */, unsigned char sy /* r1+0x15 */, unsigned char sco /* r24 */, unsigned char sst /* r25 */) {
     // Local variables
     int idx; // r27
     int idy; // r26
@@ -234,9 +251,9 @@ int aifRensaCheckCore(struct_dm_game_main_c_176 * uupw /* r3 */, unsigned char m
 }
 
 // Range: 0x4F698 -> 0x4F764
-int aifRensaCheck(struct_dm_game_main_c_176 * uupw /* r3 */, struct_aiset_c_921 * af /* r4 */) {
+int aifRensaCheck(struct_dm_game_main_c_171 * uupw /* r3 */, struct_aiset_c_1066 * af /* r4 */) {
     // Local variables
-    struct_dm_game_main_c_176 * upw; // r3
+    struct_dm_game_main_c_171 * upw; // r3
     unsigned char x; // r5
     unsigned char y; // r8
     unsigned char mx; // r5
@@ -316,7 +333,7 @@ static int flash_virus(int x /* r1+0x0 */, int y /* r1+0x4 */) {
     // -> static struct [anonymous] * pGameState;
 }
 
-struct_aiset_c_1267 aiFieldData[17][8]; // size: 0x110, address: 0x56F68
+struct_aiset_c_1412 aiFieldData[17][8]; // size: 0x110, address: 0x56F68
 // Range: 0x50130 -> 0x501E8
 static int search_Vflash(int x /* r1+0x0 */, int y /* r1+0x4 */, int col /* r1+0x8 */) {
     // Local variables
@@ -328,9 +345,18 @@ static int search_Vflash(int x /* r1+0x0 */, int y /* r1+0x4 */, int col /* r1+0
     // -> struct [anonymous] aiFieldData[17][8];
 }
 
+// Erased
+static int search_Lflash(int y /* r1+0x4 */) {
+    // Local variables
+    int i; // r1+0x0
+
+    // References
+    // -> static struct [anonymous] * pGameState;
+}
+
 unsigned char aiWall; // size: 0x1, address: 0x57078
 // Range: 0x501E8 -> 0x512A0
-int aifSearchLineMS(struct_aiset_c_921 * af /* r31 */, int mx /* r30 */, int my /* r24 */, int mco /* r19 */, int sx /* r29 */, int sy /* r25 */, int sco /* r14 */, int ec /* r21 */) {
+int aifSearchLineMS(struct_aiset_c_1066 * af /* r31 */, int mx /* r30 */, int my /* r24 */, int mco /* r19 */, int sx /* r29 */, int sy /* r25 */, int sco /* r14 */, int ec /* r21 */) {
     // Local variables
     int i; // r7
     int f; // r1+0x8
@@ -371,9 +397,9 @@ signed short aiHiErY; // size: 0x2, address: 0x5707C
 signed short aiHiErB; // size: 0x2, address: 0x5707E
 unsigned short aiPriOfs; // size: 0x2, address: 0x57080
 // Range: 0x512A0 -> 0x51F7C
-void aiHiruAllPriSet(struct_dm_game_main_c_176 * xpw /* r25 */) {
+void aiHiruAllPriSet(struct_dm_game_main_c_171 * xpw /* r25 */) {
     // Local variables
-    struct_aiset_c_921 * af; // r26
+    struct_aiset_c_1066 * af; // r26
     int i; // r1+0x1C
     int x; // r1+0x10
     int y; // r1+0x10
@@ -417,7 +443,7 @@ float aiRootP; // size: 0x4, address: 0x57084
 unsigned char aiSelCom; // size: 0x1, address: 0x57088
 unsigned long framecont; // size: 0x4, address: 0x8
 // Range: 0x51F7C -> 0x52DE8
-void aiSetCharacter(struct_dm_game_main_c_176 * xpw /* r25 */) {
+void aiSetCharacter(struct_dm_game_main_c_171 * xpw /* r25 */) {
     // Local variables
     int i; // r8
     int j; // r1+0x8
@@ -431,10 +457,10 @@ void aiSetCharacter(struct_dm_game_main_c_176 * xpw /* r25 */) {
     int vrsCnt; // r6
     unsigned char char_no; // r9
     int aidt; // r27
-    struct_aiset_c_671 (* aiDataPtr)[][8]; // r1+0x8
-    struct_aiset_c_713 * char_data; // r26
+    struct_aiset_c_816 (* aiDataPtr)[][8]; // r1+0x8
+    struct_aiset_c_858 * char_data; // r26
     int doEffectFlag; // r4
-    struct_aiset_c_671 * ptr; // r4
+    struct_aiset_c_816 * ptr; // r4
 
     // References
     // -> unsigned char evs_playcnt;
@@ -470,9 +496,9 @@ void aiSetCharacter(struct_dm_game_main_c_176 * xpw /* r25 */) {
     // -> struct [anonymous] aiFieldData[17][8];
 }
 
-struct_aiset_c_1267 aiRecurData[18][10]; // size: 0x168, address: 0x5708C
+struct_aiset_c_1412 aiRecurData[18][10]; // size: 0x168, address: 0x5708C
 // Range: 0x52DE8 -> 0x530E0
-void aifFieldCopy(struct_dm_game_main_c_176 * uupw /* r3 */) {
+void aifFieldCopy(struct_dm_game_main_c_171 * uupw /* r3 */) {
     // Local variables
     int idx; // r8
     int idy; // r9
@@ -483,6 +509,17 @@ void aifFieldCopy(struct_dm_game_main_c_176 * uupw /* r3 */) {
     // -> struct [anonymous] aiNext;
 }
 
+// Erased
+static void aifRecurCopy() {
+    // Local variables
+    int idx; // r5
+    int idy; // r9
+
+    // References
+    // -> struct [anonymous] aiRecurData[18][10];
+    // -> struct [anonymous] aiFieldData[17][8];
+}
+
 unsigned char aiTEdgeCnt; // size: 0x1, address: 0x571F4
 unsigned char aiYEdgeCnt; // size: 0x1, address: 0x571F5
 // Range: 0x530E0 -> 0x53B80
@@ -491,7 +528,7 @@ void aifPlaceSearch() {
     int idx; // r24
     int idy; // r25
     int cnt; // r26
-    struct_aiset_c_2549 aiEdge[100]; // r1+0x18
+    struct_aiset_c_2725 aiEdge[100]; // r1+0x18
 
     // References
     // -> unsigned char aiTEdgeCnt;
@@ -526,7 +563,7 @@ void aifMoveCheck() {
     // -> struct [anonymous] aiFieldData[17][8];
 }
 
-struct_aiset_c_2588 aiRoot[50]; // size: 0x64, address: 0x571FC
+struct_aiset_c_2764 aiRoot[50]; // size: 0x64, address: 0x571FC
 // Range: 0x53FA0 -> 0x54168
 void aifTRecur(unsigned char x /* r26 */, unsigned char y /* r27 */, unsigned char cnt /* r28 */) {
     // References
@@ -595,7 +632,7 @@ void aifReMoveCheck() {
 }
 
 // Range: 0x54A08 -> 0x54D98
-void aifKeyMake(struct_dm_game_main_c_176 * uupw /* r30 */) {
+void aifKeyMake(struct_dm_game_main_c_171 * uupw /* r30 */) {
     // Local variables
     int cnt; // r5
     int roll[2][2]; // r1+0x10
@@ -615,7 +652,7 @@ void aifKeyMake(struct_dm_game_main_c_176 * uupw /* r30 */) {
 static int wave_tbl$2879[8]; // size: 0x20, address: 0x3BB4
 unsigned short joygam[4]; // size: 0x8, address: 0x1CE40
 // Range: 0x54D98 -> 0x553EC
-void aifKeyOut(struct_dm_game_main_c_176 * uupw /* r28 */) {
+void aifKeyOut(struct_dm_game_main_c_171 * uupw /* r28 */) {
     // Local variables
     int idx; // r29
     int idy; // r1+0x8
