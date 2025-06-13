@@ -324,7 +324,7 @@ void UpdateStarAnimation() {
     // Local variables
     int count; // r7
     int * frame; // r8
-    struct_animation_c_1169 * s; // r3
+    uObjSprite_t * s; // r3
 
     // References
     // -> struct Game gTheGame;

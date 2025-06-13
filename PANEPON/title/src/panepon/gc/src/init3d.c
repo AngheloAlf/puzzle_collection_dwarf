@@ -383,7 +383,7 @@ void Init3DText() {
 // Range: 0x65984 -> 0x659E4
 void Init3DClearLine(struct tetWell * well /* r1+0x0 */, int num /* r1+0x8 */) {
     // Local variables
-    struct_animation_c_1169 * s; // r3
+    uObjSprite_t * s; // r3
 
     // References
     // -> struct Game gTheGame;

@@ -169,7 +169,7 @@ void Update2DDistance(struct tetWell * well /* r3 */, struct cursor_t * cursor /
     int temp; // r1+0x8
     int distance; // r5
     struct attack_t * attack; // r8
-    struct_animation_c_1169 * s; // r12
+    uObjSprite_t * s; // r12
 
     // References
     // -> int gSelection;
@@ -178,7 +178,7 @@ void Update2DDistance(struct tetWell * well /* r3 */, struct cursor_t * cursor /
 // Range: 0xADF98 -> 0xAE050
 void Update2DClearLine(struct tetWell * well /* r1+0x0 */, struct cursor_t * cursor /* r1+0x4 */, int distance /* r1+0x8 */) {
     // Local variables
-    struct_animation_c_1169 * s; // r4
+    uObjSprite_t * s; // r4
 }
 
 struct gamepad_t {

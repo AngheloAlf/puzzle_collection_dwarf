@@ -10,6 +10,7 @@ KNOWN_ANONYMOUS_STRUCTS: dict[str, str] = {
     "union_pon_gc_c_222": "uObjSprite",
     "union_pon_gc_tex_c_7332": "uObjTxtr",
     "union_pon_gc_tex_c_7116": "uObjBg",
+    "struct_animation_c_1169": "uObjSprite_t",
 }
 KNOWN_ANONYMOUS_ENUMS: dict[str, str] = {
 }

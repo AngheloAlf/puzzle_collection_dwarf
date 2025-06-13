@@ -9,7 +9,7 @@ char st_AttackPosition[4]; // size: 0x4, address: 0xF4718
 void Init3DAttackPosition(struct attack_t * attack /* r3 */, int type /* r1+0xC */, int num /* r1+0x10 */) {
     // Local variables
     char pattern; // r1+0x8
-    struct_animation_c_1169 * s; // r6
+    uObjSprite_t * s; // r6
 
     // References
     // -> char st_AttackPosition[4];

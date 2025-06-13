@@ -340,7 +340,7 @@ void AttackFly(struct tetWell * well /* r1+0x8 */, struct attack_t * attack /* r
     int multi; // r1+0x8
     float m; // f4
     float pos; // f5
-    struct_animation_c_1169 * s; // r6
+    uObjSprite_t * s; // r6
 
     // References
     // -> int st_Attack3DTopPosition[4][6];
@@ -354,7 +354,7 @@ void AttackFly(struct tetWell * well /* r1+0x8 */, struct attack_t * attack /* r
 // Range: 0x32FD4 -> 0x33088
 void pon_AttackFly4p(struct attack_t * attack /* r31 */, int num /* r1+0x10 */) {
     // Local variables
-    struct_animation_c_1169 * s; // r8
+    uObjSprite_t * s; // r8
 
     // References
     // -> int st_Attack2DTopPosition[4][6];
@@ -368,7 +368,7 @@ void AttackTop(struct tetWell * well /* r26 */, struct cursor_t * cursor /* r29 
     int count; // r5
     int pos; // r31
     int multi; // r30
-    struct_animation_c_1169 * s; // r29
+    uObjSprite_t * s; // r29
     struct attack_t * attk; // r29
 
     // References
@@ -387,7 +387,7 @@ void pon_AttackTop4p(struct tetWell * well /* r26 */, struct cursor_t * cursor /
     int count; // r6
     int pos; // r31
     int multi; // r30
-    struct_animation_c_1169 * s; // r29
+    uObjSprite_t * s; // r29
     struct attack_t * attk; // r29
     struct tetWell * victimwell; // r1+0x8
 

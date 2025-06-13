@@ -927,7 +927,7 @@ typedef struct /* struct_pon_gc_draw_c_2466 */ {
     struct flic_t flic[340]; // offset 0x2E848, size 0x2A80
     struct text_t drawText[70]; // offset 0x312C8, size 0x8C0
 } struct_pon_gc_draw_c_2466;
-typedef struct /* struct_animation_c_1169 */ {
+typedef struct /* uObjSprite_t */ {
     // total size: 0x18
     signed short objX; // offset 0x0, size 0x2
     unsigned short scaleW; // offset 0x2, size 0x2
@@ -943,7 +943,7 @@ typedef struct /* struct_animation_c_1169 */ {
     unsigned char imageSiz; // offset 0x15, size 0x1
     unsigned char imagePal; // offset 0x16, size 0x1
     unsigned char imageFlags; // offset 0x17, size 0x1
-} struct_animation_c_1169;
+} uObjSprite_t;
 typedef struct /* struct_animation_c_25858 */ {
     // total size: 0x28
     unsigned short imageX; // offset 0x0, size 0x2

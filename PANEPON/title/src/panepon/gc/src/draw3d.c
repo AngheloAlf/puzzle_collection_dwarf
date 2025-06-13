@@ -743,7 +743,7 @@ void Draw3DAttackBrick(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int nu
     unsigned char * c_tex; // r1+0x1C
     unsigned short * old_tex; // r22
     unsigned short * s_tex; // r10
-    struct_animation_c_1169 * s; // r12
+    uObjSprite_t * s; // r12
     struct attack_t (* attk)[40]; // r1+0x18
     union_pon_gc_c_173 * _g; // r1+0x8
     union_pon_gc_c_173 * _g; // r1+0x8
@@ -907,7 +907,7 @@ void Draw3DExplosion(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num 
     int ss; // r6
     int tt; // r28
     unsigned char * tex; // r8
-    struct_animation_c_1169 * s; // r7
+    uObjSprite_t * s; // r7
     struct explode_t (* exp)[50]; // r29
     int tileoffset[8]; // r1+0x10
     union_pon_gc_c_173 * _g; // r1+0x8
@@ -1102,7 +1102,7 @@ void Draw3DSmoke(struct_pon_gc_draw_c_2466 * dynamicp /* r1+0x8 */, int num /* r
     // Local variables
     int col; // r8
     int tile; // r9
-    struct_animation_c_1169 * s; // r25
+    uObjSprite_t * s; // r25
     union_pon_gc_c_173 * _g; // r1+0x8
     union_pon_gc_c_173 * _g; // r1+0x8
     union_pon_gc_c_173 * _g; // r1+0x8

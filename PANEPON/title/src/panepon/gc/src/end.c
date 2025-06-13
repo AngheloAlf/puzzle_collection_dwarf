@@ -158,7 +158,7 @@ void DeadBlocksShakeOne2D(struct tetWell * well /* r3 */) {
     // Local variables
     int row; // r1+0x0
     int diff; // r1+0x0
-    struct_animation_c_1169 * s; // r10
+    uObjSprite_t * s; // r10
 
     // References
     // -> int gSelection;
@@ -443,7 +443,7 @@ void DeadBlocksShakeTwo2D(struct tetWell * well /* r3 */, int num /* r1+0x4 */) 
     int row; // r1+0x0
     int diff; // r1+0x0
     int temp; // r7
-    struct_animation_c_1169 * s; // r11
+    uObjSprite_t * s; // r11
 
     // References
     // -> int gMain;
@@ -474,7 +474,7 @@ void WinWallUp2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     int row; // r1+0x8
     int diff; // r1+0x8
     int temp; // r1+0x8
-    struct_animation_c_1169 * s; // r9
+    uObjSprite_t * s; // r9
     int WinWall_Y_Max; // r5
 
     // References
@@ -489,7 +489,7 @@ void LoseWallUp2D(struct tetWell * well /* r30 */, int num /* r31 */) {
     // Local variables
     int row; // r1+0x8
     int diff; // r1+0x8
-    struct_animation_c_1169 * s; // r10
+    uObjSprite_t * s; // r10
 
     // References
     // -> struct Game gTheGame;
@@ -535,7 +535,7 @@ void SmallStars() {
     int j; // r12
     int y; // r9
     int total; // r6
-    struct_animation_c_1169 * s; // r31
+    uObjSprite_t * s; // r31
     unsigned char stars_TMEM[4][4]; // r1+0x8
 
     // References
@@ -549,7 +549,7 @@ void pon_SmallStars4p(struct tetWell * well /* r3 */) {
     int j; // r12
     int y; // r9
     int total; // r6
-    struct_animation_c_1169 * s; // r31
+    uObjSprite_t * s; // r31
     unsigned char stars_TMEM[4][4]; // r1+0xC
 }
 
@@ -561,7 +561,7 @@ int CircleStars() {
     float y; // r1+0x8
     int total; // r11
     struct tetWell * well; // r1+0x8
-    struct_animation_c_1169 * s; // r12
+    uObjSprite_t * s; // r12
     unsigned char stars_TMEM[4][4]; // r1+0x128
     float gSinTable[36]; // r1+0x98
     float gCosTable[36]; // r1+0x8

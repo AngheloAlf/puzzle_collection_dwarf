@@ -338,7 +338,7 @@ void UpdateFlower1(int combo /* r25 */, int chain /* r26 */) {
     int x; // r18
     int y; // r1+0x8
     unsigned short * image; // r5
-    struct_animation_c_1169 * s; // r17
+    uObjSprite_t * s; // r17
     struct action_t * action; // r17
     struct action_t * mascot; // r1+0x8
 

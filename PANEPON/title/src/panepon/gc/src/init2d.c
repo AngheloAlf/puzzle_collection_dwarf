@@ -333,7 +333,7 @@ void Init2DNewRow(struct tetWell * well /* r25 */) {
 // Range: 0x631B0 -> 0x63374
 void Init2DCursor(struct cursor_t * cursor /* r1+0x0 */, int num /* r1+0x4 */) {
     // Local variables
-    struct_animation_c_1169 * s; // r6
+    uObjSprite_t * s; // r6
 
     // References
     // -> struct Game gTheGame;
@@ -345,7 +345,7 @@ void Init2DTetrisBlocks(struct tetWell * well /* r1+0x10 */, int num /* r30 */) 
     int i; // r18
     int j; // r28
     struct block_t * block; // r1+0x8
-    struct_animation_c_1169 * s; // r31
+    uObjSprite_t * s; // r31
 
     // References
     // -> struct Game gTheGame;
@@ -364,7 +364,7 @@ void Init2DIcons(struct tetWell * well /* r3 */) {
     // Local variables
     int i; // r11
     struct icon_t * icon; // r5
-    struct_animation_c_1169 * s; // r12
+    uObjSprite_t * s; // r12
 
     // References
     // -> struct Game gTheGame;
@@ -375,7 +375,7 @@ void Init2DAttackBlocks(struct tetWell * well /* r3 */) {
     // Local variables
     int i; // r1+0x0
     struct attack_t * attack; // r9
-    struct_animation_c_1169 * s; // r10
+    uObjSprite_t * s; // r10
 }
 
 // Range: 0x639A4 -> 0x63A88
@@ -383,7 +383,7 @@ void pon_Init2DAttackBlocks4p(struct tetWell * well /* r3 */) {
     // Local variables
     int i; // r1+0x0
     struct attack_t * attack; // r11
-    struct_animation_c_1169 * s; // r12
+    uObjSprite_t * s; // r12
 }
 
 // Range: 0x63A88 -> 0x63AF4
@@ -394,7 +394,7 @@ void Init2DExplosion(struct tetWell * well /* r3 */) {
     // Local variables
     int i; // r9
     struct explode_t * explode; // r5
-    struct_animation_c_1169 * s; // r10
+    uObjSprite_t * s; // r10
 
     // References
     // -> struct Game gTheGame;
@@ -407,7 +407,7 @@ void Init2DText() {
     int i; // r1+0x8
     int temp; // r3
     uObjSprite * rect; // r3
-    struct_animation_c_1169 * s; // r8
+    uObjSprite_t * s; // r8
 
     // References
     // -> struct Game gTheGame;
@@ -418,7 +418,7 @@ void Init2DText() {
 void Init2DClearLine(struct tetWell * well /* r3 */, int num /* r1+0x10 */) {
     // Local variables
     int count; // r8
-    struct_animation_c_1169 * s; // r9
+    uObjSprite_t * s; // r9
 
     // References
     // -> struct Game gTheGame;
@@ -430,7 +430,7 @@ void Init2DSmallStars(int num /* r18 */) {
     int i; // r22
     int j; // r21
     int total; // r20
-    struct_animation_c_1169 * s; // r19
+    uObjSprite_t * s; // r19
     unsigned char stars_POS[21][3]; // r1+0x28
     unsigned char stars_DROP[10]; // r1+0x1C
     unsigned char stars_TMEM[4][4]; // r1+0xC
@@ -446,7 +446,7 @@ static void pon_Init2DSmallStars4p(int num /* r19 */) {
     int j; // r21
     int total; // r20
     struct tetWell * well; // r21
-    struct_animation_c_1169 * s; // r19
+    uObjSprite_t * s; // r19
     unsigned short stars_POS[13][5]; // r1+0x28
     unsigned char stars_DROP[10]; // r1+0x1C
     unsigned char stars_TMEM[4][4]; // r1+0xC
@@ -462,7 +462,7 @@ void Init2DCircleStars(int num /* r18 */, int pos /* r19 */) {
     int j; // r22
     int total; // r21
     struct tetWell * well; // r1+0x8
-    struct_animation_c_1169 * s; // r20
+    uObjSprite_t * s; // r20
 
     // References
     // -> int gSelection;
@@ -475,7 +475,7 @@ void Init2DGameOverSmoke(struct tetWell * well /* r3 */, int num /* r1+0xC */) {
     int i; // r1+0x8
     int j; // r7
     struct explode_t * explode; // r8
-    struct_animation_c_1169 * s; // r8
+    uObjSprite_t * s; // r8
 
     // References
     // -> struct Game gTheGame;
@@ -507,7 +507,7 @@ void Init2DAttackTMEM(uObjSprite * rect /* r31 */, int type /* r4 */, int lev /*
 // Range: 0x65074 -> 0x65150
 void Init2DBrickTMEM(struct attack_t * attack /* r1+0x0 */) {
     // Local variables
-    struct_animation_c_1169 * s; // r6
+    uObjSprite_t * s; // r6
 }
 
 int gCounter; // size: 0x4, address: 0xF4E80
