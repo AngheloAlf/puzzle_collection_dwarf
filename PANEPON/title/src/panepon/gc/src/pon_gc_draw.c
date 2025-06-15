@@ -4,7 +4,7 @@
     Language: C++
     Code range: 0x0000CAEC -> 0x0000D17C
 */
-static union_pon_gc_MemoryCard_c_1396 _viewMtx$98; // size: 0x40, address: 0x15B0
+static Mtx _viewMtx$98; // size: 0x40, address: 0x15B0
 union_pon_gc_c_173 normal_texture_init_dl[]; // size: 0x0, address: 0xAF0
 unsigned char tlu_loading_message[32]; // size: 0x20, address: 0x510
 unsigned char tex_loading_message[1152]; // size: 0x480, address: 0x90

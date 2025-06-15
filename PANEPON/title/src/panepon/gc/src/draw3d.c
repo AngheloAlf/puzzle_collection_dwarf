@@ -1263,7 +1263,7 @@ void Draw3DSmallStars(int layer /* r1+0x8 */) {
 }
 
 int gSelection; // size: 0x4, address: 0xF4E94
-union_pon_gc_MemoryCard_c_1396 gIdent; // size: 0x40, address: 0x50F08
+Mtx gIdent; // size: 0x40, address: 0x50F08
 // Range: 0x4EB70 -> 0x51968
 void Draw3DTetris(struct_pon_gc_draw_c_2466 * dynamicp /* r19 */) {
     // Local variables

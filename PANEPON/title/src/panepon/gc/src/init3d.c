@@ -418,7 +418,7 @@ static void Init3DVertex() {
     // -> union [anonymous] * gAllVertex;
 }
 
-union_pon_gc_MemoryCard_c_1396 gIdent; // size: 0x40, address: 0x50F08
+Mtx gIdent; // size: 0x40, address: 0x50F08
 // Range: 0x65C10 -> 0x65C50
 void Init3DMatrixBlocks() {
     // References

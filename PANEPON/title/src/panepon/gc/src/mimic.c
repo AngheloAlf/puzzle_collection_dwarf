@@ -616,7 +616,7 @@ void Draw2DMT(struct_pon_gc_draw_c_2466 * dynamicp /* r31 */) {
 unsigned char shade3d[]; // size: 0x0, address: 0xD5FA8
 unsigned short colorTable[]; // size: 0x0, address: 0xB77F8
 float gTransMtx[4][4]; // size: 0x40, address: 0xB0FD8
-union_pon_gc_MemoryCard_c_1396 gIdent; // size: 0x40, address: 0x50F08
+Mtx gIdent; // size: 0x40, address: 0x50F08
 // Range: 0x79E88 -> 0x7A5B0
 void Draw3DMT(struct_pon_gc_draw_c_2466 * dynamicp /* r31 */) {
     // Local variables

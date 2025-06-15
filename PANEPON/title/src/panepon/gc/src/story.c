@@ -27,7 +27,7 @@ static @enum$105story_c geModeLast; // size: 0x4, address: 0xF481C
 static int gnPickStory; // size: 0x4, address: 0xF4820
 static int giMovieStory; // size: 0x4, address: 0xF4824
 static int gnOffsetWipe; // size: 0x4, address: 0xF4828
-static union_pon_gc_MemoryCard_c_1396 gaMtxStory[5][2]; // size: 0x280, address: 0xF4830
+static Mtx gaMtxStory[5][2]; // size: 0x280, address: 0xF4830
 static struct_image_c_92 * gpImageDustBits; // size: 0x4, address: 0xF4AB0
 static struct_image_c_92 * gpImageDustBall; // size: 0x4, address: 0xF4AB4
 static struct_image_c_92 * gpImageDustGlow; // size: 0x4, address: 0xF4AB8
@@ -558,8 +558,8 @@ void storySetupStage() {
 static float grFOV; // size: 0x4, address: 0xF4AE0
 static float grDistanceCamera; // size: 0x4, address: 0xF4AE4
 static int giMtxDraw; // size: 0x4, address: 0xF4AE8
-static union_pon_gc_MemoryCard_c_1396 gMtxView; // size: 0x40, address: 0xF4AF0
-static union_pon_gc_MemoryCard_c_1396 gMtxLook; // size: 0x40, address: 0xF4B30
+static Mtx gMtxView; // size: 0x40, address: 0xF4AF0
+static Mtx gMtxLook; // size: 0x40, address: 0xF4B30
 static unsigned short gnNormalize; // size: 0x2, address: 0xF4B70
 static float garView[4][4]; // size: 0x40, address: 0xF4B74
 static float garLook[4][4]; // size: 0x40, address: 0xF4BB4
@@ -931,7 +931,7 @@ static void storyMakeRays(void * ppHeap /* r1+0x8 */) {
 }
 
 // Range: 0x938C8 -> 0x93C70
-static void storyDrawRays(union_pon_gc_c_173 * * ppGfx /* r27 */, int bBack /* r1+0xC */, union_pon_gc_MemoryCard_c_1396 * pMtx0 /* r28 */, union_pon_gc_MemoryCard_c_1396 * pMtx1 /* r29 */) {
+static void storyDrawRays(union_pon_gc_c_173 * * ppGfx /* r27 */, int bBack /* r1+0xC */, Mtx * pMtx0 /* r28 */, Mtx * pMtx1 /* r29 */) {
     // Local variables
     union_pon_gc_c_173 * pGfx; // r30
     int iRay; // r22
@@ -2317,10 +2317,10 @@ static void storyDrawImage(union_pon_gc_c_173 * * ppGfx /* r30 */, int iScreen /
     int nAlpha; // r3
     int bFlag; // r28
     int nColor; // r6
-    union_pon_gc_MemoryCard_c_1396 * pMtx0; // r27
-    union_pon_gc_MemoryCard_c_1396 * pMtx1; // r26
-    union_pon_gc_MemoryCard_c_1396 * pMtx2; // r25
-    union_pon_gc_MemoryCard_c_1396 * pMtx3; // r23
+    Mtx * pMtx0; // r27
+    Mtx * pMtx1; // r26
+    Mtx * pMtx2; // r25
+    Mtx * pMtx3; // r23
     union_pon_gc_c_173 * _g; // r1+0x8
     union_pon_gc_c_173 * _g; // r1+0x8
     union_pon_gc_c_173 * _g; // r1+0x8

@@ -635,10 +635,10 @@ typedef struct /* struct_pon_gc_MemoryCard_c_23 */ {
     long fileNotUsed; // offset 0x24, size 0x4
     int reserveFile; // offset 0x28, size 0x4
 } struct_pon_gc_MemoryCard_c_23;
-typedef union /* union_pon_gc_MemoryCard_c_1396 */ {
+typedef union /* Mtx */ {
     long m[4][4]; // offset 0x0, size 0x40
     long long force_structure_alignment; // offset 0x0, size 0x8
-} union_pon_gc_MemoryCard_c_1396;
+} Mtx;
 typedef struct /* struct_pon_gc_draw_c_2466 */ {
     // total size: 0x31B88
     union {

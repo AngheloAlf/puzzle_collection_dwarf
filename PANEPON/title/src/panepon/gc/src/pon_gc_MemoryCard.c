@@ -383,7 +383,7 @@ void SetDummySave(int Player /* r1+0x8 */) {
     // -> int AccessPlayerNo;
 }
 
-static union_pon_gc_MemoryCard_c_1396 _viewMtx$182; // size: 0x40, address: 0x1530
+static Mtx _viewMtx$182; // size: 0x40, address: 0x1530
 union_pon_gc_c_173 normal_texture_init_dl[]; // size: 0x0, address: 0xAF0
 unsigned char tlu_fill_black[32]; // size: 0x20, address: 0x16B8
 unsigned char tex_fill_black[32]; // size: 0x20, address: 0x1698
@@ -421,7 +421,7 @@ void MemoryCard_dispSave() {
     // -> static int Pon_Card_DispMess;
 }
 
-static union_pon_gc_MemoryCard_c_1396 _viewMtx$202; // size: 0x40, address: 0x1570
+static Mtx _viewMtx$202; // size: 0x40, address: 0x1570
 unsigned char memory_delete_lut[512]; // size: 0x200, address: 0xBBD0
 unsigned char memory_delete_tex[2048]; // size: 0x800, address: 0xB3D0
 // Range: 0xC834 -> 0xCAA8
